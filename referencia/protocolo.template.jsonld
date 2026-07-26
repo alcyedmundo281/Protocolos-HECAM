@@ -1,0 +1,362 @@
+{
+  "@context": [
+    "https://schema.org",
+    "./protocolo.context.jsonld"
+  ],
+  "type": ["GuiaMedica", "schema:CreativeWork"],
+  "id": "urn:hecam:protocolo:HECAM-xx-PR-xxx",
+
+  "identifier": "HECAM-xx-PR-xxx",
+  "codigoProvisional": true,
+  "name": "{{Título del protocolo, máximo 15 palabras}}",
+  "tipoDocumento": "Protocolo Clínico",
+  "unidadTecnica": "{{Medicina Interna}}",
+  "version": "1",
+  "estado": "borrador",
+  "inLanguage": "es-EC",
+  "dateCreated": "2026-07-15",
+  "mesAnioPortada": "Julio, 2026",
+  "vigenciaAnios": 3,
+  "description": "{{Resumen de una o dos oraciones para metadatos e indexación}}",
+
+  "publisher": {
+    "type": "Organizacion",
+    "name": "Hospital de Especialidades Carlos Andrade Marín",
+    "alternateName": "HECAM",
+    "schema:parentOrganization": {
+      "type": "Organizacion",
+      "name": "Instituto Ecuatoriano de Seguridad Social",
+      "alternateName": "IESS"
+    },
+    "schema:address": {
+      "type": "schema:PostalAddress",
+      "schema:addressLocality": "Quito",
+      "schema:addressRegion": "Pichincha",
+      "schema:addressCountry": "EC"
+    }
+  },
+  "recognizingAuthority": {
+    "type": "Organizacion",
+    "name": "Dirección Técnica del HECAM"
+  },
+
+  "audience": {
+    "type": "AudienciaMedica",
+    "schema:audienceType": "Personal médico y de enfermería del HECAM",
+    "name": "Pacientes adultos (≥18 años) atendidos en el HECAM"
+  },
+  "guidelineSubject": {
+    "type": "CondicionMedica",
+    "name": "{{Condición clínica}}",
+    "schema:code": {
+      "type": "CodigoMedico",
+      "schema:codeValue": "{{A41.9}}",
+      "schema:codingSystem": "CIE-10"
+    }
+  },
+  "evidenceOrigin": "Oxford Centre for Evidence-Based Medicine (CEBM), marzo 2009",
+
+  "normativaAplicable": [
+    { "identifier": "HECAM-CC-P-001 v13", "name": "Creación, Actualización y Control de Documentos" },
+    { "identifier": "HECAM-CC-IT-008 v4", "name": "Elaboración de Protocolos Clínicos" },
+    { "identifier": "HECAM-CC-FR-012 V3.0", "name": "Formato de Protocolos" }
+  ],
+
+  "author": [
+    {
+      "type": ["Rol", "RolElaboracion"],
+      "roleName": "Elaborado por",
+      "bloqueFirma": "Elaborado por:",
+      "ordenFirma": 3,
+      "author": {
+        "type": "Persona",
+        "honorificPrefix": "{{Dr.}}",
+        "name": "{{Nombres y Apellidos}}",
+        "jobTitle": "{{Médico Internista}}",
+        "schema:memberOf": { "type": "Organizacion", "name": "{{Unidad Técnica de Medicina Interna}}" },
+        "worksFor": { "type": "Organizacion", "name": "Hospital de Especialidades Carlos Andrade Marín" }
+      }
+    }
+  ],
+
+  "revisionEditorial": {
+    "type": ["Rol", "RolRevisionEditorial"],
+    "roleName": "Revisión de forma y estilo editorial",
+    "alcanceRevision": "forma",
+    "instancia": "Coordinación General de Investigación",
+    "startDate": "2026-07-16",
+    "description": "Fija el formato editorial de la serie completa de protocolos. No revisa el contenido científico.",
+    "contributor": {
+      "type": "Persona",
+      "name": "{{Nombre de la revisora de protocolos}}",
+      "jobTitle": "Revisora de Protocolos Clínicos",
+      "worksFor": { "type": "Organizacion", "name": "Coordinación General de Investigación — HECAM" }
+    },
+    "reglasVigentes": {
+      "citasEnSuperindice": true,
+      "bibliografiaOrdenAparicion": true,
+      "aplicaASerieCompleta": true,
+      "responsabilidadContenidoCientifico": "autor",
+      "restriccionFarmacos": "CNMB",
+      "documentoDeReglas": "references/matriz-editorial.md"
+    }
+  },
+
+  "contributor": [
+    {
+      "type": ["Rol", "RolAprobacion"],
+      "roleName": "Aprobado por",
+      "bloqueFirma": "Aprobado por:",
+      "ordenFirma": 1,
+      "contributor": { "type": "Persona", "jobTitle": "Director Técnico" }
+    },
+    {
+      "type": ["Rol", "RolRevisionInstitucional"],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 1,
+      "contributor": { "type": "Persona", "jobTitle": "Coordinador General de Investigación" }
+    },
+    {
+      "type": ["Rol", "RolRevisionInstitucional"],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 2,
+      "contributor": { "type": "Persona", "jobTitle": "Coordinador General de Control de Calidad" }
+    },
+    {
+      "type": ["Rol", "RolRevisionInstitucional"],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 3,
+      "contributor": { "type": "Persona", "jobTitle": "Coordinador General de Hospitalización y Ambulatorio" }
+    },
+    {
+      "type": ["Rol", "RolRevisionInstitucional"],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 4,
+      "contributor": { "type": "Persona", "jobTitle": "Coordinador General de Áreas Críticas" }
+    },
+    {
+      "type": ["Rol", "RolRevisionInstitucional"],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 5,
+      "contributor": { "type": "Persona", "jobTitle": "Coordinador General de Diagnóstico y Tratamiento" }
+    },
+    {
+      "type": ["Rol", "RolRevisionInstitucional"],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 6,
+      "contributor": { "type": "Persona", "jobTitle": "Jefe de Áreas Clínicas (Presidente PROA)" }
+    },
+    {
+      "type": ["Rol", "RolRevisionInstitucional"],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 7,
+      "contributor": { "type": "Persona", "jobTitle": "Jefe de la Unidad de Cuidados Intensivos Adultos" }
+    }
+  ],
+
+  "hasPart": [
+    {
+      "type": "Seccion",
+      "numeral": "1",
+      "name": "Justificación",
+      "secType": "justificacion",
+      "contenido": [
+        { "type": "Parrafo", "text": "{{300–500 palabras en párrafos continuos. Definición y epidemiología global[[1]], nacional[[2]] e institucional. Citas con doble corchete.}}" }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "2",
+      "name": "Objetivos",
+      "secType": "objetivos",
+      "objetivoGeneral": "{{Infinitivo + qué + para qué. Sin adjetivos calificativos.}}",
+      "objetivosEspecificos": [
+        "{{Objetivo específico 1}}",
+        "{{Objetivo específico 2}}",
+        "{{Objetivo específico 3}}",
+        "{{Objetivo específico 4}}"
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "3",
+      "name": "Glosario de términos / Abreviaciones",
+      "secType": "glosario",
+      "glosario": [
+        { "termino": "{{Término}}", "definicion": "{{Definición clínica de una a dos oraciones.[[3]]}}" }
+      ],
+      "abreviaciones": [
+        { "sigla": "{{SIGLA}}", "significado": "{{Expansión completa}}" }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "4",
+      "name": "Procedimiento (Plan de Acción/Actuación)",
+      "secType": "procedimiento",
+      "hasPart": [
+        {
+          "type": "Seccion",
+          "numeral": "4.1",
+          "name": "Evaluación inicial del paciente",
+          "quienLoHace": "{{Médico tratante / Médico de Emergencia}}",
+          "cuando": "{{Al primer contacto, dentro de los primeros N minutos}}",
+          "contenido": [
+            { "type": "Parrafo", "text": "{{Anamnesis, examen físico, signos vitales, escalas con umbrales.[[4]]}}" }
+          ]
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.2",
+          "name": "Diagnóstico / Identificación de problemas basados en las necesidades",
+          "quienLoHace": "{{...}}",
+          "cuando": "{{...}}",
+          "contenido": []
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.3",
+          "name": "Plan Terapéutico / Intervenciones no farmacológicas",
+          "quienLoHace": "{{...}}",
+          "cuando": "{{...}}",
+          "contenido": [
+            {
+              "type": "Tabla",
+              "titulo": "{{Esquema antimicrobiano empírico por escenario clínico}}",
+              "columnas": ["Escenario", "Primera línea", "Dosis y vía", "Duración", "Alternativa"],
+              "anchos": [1800, 2000, 2200, 1200, 1606],
+              "filas": [["{{...}}", "{{...}}", "{{...}}", "{{...}}", "{{...}}"]],
+              "fuente": "Cartilla de Resistencia HECAM 2025; CNMB."
+            }
+          ]
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.4",
+          "name": "Clasificación de severidad / Manejo de Complicaciones",
+          "quienLoHace": "{{...}}",
+          "cuando": "{{...}}",
+          "contenido": []
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.5",
+          "name": "Plan de Egreso de la Unidad/Seguimiento/Evaluación integral",
+          "quienLoHace": "{{...}}",
+          "cuando": "{{...}}",
+          "contenido": []
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.6",
+          "name": "Nivel de evidencia y grado de recomendaciones",
+          "contenido": [
+            {
+              "type": "Tabla",
+              "columnas": ["Área", "Recomendación", "Nivel de Evidencia", "Grado"],
+              "anchos": [1600, 4406, 1600, 1200],
+              "filas": [["{{Diagnóstico}}", "{{Recomendación}}", "1a", "A"]]
+            },
+            { "type": "Nota", "text": "Sistema Oxford Centre for Evidence-Based Medicine (CEBM), marzo 2009. Niveles 1a–5; grados A–D." }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "5",
+      "name": "Algoritmo de actuación",
+      "secType": "algoritmo",
+      "contenido": [
+        { "type": "Parrafo", "text": "{{Descripción narrativa secuencial del flujo clínico, redactada para su transcripción a Bizagi.}}" },
+        { "type": "Nota", "text": "El diagrama de flujo será elaborado en la herramienta Bizagi con el soporte de la Coordinación General de Control de Calidad del HECAM." }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "6",
+      "name": "Indicadores",
+      "secType": "indicadores",
+      "indicadores": [
+        {
+          "type": "Indicador",
+          "name": "{{Nombre del indicador}}",
+          "tipoIndicador": "diagnóstico",
+          "definicionIndicador": "{{Qué mide}}",
+          "calculo": "(Numerador: {{...}} / Denominador: {{...}}) × 100",
+          "meta": "≥80%",
+          "periodo": "Trimestral",
+          "responsable": "{{Cargo, no persona}}"
+        }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "7",
+      "name": "Bibliografía",
+      "secType": "bibliografia"
+    },
+    {
+      "type": "Seccion",
+      "numeral": "8",
+      "name": "Anexos",
+      "secType": "anexos",
+      "anexos": [
+        {
+          "type": "Anexo",
+          "position": 1,
+          "name": "Cronograma de implementación",
+          "columnas": ["ID", "Tarea", "Responsable", "Inicio", "Fin", "Recursos"],
+          "filas": [["1", "{{Socialización}}", "{{...}}", "{{...}}", "{{...}}", "{{...}}"]]
+        },
+        { "type": "Anexo", "position": 2, "name": "{{Herramienta clínica de apoyo}}" },
+        { "type": "Anexo", "position": 3, "name": "{{Comparación del perfil de resistencia nacional vs. HECAM}}" }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "9",
+      "name": "Firmas de los involucrados",
+      "secType": "firmas",
+      "contenido": [
+        { "type": "Nota", "text": "La legalización se realiza únicamente mediante firma electrónica." }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "10",
+      "name": "Control de cambios",
+      "secType": "control-cambios",
+      "controlCambios": [
+        { "type": "CambioVersion", "version": "1", "dateCreated": "2026-07-15", "descripcionCambio": "Creación del Protocolo." }
+      ]
+    }
+  ],
+
+  "citation": [
+    {
+      "type": "ArticuloAcademico",
+      "position": 1,
+      "primeraAparicion": "1",
+      "vancouver": "{{Apellido AA, Apellido BB. Título del artículo. Revista Abrev. 2024;12(3):45-58. doi:10.xxxx/yyyy}}",
+      "name": "{{Título del artículo}}",
+      "datePublished": "2024",
+      "schema:isPartOf": { "type": "schema:Periodical", "name": "{{Revista}}" },
+      "url": "{{https://doi.org/10.xxxx/yyyy}}"
+    }
+  ]
+}

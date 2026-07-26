@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.3 20210610//EN"
+  "https://jats.nlm.nih.gov/archiving/1.3/JATS-archivearticle1-3.dtd">
+<!--
+  Esqueleto de referencia. NO editar a mano para producción:
+  generar con  python3 scripts/build_jats.py protocolo.jsonld -o salida.jats.xml
+-->
+<article xmlns:xlink="http://www.w3.org/1999/xlink"
+         dtd-version="1.3"
+         article-type="clinical-guideline"
+         xml:lang="es">
+
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher">HECAM-PROTOCOLOS</journal-id>
+      <journal-title-group>
+        <journal-title>Protocolos Clínicos del Hospital de Especialidades Carlos Andrade Marín</journal-title>
+        <abbrev-journal-title>HECAM Protoc Clin</abbrev-journal-title>
+      </journal-title-group>
+      <publisher>
+        <publisher-name>Hospital de Especialidades Carlos Andrade Marín — IESS</publisher-name>
+        <publisher-loc>Quito, Pichincha, Ecuador</publisher-loc>
+      </publisher>
+    </journal-meta>
+
+    <article-meta>
+      <article-id pub-id-type="publisher-id">HECAM-xx-PR-xxx</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Protocolo Clínico</subject>
+        </subj-group>
+        <subj-group subj-group-type="unidad-tecnica">
+          <subject>Medicina Interna</subject>
+        </subj-group>
+      </article-categories>
+
+      <title-group>
+        <article-title>Título del protocolo</article-title>
+      </title-group>
+
+      <!-- Roles: author / editor / reviewer, con <role> explícito -->
+      <contrib-group content-type="elaboracion">
+        <contrib contrib-type="author">
+          <name><surname>Apellido</surname><given-names>Nombre</given-names></name>
+          <role content-type="elaborado-por">Elaborado por</role>
+          <aff><institution>Unidad Técnica de Medicina Interna</institution></aff>
+        </contrib>
+      </contrib-group>
+
+      <contrib-group content-type="revision-editorial">
+        <contrib contrib-type="editor">
+          <name><surname>Apellido</surname><given-names>Nombre</given-names></name>
+          <role content-type="revision-editorial">Revisión de forma y estilo editorial</role>
+          <aff><institution>Coordinación General de Investigación — HECAM</institution></aff>
+        </contrib>
+      </contrib-group>
+
+      <contrib-group content-type="revision-institucional">
+        <contrib contrib-type="reviewer">
+          <role content-type="revisado-por">Coordinador General de Investigación</role>
+        </contrib>
+      </contrib-group>
+
+      <contrib-group content-type="aprobacion">
+        <contrib contrib-type="editor">
+          <role content-type="aprobado-por">Director Técnico</role>
+        </contrib>
+      </contrib-group>
+
+      <pub-date date-type="original-elaboration" iso-8601-date="2026-07-15">
+        <day>15</day><month>07</month><year>2026</year>
+      </pub-date>
+
+      <permissions>
+        <copyright-statement>© Hospital de Especialidades Carlos Andrade Marín — IESS</copyright-statement>
+        <copyright-year>2026</copyright-year>
+      </permissions>
+
+      <abstract abstract-type="summary">
+        <p>Resumen del protocolo.</p>
+      </abstract>
+
+      <custom-meta-group>
+        <custom-meta><meta-name>codigo-sgd</meta-name><meta-value>HECAM-xx-PR-xxx</meta-value></custom-meta>
+        <custom-meta><meta-name>version</meta-name><meta-value>1</meta-value></custom-meta>
+        <custom-meta><meta-name>unidad-tecnica</meta-name><meta-value>Medicina Interna</meta-value></custom-meta>
+        <custom-meta><meta-name>estado</meta-name><meta-value>borrador</meta-value></custom-meta>
+        <custom-meta><meta-name>vigencia-anios</meta-name><meta-value>3</meta-value></custom-meta>
+        <custom-meta><meta-name>normativa</meta-name><meta-value>HECAM-CC-FR-012 V3.0</meta-value></custom-meta>
+        <custom-meta><meta-name>sistema-evidencia</meta-name><meta-value>Oxford CEBM 2009</meta-value></custom-meta>
+      </custom-meta-group>
+    </article-meta>
+  </front>
+
+  <body>
+    <sec id="sec-1" sec-type="justificacion">
+      <label>1</label>
+      <title>Justificación</title>
+      <p>Texto con cita en superíndice<sup><xref ref-type="bibr" rid="ref-1">1</xref></sup>.</p>
+    </sec>
+    <!-- … secciones 2 a 10 … -->
+  </body>
+
+  <back>
+    <ref-list>
+      <title>Bibliografía</title>
+      <ref id="ref-1">
+        <label>1</label>
+        <mixed-citation publication-type="journal">Referencia en formato Vancouver.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

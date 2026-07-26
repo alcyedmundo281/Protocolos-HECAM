@@ -1,0 +1,121 @@
+{
+  "geometria": {
+    "objetos_anclados": [
+      {
+        "nombre": "Rectángulo: esquinas redondeadas 900",
+        "tipo": "forma:roundRect",
+        "cuadro_texto": false,
+        "x_emu": 540000,
+        "y_emu": 648000,
+        "cx_emu": 6480000,
+        "cy_emu": 9612000
+      },
+      {
+        "nombre": "",
+        "tipo": "forma:rect",
+        "cuadro_texto": false,
+        "x_emu": 939600,
+        "y_emu": 4667040,
+        "cx_emu": 54197,
+        "cy_emu": 1759268
+      },
+      {
+        "nombre": "Cuadro de texto 902",
+        "tipo": "forma:rect",
+        "cuadro_texto": true,
+        "x_emu": 2880000,
+        "y_emu": 9129600,
+        "cx_emu": 3790800,
+        "cy_emu": 468000
+      }
+    ],
+    "caratula_lineas": [
+      {
+        "line": "787",
+        "lineRule": "exact",
+        "before": "0",
+        "after": "0"
+      },
+      {
+        "line": "2205",
+        "lineRule": "atLeast",
+        "before": "0",
+        "after": "0"
+      },
+      {
+        "line": "1219",
+        "lineRule": "exact",
+        "before": "0",
+        "after": "0"
+      },
+      {
+        "line": "1050",
+        "lineRule": "exact",
+        "before": "0",
+        "after": "0"
+      },
+      {
+        "line": "1575",
+        "lineRule": "exact",
+        "before": "0",
+        "after": "0"
+      },
+      {
+        "line": "400",
+        "lineRule": "exact",
+        "before": "0",
+        "after": "0"
+      }
+    ],
+    "medios": 4,
+    "medios_bytes": [
+      0,
+      2844,
+      50714,
+      256225
+    ],
+    "pagina": {
+      "w": "11906",
+      "h": "16838"
+    },
+    "margenes": {
+      "top": "1400",
+      "bottom": "1400",
+      "left": "1700",
+      "right": "1400"
+    },
+    "titlePage": true,
+    "membrete": {
+      "ancho": "10206",
+      "sangria": "-850"
+    }
+  },
+  "render": {
+    "marco": [
+      1.76,
+      28.51
+    ],
+    "logo": [
+      3.87,
+      7.75
+    ],
+    "protocolo": [
+      10.3,
+      11.4
+    ],
+    "titulo": [
+      14.61,
+      15.82
+    ],
+    "pie": [
+      25.48,
+      26.36
+    ],
+    "barra": [
+      13.27,
+      17.79
+    ],
+    "hojas": 24,
+    "tinta_hoja2_pct": 3.13
+  }
+}
