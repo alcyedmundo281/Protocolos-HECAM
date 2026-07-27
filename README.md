@@ -200,17 +200,15 @@ Conviene no revertirlo a la forma corta. La diferencia importa en la cabecera:
 un rango plano para todo adulto puede hacer parecer hipoxémico a un paciente
 mayor que está en su basal, y el paciente séptico suele ser mayor.
 
-**Lo que sigue pendiente** es sustituir la extrapolación por datos propios. Dos
-caminos, ninguno de los cuales puede resolver el generador:
+**Decisión tomada: «extrapolados» se queda** hasta que existan datos propios. No
+hay estudio de valores gasométricos de referencia en adultos sanos residentes en
+Quito, y aplicar una ecuación altitud–PaO₂ genérica sería peor que extrapolar
+210 m dentro de la misma población andina.
 
-- Validar los valores basales en la población del HECAM, a 2.850 m. Es lo único
-  que permitiría quitar la palabra «extrapolados».
-- Mientras tanto, estratificar el rango por edad y sexo con las tablas del
-  artículo de Gonzalez-Garcia, o respaldarlo con Forrer A, Gaisl T, Sevik A,
-  Meyer M, Senteler L, Lichtblau M, et al. *Partial pressure of arterial oxygen
-  in healthy adults at high altitudes: a systematic review and meta-analysis.*
-  JAMA Netw Open. 2023;6(6):e2318036 (**PMID 37326993**), que modela el PaO₂
-  frente a la altitud y permitiría estimar el valor a 2.850 m.
+`docs/valores-altitud.md` recoge la búsqueda completa, por qué la extrapolación
+desde Bogotá es la opción menos mala, y la especificación exacta del estudio que
+haría falta para quitar esa palabra: criterios de inclusión y exclusión, tamaño
+por celda de edad y sexo, variables a medir y condiciones que hay que registrar.
 
 Si además se quiere respaldar la interpretación del cociente PaO₂/FiO₂ en
 ventilación mecánica en altura, está verificada Ortiz G, Bastidas A,
