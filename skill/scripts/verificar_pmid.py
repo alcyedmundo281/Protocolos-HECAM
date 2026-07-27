@@ -64,11 +64,16 @@ DOI_RE = re.compile(
 REVISTA_RE = re.compile(r"\.\s*\d{4}\s*;\s*\d+")
 # "Arnhem: EAU Guidelines Office; 2023" — pie de imprenta de monografía o guía
 MONOGRAFIA_RE = re.compile(r"[A-ZÁÉÍÓÚÑ][\wáéíóúñ.'’-]+:\s+[^;.]{3,80};\s*\d{4}")
+# "In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2024" — capítulo
+# de libro. PubMed los tiene en Bookshelf, no en el índice de artículos, así que
+# buscarlos ahí devuelve cualquier cosa.
+CAPITULO_RE = re.compile(r"\bIn:\s+\S")
 ET_AL_RE = re.compile(r"\bet\s+al\.[\s.]*")   # tolera «et al.. Título» de los exportadores
 INICIALES_RE = re.compile(r"\s[A-ZÁÉÍÓÚÑ]{1,4}\.\s+")
 CORPORATIVO_RE = re.compile(
     r"^(.{2,140}?(?:Group|Committee|Society|Association|Task Force|Panel|"
-    r"Collaboration|Network|Consortium))\.\s+")
+    r"Collaboration|Network|Consortium|Investigators|Trialists|Trial|"
+    r"Study Investigators|Working Party))\.\s+")
 
 # Literatura gris: normativa, informes institucionales y documentos oficiales.
 # Solo se aplica cuando la referencia NO tiene DOI ni patrón de revista, para que
@@ -168,7 +173,8 @@ def es_gris(ref):
     """
     if extraer_doi(ref) or REVISTA_RE.search(ref):
         return False
-    return bool(GRIS_RE.search(ref) or MONOGRAFIA_RE.search(ref))
+    return bool(GRIS_RE.search(ref) or MONOGRAFIA_RE.search(ref)
+                or CAPITULO_RE.search(ref))
 
 
 # ── acceso a PubMed (E-utilities) ─────────────────────────────────────────────
