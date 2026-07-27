@@ -58,6 +58,20 @@ Los scripts de Python localizan `referencia/` subiendo un nivel desde su propia
 ubicación, así que funcionan desde cualquier directorio de trabajo. Los
 generadores resuelven su salida con `__dirname`, por lo mismo.
 
+## El autor de la tabla de firmas
+
+`firmas()` rellena «Elaborado por:» con el autor por defecto de la Unidad Técnica
+de Medicina Interna, definido en `lib/hecam-lib.js`. Los demás roles de la tabla
+—Director Técnico y los siete revisores institucionales— son cargos, no
+personas, y firman sobre la línea.
+
+Un protocolo de otra unidad o de otro autor lo sobrescribe sin tocar la
+librería:
+
+```js
+firmas({ nombre: 'Dra. …', unidad: 'Unidad Técnica de …' })
+```
+
 ## Añadir un protocolo
 
 1. Crear `produccion/<CODIGO>-<nombre>/` y copiar un generador existente como
