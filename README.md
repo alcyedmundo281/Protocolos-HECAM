@@ -171,6 +171,51 @@ se actualiza ese archivo primero y luego se recompila.
 
 ## Pendientes
 
+### Bibliografía: lo que queda por decidir en el bloque de altura
+
+La cita inventada ya no está. `sepsis.js` [6] e `itu.js` [8] apuntan ahora a
+Gonzalez-Garcia M, Maldonado D, Barrero M, Casas A, Perez-Padilla R,
+Torres-Duque CA. *Arterial blood gases and ventilation at rest by age and sex in
+an adult Andean population resident at high altitude.* Eur J Appl Physiol.
+2020;120(12):2729–36 (**PMID 32939642**). Quedan dos cosas por resolver antes de
+la firma:
+
+**1. El estudio es a 2.640 m, no a 2.850 m.** Se hizo en Bogotá, con 374 adultos
+sanos de 18 a 83 años. Es la mejor referencia disponible para población andina
+adulta, pero el protocolo afirma valores «en Quito» y la diferencia de altitud no
+es cero. Conviene redactar la cifra como extrapolada desde 2.640 m, o respaldarla
+además con la revisión sistemática de Forrer A, Gaisl T, Sevik A, Meyer M,
+Senteler L, Lichtblau M, et al. *Partial pressure of arterial oxygen in healthy
+adults at high altitudes: a systematic review and meta-analysis.* JAMA Netw Open.
+2023;6(6):e2318036 (**PMID 37326993**), que modela el PaO₂ frente a la altitud.
+
+**2. Los valores dependen de la edad y del sexo, y eso es justo lo que el
+artículo demuestra.** El PaO₂ y la SaO₂ descienden de forma significativa con la
+edad (p < 0,001), y en mujeres el descenso del PaO₂ es mayor y se acompaña de un
+aumento del PaCO₂. Dar un rango único de 65–70 mmHg para todo adulto aplana ese
+gradiente, y eso importa clínicamente: el paciente séptico suele ser mayor, y su
+PaO₂ «normal» en altura es más bajo que el de un adulto joven, de modo que un
+umbral plano puede hacer parecer hipoxémico a quien no lo está, o al revés.
+
+Si además se quiere respaldar la interpretación del cociente PaO₂/FiO₂ en
+ventilación mecánica en altura, está verificada Ortiz G, Bastidas A,
+Garay-Fernández M, Lara A, Benavides M, Rocha E, et al. *Correlation and validity
+of imputed PaO₂/FiO₂ and SpO₂/FiO₂ in patients with invasive mechanical
+ventilation at 2600 m above sea level.* Med Intensiva. 2022;46(9):501–7 (**PMID
+36057441**).
+
+### Bibliografía ya corregida
+
+| Dónde | Qué se hizo |
+|---|---|
+| `sepsis.js` [11] y `itu.js` [7] | La referencia de Tamma mezclaba dos documentos de la IDSA: llevaba el DOI y las páginas de la guía de AmpC/*Acinetobacter*/*Stenotrophomonas* pero el título de la de ESBL-E/CRE/DTR-*P. aeruginosa*. Como el texto que la cita habla de *E. coli* BLEE y desescalamiento, se corrigieron DOI y páginas al documento de ESBL-E (PMID 35439291). |
+| `sepsis.js` [15] | Sustituida por el artículo real de Marik y Farkas: *The Changing Paradigm of Sepsis: Early Diagnosis, Early Antibiotics, Early Pressors, and Early Adjuvant Treatment*, Crit Care Med. 2018;46(10):1690–2 (PMID 30216303). El DOI que llevaba no existía. |
+| `itu.js` [16] | REPRISE: corregido el título al plural publicado, *infections*. |
+| `sepsis.js` [6] y `itu.js` [8] | Sustituida la cita fabricada de altura (DOI inexistente en PubMed y en Crossref, y con dos títulos distintos según el protocolo) por Gonzalez-Garcia M, et al. Eur J Appl Physiol. 2020;120(12):2729–36 (PMID 32939642), del mismo primer autor y año. Ver arriba los dos matices pendientes. |
+| `sepsis.js` [7] (nueva) | Añadida Eltzschig HK, Carmeliet P. Hypoxia and inflammation. N Engl J Med. 2011;364(7):656–65 (PMID 21323543) para las afirmaciones sobre HIF-1, que un artículo de gasometría no respalda. El glosario de «HIF-1» pasa a citarla en exclusiva; la justificación y el glosario de «Hipoxia dual» citan las dos, porque mezclan mecanismo y valores de referencia. Sepsis pasa de 18 a 19 referencias y el resto se renumeró. **ITU no la lleva**: su justificación no hace ninguna afirmación sobre HIF-1. |
+
+### Del formato
+
 - Nombre de la revisora de protocolos y fecha exacta de elaboración (hoy son
   marcadores en la plantilla JSON-LD).
 - Códigos definitivos del SGD; los actuales son provisionales.
