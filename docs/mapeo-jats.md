@@ -1,6 +1,6 @@
 # Mapeo HECAM → JATS 1.3
 
-Referencia para `scripts/build_jats.py`. Perfil: **JATS Journal Archiving and Interchange
+Referencia para `skill/scripts/build_jats.py`. Perfil: **JATS Journal Archiving and Interchange
 1.3**, `article-type="clinical-guideline"`, `xml:lang="es"`.
 
 Se eligió el perfil *Archiving* (no *Publishing*) porque es el más permisivo y el que
@@ -130,7 +130,7 @@ rompería los enlaces en los visores JATS.
 Los campos `pmid` y `doi` de cada entrada de `citation[]` salen como `<pub-id>` dentro de
 `<mixed-citation>`, que es donde los buscan los agregadores para enlazar la referencia. Se
 omiten si están vacíos o si conservan el marcador `{{…}}` de la plantilla. Los rellena
-`scripts/verificar_pmid.py` al comprobar la bibliografía contra PubMed; el campo
+`skill/scripts/verificar_pmid.py` al comprobar la bibliografía contra PubMed; el campo
 `verificado` guarda la fecha de esa comprobación.
 
 Se usa `<mixed-citation>` y no `<element-citation>` porque la cadena Vancouver ya viene

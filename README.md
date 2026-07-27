@@ -29,7 +29,7 @@ pip install pypdfium2 Pillow numpy     # opcional
 ## Uso
 
 ```bash
-make generar      # compila los .docx en salida/
+make generar      # compila cada produccion/*/salida/*.docx
 make verificar    # comprueba que la maquetación no se movió
 make fuentes      # comprueba contra PubMed que la bibliografía exista
 make todo         # las tres cosas
@@ -38,17 +38,17 @@ make todo         # las tres cosas
 Sin `make`:
 
 ```bash
-cd protocolos && node sepsis.js && node itu.js
-python3 scripts/verificar_caratula.py salida/HECAM-MI-PR-001_*.docx
-python3 scripts/verificar_pmid.py protocolos/sepsis.js
+node produccion/HECAM-MI-PR-001-sepsis/sepsis.js
+python3 skill/scripts/verificar_caratula.py produccion/*/salida/*.docx
+python3 skill/scripts/verificar_pmid.py produccion/*/*.js
 ```
 
 ---
 
 ## La referencia de maquetación
 
-`referencia/caratula.json` guarda las medidas de la carátula y el membrete tal y
-como fueron aprobadas. `scripts/verificar_caratula.py` compara cada compilación
+`skill/referencia/caratula.json` guarda las medidas de la carátula y el membrete tal y
+como fueron aprobadas. `skill/scripts/verificar_caratula.py` compara cada compilación
 contra ese archivo y **falla** si algo se desplazó.
 
 Comprueba en dos capas:
@@ -65,24 +65,24 @@ La referencia **solo se regenera cuando la revisora aprueba un cambio de
 formato**, nunca para «hacer que pase» una compilación:
 
 ```bash
-python3 scripts/verificar_caratula.py --generar-referencia salida/APROBADO.docx
+python3 skill/scripts/verificar_caratula.py --generar-referencia APROBADO.docx
 ```
 
-Conviene revisar el `git diff` de `referencia/caratula.json` antes de confirmar:
+Conviene revisar el `git diff` de `skill/referencia/caratula.json` antes de confirmar:
 ahí se ve exactamente qué se movió y cuánto.
 
 ---
 
 ## La verificación de fuentes
 
-`scripts/verificar_pmid.py` comprueba contra PubMed que cada referencia de la
+`skill/scripts/verificar_pmid.py` comprueba contra PubMed que cada referencia de la
 bibliografía exista de verdad. Acepta el generador `.js`, el `.docx` compilado o
 un `protocolo.jsonld`, y busca el PMID en tres pasadas: por DOI, por título y,
 como último recurso, por autor, año y revista.
 
 ```bash
-python3 scripts/verificar_pmid.py protocolos/sepsis.js
-python3 scripts/verificar_pmid.py --offline protocolos/*.js   # solo caché, sin red
+python3 skill/scripts/verificar_pmid.py produccion/HECAM-MI-PR-001-sepsis/sepsis.js
+python3 skill/scripts/verificar_pmid.py --offline produccion/*/*.js   # solo caché, sin red
 ```
 
 | Veredicto | Qué significa |
@@ -113,7 +113,7 @@ Tres decisiones que evitan falsos positivos, y que conviene no revertir:
   casi todo tiene DOI registrado. Es lo que separa «esta cita no existe» de
   «esta revista no está indexada».
 
-`referencia/pmid-cache.json` guarda cada registro recuperado y la fecha de
+`skill/referencia/pmid-cache.json` guarda cada registro recuperado y la fecha de
 consulta. Permite repetir la verificación sin red y deja constancia de qué se
 comprobó. Se regenera solo; no se edita a mano.
 
@@ -154,13 +154,22 @@ transparente y margen recortado, sin tocar ningún color.
 ## Estructura
 
 ```
-lib/hecam-lib.js        librería de composición (membrete, portada, tablas, firmas)
-protocolos/*.js         un archivo por protocolo: contenido clínico y llamadas a la librería
-assets/                 logotipos y barra
-scripts/                verificadores de maquetación y de fuentes, validadores de la matriz
-referencia/             plantilla JSON-LD, contexto, plantilla JATS, caratula.json y pmid-cache.json
-docs/                   matriz editorial, mapeo JATS y datos institucionales
-salida/                 documentos compilados (ignorados por git)
+skill/                  el pipeline genérico y reutilizable; no lleva contenido clínico
+  SKILL.md              qué hace, cuándo usarla y cómo añadir un protocolo
+  lib/hecam-lib.js      composición del documento (membrete, portada, tablas, firmas)
+  assets/               logotipos y barra
+  scripts/              verificadores de maquetación, citas y fuentes; matriz y JATS
+  referencia/           plantilla JSON-LD, contexto, plantilla JATS, caratula.json, pmid-cache.json
+
+produccion/             un directorio por protocolo, con su código institucional
+  HECAM-MI-PR-001-sepsis/
+    sepsis.js           contenido clínico y llamadas a la librería
+    salida/             el .docx compilado (ignorado por git)
+  HECAM-MI-PR-002-itu/
+    itu.js
+    salida/
+
+docs/                   matriz editorial, mapeo JATS, datos institucionales, valores de altitud
 ```
 
 `docs/matriz-editorial.md` recoge el formato vigente de la revisora y **manda

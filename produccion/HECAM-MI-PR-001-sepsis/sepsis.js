@@ -1,6 +1,7 @@
 'use strict';
 const fs = require('fs');
-const L = require('../lib/hecam-lib.js');
+const path = require('path');
+const L = require('../../skill/lib/hecam-lib.js');
 const {
   Packer, Paragraph, TextRun, PageBreak, AlignmentType,
   CW, sp, h1, h2, h3, bp, blt, nmb, blk, dvd, caption, note, who,
@@ -515,5 +516,6 @@ const children = [
   ...s10,
 ];
 
-L.escribir(buildDoc(titulo, codigo, version, children, fechaElab), '../salida/HECAM-MI-PR-001_Manejo_Sepsis_Shock_Septico_Adultos.docx')
+L.escribir(buildDoc(titulo, codigo, version, children, fechaElab),
+           path.join(__dirname, 'salida', 'HECAM-MI-PR-001_Manejo_Sepsis_Shock_Septico_Adultos.docx'))
   .then(() => console.log('OK — Sepsis generado'));

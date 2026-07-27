@@ -289,6 +289,7 @@ async function escribir(doc, ruta) {
     xml = xml.replace(re, figura);
   }
   zip.file('word/document.xml', xml);
+  fs.mkdirSync(path.dirname(ruta), { recursive: true });
   fs.writeFileSync(ruta, await zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' }));
 }
 

@@ -37,7 +37,7 @@ Cuatro reglas, en orden de importancia:
 
 Consecuencia operativa: si al añadir un párrafo se introduce una cita nueva en medio del
 documento, hay que **renumerar toda la bibliografía posterior**. Por eso el orden se verifica
-programáticamente (`scripts/check_citas.py`) y nunca a ojo.
+programáticamente (`skill/scripts/check_citas.py`) y nunca a ojo.
 
 ---
 
