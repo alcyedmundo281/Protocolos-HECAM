@@ -376,6 +376,7 @@ function biblio(refs) {
 // para que el pipeline siga sirviendo a otras unidades y otros autores.
 const AUTOR_POR_DEFECTO = {
   nombre: 'Dr. Alcy Edmundo Torres Guerrero',
+  cargo: 'Médico Internista (Tratante)',
   unidad: 'Unidad Técnica de Medicina Interna',
 };
 
@@ -403,7 +404,8 @@ function firmas(autor = AUTOR_POR_DEFECTO) {
       'Jefe de Áreas Clínicas (Presidente PROA)',
       'Jefe de la Unidad de Cuidados Intensivos Adultos',
     ]), cR(7)] }),
-    new TableRow({ children: [cL(['Elaborado por:', autor.nombre, autor.unidad]), cR(1)] }),
+    new TableRow({ children: [cL(['Elaborado por:', autor.nombre, autor.cargo, autor.unidad]
+      .filter(Boolean)), cR(1)] }),
   ]});
 }
 

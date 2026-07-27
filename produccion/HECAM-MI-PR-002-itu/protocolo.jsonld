@@ -82,7 +82,7 @@
         "type": "Persona",
         "honorificPrefix": "Dr.",
         "name": "Alcy Edmundo Torres Guerrero",
-        "jobTitle": "Médico de la Unidad Técnica de Medicina Interna",
+        "jobTitle": "Médico Internista (Tratante)",
         "schema:memberOf": {
           "type": "Organizacion",
           "name": "Unidad Técnica de Medicina Interna"
@@ -451,19 +451,6 @@
                 ]
               ],
               "titulo": "Tabla 3. Factores de complicación de la infección urinaria"
-            },
-            {
-              "type": "Subtitulo",
-              "text": "Criterios de exclusión del protocolo"
-            },
-            {
-              "type": "Lista",
-              "estilo": "vinetas",
-              "itemListElement": [
-                "Pacientes menores de 18 años, que deben ser derivados al Servicio de Pediatría.",
-                "ITU no complicada en mujer adulta sin factores de riesgo: manejo ambulatorio con fosfomicina trometamol 3 g en dosis única o nitrofurantoína 100 mg cada 12 horas durante 5 días, ambas incluidas en el CNMB[[11]]. La Cartilla HECAM 2025 registra para __E. coli__ de Emergencia una resistencia a fosfomicina del 8 % y a nitrofurantoína del 7 %, restringiendo su uso exclusivamente a la cistitis no complicada[[5]].",
-                "Bacteriuria asintomática en paciente no embarazada y sin procedimiento urológico programado: NO debe tratarse[[12]]."
-              ]
             },
             {
               "type": "Subtitulo",
@@ -939,6 +926,67 @@
                 ]
               ],
               "titulo": "Tabla 8. Opciones de terapia secuencial oral"
+            },
+            {
+              "type": "Subtitulo",
+              "text": "F. Criterios de inclusión y exclusión, duración y suspensión del tratamiento"
+            },
+            {
+              "type": "Lista",
+              "estilo": "vinetas",
+              "itemListElement": [
+                "__Inclusión:__ paciente adulto (≥ 18 años) con infección urinaria y al menos uno de los factores de complicación de la Tabla 3 (numeral 4.1).",
+                "__Exclusión:__ pacientes menores de 18 años, que deben ser derivados al Servicio de Pediatría.",
+                "__Exclusión:__ ITU no complicada en mujer adulta sin factores de riesgo: manejo ambulatorio con fosfomicina trometamol 3 g en dosis única o nitrofurantoína 100 mg cada 12 horas durante 5 días, ambas incluidas en el CNMB[[11]]. La Cartilla HECAM 2025 registra para __E. coli__ de Emergencia una resistencia a fosfomicina del 8 % y a nitrofurantoína del 7 %, restringiendo su uso exclusivamente a la cistitis no complicada[[5]].",
+                "__Exclusión:__ bacteriuria asintomática en paciente no embarazada y sin procedimiento urológico programado: NO debe tratarse[[12]].",
+                "__Criterios de suspensión:__ emplear la procalcitonina como criterio complementario de suspensión, con meta < 0,5 ng/mL cuando esté disponible. En __K. pneumoniae__ CRE la duración total la define Infectología caso por caso[[16]]."
+              ]
+            },
+            {
+              "type": "Tabla",
+              "columnas": [
+                "Diagnóstico",
+                "Duración total (intravenosa más oral)"
+              ],
+              "anchos": [
+                3400,
+                5406
+              ],
+              "filas": [
+                [
+                  "Cistitis complicada",
+                  "7 días"
+                ],
+                [
+                  "Pielonefritis aguda complicada sin bacteriemia",
+                  "10–14 días"
+                ],
+                [
+                  "Pielonefritis aguda complicada con bacteriemia",
+                  "14 días como mínimo"
+                ],
+                [
+                  "ITU asociada a catéter con retiro del dispositivo en 24 horas",
+                  "7 días"
+                ],
+                [
+                  "ITU asociada a catéter sin retiro del dispositivo",
+                  "14 días"
+                ],
+                [
+                  "Urosepsis por K. pneumoniae CRE",
+                  "14–21 días según evolución y control microbiológico"
+                ],
+                [
+                  "Prostatitis bacteriana aguda",
+                  "4–6 semanas, con antimicrobiano oral avalado por antibiograma"
+                ],
+                [
+                  "Absceso renal o pionefrosis tras el drenaje",
+                  "21 días como mínimo, con seguimiento por imagen"
+                ]
+              ],
+              "titulo": "Tabla 9. Duración total recomendada del tratamiento antimicrobiano"
             }
           ]
         },
@@ -989,7 +1037,7 @@
                   "UCI inmediata. Activar el protocolo HECAM-MI-PR-001. Drenaje urológico urgente si existe obstrucción."
                 ]
               ],
-              "titulo": "Tabla 9. Clasificación de severidad de la infección urinaria complicada"
+              "titulo": "Tabla 10. Clasificación de severidad de la infección urinaria complicada"
             },
             {
               "type": "Subtitulo",
@@ -1028,7 +1076,7 @@
                 "Revisar el urocultivo y el antibiograma a las 48–72 horas. Si el microorganismo es sensible a un antimicrobiano de espectro más estrecho, la desescalada es OBLIGATORIA[[10]].",
                 "__E. coli__ sensible a piperacilina/tazobactam: desescalar desde ertapenem o meropenem. __E. coli__ productora de BLEE sensible a ertapenem: desescalar desde meropenem[[6]].",
                 "__K. pneumoniae__ CRE sensible a ceftazidima/avibactam: mantener el esquema y consultar a Infectología para definir la duración total del tratamiento[[16]].",
-                "Emplear la procalcitonina como criterio complementario de suspensión, con meta < 0,5 ng/mL cuando esté disponible.",
+                "Registrar la procalcitonina cuando esté disponible; el criterio de suspensión que se aplica a ese valor consta en el numeral 4.3.",
                 "Realizar una reunión interdisciplinaria (internista, farmacéutico e infectólogo) para cada aislamiento CRE o de manejo difícil, conforme a las políticas de vigilancia nacional de la resistencia antimicrobiana[[17]]."
               ]
             },
@@ -1046,52 +1094,6 @@
                 "El urocultivo de control no se requiere de forma rutinaria al alta, salvo en pacientes con aislamiento CRE, embarazadas, receptores de trasplante o ante persistencia de síntomas.",
                 "Plan de seguimiento ambulatorio confirmado a los 7 días, con control clínico y de laboratorio."
               ]
-            },
-            {
-              "type": "Tabla",
-              "columnas": [
-                "Diagnóstico",
-                "Duración total (intravenosa más oral)"
-              ],
-              "anchos": [
-                3400,
-                5406
-              ],
-              "filas": [
-                [
-                  "Cistitis complicada",
-                  "7 días"
-                ],
-                [
-                  "Pielonefritis aguda complicada sin bacteriemia",
-                  "10–14 días"
-                ],
-                [
-                  "Pielonefritis aguda complicada con bacteriemia",
-                  "14 días como mínimo"
-                ],
-                [
-                  "ITU asociada a catéter con retiro del dispositivo en 24 horas",
-                  "7 días"
-                ],
-                [
-                  "ITU asociada a catéter sin retiro del dispositivo",
-                  "14 días"
-                ],
-                [
-                  "Urosepsis por K. pneumoniae CRE",
-                  "14–21 días según evolución y control microbiológico"
-                ],
-                [
-                  "Prostatitis bacteriana aguda",
-                  "4–6 semanas, con antimicrobiano oral avalado por antibiograma"
-                ],
-                [
-                  "Absceso renal o pionefrosis tras el drenaje",
-                  "21 días como mínimo, con seguimiento por imagen"
-                ]
-              ],
-              "titulo": "Tabla 10. Duración total recomendada del tratamiento antimicrobiano"
             }
           ]
         },

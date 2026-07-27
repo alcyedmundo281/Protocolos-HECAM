@@ -95,9 +95,6 @@ const s41 = [
   h2('4.1.  Evaluación inicial del paciente'),
   ...who('Personal de Enfermería y Médico de Triage / Emergencia.',
          'Inmediatamente al ingreso o ante la sospecha de infección en cualquier unidad del HECAM.'),
-  h3('Criterios de inclusión y exclusión'),
-  blt('__Inclusión:__ pacientes adultos (≥ 18 años) con sospecha o diagnóstico de infección que presenten signos de disfunción orgánica o inestabilidad hemodinámica.'),
-  blt('__Exclusión:__ pacientes pediátricos (< 18 años); pacientes en cuidados paliativos exclusivos donde la intervención intensiva no sea el objetivo terapéutico; pacientes con directrices de no reanimación documentadas.'),
   h3('Anamnesis y examen físico dirigidos'),
   blt('Antecedentes de infección reciente, procedimientos invasivos, inmunosupresión, viajes y exposiciones ambientales. Identificar el foco probable: respiratorio, urinario, abdominal, piel y tejidos blandos, sistema nervioso central o dispositivos intravasculares.'),
   blt('Signos vitales completos: temperatura, frecuencia cardíaca, frecuencia respiratoria, presión arterial y saturación de oxígeno. **NOTA DE ALTITUD:** la SatO₂ basal de referencia es 88–92 %; alarmar si < 88 %. Es un valor de población andina sana estudiada a 2.640 m, extrapolado a los 2.850 m de Quito; desciende con la edad y la caída es mayor en mujeres, de modo que en el paciente mayor debe interpretarse junto con la gasometría y no de forma aislada[[6]]. El umbral de fiebre se ajusta a T > 37,5 °C axilar.'),
@@ -263,6 +260,12 @@ const s43 = [
   blt('**Vasopresina:** añadir si la norepinefrina supera 0,25 mcg/kg/min. Dosis fija de 0,03 UI/min IV.'),
   blt('**Dobutamina:** considerar ante disfunción miocárdica confirmada por ecocardiografía. Dosis de 2–20 mcg/kg/min IV.'),
   blt('**Corticoesteroides:** hidrocortisona 200 mg/día IV en shock séptico refractario que persiste con requerimiento vasopresor creciente pese a resucitación adecuada[[8]].'),
+  blk(),
+  h3('F. Criterios de inclusión y exclusión, duración y suspensión del tratamiento'),
+  blt('__Inclusión:__ pacientes adultos (≥ 18 años) con sospecha o diagnóstico de infección que presenten signos de disfunción orgánica o inestabilidad hemodinámica.'),
+  blt('__Exclusión:__ pacientes pediátricos (< 18 años); pacientes en cuidados paliativos exclusivos donde la intervención intensiva no sea el objetivo terapéutico; pacientes con directrices de no reanimación documentadas.'),
+  blt('__Duración del tratamiento:__ la duración total se define en la reevaluación antimicrobiana de las 48–72 horas, con el resultado de los cultivos (numeral 4.5). En aislamientos de __K. pneumoniae__ CRE, __A. baumannii__ o __P. aeruginosa__ XDR la establece Infectología caso por caso.'),
+  blt('__Criterios de suspensión:__ una procalcitonina < 0,5 ng/mL a las 48–72 horas orienta a la suspensión del antimicrobiano según criterio del PROA-HECAM[[9]]. La decisión se registra en la historia clínica junto con el resultado que la sustenta.'),
 ];
 
 const s44 = [
@@ -298,7 +301,7 @@ const s45 = [
   blt('Diuresis horaria con meta ≥ 0,5 mL/kg/h. Instalar sonda vesical en todo paciente con shock séptico.'),
   blt('Cálculo diario del SOFA para evaluar la respuesta y detectar progresión de la disfunción orgánica[[13]].'),
   blt('Glucemia cada 2–4 horas si el paciente recibe insulinoterapia, con meta de 140–180 mg/dL.'),
-  blt('Procalcitonina a las 48–72 horas. Un valor < 0,5 ng/mL orienta a la suspensión del antimicrobiano según criterio del PROA-HECAM[[9]].'),
+  blt('Procalcitonina a las 48–72 horas como parámetro de monitoreo; el criterio de suspensión que se aplica a ese valor consta en el numeral 4.3.'),
   h3('Desescalada antimicrobiana a las 48–72 horas (PROA-HECAM)'),
   blt('Revisar hemocultivos y cultivo del foco. Si el microorganismo es sensible a un antimicrobiano de espectro más estrecho, la desescalada es OBLIGATORIA[[9]].'),
   blt('__K. pneumoniae__ sensible a ceftriaxona (situación infrecuente en el HECAM): desescalar. __K. pneumoniae__ CRE sensible a ceftazidima/avibactam: mantener el esquema y consultar a Infectología para definir la duración.'),

@@ -1,5 +1,5 @@
 {
-  "_nota": "Lo que el generador .js no contiene y la matriz necesita. Editable a mano; armar_jsonld.py lee de aquí. Revisar los campos marcados como POR CONFIRMAR antes de la firma.",
+  "_nota": "Lo que el generador .js no contiene y la matriz necesita. Editable a mano; armar_jsonld.py lee de aquí.",
 
   "unidadTecnica": "Medicina Interna",
   "dateCreated": "2026-07-15",
@@ -12,14 +12,13 @@
   "condicion": {
     "name": "Infección urinaria aguda complicada",
     "cie10": "N39.0",
-    "_cie10_nota": "POR CONFIRMAR: N39.0 es «Infección de vías urinarias, sitio no especificado». Si el protocolo debe cubrir pielonefritis aguda de forma explícita, valorar N10."
+    "_cie10_nota": "Confirmado por el autor. N39.0 = «Infección de vías urinarias, sitio no especificado»."
   },
 
   "autor": {
     "honorificPrefix": "Dr.",
     "name": "Alcy Edmundo Torres Guerrero",
-    "jobTitle": "Médico de la Unidad Técnica de Medicina Interna",
-    "unidad": "Unidad Técnica de Medicina Interna",
-    "_jobTitle_nota": "POR CONFIRMAR: derivado de la unidad indicada. Sustituir por el cargo exacto que deba constar en la firma."
+    "jobTitle": "Médico Internista (Tratante)",
+    "unidad": "Unidad Técnica de Medicina Interna"
   }
 }

@@ -277,9 +277,14 @@ resuelve quien firma:
 | Dónde | Qué dice la norma | Qué hay |
 |---|---|---|
 | ~~Justificación de ambos~~ | ~~300–500 palabras~~ | **corregido**: sepsis 486, ITU 488 |
-| Sección 4.3 de ambos | debe declarar duración del tratamiento y criterios de suspensión, inclusión y exclusión | ninguno de los cuatro aparece en 4.3. El contenido existe, pero repartido: inclusión y exclusión están en 4.1, suspensión en 4.2 y 4.5, duración en 4.5 |
-| `itu.js`, indicador 11 | el cálculo debe ser numerador/denominador | «Estancia hospitalaria» usa una mediana de días. O se reformula como razón, o se acepta como excepción |
+| ~~Sección 4.3 de ambos~~ | ~~duración, suspensión, inclusión y exclusión~~ | **corregido**: los cuatro criterios se agruparon en el apartado F de 4.3 |
+| `itu.js`, indicador 11 | el cálculo debe ser numerador/denominador | «Estancia hospitalaria» usa una mediana de días. O se reformula como razón, o se acepta como excepción. **Único error que queda** |
 | Glosario de ambos | 10–12 términos y 6–8 abreviaciones | sepsis 13 y 14; ITU 14 y 15. Solo son avisos, no bloquean |
+
+`sepsis.js` valida ya sin ningún error. Al agrupar los criterios en 4.3 se
+evitó duplicarlos: donde el contenido cumplía además una función operativa —la
+procalcitonina como parámetro de monitoreo en 4.5— esa mención se conservó y
+ahora remite al numeral 4.3, que es donde está el criterio.
 
 Los nombres de las secciones también difieren: el generador escribe «Procedimiento
 (Plan de Acción / Actuación)» y «Plan de Egreso de la Unidad / Seguimiento /

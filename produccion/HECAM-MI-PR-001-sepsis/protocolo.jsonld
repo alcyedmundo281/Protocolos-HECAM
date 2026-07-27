@@ -82,7 +82,7 @@
         "type": "Persona",
         "honorificPrefix": "Dr.",
         "name": "Alcy Edmundo Torres Guerrero",
-        "jobTitle": "Médico de la Unidad Técnica de Medicina Interna",
+        "jobTitle": "Médico Internista (Tratante)",
         "schema:memberOf": {
           "type": "Organizacion",
           "name": "Unidad Técnica de Medicina Interna"
@@ -406,18 +406,6 @@
           "quienLoHace": "Personal de Enfermería y Médico de Triage / Emergencia.",
           "cuando": "Inmediatamente al ingreso o ante la sospecha de infección en cualquier unidad del HECAM.",
           "contenido": [
-            {
-              "type": "Subtitulo",
-              "text": "Criterios de inclusión y exclusión"
-            },
-            {
-              "type": "Lista",
-              "estilo": "vinetas",
-              "itemListElement": [
-                "__Inclusión:__ pacientes adultos (≥ 18 años) con sospecha o diagnóstico de infección que presenten signos de disfunción orgánica o inestabilidad hemodinámica.",
-                "__Exclusión:__ pacientes pediátricos (< 18 años); pacientes en cuidados paliativos exclusivos donde la intervención intensiva no sea el objetivo terapéutico; pacientes con directrices de no reanimación documentadas."
-              ]
-            },
             {
               "type": "Subtitulo",
               "text": "Anamnesis y examen físico dirigidos"
@@ -889,6 +877,20 @@
                 "**Dobutamina:** considerar ante disfunción miocárdica confirmada por ecocardiografía. Dosis de 2–20 mcg/kg/min IV.",
                 "**Corticoesteroides:** hidrocortisona 200 mg/día IV en shock séptico refractario que persiste con requerimiento vasopresor creciente pese a resucitación adecuada[[8]]."
               ]
+            },
+            {
+              "type": "Subtitulo",
+              "text": "F. Criterios de inclusión y exclusión, duración y suspensión del tratamiento"
+            },
+            {
+              "type": "Lista",
+              "estilo": "vinetas",
+              "itemListElement": [
+                "__Inclusión:__ pacientes adultos (≥ 18 años) con sospecha o diagnóstico de infección que presenten signos de disfunción orgánica o inestabilidad hemodinámica.",
+                "__Exclusión:__ pacientes pediátricos (< 18 años); pacientes en cuidados paliativos exclusivos donde la intervención intensiva no sea el objetivo terapéutico; pacientes con directrices de no reanimación documentadas.",
+                "__Duración del tratamiento:__ la duración total se define en la reevaluación antimicrobiana de las 48–72 horas, con el resultado de los cultivos (numeral 4.5). En aislamientos de __K. pneumoniae__ CRE, __A. baumannii__ o __P. aeruginosa__ XDR la establece Infectología caso por caso.",
+                "__Criterios de suspensión:__ una procalcitonina < 0,5 ng/mL a las 48–72 horas orienta a la suspensión del antimicrobiano según criterio del PROA-HECAM[[9]]. La decisión se registra en la historia clínica junto con el resultado que la sustenta."
+              ]
             }
           ]
         },
@@ -968,7 +970,7 @@
                 "Diuresis horaria con meta ≥ 0,5 mL/kg/h. Instalar sonda vesical en todo paciente con shock séptico.",
                 "Cálculo diario del SOFA para evaluar la respuesta y detectar progresión de la disfunción orgánica[[13]].",
                 "Glucemia cada 2–4 horas si el paciente recibe insulinoterapia, con meta de 140–180 mg/dL.",
-                "Procalcitonina a las 48–72 horas. Un valor < 0,5 ng/mL orienta a la suspensión del antimicrobiano según criterio del PROA-HECAM[[9]]."
+                "Procalcitonina a las 48–72 horas como parámetro de monitoreo; el criterio de suspensión que se aplica a ese valor consta en el numeral 4.3."
               ]
             },
             {
