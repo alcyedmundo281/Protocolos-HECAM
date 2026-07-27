@@ -1,0 +1,25 @@
+{
+  "_nota": "Lo que el generador .js no contiene y la matriz necesita. Editable a mano; armar_jsonld.py lee de aquí. Revisar los campos marcados como POR CONFIRMAR antes de la firma.",
+
+  "unidadTecnica": "Medicina Interna",
+  "dateCreated": "2026-07-15",
+  "vigenciaAnios": 3,
+  "estado": "borrador",
+  "codigoProvisional": true,
+
+  "description": "Protocolo institucional para el diagnóstico y el tratamiento de la infección urinaria aguda complicada en pacientes adultos del HECAM, con estratificación por servicio de origen y por factores de riesgo para microorganismos BLEE o resistentes a carbapenémicos, uso restringido de ceftazidima/avibactam como rescate y ajustes por la altitud de Quito.",
+
+  "condicion": {
+    "name": "Infección urinaria aguda complicada",
+    "cie10": "N39.0",
+    "_cie10_nota": "POR CONFIRMAR: N39.0 es «Infección de vías urinarias, sitio no especificado». Si el protocolo debe cubrir pielonefritis aguda de forma explícita, valorar N10."
+  },
+
+  "autor": {
+    "honorificPrefix": "Dr.",
+    "name": "Alcy Edmundo Torres Guerrero",
+    "jobTitle": "Médico de la Unidad Técnica de Medicina Interna",
+    "unidad": "Unidad Técnica de Medicina Interna",
+    "_jobTitle_nota": "POR CONFIRMAR: derivado de la unidad indicada. Sustituir por el cargo exacto que deba constar en la firma."
+  }
+}

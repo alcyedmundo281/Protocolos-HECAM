@@ -30,6 +30,8 @@ tras iteración.
 | `scripts/verificar_documento.py` | Comprueba que las piezas institucionales existan y estén enlazadas |
 | `scripts/verificar_pmid.py` | Comprueba cada referencia contra PubMed y Crossref |
 | `scripts/check_citas.py` | Verifica que las citas vayan en orden correlativo |
+| `scripts/grabar_estructura.js` | Captura la estructura semántica de un generador |
+| `scripts/armar_jsonld.py` | Reconstruye el `protocolo.jsonld` desde el generador |
 | `scripts/build_jats.py` | JSON-LD → JATS 1.3 para archivo y DOI |
 | `scripts/validate_jsonld.py` | Valida la matriz antes de compilar |
 | `referencia/caratula.json` | Medidas aprobadas de carátula y membrete |
@@ -57,6 +59,35 @@ python3 skill/scripts/verificar_pmid.py produccion/HECAM-MI-PR-001-sepsis/sepsis
 Los scripts de Python localizan `referencia/` subiendo un nivel desde su propia
 ubicación, así que funcionan desde cualquier directorio de trabajo. Los
 generadores resuelven su salida con `__dirname`, por lo mismo.
+
+## La matriz JSON-LD
+
+El `.docx` es la salida para firma; el `protocolo.jsonld` es el registro
+normativo, y de él salen el JATS de archivo y la validación contra la norma.
+
+```bash
+make matriz     # reconstruye produccion/*/protocolo.jsonld desde cada generador
+make validar    # comprueba la matriz contra HECAM-CC-IT-008
+make jats       # matriz -> JATS 1.3 para depósito
+```
+
+`armar_jsonld.py` no transcribe a mano: ejecuta el generador con la librería
+instrumentada por `grabar_estructura.js` y reconstruye las secciones desde la
+secuencia real de llamadas. Se lee el generador y no el `.docx` porque el `.docx`
+ya perdió la distinción entre un párrafo y una viñeta, o entre la tabla del
+glosario y la de indicadores.
+
+Cada protocolo necesita un `metadatos.json` junto al generador con lo que el
+código no contiene: el resumen para indexación, el código CIE-10, las fechas y
+los datos del autor.
+
+Los `pmid` y `doi` de la bibliografía se rellenan desde
+`referencia/pmid-cache.json`, de modo que lo verificado contra PubMed llegue al
+XML de archivo en vez de quedarse en el `.docx`.
+
+Los nombres de las secciones en la matriz son los **normativos**, no los del
+generador: el `.docx` tiene variantes cosméticas —«Plan de Acción / Actuación»
+con espacios alrededor de la barra— que no son las del HECAM-CC-FR-012.
 
 ## El autor de la tabla de firmas
 

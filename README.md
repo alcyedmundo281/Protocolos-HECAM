@@ -198,6 +198,26 @@ se actualiza ese archivo primero y luego se recompila.
 
 ---
 
+## La matriz JSON-LD
+
+El `.docx` es la salida para firma; `produccion/*/protocolo.jsonld` es el
+registro normativo, y de él salen el JATS de archivo y la validación contra la
+norma.
+
+```bash
+make matriz     # reconstruye la matriz desde cada generador
+make validar    # la comprueba contra HECAM-CC-IT-008
+make jats       # matriz -> JATS 1.3
+```
+
+La reconstrucción no es una transcripción: `armar_jsonld.py` ejecuta el
+generador con la librería instrumentada y arma las secciones desde la secuencia
+real de llamadas, así que no puede desincronizarse del `.docx`. Los `pmid` y
+`doi` se rellenan desde la caché de PubMed, de modo que la verificación de
+fuentes llega ahora al XML de archivo y no se queda en el documento de Word.
+
+---
+
 ## Pendientes
 
 ### Bibliografía: lo que queda por decidir en el bloque de altura
@@ -247,11 +267,31 @@ ventilation at 2600 m above sea level.* Med Intensiva. 2022;46(9):501–7 (**PMI
 | `sepsis.js` [6] y `itu.js` [8] | Sustituida la cita fabricada de altura (DOI inexistente en PubMed y en Crossref, y con dos títulos distintos según el protocolo) por Gonzalez-Garcia M, et al. Eur J Appl Physiol. 2020;120(12):2729–36 (PMID 32939642), del mismo primer autor y año. Ver arriba los dos matices pendientes. |
 | `sepsis.js` [7] (nueva) | Añadida Eltzschig HK, Carmeliet P. Hypoxia and inflammation. N Engl J Med. 2011;364(7):656–65 (PMID 21323543) para las afirmaciones sobre HIF-1, que un artículo de gasometría no respalda. El glosario de «HIF-1» pasa a citarla en exclusiva; la justificación y el glosario de «Hipoxia dual» citan las dos, porque mezclan mecanismo y valores de referencia. Sepsis pasa de 18 a 19 referencias y el resto se renumeró. **ITU no la lleva**: su justificación no hace ninguna afirmación sobre HIF-1. |
 
+### Lo que destapó la validación de la matriz
+
+Al reconstruir el `protocolo.jsonld` y pasarlo por `validate_jsonld.py`
+aparecieron incumplimientos que hasta ahora nadie podía ver, porque no había
+contra qué comprobarlos. Son de contenido clínico y editorial, así que los
+resuelve quien firma:
+
+| Dónde | Qué dice la norma | Qué hay |
+|---|---|---|
+| Justificación de ambos | 300–500 palabras | sepsis 580, ITU 717 |
+| Sección 4.3 de ambos | debe declarar duración del tratamiento y criterios de suspensión, inclusión y exclusión | ninguno de los cuatro aparece en 4.3. El contenido existe, pero repartido: inclusión y exclusión están en 4.1, suspensión en 4.2 y 4.5, duración en 4.5 |
+| `itu.js`, indicador 11 | el cálculo debe ser numerador/denominador | «Estancia hospitalaria» usa una mediana de días. O se reformula como razón, o se acepta como excepción |
+| Glosario de ambos | 10–12 términos y 6–8 abreviaciones | sepsis 13 y 14; ITU 14 y 15. Solo son avisos, no bloquean |
+
+Los nombres de las secciones también difieren: el generador escribe «Procedimiento
+(Plan de Acción / Actuación)» y «Plan de Egreso de la Unidad / Seguimiento /
+Evaluación integral», con espacios alrededor de las barras, donde el
+HECAM-CC-FR-012 no los lleva. La matriz usa los nombres normativos; el `.docx`
+todavía no. Es cosmético, pero conviene alinearlo antes de la firma.
+
 ### Del formato
 
 - Nombre de la revisora de protocolos y fecha exacta de elaboración (hoy son
   marcadores en la plantilla JSON-LD).
 - Códigos definitivos del SGD; los actuales son provisionales.
 - Diagramas de flujo en Bizagi, a cargo de Control de Calidad.
-- Ingeniería inversa de los dos protocolos ya terminados hacia su
-  `protocolo.jsonld`, para que el tercero nazca dentro de la matriz.
+- Diagramas de la sección 5: hoy ambos protocolos llevan el texto de instrucción
+  del formato en lugar del algoritmo. Corresponde a Control de Calidad.
