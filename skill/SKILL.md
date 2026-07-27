@@ -27,6 +27,7 @@ tras iteración.
 | `lib/hecam-lib.js` | Composición del documento: membrete, carátula, tablas, firmas |
 | `assets/` | Logotipos institucionales y barra del título |
 | `scripts/verificar_caratula.py` | Compara la maquetación contra la referencia aprobada |
+| `scripts/verificar_documento.py` | Comprueba que las piezas institucionales existan y estén enlazadas |
 | `scripts/verificar_pmid.py` | Comprueba cada referencia contra PubMed y Crossref |
 | `scripts/check_citas.py` | Verifica que las citas vayan en orden correlativo |
 | `scripts/build_jats.py` | JSON-LD → JATS 1.3 para archivo y DOI |
@@ -65,15 +66,21 @@ generadores resuelven su salida con `__dirname`, por lo mismo.
    debe construirse con `path.join(__dirname, 'salida', ...)`.
 3. Compilar y pasar las tres verificaciones antes de mandar a revisión.
 
-## Las tres verificaciones, y por qué son tres
+## Las cuatro verificaciones, y por qué son cuatro
 
-Son independientes a propósito: cada una detecta un fallo que las otras dos no
-ven.
+Son independientes a propósito: cada una detecta un fallo que las otras no ven.
 
 - **Maquetación.** Lee `word/document.xml` y compara posiciones, tamaños y
   márgenes contra `referencia/caratula.json`. La referencia solo se regenera
   cuando la revisora aprueba un cambio de formato, nunca para «hacer que pase»
   una compilación.
+- **Piezas institucionales.** Comprueba que existan y estén bien enlazadas: que
+  las tres imágenes salgan de `assets/` —comparadas por hash, no por nombre—,
+  que el marco sea autoforma y no una imagen, que el membrete vaya en el
+  encabezado de las páginas siguientes y no en la carátula, y que la paginación
+  use campos automáticos en vez de texto fijo. La verificación de maquetación no
+  lo cubre: mide dónde caen las cosas, no si son las correctas. Un logotipo
+  sustituido por otro del mismo tamaño pasaría la primera y falla esta.
 - **Orden de citas.** El formato exige bibliografía en orden de aparición.
   Insertar una referencia obliga a renumerar todas las posteriores, y es un
   error fácil de cometer y difícil de ver a simple vista.

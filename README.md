@@ -71,6 +71,26 @@ python3 skill/scripts/verificar_caratula.py --generar-referencia APROBADO.docx
 Conviene revisar el `git diff` de `skill/referencia/caratula.json` antes de confirmar:
 ahí se ve exactamente qué se movió y cuánto.
 
+### Y las piezas, aparte de las medidas
+
+`skill/scripts/verificar_documento.py` comprueba lo que la referencia de
+maquetación no puede ver: que las piezas **sean** las correctas, no solo que
+caigan donde deben.
+
+```bash
+python3 skill/scripts/verificar_documento.py produccion/*/salida/*.docx
+```
+
+Verifica que las tres imágenes del documento salgan de `skill/assets`
+—comparadas por hash, no por nombre ni por tamaño—, que el marco de la carátula
+sea autoforma y no una imagen, que la unidad y la fecha vayan en cuadro de texto
+anclado, que el membrete con el logotipo esté en el encabezado de las páginas
+siguientes y **no** en la carátula, que «Página X de Y» use campos automáticos
+en vez de texto fijo, y que las citas vayan en superíndice.
+
+La distinción importa: un logotipo sustituido por otro del mismo tamaño pasaría
+la verificación de maquetación sin inmutarse, porque las medidas no cambian.
+
 ---
 
 ## La verificación de fuentes

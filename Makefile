@@ -6,6 +6,7 @@ generar:
 verificar:
 	@for f in produccion/*/salida/*.docx; do \
 		python3 skill/scripts/verificar_caratula.py "$$f" || exit 1; \
+		python3 skill/scripts/verificar_documento.py "$$f" || exit 1; \
 		python3 skill/scripts/check_citas.py "$$f" || exit 1; \
 	done
 
