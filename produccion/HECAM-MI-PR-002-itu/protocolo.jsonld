@@ -1324,11 +1324,11 @@
         },
         {
           "type": "Indicador",
-          "name": "Estancia hospitalaria por ITU complicada",
+          "name": "Estancia hospitalaria prolongada en ITU complicada",
           "tipoIndicador": "resultado",
-          "definicionIndicador": "Mediana de días de hospitalización por ITU complicada, excluyendo los casos de urosepsis por CRE.",
-          "calculo": "Mediana de días de hospitalización de la cohorte",
-          "meta": "Reducción 10 % anual",
+          "definicionIndicador": "Egresos por ITU complicada, excluida la urosepsis por CRE, cuya estancia supera los 10 días. El umbral es el límite inferior de la duración recomendada para pielonefritis complicada sin bacteriemia (Tabla 9).",
+          "calculo": "(N.º de egresos con estancia > 10 días / total de egresos por ITU complicada sin CRE) × 100",
+          "meta": "≤ 30 %, con reducción del 10 % anual sobre la línea base del primer trimestre",
           "periodo": "Trimestral",
           "responsable": "Medicina Interna, Control de Calidad"
         },

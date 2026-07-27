@@ -267,24 +267,28 @@ ventilation at 2600 m above sea level.* Med Intensiva. 2022;46(9):501–7 (**PMI
 | `sepsis.js` [6] y `itu.js` [8] | Sustituida la cita fabricada de altura (DOI inexistente en PubMed y en Crossref, y con dos títulos distintos según el protocolo) por Gonzalez-Garcia M, et al. Eur J Appl Physiol. 2020;120(12):2729–36 (PMID 32939642), del mismo primer autor y año. Ver arriba los dos matices pendientes. |
 | `sepsis.js` [7] (nueva) | Añadida Eltzschig HK, Carmeliet P. Hypoxia and inflammation. N Engl J Med. 2011;364(7):656–65 (PMID 21323543) para las afirmaciones sobre HIF-1, que un artículo de gasometría no respalda. El glosario de «HIF-1» pasa a citarla en exclusiva; la justificación y el glosario de «Hipoxia dual» citan las dos, porque mezclan mecanismo y valores de referencia. Sepsis pasa de 18 a 19 referencias y el resto se renumeró. **ITU no la lleva**: su justificación no hace ninguna afirmación sobre HIF-1. |
 
-### Lo que destapó la validación de la matriz
+### Lo que destapó la validación de la matriz, y cómo se resolvió
 
-Al reconstruir el `protocolo.jsonld` y pasarlo por `validate_jsonld.py`
-aparecieron incumplimientos que hasta ahora nadie podía ver, porque no había
-contra qué comprobarlos. Son de contenido clínico y editorial, así que los
-resuelve quien firma:
+Reconstruir el `protocolo.jsonld` y pasarlo por `validate_jsonld.py` sacó a la
+luz incumplimientos que hasta entonces nadie podía ver, porque no había contra
+qué comprobarlos. **Los dos protocolos validan ya sin ningún error.**
 
-| Dónde | Qué dice la norma | Qué hay |
+| Qué dice la norma | Qué había | Cómo se resolvió |
 |---|---|---|
-| ~~Justificación de ambos~~ | ~~300–500 palabras~~ | **corregido**: sepsis 486, ITU 488 |
-| ~~Sección 4.3 de ambos~~ | ~~duración, suspensión, inclusión y exclusión~~ | **corregido**: los cuatro criterios se agruparon en el apartado F de 4.3 |
-| `itu.js`, indicador 11 | el cálculo debe ser numerador/denominador | «Estancia hospitalaria» usa una mediana de días. O se reformula como razón, o se acepta como excepción. **Único error que queda** |
-| Glosario de ambos | 10–12 términos y 6–8 abreviaciones | sepsis 13 y 14; ITU 14 y 15. Solo son avisos, no bloquean |
+| Justificación de 300–500 palabras | sepsis 580, ITU 717 | recortadas a 486 y 488, sin perder ninguna cifra ni cita |
+| 4.3 debe declarar duración, suspensión, inclusión y exclusión | los cuatro existían, repartidos entre 4.1, 4.2 y 4.5 | agrupados en el apartado F de 4.3 |
+| El cálculo de cada indicador debe ser numerador/denominador | el indicador 11 de ITU medía una mediana de estancia | reformulado como proporción de egresos con estancia > 10 días, umbral tomado de la Tabla 9 del propio protocolo |
 
-`sepsis.js` valida ya sin ningún error. Al agrupar los criterios en 4.3 se
-evitó duplicarlos: donde el contenido cumplía además una función operativa —la
-procalcitonina como parámetro de monitoreo en 4.5— esa mención se conservó y
-ahora remite al numeral 4.3, que es donde está el criterio.
+Quedan dos avisos que no bloquean: el glosario tiene 13 términos en sepsis y 14
+en ITU frente a los 10–12 esperados, y las abreviaciones son 14 y 15 frente a
+6–8.
+
+Al agrupar los criterios en 4.3 se evitó duplicarlos: donde el contenido cumplía
+además una función operativa —la procalcitonina como parámetro de monitoreo en
+4.5— esa mención se conservó y ahora remite al numeral 4.3, que es donde está el
+criterio. Y en ITU la Tabla 3 de factores de complicación se quedó en 4.1,
+porque define qué es una ITU complicada y eso es evaluación, no tratamiento: el
+criterio de inclusión de 4.3 remite a ella en vez de moverla.
 
 Los nombres de las secciones también difieren: el generador escribe «Procedimiento
 (Plan de Acción / Actuación)» y «Plan de Egreso de la Unidad / Seguimiento /
