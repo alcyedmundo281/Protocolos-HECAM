@@ -177,25 +177,31 @@ La cita inventada ya no está. `sepsis.js` [6] e `itu.js` [8] apuntan ahora a
 Gonzalez-Garcia M, Maldonado D, Barrero M, Casas A, Perez-Padilla R,
 Torres-Duque CA. *Arterial blood gases and ventilation at rest by age and sex in
 an adult Andean population resident at high altitude.* Eur J Appl Physiol.
-2020;120(12):2729–36 (**PMID 32939642**). Quedan dos cosas por resolver antes de
-la firma:
+2020;120(12):2729–36 (**PMID 32939642**).
 
-**1. El estudio es a 2.640 m, no a 2.850 m.** Se hizo en Bogotá, con 374 adultos
-sanos de 18 a 83 años. Es la mejor referencia disponible para población andina
-adulta, pero el protocolo afirma valores «en Quito» y la diferencia de altitud no
-es cero. Conviene redactar la cifra como extrapolada desde 2.640 m, o respaldarla
-además con la revisión sistemática de Forrer A, Gaisl T, Sevik A, Meyer M,
-Senteler L, Lichtblau M, et al. *Partial pressure of arterial oxygen in healthy
-adults at high altitudes: a systematic review and meta-analysis.* JAMA Netw Open.
-2023;6(6):e2318036 (**PMID 37326993**), que modela el PaO₂ frente a la altitud.
+El texto clínico ya declara la procedencia de las cifras. Antes decía «la SatO₂
+basal normal **en Quito** es 88–92 %», lo que atribuía a Quito una medición que
+nunca se hizo allí: el estudio es de Bogotá, a 2.640 m, con 374 adultos sanos de
+18 a 83 años. Ahora los siete puntos donde aparecen esos valores dicen que son de
+población andina sana estudiada a 2.640 m y extrapolados a los 2.850 m de Quito,
+y advierten que descienden con la edad y que la caída es mayor en mujeres, que es
+justamente el hallazgo del artículo.
 
-**2. Los valores dependen de la edad y del sexo, y eso es justo lo que el
-artículo demuestra.** El PaO₂ y la SaO₂ descienden de forma significativa con la
-edad (p < 0,001), y en mujeres el descenso del PaO₂ es mayor y se acompaña de un
-aumento del PaCO₂. Dar un rango único de 65–70 mmHg para todo adulto aplana ese
-gradiente, y eso importa clínicamente: el paciente séptico suele ser mayor, y su
-PaO₂ «normal» en altura es más bajo que el de un adulto joven, de modo que un
-umbral plano puede hacer parecer hipoxémico a quien no lo está, o al revés.
+Conviene no revertirlo a la forma corta. La diferencia importa en la cabecera:
+un rango plano para todo adulto puede hacer parecer hipoxémico a un paciente
+mayor que está en su basal, y el paciente séptico suele ser mayor.
+
+**Lo que sigue pendiente** es sustituir la extrapolación por datos propios. Dos
+caminos, ninguno de los cuales puede resolver el generador:
+
+- Validar los valores basales en la población del HECAM, a 2.850 m. Es lo único
+  que permitiría quitar la palabra «extrapolados».
+- Mientras tanto, estratificar el rango por edad y sexo con las tablas del
+  artículo de Gonzalez-Garcia, o respaldarlo con Forrer A, Gaisl T, Sevik A,
+  Meyer M, Senteler L, Lichtblau M, et al. *Partial pressure of arterial oxygen
+  in healthy adults at high altitudes: a systematic review and meta-analysis.*
+  JAMA Netw Open. 2023;6(6):e2318036 (**PMID 37326993**), que modela el PaO₂
+  frente a la altitud y permitiría estimar el valor a 2.850 m.
 
 Si además se quiere respaldar la interpretación del cociente PaO₂/FiO₂ en
 ventilación mecánica en altura, está verificada Ortiz G, Bastidas A,
