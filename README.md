@@ -276,7 +276,7 @@ resuelve quien firma:
 
 | Dónde | Qué dice la norma | Qué hay |
 |---|---|---|
-| Justificación de ambos | 300–500 palabras | sepsis 580, ITU 717 |
+| ~~Justificación de ambos~~ | ~~300–500 palabras~~ | **corregido**: sepsis 486, ITU 488 |
 | Sección 4.3 de ambos | debe declarar duración del tratamiento y criterios de suspensión, inclusión y exclusión | ninguno de los cuatro aparece en 4.3. El contenido existe, pero repartido: inclusión y exclusión están en 4.1, suspensión en 4.2 y 4.5, duración en 4.5 |
 | `itu.js`, indicador 11 | el cálculo debe ser numerador/denominador | «Estancia hospitalaria» usa una mediana de días. O se reformula como razón, o se acepta como excepción |
 | Glosario de ambos | 10–12 términos y 6–8 abreviaciones | sepsis 13 y 14; ITU 14 y 15. Solo son avisos, no bloquean |
