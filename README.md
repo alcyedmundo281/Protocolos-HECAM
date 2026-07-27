@@ -4,9 +4,10 @@ Generación automatizada de protocolos clínicos del **Hospital de Especialidade
 Carlos Andrade Marín** (HECAM / IESS, Quito) en el formato institucional exigido
 por Control de Calidad, con salida `.docx` lista para revisión y firma.
 
-El principio es que **el documento no se edita a mano**. Se edita el generador y
-se vuelve a compilar. Así la maquetación no puede degradarse iteración tras
-iteración, que es el problema que este repositorio existe para resolver.
+El principio es que **el documento no se edita a mano**. La fuente de verdad es
+`protocolo.jsonld`, y el `.docx` se compila desde ahí. Así la maquetación no
+puede degradarse iteración tras iteración, que es el problema que este
+repositorio existe para resolver.
 
 ---
 
@@ -38,9 +39,9 @@ make todo         # las tres cosas
 Sin `make`:
 
 ```bash
-node produccion/HECAM-MI-PR-001-sepsis/sepsis.js
+node skill/scripts/compilar_docx.js produccion/*/protocolo.jsonld
 python3 skill/scripts/verificar_caratula.py produccion/*/salida/*.docx
-python3 skill/scripts/verificar_pmid.py produccion/*/*.js
+python3 skill/scripts/verificar_pmid.py produccion/*/protocolo.jsonld
 ```
 
 ---
@@ -96,13 +97,13 @@ la verificación de maquetación sin inmutarse, porque las medidas no cambian.
 ## La verificación de fuentes
 
 `skill/scripts/verificar_pmid.py` comprueba contra PubMed que cada referencia de la
-bibliografía exista de verdad. Acepta el generador `.js`, el `.docx` compilado o
-un `protocolo.jsonld`, y busca el PMID en tres pasadas: por DOI, por título y,
+bibliografía exista de verdad. Acepta un `protocolo.jsonld`, el `.docx`
+compilado o un generador `.js` heredado, y busca el PMID en tres pasadas: por DOI, por título y,
 como último recurso, por autor, año y revista.
 
 ```bash
-python3 skill/scripts/verificar_pmid.py produccion/HECAM-MI-PR-001-sepsis/sepsis.js
-python3 skill/scripts/verificar_pmid.py --offline produccion/*/*.js   # solo caché, sin red
+python3 skill/scripts/verificar_pmid.py produccion/HECAM-MI-PR-001-sepsis/protocolo.jsonld
+python3 skill/scripts/verificar_pmid.py --offline produccion/*/protocolo.jsonld   # solo caché, sin red
 ```
 
 | Veredicto | Qué significa |
@@ -183,10 +184,10 @@ skill/                  el pipeline genérico y reutilizable; no lleva contenido
 
 produccion/             un directorio por protocolo, con su código institucional
   HECAM-MI-PR-001-sepsis/
-    sepsis.js           contenido clínico y llamadas a la librería
-    salida/             el .docx compilado (ignorado por git)
+    protocolo.jsonld    la fuente de verdad: contenido clínico y metadatos
+    salida/             el .docx y el JATS compilados (ignorados por git)
   HECAM-MI-PR-002-itu/
-    itu.js
+    protocolo.jsonld
     salida/
 
 docs/                   matriz editorial, mapeo JATS, datos institucionales, valores de altitud
@@ -230,7 +231,7 @@ fuentes llega ahora al XML de archivo y no se queda en el documento de Word.
 
 ### Bibliografía: lo que queda por decidir en el bloque de altura
 
-La cita inventada ya no está. `sepsis.js` [6] e `itu.js` [8] apuntan ahora a
+La cita inventada ya no está. Sepsis [6] e ITU [8] apuntan ahora a
 Gonzalez-Garcia M, Maldonado D, Barrero M, Casas A, Perez-Padilla R,
 Torres-Duque CA. *Arterial blood gases and ventilation at rest by age and sex in
 an adult Andean population resident at high altitude.* Eur J Appl Physiol.
@@ -269,11 +270,11 @@ ventilation at 2600 m above sea level.* Med Intensiva. 2022;46(9):501–7 (**PMI
 
 | Dónde | Qué se hizo |
 |---|---|
-| `sepsis.js` [11] y `itu.js` [7] | La referencia de Tamma mezclaba dos documentos de la IDSA: llevaba el DOI y las páginas de la guía de AmpC/*Acinetobacter*/*Stenotrophomonas* pero el título de la de ESBL-E/CRE/DTR-*P. aeruginosa*. Como el texto que la cita habla de *E. coli* BLEE y desescalamiento, se corrigieron DOI y páginas al documento de ESBL-E (PMID 35439291). |
-| `sepsis.js` [15] | Sustituida por el artículo real de Marik y Farkas: *The Changing Paradigm of Sepsis: Early Diagnosis, Early Antibiotics, Early Pressors, and Early Adjuvant Treatment*, Crit Care Med. 2018;46(10):1690–2 (PMID 30216303). El DOI que llevaba no existía. |
-| `itu.js` [16] | REPRISE: corregido el título al plural publicado, *infections*. |
-| `sepsis.js` [6] y `itu.js` [8] | Sustituida la cita fabricada de altura (DOI inexistente en PubMed y en Crossref, y con dos títulos distintos según el protocolo) por Gonzalez-Garcia M, et al. Eur J Appl Physiol. 2020;120(12):2729–36 (PMID 32939642), del mismo primer autor y año. Ver arriba los dos matices pendientes. |
-| `sepsis.js` [7] (nueva) | Añadida Eltzschig HK, Carmeliet P. Hypoxia and inflammation. N Engl J Med. 2011;364(7):656–65 (PMID 21323543) para las afirmaciones sobre HIF-1, que un artículo de gasometría no respalda. El glosario de «HIF-1» pasa a citarla en exclusiva; la justificación y el glosario de «Hipoxia dual» citan las dos, porque mezclan mecanismo y valores de referencia. Sepsis pasa de 18 a 19 referencias y el resto se renumeró. **ITU no la lleva**: su justificación no hace ninguna afirmación sobre HIF-1. |
+| Sepsis [11] e ITU [7] | La referencia de Tamma mezclaba dos documentos de la IDSA: llevaba el DOI y las páginas de la guía de AmpC/*Acinetobacter*/*Stenotrophomonas* pero el título de la de ESBL-E/CRE/DTR-*P. aeruginosa*. Como el texto que la cita habla de *E. coli* BLEE y desescalamiento, se corrigieron DOI y páginas al documento de ESBL-E (PMID 35439291). |
+| Sepsis [15] | Sustituida por el artículo real de Marik y Farkas: *The Changing Paradigm of Sepsis: Early Diagnosis, Early Antibiotics, Early Pressors, and Early Adjuvant Treatment*, Crit Care Med. 2018;46(10):1690–2 (PMID 30216303). El DOI que llevaba no existía. |
+| ITU [16] | REPRISE: corregido el título al plural publicado, *infections*. |
+| Sepsis [6] e ITU [8] | Sustituida la cita fabricada de altura (DOI inexistente en PubMed y en Crossref, y con dos títulos distintos según el protocolo) por Gonzalez-Garcia M, et al. Eur J Appl Physiol. 2020;120(12):2729–36 (PMID 32939642), del mismo primer autor y año. Ver arriba los dos matices pendientes. |
+| Sepsis [7] (nueva) | Añadida Eltzschig HK, Carmeliet P. Hypoxia and inflammation. N Engl J Med. 2011;364(7):656–65 (PMID 21323543) para las afirmaciones sobre HIF-1, que un artículo de gasometría no respalda. El glosario de «HIF-1» pasa a citarla en exclusiva; la justificación y el glosario de «Hipoxia dual» citan las dos, porque mezclan mecanismo y valores de referencia. Sepsis pasa de 18 a 19 referencias y el resto se renumeró. **ITU no la lleva**: su justificación no hace ninguna afirmación sobre HIF-1. |
 
 ### Lo que destapó la validación de la matriz, y cómo se resolvió
 

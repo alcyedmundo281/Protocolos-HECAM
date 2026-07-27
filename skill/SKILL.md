@@ -1,18 +1,18 @@
 ---
 name: hecam-protocolos
-description: Pipeline genérico para compilar y verificar protocolos clínicos del Hospital de Especialidades Carlos Andrade Marín (HECAM / IESS, Quito). Compone el .docx institucional desde un generador en JavaScript y lo somete a tres verificaciones independientes: maquetación de carátula y membrete, orden correlativo de las citas, y existencia real de cada referencia contra PubMed y Crossref. Usar al crear un protocolo nuevo, al corregir uno existente, o al comprobar que una bibliografía no contiene citas inventadas.
+description: Pipeline genérico para compilar y verificar protocolos clínicos del Hospital de Especialidades Carlos Andrade Marín (HECAM / IESS, Quito). Compila el .docx institucional desde una matriz JSON-LD y lo somete a cuatro verificaciones independientes: maquetación de carátula y membrete, presencia de las piezas institucionales, orden correlativo de las citas, y existencia real de cada referencia contra PubMed y Crossref. Usar al crear un protocolo nuevo, al corregir uno existente, o al comprobar que una bibliografía no contiene citas inventadas.
 ---
 
 # Pipeline de protocolos HECAM
 
 Esta carpeta es la parte **genérica y reutilizable**: la librería de composición,
 los verificadores y las referencias normativas. No contiene contenido clínico.
-Cada protocolo vive en `produccion/<CODIGO>-<nombre>/` con su propio generador y
-su propia carpeta `salida/`.
+Cada protocolo vive en `produccion/<CODIGO>-<nombre>/` con su `protocolo.jsonld`
+y su propia carpeta `salida/`.
 
-El principio del repositorio es que **el `.docx` no se edita a mano**: se edita
-el generador y se vuelve a compilar. Así la maquetación no se degrada iteración
-tras iteración.
+El principio del repositorio es que **el `.docx` no se edita a mano**: la fuente
+de verdad es la matriz y el documento se compila desde ella. Así la maquetación
+no se degrada iteración tras iteración.
 
 ## Cuándo usar esta skill
 
@@ -53,13 +53,12 @@ make todo         # las tres cosas
 Un protocolo suelto:
 
 ```bash
-node produccion/HECAM-MI-PR-001-sepsis/sepsis.js
-python3 skill/scripts/verificar_pmid.py produccion/HECAM-MI-PR-001-sepsis/sepsis.js
+node    skill/scripts/compilar_docx.js  produccion/HECAM-MI-PR-001-sepsis/protocolo.jsonld
+python3 skill/scripts/verificar_pmid.py produccion/HECAM-MI-PR-001-sepsis/protocolo.jsonld
 ```
 
-Los scripts de Python localizan `referencia/` subiendo un nivel desde su propia
-ubicación, así que funcionan desde cualquier directorio de trabajo. Los
-generadores resuelven su salida con `__dirname`, por lo mismo.
+Los scripts localizan `referencia/` subiendo un nivel desde su propia ubicación,
+así que funcionan desde cualquier directorio de trabajo.
 
 ## La matriz JSON-LD
 
@@ -67,8 +66,8 @@ El `.docx` es la salida para firma; el `protocolo.jsonld` es el registro
 normativo, y de él salen el JATS de archivo y la validación contra la norma.
 
 ```bash
-make matriz     # reconstruye produccion/*/protocolo.jsonld desde cada generador
 make validar    # comprueba la matriz contra HECAM-CC-IT-008
+make generar    # matriz -> .docx institucional
 make jats       # matriz -> JATS 1.3 para depósito
 ```
 
@@ -78,9 +77,10 @@ secuencia real de llamadas. Se lee el generador y no el `.docx` porque el `.docx
 ya perdió la distinción entre un párrafo y una viñeta, o entre la tabla del
 glosario y la de indicadores.
 
-Cada protocolo necesita un `metadatos.json` junto al generador con lo que el
-código no contiene: el resumen para indexación, el código CIE-10, las fechas y
-los datos del autor.
+`armar_jsonld.py` solo hace falta para protocolos heredados que todavía vivan
+como `.js`; en ese caso necesita un `metadatos.json` junto al generador con lo
+que el código no contiene: resumen, código CIE-10, fechas y datos del autor.
+Los dos protocolos del repositorio ya están migrados y no lo usan.
 
 Los `pmid` y `doi` de la bibliografía se rellenan desde
 `referencia/pmid-cache.json`, de modo que lo verificado contra PubMed llegue al
@@ -124,15 +124,15 @@ del texto —dependen de cómo pagine Word— así que hay que declararlos y rev
 cuando el contenido crezca. Sin `indice`, el compilador avisa y deja la columna
 en blanco.
 
-**Desde un generador `.js`**, como los dos protocolos existentes: se copia uno
-como punto de partida, se ajusta `require('../../skill/lib/hecam-lib.js')` y la
-ruta de salida con `path.join(__dirname, 'salida', ...)`, y la matriz se deriva
-después con `armar_jsonld.py`.
+**Desde un generador `.js` heredado.** Ya no queda ninguno en el repositorio,
+pero si aparece uno se reconstruye su matriz con `armar_jsonld.py` y se compila
+desde ella como cualquier otro.
 
-Los dos caminos convergen: el `.docx` compilado desde la matriz y el compilado
-desde el `.js` coinciden al 99,6 % en texto, con el mismo número de párrafos,
-tablas y filas. Lo único que difiere son los nombres de sección, y a propósito:
-la matriz usa los normativos y el generador arrastra variantes cosméticas.
+Los dos caminos convergen: al migrar sepsis e ITU, el `.docx` compilado desde la
+matriz resultó tener el mismo número de párrafos, tablas y filas que el que
+producía el `.js`, con 99,6 % de similitud de texto. Lo único que difería eran
+los nombres de sección, y a favor de la matriz: usa los normativos donde el
+generador arrastraba variantes cosméticas.
 
 ## Las cuatro verificaciones, y por qué son cuatro
 

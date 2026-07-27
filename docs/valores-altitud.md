@@ -113,8 +113,8 @@ normalidad, y es lo que debería sustituir al «alarmar si < 88 %» actual.
 
 Con esos datos se podría:
 
-1. Quitar la palabra «extrapolados» de los siete puntos de `sepsis.js` y los dos
-   de `itu.js` donde hoy aparece.
+1. Quitar la palabra «extrapolados» de los siete puntos de sepsis y los dos de
+   ITU donde hoy aparece.
 2. Sustituir el rango plano 88–92 % por una tabla corta por edad y sexo, o al
    menos por un umbral de alarma ajustado a la edad.
 3. Recalcular el PaO₂/FiO₂ basal (hoy 310, estimado) con la PaO₂ medida.

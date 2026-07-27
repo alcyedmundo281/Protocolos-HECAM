@@ -1,7 +1,11 @@
-PROTOCOLOS := $(wildcard produccion/*/*.js)
+MATRICES := $(wildcard produccion/*/protocolo.jsonld)
 
+# La matriz es la fuente de verdad: el .docx se compila desde ella.
 generar:
-	@for f in $(PROTOCOLOS); do node "$$f" || exit 1; done
+	@for f in $(MATRICES); do node skill/scripts/compilar_docx.js "$$f" || exit 1; done
+
+validar:
+	@for f in $(MATRICES); do python3 skill/scripts/validate_jsonld.py "$$f" || exit 1; done
 
 verificar:
 	@for f in produccion/*/salida/*.docx; do \
@@ -11,26 +15,22 @@ verificar:
 	done
 
 fuentes:
-	python3 skill/scripts/verificar_pmid.py $(PROTOCOLOS)
-
-matriz:
-	@for f in $(PROTOCOLOS); do python3 skill/scripts/armar_jsonld.py "$$f" || exit 1; done
-
-validar:
-	@for f in produccion/*/protocolo.jsonld; do python3 skill/scripts/validate_jsonld.py "$$f" || exit 1; done
-
-docx:
-	@for f in produccion/*/protocolo.jsonld; do node skill/scripts/compilar_docx.js "$$f" || exit 1; done
+	python3 skill/scripts/verificar_pmid.py $(MATRICES)
 
 jats:
-	@for d in produccion/*/; do \
-		python3 skill/scripts/build_jats.py "$$d/protocolo.jsonld" \
-			-o "$$d/salida/protocolo.jats.xml" || exit 1; \
+	@for f in $(MATRICES); do \
+		python3 skill/scripts/build_jats.py "$$f" \
+			-o "$$(dirname $$f)/salida/protocolo.jats.xml" || exit 1; \
 	done
 
-todo: generar verificar fuentes
+todo: validar generar verificar fuentes
+
+# Ingeniería inversa: reconstruye la matriz desde un generador .js heredado.
+# Los dos protocolos actuales ya están migrados y no lo necesitan.
+matriz:
+	python3 skill/scripts/armar_jsonld.py $(JS)
 
 referencia:
 	python3 skill/scripts/verificar_caratula.py --generar-referencia $(APROBADO)
 
-.PHONY: generar verificar fuentes matriz validar docx jats todo referencia
+.PHONY: generar validar verificar fuentes jats todo matriz referencia

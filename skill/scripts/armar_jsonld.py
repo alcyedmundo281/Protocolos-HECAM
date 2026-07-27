@@ -477,6 +477,13 @@ def armar(generador, meta):
     if indice:
         doc["indice"] = indice
 
+    # El nombre del archivo es una decisión editorial, no algo que se deduzca del
+    # título: los existentes van sin tildes y abreviados. Se conserva el que
+    # declaró el generador para que compilar_docx.js no lo cambie.
+    esc = next((x for x in rec if x["fn"] == "escribir"), None)
+    if esc:
+        doc["nombreArchivo"] = os.path.basename(esc["args"][0].replace("\\", "/"))
+
     return doc
 
 

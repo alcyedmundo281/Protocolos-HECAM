@@ -279,11 +279,17 @@ const children = [
   ...seccion10(),
 ];
 
+// El nombre del archivo es una decisión editorial: los protocolos existentes van
+// sin tildes y abreviados. Se respeta el declarado en la matriz; solo si falta se
+// deriva del título, y entonces se quitan las tildes para no introducirlas ahora.
+const sinTildes = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+const nombrePorDefecto = codigo + '_' +
+  sinTildes(titulo).replace(/[^\w]+/g, '_').replace(/^_|_$/g, '').slice(0, 80) + '.docx';
+
 const destino = iSalida >= 0 && args[iSalida + 1]
   ? path.resolve(args[iSalida + 1])
   : path.join(path.dirname(path.resolve(entrada)), 'salida',
-              codigo + '_' + titulo.replace(/[^\wáéíóúñÁÉÍÓÚÑ]+/g, '_')
-                .replace(/^_|_$/g, '').slice(0, 80) + '.docx');
+              g(doc, 'nombreArchivo', nombrePorDefecto));
 
 L.escribir(L.buildDoc(titulo, codigo, version, children, fechaElab), destino)
   .then(() => {

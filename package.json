@@ -4,9 +4,10 @@
   "description": "Generación automatizada de protocolos clínicos del HECAM (IESS, Quito)",
   "private": true,
   "scripts": {
-    "generar": "node produccion/HECAM-MI-PR-001-sepsis/sepsis.js && node produccion/HECAM-MI-PR-002-itu/itu.js",
+    "generar": "node skill/scripts/compilar_docx.js produccion/HECAM-MI-PR-001-sepsis/protocolo.jsonld && node skill/scripts/compilar_docx.js produccion/HECAM-MI-PR-002-itu/protocolo.jsonld",
+    "validar": "python3 skill/scripts/validate_jsonld.py produccion/HECAM-MI-PR-001-sepsis/protocolo.jsonld && python3 skill/scripts/validate_jsonld.py produccion/HECAM-MI-PR-002-itu/protocolo.jsonld",
     "verificar": "python3 skill/scripts/verificar_caratula.py produccion/HECAM-MI-PR-001-sepsis/salida/HECAM-MI-PR-001_Manejo_Sepsis_Shock_Septico_Adultos.docx",
-    "fuentes": "python3 skill/scripts/verificar_pmid.py produccion/HECAM-MI-PR-001-sepsis/sepsis.js produccion/HECAM-MI-PR-002-itu/itu.js"
+    "fuentes": "python3 skill/scripts/verificar_pmid.py produccion/HECAM-MI-PR-001-sepsis/protocolo.jsonld produccion/HECAM-MI-PR-002-itu/protocolo.jsonld"
   },
   "dependencies": { "docx": "^9.6.1" }
 }
