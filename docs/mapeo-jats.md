@@ -121,11 +121,17 @@ rompería los enlaces en los visores JATS.
     <title>Bibliografía</title>
     <ref id="ref-1">
       <label>1</label>
-      <mixed-citation publication-type="journal">…Vancouver…</mixed-citation>
+      <mixed-citation publication-type="journal">…Vancouver…<pub-id pub-id-type="pmid">26903338</pub-id><pub-id pub-id-type="doi">10.1001/jama.2016.0287</pub-id></mixed-citation>
     </ref>
   </ref-list>
 </back>
 ```
+
+Los campos `pmid` y `doi` de cada entrada de `citation[]` salen como `<pub-id>` dentro de
+`<mixed-citation>`, que es donde los buscan los agregadores para enlazar la referencia. Se
+omiten si están vacíos o si conservan el marcador `{{…}}` de la plantilla. Los rellena
+`scripts/verificar_pmid.py` al comprobar la bibliografía contra PubMed; el campo
+`verificado` guarda la fecha de esa comprobación.
 
 Se usa `<mixed-citation>` y no `<element-citation>` porque la cadena Vancouver ya viene
 compuesta desde el JSON-LD; descomponerla en `<surname>`, `<article-title>`, `<source>`,

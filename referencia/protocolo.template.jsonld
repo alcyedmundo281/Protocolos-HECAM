@@ -356,7 +356,11 @@
       "name": "{{Título del artículo}}",
       "datePublished": "2024",
       "schema:isPartOf": { "type": "schema:Periodical", "name": "{{Revista}}" },
-      "url": "{{https://doi.org/10.xxxx/yyyy}}"
+      "url": "{{https://doi.org/10.xxxx/yyyy}}",
+
+      "doi": "{{10.xxxx/yyyy}}",
+      "pmid": "{{PMID, lo devuelve scripts/verificar_pmid.py}}",
+      "verificado": "{{AAAA-MM-DD en que se comprobó contra PubMed}}"
     }
   ]
 }
