@@ -443,8 +443,15 @@ def build(doc):
         pos = g(ref, "position", default=i)
         L.append(f'      <ref id="ref-{esc(pos)}">')
         L.append(f"        <label>{esc(pos)}</label>")
+        cita = esc(g(ref, "vancouver", default=g(ref, "name", default="")))
+        # Los identificadores van dentro de <mixed-citation>: es donde los
+        # esperan los agregadores para enlazar la referencia.
+        for tipo, campo in (("pmid", "pmid"), ("doi", "doi")):
+            valor = g(ref, campo)
+            if valor and "{{" not in str(valor):
+                cita += f'<pub-id pub-id-type="{tipo}">{esc(valor)}</pub-id>'
         L.append('        <mixed-citation publication-type="journal">'
-                 f"{esc(g(ref, 'vancouver', default=g(ref, 'name', default='')))}</mixed-citation>")
+                 f"{cita}</mixed-citation>")
         L.append("      </ref>")
     L.append("    </ref-list>")
     L.append("  </back>")

@@ -1,6 +1,7 @@
 node_modules/
-salida/*.docx
-salida/*.pdf
+produccion/*/salida/*.docx
+produccion/*/salida/*.pdf
+produccion/*/salida/*.xml
 __pycache__/
 *.pyc
 .DS_Store

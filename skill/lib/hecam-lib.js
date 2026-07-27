@@ -289,6 +289,7 @@ async function escribir(doc, ruta) {
     xml = xml.replace(re, figura);
   }
   zip.file('word/document.xml', xml);
+  fs.mkdirSync(path.dirname(ruta), { recursive: true });
   fs.writeFileSync(ruta, await zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' }));
 }
 
@@ -370,7 +371,16 @@ function biblio(refs) {
 }
 
 // ── Firmas (lista oficial revisada) ───────────────────────────────────────────
-function firmas() {
+// Autor por defecto de los protocolos de la Unidad Técnica de Medicina Interna.
+// Se puede sobrescribir por protocolo: firmas({ nombre: '…', unidad: '…' }),
+// para que el pipeline siga sirviendo a otras unidades y otros autores.
+const AUTOR_POR_DEFECTO = {
+  nombre: 'Dr. Alcy Edmundo Torres Guerrero',
+  cargo: 'Médico Internista (Tratante)',
+  unidad: 'Unidad Técnica de Medicina Interna',
+};
+
+function firmas(autor = AUTOR_POR_DEFECTO) {
   const L = 4200, R = CW - L;
   const cL = (lines) => new TableCell({ width: { size: L, type: WidthType.DXA }, borders: allCell,
     shading: { fill: GRAY_BG, type: ShadingType.CLEAR },
@@ -394,7 +404,8 @@ function firmas() {
       'Jefe de Áreas Clínicas (Presidente PROA)',
       'Jefe de la Unidad de Cuidados Intensivos Adultos',
     ]), cR(7)] }),
-    new TableRow({ children: [cL(['Elaborado por:', 'Autor']), cR(1)] }),
+    new TableRow({ children: [cL(['Elaborado por:', autor.nombre, autor.cargo, autor.unidad]
+      .filter(Boolean)), cR(1)] }),
   ]});
 }
 

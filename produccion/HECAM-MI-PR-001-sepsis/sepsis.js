@@ -1,6 +1,7 @@
 'use strict';
 const fs = require('fs');
-const L = require('../lib/hecam-lib.js');
+const path = require('path');
+const L = require('../../skill/lib/hecam-lib.js');
 const {
   Packer, Paragraph, TextRun, PageBreak, AlignmentType,
   CW, sp, h1, h2, h3, bp, blt, nmb, blk, dvd, caption, note, who,
@@ -18,11 +19,11 @@ const fechaElab = 'Julio 2026';
 // ═══════════════════════════════════════════════════════════════════════════════
 const s1 = [
   h1('1.  Justificación'),
-  bp('El Hospital de Especialidades Carlos Andrade Marín (HECAM), establecimiento de referencia de tercer nivel del Instituto Ecuatoriano de Seguridad Social (IESS) para la zona norte del Ecuador, atiende volúmenes significativos de pacientes con sepsis, uno de los mayores desafíos de la medicina moderna. La sepsis, definida por el Tercer Consenso Internacional para Sepsis y Shock Séptico (Sepsis-3, 2016) como una disfunción orgánica potencialmente mortal causada por una respuesta desregulada del huésped a la infección[[1]], causa cerca de 11 millones de muertes anuales a nivel mundial —una de cada cinco muertes registradas en el planeta—[[2]] y ha sido reconocida por la Asamblea Mundial de la Salud como una prioridad sanitaria que exige planes de acción nacionales[[3]]. En el Ecuador constituye una causa primaria de mortalidad intrahospitalaria, especialmente en las Unidades de Cuidados Intensivos.'),
-  bp('Los datos nacionales del Informe Técnico SVPCS-DNVE-2026-02 sobre Resistencia Antimicrobiana en Ecuador 2020-2024 (MSP/INSPI–CRN-RAM), elaborado sobre 58 hospitales centinela incluido el HECAM y aproximadamente 172.000 aislamientos con antibiograma, identifican a __Escherichia coli__ (46–55 % del total anual), __Klebsiella pneumoniae__ (10–14 %) y __Staphylococcus aureus__ (8–10 %) como los microorganismos de mayor prevalencia en infecciones que progresan a sepsis, con una resistencia nacional de __K. pneumoniae__ a carbapenémicos del 28–31 %[[4]]. Sin embargo, la Cartilla de Resistencia Antibiótica HECAM 2025, elaborada por el Laboratorio de Bacteriología de la Unidad Técnica de Patología Clínica y aprobada por el Programa de Optimización del Uso de Antimicrobianos (PROA) institucional, documenta un hallazgo central que diferencia al hospital del promedio nacional: la resistencia de __K. pneumoniae__ a carbapenémicos en el HECAM es hasta 2,5 veces superior (meropenem 49–56 % R en UCI y bacteriemia; imipenem 50–76 % R), con ceftazidima/avibactam como única opción de alta actividad (0–2 % R)[[5]].'),
-  bp('A ello se suma la altitud de Quito (2.850 m.s.n.m.), que genera un fenómeno de "hipoxia dual": la hipoxia celular sistémica inducida por la sepsis se superpone a la hipoxia hipobárica crónica de la altitud, activando vías inflamatorias compartidas mediadas por el Factor Inducible por Hipoxia 1 (HIF-1), exacerbando la respuesta inflamatoria desregulada y obligando a ajustar los valores de referencia diagnósticos (SatO₂ basal 88–92 %; PaO₂ basal 65–70 mmHg)[[6]]. Síntomas como taquipnea, taquicardia y alteración del estado mental, que a nivel del mar orientarían inequívocamente hacia sepsis, en Quito exigen una evaluación estructurada para evitar errores diagnósticos.'),
-  bp('Este perfil epidemiológico y fisiopatológico obliga a rediseñar el esquema antimicrobiano empírico institucional, abandonando la ceftriaxona como primera línea universal y estratificando la terapia según foco infeccioso, servicio de origen y factores de riesgo para microorganismos productores de betalactamasas de espectro extendido (BLEE) o resistentes a carbapenémicos (CRE), en concordancia con las recomendaciones internacionales vigentes[[7]].'),
-  bp('El presente protocolo está dirigido a todos los pacientes adultos (≥ 18 años) atendidos en cualquier unidad del HECAM con sospecha o diagnóstico de sepsis o shock séptico. Las Unidades Técnicas involucradas son: Servicio de Emergencia, Unidad de Cuidados Intensivos, Departamento de Medicina Interna y Subespecialidades, Servicios Quirúrgicos, Laboratorio de Bacteriología/PROA, Imagenología y Farmacia. Su alcance abarca la detección precoz, el diagnóstico conforme a Sepsis-3, la terapia empírica anclada a la Cartilla de Resistencia HECAM 2025, el soporte hemodinámico y ventilatorio adaptado a la altitud, y la desescalada antimicrobiana oportuna. Los resultados esperados son la reducción de la mortalidad hospitalaria por shock séptico, la disminución de los días de estancia en UCI, la mejora de la adherencia a las intervenciones de la primera hora y la generación de datos locales que retroalimenten la política institucional de calidad y seguridad del paciente.'),
+  bp('El Hospital de Especialidades Carlos Andrade Marín (HECAM), establecimiento de referencia de tercer nivel del Instituto Ecuatoriano de Seguridad Social (IESS) para la zona norte del Ecuador, atiende volúmenes significativos de pacientes con sepsis. Definida por el Tercer Consenso Internacional (Sepsis-3) como una disfunción orgánica potencialmente mortal causada por una respuesta desregulada del huésped a la infección[[1]], causa cerca de 11 millones de muertes anuales, una de cada cinco en el mundo[[2]], y la Asamblea Mundial de la Salud la ha reconocido como prioridad sanitaria que exige planes de acción nacionales[[3]]. En el Ecuador es una causa primaria de mortalidad intrahospitalaria, especialmente en las Unidades de Cuidados Intensivos.'),
+  bp('El Informe Técnico SVPCS-DNVE-2026-02 sobre Resistencia Antimicrobiana en Ecuador 2020-2024 (MSP/INSPI–CRN-RAM), construido sobre 58 hospitales centinela —el HECAM entre ellos— y unos 172.000 aislamientos con antibiograma, identifica a __Escherichia coli__ (46–55 % del total anual), __Klebsiella pneumoniae__ (10–14 %) y __Staphylococcus aureus__ (8–10 %) como los microorganismos más prevalentes en infecciones que progresan a sepsis, con una resistencia nacional de __K. pneumoniae__ a carbapenémicos del 28–31 %[[4]]. La Cartilla de Resistencia Antibiótica HECAM 2025 documenta un hallazgo que separa al hospital del promedio nacional: esa resistencia es aquí hasta 2,5 veces superior (meropenem 49–56 % R en UCI y bacteriemia; imipenem 50–76 % R), con ceftazidima/avibactam como única opción de alta actividad (0–2 % R)[[5]].'),
+  bp('A ello se suma la altitud de Quito (2.850 m.s.n.m.), que genera un fenómeno de "hipoxia dual": la hipoxia celular sistémica inducida por la sepsis se superpone a la hipoxia hipobárica crónica de la altitud, activando vías inflamatorias compartidas mediadas por el Factor Inducible por Hipoxia 1 (HIF-1) y obligando a ajustar los valores de referencia diagnósticos (SatO₂ basal 88–92 %; PaO₂ basal 65–70 mmHg)[[6,7]]. La taquipnea, la taquicardia y la alteración del estado mental, que a nivel del mar orientarían inequívocamente hacia sepsis, en Quito exigen una evaluación estructurada para evitar errores diagnósticos.'),
+  bp('Este perfil epidemiológico y fisiopatológico obliga a rediseñar el esquema antimicrobiano empírico institucional, abandonando la ceftriaxona como primera línea universal y estratificando la terapia según foco infeccioso, servicio de origen y factores de riesgo para microorganismos productores de betalactamasas de espectro extendido (BLEE) o resistentes a carbapenémicos (CRE), en concordancia con las recomendaciones internacionales vigentes[[8]].'),
+  bp('El protocolo se dirige a los pacientes adultos (≥ 18 años) atendidos en cualquier unidad del HECAM con sospecha o diagnóstico de sepsis o shock séptico. Participan Emergencia, Cuidados Intensivos, Medicina Interna y Subespecialidades, Servicios Quirúrgicos, Laboratorio de Bacteriología/PROA, Imagenología y Farmacia. Abarca la detección precoz, el diagnóstico conforme a Sepsis-3, la terapia empírica anclada a la Cartilla de Resistencia HECAM 2025, el soporte hemodinámico y ventilatorio adaptado a la altitud y la desescalada antimicrobiana oportuna. Se espera reducir la mortalidad por shock séptico y la estancia en UCI, mejorar la adherencia a las intervenciones de la primera hora y generar datos locales que retroalimenten la política institucional de calidad y seguridad del paciente.'),
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -34,9 +35,9 @@ const s2 = [
   bp('Estandarizar el manejo de la sepsis y el shock séptico en pacientes adultos atendidos en el Hospital de Especialidades Carlos Andrade Marín, integrando la Cartilla de Resistencia Antibiótica HECAM 2025 y los datos nacionales de resistencia antimicrobiana 2020-2024 como pilares de la terapia empírica, para reducir la mortalidad y garantizar el uso racional de antimicrobianos.'),
   h3('Objetivos Específicos'),
   nmb('Implementar las definiciones del Tercer Consenso Internacional (Sepsis-3) en todas las unidades del HECAM, garantizando un diagnóstico preciso, una comunicación clínica uniforme y la eliminación del término obsoleto "sepsis severa" del léxico institucional[[1]].'),
-  nmb('Establecer el paquete de intervenciones críticas "HECAM Hora-1" (hemocultivos, lactato sérico, antimicrobianos y resucitación con cristaloides), con terapia empírica estratificada según foco, servicio de origen y factores de riesgo para BLEE/CRE, conforme a la Cartilla de Resistencia HECAM 2025[[5]] y a las guías internacionales vigentes[[7]].'),
+  nmb('Establecer el paquete de intervenciones críticas "HECAM Hora-1" (hemocultivos, lactato sérico, antimicrobianos y resucitación con cristaloides), con terapia empírica estratificada según foco, servicio de origen y factores de riesgo para BLEE/CRE, conforme a la Cartilla de Resistencia HECAM 2025[[5]] y a las guías internacionales vigentes[[8]].'),
   nmb('Definir un plan de manejo hemodinámico y de soporte ventilatorio adaptado a las particularidades fisiopatológicas de la altitud de Quito (2.850 m.s.n.m.), considerando el fenómeno de hipoxia dual y sus implicaciones diagnósticas y terapéuticas[[6]].'),
-  nmb('Promover el uso racional de antimicrobianos mediante el PROA-HECAM[[8]], empleando únicamente medicamentos incluidos en el Cuadro Nacional de Medicamentos Básicos[[9]] y estableciendo metas de desescalada a las 48–72 horas guiadas por cultivo y procalcitonina.'),
+  nmb('Promover el uso racional de antimicrobianos mediante el PROA-HECAM[[9]], empleando únicamente medicamentos incluidos en el Cuadro Nacional de Medicamentos Básicos[[10]] y estableciendo metas de desescalada a las 48–72 horas guiadas por cultivo y procalcitonina.'),
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -49,18 +50,18 @@ const s3 = [
     [{ label: 'TÉRMINO', w: 2000 }, { label: 'DEFINICIÓN', w: 6806 }],
     [
       ['Sepsis', 'Disfunción orgánica potencialmente mortal causada por una respuesta desregulada del huésped a la infección. Se identifica por un aumento agudo de la puntuación SOFA ≥ 2 puntos sobre el basal secundario a infección. Mortalidad hospitalaria > 10 %.[[1]]'],
-      ['Shock séptico', 'Subconjunto de la sepsis con anomalías circulatorias, celulares y metabólicas que aumentan sustancialmente la mortalidad. Criterios: necesidad de vasopresores para mantener PAM ≥ 65 mmHg Y lactato > 2 mmol/L a pesar de resucitación adecuada. Mortalidad > 40 %.[[10]]'],
+      ['Shock séptico', 'Subconjunto de la sepsis con anomalías circulatorias, celulares y metabólicas que aumentan sustancialmente la mortalidad. Criterios: necesidad de vasopresores para mantener PAM ≥ 65 mmHg Y lactato > 2 mmol/L a pesar de resucitación adecuada. Mortalidad > 40 %.[[11]]'],
       ['Sepsis-3', 'Tercer Consenso Internacional para Sepsis y Shock Séptico (Singer et al., 2016). Sus definiciones operacionales son adoptadas formalmente en este protocolo.[[1]]'],
       ['Sepsis severa', 'Término OBSOLETO, eliminado por el grupo de trabajo Sepsis-3 por considerarlo redundante. Los pacientes antes clasificados bajo este rótulo cumplen la definición vigente de sepsis.[[1]]'],
-      ['Hipoxia dual', 'Fenómeno fisiopatológico propio del HECAM: la hipoxia celular sistémica de la sepsis se superpone a la hipoxia hipobárica crónica de la altitud (2.850 m.s.n.m.), activando vías HIF-1 compartidas y exacerbando la respuesta inflamatoria.[[6]]'],
+      ['Hipoxia dual', 'Fenómeno fisiopatológico propio del HECAM: la hipoxia celular sistémica de la sepsis se superpone a la hipoxia hipobárica crónica de la altitud (2.850 m.s.n.m.), activando vías HIF-1 compartidas y exacerbando la respuesta inflamatoria.[[6,7]]'],
       ['CRE', 'Enterobacterales resistentes a carbapenémicos (__Carbapenem-Resistant Enterobacterales__). En el HECAM 2025: __K. pneumoniae__ con 50–76 % de resistencia a carbapenémicos en UCI y bacteriemia; mecanismo principal, carbapenemasas tipo KPC.[[5]] Promedio nacional: 28–31 %.[[4]]'],
-      ['BLEE', 'Betalactamasas de espectro extendido. Enzimas que hidrolizan penicilinas y cefalosporinas de 3.ª y 4.ª generación. En el HECAM 2025, __E. coli__ hospitalaria presenta > 50 % de resistencia a cefalosporinas de 3.ª generación y __K. pneumoniae__ > 65 % en todos los servicios.[[11]]'],
-      ['SOFA', '__Sequential Organ Failure Assessment__. Escala que evalúa seis sistemas orgánicos (0–4 puntos cada uno; máximo 24). Un aumento agudo ≥ 2 puntos sobre el basal define la disfunción orgánica de la sepsis. En el HECAM se ajusta el componente respiratorio por altitud.[[12]]'],
-      ['qSOFA', '__Quick SOFA__. Herramienta de cribado de cabecera: alteración del estado mental (Glasgow < 15) + frecuencia respiratoria ≥ 22 rpm + presión arterial sistólica ≤ 100 mmHg. Un puntaje ≥ 2 indica riesgo alto de mal desenlace y obliga a activar el paquete HECAM Hora-1.[[13]]'],
-      ['PAM', 'Presión arterial media. Meta terapéutica en shock séptico: ≥ 65 mmHg con soporte vasopresor. Se calcula como PAD + 1/3 (PAS − PAD).[[7]]'],
+      ['BLEE', 'Betalactamasas de espectro extendido. Enzimas que hidrolizan penicilinas y cefalosporinas de 3.ª y 4.ª generación. En el HECAM 2025, __E. coli__ hospitalaria presenta > 50 % de resistencia a cefalosporinas de 3.ª generación y __K. pneumoniae__ > 65 % en todos los servicios.[[12]]'],
+      ['SOFA', '__Sequential Organ Failure Assessment__. Escala que evalúa seis sistemas orgánicos (0–4 puntos cada uno; máximo 24). Un aumento agudo ≥ 2 puntos sobre el basal define la disfunción orgánica de la sepsis. En el HECAM se ajusta el componente respiratorio por altitud.[[13]]'],
+      ['qSOFA', '__Quick SOFA__. Herramienta de cribado de cabecera: alteración del estado mental (Glasgow < 15) + frecuencia respiratoria ≥ 22 rpm + presión arterial sistólica ≤ 100 mmHg. Un puntaje ≥ 2 indica riesgo alto de mal desenlace y obliga a activar el paquete HECAM Hora-1.[[14]]'],
+      ['PAM', 'Presión arterial media. Meta terapéutica en shock séptico: ≥ 65 mmHg con soporte vasopresor. Se calcula como PAD + 1/3 (PAS − PAD).[[8]]'],
       ['Cartilla de Resistencia HECAM 2025', 'Análisis acumulado de resistencia antibiótica institucional (18 tablas por servicio). Metodología de concentración mínima inhibitoria según CLSI M100/M39; base de datos WHONET. Abril 2026. Documento de referencia PRIMARIO para la selección antimicrobiana empírica en el HECAM.[[5]]'],
-      ['PROA', 'Programa de Optimización del Uso de Antimicrobianos. Equipo institucional responsable de la vigilancia microbiológica, la elaboración de las cartillas de resistencia y la auditoría del uso de antibióticos.[[8]]'],
-      ['HIF-1', 'Factor Inducible por Hipoxia 1. Factor de transcripción activado tanto por la hipoxia hipobárica de la altitud como por la hipoxia celular de la sepsis, promoviendo una respuesta inflamatoria potencialmente exacerbada.[[6]]'],
+      ['PROA', 'Programa de Optimización del Uso de Antimicrobianos. Equipo institucional responsable de la vigilancia microbiológica, la elaboración de las cartillas de resistencia y la auditoría del uso de antibióticos.[[9]]'],
+      ['HIF-1', 'Factor Inducible por Hipoxia 1. Factor de transcripción activado tanto por la hipoxia hipobárica de la altitud como por la hipoxia celular de la sepsis, promoviendo una respuesta inflamatoria potencialmente exacerbada.[[7]]'],
     ]
   ),
   blk(),
@@ -94,16 +95,13 @@ const s41 = [
   h2('4.1.  Evaluación inicial del paciente'),
   ...who('Personal de Enfermería y Médico de Triage / Emergencia.',
          'Inmediatamente al ingreso o ante la sospecha de infección en cualquier unidad del HECAM.'),
-  h3('Criterios de inclusión y exclusión'),
-  blt('__Inclusión:__ pacientes adultos (≥ 18 años) con sospecha o diagnóstico de infección que presenten signos de disfunción orgánica o inestabilidad hemodinámica.'),
-  blt('__Exclusión:__ pacientes pediátricos (< 18 años); pacientes en cuidados paliativos exclusivos donde la intervención intensiva no sea el objetivo terapéutico; pacientes con directrices de no reanimación documentadas.'),
   h3('Anamnesis y examen físico dirigidos'),
   blt('Antecedentes de infección reciente, procedimientos invasivos, inmunosupresión, viajes y exposiciones ambientales. Identificar el foco probable: respiratorio, urinario, abdominal, piel y tejidos blandos, sistema nervioso central o dispositivos intravasculares.'),
-  blt('Signos vitales completos: temperatura, frecuencia cardíaca, frecuencia respiratoria, presión arterial y saturación de oxígeno. **NOTA DE ALTITUD:** la SatO₂ basal normal en Quito es 88–92 %; alarmar si < 88 %. El umbral de fiebre se ajusta a T > 37,5 °C axilar.'),
+  blt('Signos vitales completos: temperatura, frecuencia cardíaca, frecuencia respiratoria, presión arterial y saturación de oxígeno. **NOTA DE ALTITUD:** la SatO₂ basal de referencia es 88–92 %; alarmar si < 88 %. Es un valor de población andina sana estudiada a 2.640 m, extrapolado a los 2.850 m de Quito; desciende con la edad y la caída es mayor en mujeres, de modo que en el paciente mayor debe interpretarse junto con la gasometría y no de forma aislada[[6]]. El umbral de fiebre se ajusta a T > 37,5 °C axilar.'),
   blt('Estado de conciencia: escala de Glasgow y orientación.'),
   blt('**Antecedente microbiológico clave:** ¿tratamiento antibiótico en los últimos 90 días?, ¿hospitalización reciente?, ¿infección previa por BLEE o CRE? Estos factores modifican la selección empírica (véase el numeral 4.3).'),
   h3('Escalas clínicas de cribado'),
-  blt('qSOFA: alteración mental (Glasgow < 15) + FR ≥ 22 rpm + PAS ≤ 100 mmHg. Puntaje ≥ 2 → ALTO RIESGO → activar "HECAM Hora-1" de forma inmediata[[13]].'),
+  blt('qSOFA: alteración mental (Glasgow < 15) + FR ≥ 22 rpm + PAS ≤ 100 mmHg. Puntaje ≥ 2 → ALTO RIESGO → activar "HECAM Hora-1" de forma inmediata[[14]].'),
   blt('SOFA completo: solicitar los exámenes de laboratorio en paralelo para el diagnóstico definitivo (véase el numeral 4.2).'),
   blt('Si qSOFA ≥ 2 O existe sospecha clínica alta aunque el qSOFA sea < 2, activar el protocolo de forma inmediata: la sensibilidad del qSOFA es subóptima en el entorno de altitud.'),
 ];
@@ -114,9 +112,9 @@ const s42 = [
          'Dentro de los primeros 15 minutos de la evaluación inicial, en paralelo con el inicio del paquete HECAM Hora-1.'),
   h3('Criterios diagnósticos secuenciales (Sepsis-3)'),
   nmb('Confirmar la presencia o alta sospecha de infección (clínica, laboratorio, imagen).'),
-  nmb('Calcular la puntuación SOFA basal. Si no se dispone del valor basal, asumir 0[[12]].'),
-  nmb('Un aumento agudo de SOFA ≥ 2 puntos confirma el diagnóstico de SEPSIS (mortalidad estimada > 10 %). Ajustar el componente respiratorio por altitud: PaO₂ basal en Quito 65–70 mmHg; PaO₂/FiO₂ basal aproximado 300–320[[1]].'),
-  nmb('Medir el lactato sérico. Si el lactato es > 2 mmol/L y persiste la necesidad de vasopresores para mantener PAM ≥ 65 mmHg pese a una resucitación adecuada, se confirma SHOCK SÉPTICO (mortalidad estimada > 40 %)[[10]].'),
+  nmb('Calcular la puntuación SOFA basal. Si no se dispone del valor basal, asumir 0[[13]].'),
+  nmb('Un aumento agudo de SOFA ≥ 2 puntos confirma el diagnóstico de SEPSIS (mortalidad estimada > 10 %). Ajustar el componente respiratorio por altitud: PaO₂ basal de referencia 65–70 mmHg y PaO₂/FiO₂ basal aproximado 300–320, extrapolados a Quito desde población andina sana estudiada a 2.640 m[[1,6]].'),
+  nmb('Medir el lactato sérico. Si el lactato es > 2 mmol/L y persiste la necesidad de vasopresores para mantener PAM ≥ 65 mmHg pese a una resucitación adecuada, se confirma SHOCK SÉPTICO (mortalidad estimada > 40 %)[[11]].'),
   nmb('ELIMINAR el término "sepsis severa" del registro clínico: es obsoleto según Sepsis-3[[1]].'),
   blk(),
   caption('Tabla 3. Exámenes complementarios por prioridad'),
@@ -128,7 +126,7 @@ const s42 = [
       ['1.ª', 'BHC, glucosa, creatinina, BUN', 'Cálculo del SOFA (coagulación y renal) y de la función renal para el ajuste de dosis antimicrobianas. Estimar TFG con CKD-EPI.'],
       ['1.ª', 'Bilirrubina total, TGO, TGP', 'Componente hepático del SOFA.'],
       ['1.ª', 'Plaquetas, TP, TTP', 'Componente de coagulación del SOFA; detección de coagulación intravascular diseminada.'],
-      ['1.ª', 'Gasometría arterial, PaO₂/FiO₂', 'Componente respiratorio del SOFA. Ajustar por altitud: PaO₂ normal en Quito 65–70 mmHg; PaO₂/FiO₂ basal aproximado 310.'],
+      ['1.ª', 'Gasometría arterial, PaO₂/FiO₂', 'Componente respiratorio del SOFA. Ajustar por altitud: PaO₂ de referencia 65–70 mmHg; PaO₂/FiO₂ basal aproximado 310. Extrapolados desde 2.640 m.'],
       ['2.ª', 'PCR y procalcitonina', 'Biomarcadores inflamatorios. Una PCT < 0,5 ng/mL orienta a la suspensión del antimicrobiano.'],
       ['2.ª', 'Urocultivo y cultivo del foco', 'Identificación del microorganismo y su sensibilidad local. Consultar la Cartilla de Resistencia HECAM 2025 al recibir el antibiograma[[5]].'],
       ['2.ª', 'Radiografía de tórax / ECO FAST / POCUS', 'Identificación del foco infeccioso, derrames, colecciones y evaluación de la función cardíaca.'],
@@ -181,13 +179,13 @@ const atbRows = [
    'Piperacilina/tazobactam 4,5 g IV c/6 h + amikacina 20 mg/kg/día IV (DUD).',
    'Amikacina: no administrar si TFG < 30. Piperacilina/tazobactam: ajustar si TFG < 20.'],
   ['Desconocido, con riesgo BLEE (hospitalizado, Medicina Interna)',
-   'ATB previos < 90 días, hospitalización reciente, diabetes o ERC. __E. coli__ > 50 % R a cefalosporinas[[11]].',
+   'ATB previos < 90 días, hospitalización reciente, diabetes o ERC. __E. coli__ > 50 % R a cefalosporinas[[12]].',
    'Ertapenem IV (carbapenémico de elección para BLEE; preserva meropenem para CRE).',
    'Ertapenem 1 g IV c/24 h (infusión de 30 min).',
    '0,5 g c/24 h si TFG 10–30. Si TFG < 10, interconsulta a Infectología.'],
   ['Desconocido, riesgo alto de CRE (UCI o bacteriemia por K. pneumoniae)',
    '__K. pneumoniae__ CRE probable. Meropenem 49–56 % R en el HECAM 2025[[5]].',
-   'Meropenem IV ± ceftazidima/avibactam (0–2 % R en __K. pneumoniae__ de UCI y bacteriemia: única opción activa)[[16]].',
+   'Meropenem IV ± ceftazidima/avibactam (0–2 % R en __K. pneumoniae__ de UCI y bacteriemia: única opción activa)[[17]].',
    'Meropenem 1–2 g IV c/8 h; ceftazidima/avibactam 2 g/0,5 g IV c/8 h en infusión de 2 h. Requiere autorización del PROA / Infectología.',
    'Ambos requieren ajuste obligatorio por TFG.'],
   ['Respiratorio comunitario',
@@ -234,9 +232,9 @@ const s43 = [
   h3('A. Intervenciones no farmacológicas'),
   blt('Asegurar la vía aérea y el soporte ventilatorio. En Quito, ajustar la FiO₂ para lograr SatO₂ ≥ 92 %, evitando la hiperoxia (no perseguir SatO₂ > 96 %)[[6]].'),
   blt('Canalizar dos accesos venosos periféricos de calibre ≥ 18 G, o un acceso venoso central si el paciente no responde. Para ceftazidima/avibactam o meropenem en infusión prolongada se requiere una vía dedicada.'),
-  blt('Tomar hemocultivos × 2 series (aerobio y anaerobio) y el cultivo del foco sospechado ANTES de administrar antibióticos. No retrasar el antimicrobiano más de 30–45 minutos esperando las muestras[[14]].'),
-  blt('Medir el lactato sérico inicial. Si es > 2 mmol/L, repetir a las 2 horas (meta: descenso ≥ 10 %). Si es > 4 mmol/L, iniciar resucitación agresiva independientemente de la presión arterial[[15]].'),
-  blt('Resucitación con cristaloides: administrar 30 mL/kg de solución salina al 0,9 % o lactato de Ringer en 3 horas si la PAM es < 65 mmHg o el lactato > 4 mmol/L. Reevaluar con cada 500 mL mediante POCUS o elevación pasiva de piernas[[7]].'),
+  blt('Tomar hemocultivos × 2 series (aerobio y anaerobio) y el cultivo del foco sospechado ANTES de administrar antibióticos. No retrasar el antimicrobiano más de 30–45 minutos esperando las muestras[[15]].'),
+  blt('Medir el lactato sérico inicial. Si es > 2 mmol/L, repetir a las 2 horas (meta: descenso ≥ 10 %). Si es > 4 mmol/L, iniciar resucitación agresiva independientemente de la presión arterial[[16]].'),
+  blt('Resucitación con cristaloides: administrar 30 mL/kg de solución salina al 0,9 % o lactato de Ringer en 3 horas si la PAM es < 65 mmHg o el lactato > 4 mmol/L. Reevaluar con cada 500 mL mediante POCUS o elevación pasiva de piernas[[8]].'),
   blk(),
   h3('B. Perfil de resistencia local — organismos relevantes para sepsis'),
   bp('Los datos siguientes provienen de la Cartilla de Resistencia Antibiótica HECAM 2025 (metodología de concentración mínima inhibitoria según CLSI M100; base de datos WHONET) y expresan el porcentaje de resistencia de cada microorganismo por servicio y tipo de muestra[[5]].'),
@@ -253,15 +251,21 @@ const s43 = [
   blt('**Contraste nacional:** la resistencia nacional de __K. pneumoniae__ a carbapenémicos es del 28–31 % sobre 21.226 aislamientos; el HECAM duplica ese promedio en UCI y bacteriemia, lo que justifica un esquema empírico institucional propio[[4]].'),
   blk(),
   h3('D. Antibioticoterapia empírica estratificada'),
-  bp('**INSTRUCCIÓN OPERATIVA:** seleccionar el escenario clínico que corresponde al paciente. Antes de prescribir, consultar la Cartilla de Resistencia HECAM 2025 correspondiente al servicio de origen. Todos los antimicrobianos indicados constan en el Cuadro Nacional de Medicamentos Básicos[[9]]. Las dosis asumen función renal normal; ajustar según la TFG estimada por CKD-EPI.'),
+  bp('**INSTRUCCIÓN OPERATIVA:** seleccionar el escenario clínico que corresponde al paciente. Antes de prescribir, consultar la Cartilla de Resistencia HECAM 2025 correspondiente al servicio de origen. Todos los antimicrobianos indicados constan en el Cuadro Nacional de Medicamentos Básicos[[10]]. Las dosis asumen función renal normal; ajustar según la TFG estimada por CKD-EPI.'),
   caption('Tabla 5. Antibioticoterapia empírica estratificada por foco y riesgo de resistencia'),
   mkT(atbCols, atbRows),
   blk(),
   h3('E. Tratamiento farmacológico complementario: vasopresores e inotrópicos'),
-  blt('**Norepinefrina:** vasopresor de primera línea. Iniciar a 0,1–0,2 mcg/kg/min IV en infusión continua y titular hasta lograr PAM ≥ 65 mmHg[[7]].'),
+  blt('**Norepinefrina:** vasopresor de primera línea. Iniciar a 0,1–0,2 mcg/kg/min IV en infusión continua y titular hasta lograr PAM ≥ 65 mmHg[[8]].'),
   blt('**Vasopresina:** añadir si la norepinefrina supera 0,25 mcg/kg/min. Dosis fija de 0,03 UI/min IV.'),
   blt('**Dobutamina:** considerar ante disfunción miocárdica confirmada por ecocardiografía. Dosis de 2–20 mcg/kg/min IV.'),
-  blt('**Corticoesteroides:** hidrocortisona 200 mg/día IV en shock séptico refractario que persiste con requerimiento vasopresor creciente pese a resucitación adecuada[[7]].'),
+  blt('**Corticoesteroides:** hidrocortisona 200 mg/día IV en shock séptico refractario que persiste con requerimiento vasopresor creciente pese a resucitación adecuada[[8]].'),
+  blk(),
+  h3('F. Criterios de inclusión y exclusión, duración y suspensión del tratamiento'),
+  blt('__Inclusión:__ pacientes adultos (≥ 18 años) con sospecha o diagnóstico de infección que presenten signos de disfunción orgánica o inestabilidad hemodinámica.'),
+  blt('__Exclusión:__ pacientes pediátricos (< 18 años); pacientes en cuidados paliativos exclusivos donde la intervención intensiva no sea el objetivo terapéutico; pacientes con directrices de no reanimación documentadas.'),
+  blt('__Duración del tratamiento:__ la duración total se define en la reevaluación antimicrobiana de las 48–72 horas, con el resultado de los cultivos (numeral 4.5). En aislamientos de __K. pneumoniae__ CRE, __A. baumannii__ o __P. aeruginosa__ XDR la establece Infectología caso por caso.'),
+  blt('__Criterios de suspensión:__ una procalcitonina < 0,5 ng/mL a las 48–72 horas orienta a la suspensión del antimicrobiano según criterio del PROA-HECAM[[9]]. La decisión se registra en la historia clínica junto con el resultado que la sustenta.'),
 ];
 
 const s44 = [
@@ -278,13 +282,13 @@ const s44 = [
   ),
   blk(),
   h3('Manejo de complicaciones esperadas'),
-  blt('**Síndrome de distrés respiratorio agudo:** ventilación protectora con volumen corriente de 6 mL/kg de peso ideal, PEEP ≥ 5 cmH₂O y FiO₂ ajustada para SatO₂ de 92–95 % en Quito. Si fracasa: pronación, bloqueo neuromuscular u oxigenación por membrana extracorpórea[[7]].'),
+  blt('**Síndrome de distrés respiratorio agudo:** ventilación protectora con volumen corriente de 6 mL/kg de peso ideal, PEEP ≥ 5 cmH₂O y FiO₂ ajustada para SatO₂ de 92–95 % en Quito. Si fracasa: pronación, bloqueo neuromuscular u oxigenación por membrana extracorpórea[[8]].'),
   blt('**Lesión renal aguda:** optimizar la hemodinamia, suspender nefrotóxicos, ajustar las dosis de meropenem y ceftazidima/avibactam, y considerar terapia de reemplazo renal ante oligoanuria, acidosis severa o sobrecarga hídrica refractaria.'),
   blt('**Coagulopatía y coagulación intravascular diseminada:** plasma fresco congelado si TP/TTP > 1,5 veces el valor normal con sangrado activo; transfusión de plaquetas si el recuento es < 10.000/µL, o < 50.000/µL con sangrado o procedimiento invasivo.'),
   blt('**Disfunción miocárdica:** ecocardiografía para guiar la administración de fluidos y vasopresores; dobutamina si la fracción de eyección es < 40 % con signos de bajo gasto.'),
-  blt('**Hipoxia dual asociada a la altitud:** mantener metas de SpO₂ de 92–95 %, evitar la hiperoxia y considerar que la PaO₂ basal en Quito es de 65–70 mmHg, valor que no debe compararse con los estándares de nivel del mar[[6]].'),
-  blt('**Control del foco infeccioso:** drenaje de colecciones, retiro de dispositivos infectados o desbridamiento quirúrgico dentro de las primeras 6–12 horas cuando sea factible. En infecciones nosocomiales debe aplicarse la normativa nacional vigente[[17]].'),
-  blt('**Sepsis refractaria por __K. pneumoniae__ CRE:** interconsulta inmediata a Infectología. Considerar la combinación de ceftazidima/avibactam con meropenem en infusión prolongada de 3 horas, o colistina como último recurso. Notificar el aislamiento al PROA-HECAM y al CRN-RAM/INSPI conforme a la Norma Técnica del Sistema Integrado de Vigilancia Epidemiológica[[18]].'),
+  blt('**Hipoxia dual asociada a la altitud:** mantener metas de SpO₂ de 92–95 %, evitar la hiperoxia y considerar que la PaO₂ basal de referencia es de 65–70 mmHg —dato de población andina sana a 2.640 m, extrapolado a Quito—, valor que no debe compararse con los estándares de nivel del mar[[6]].'),
+  blt('**Control del foco infeccioso:** drenaje de colecciones, retiro de dispositivos infectados o desbridamiento quirúrgico dentro de las primeras 6–12 horas cuando sea factible. En infecciones nosocomiales debe aplicarse la normativa nacional vigente[[18]].'),
+  blt('**Sepsis refractaria por __K. pneumoniae__ CRE:** interconsulta inmediata a Infectología. Considerar la combinación de ceftazidima/avibactam con meropenem en infusión prolongada de 3 horas, o colistina como último recurso. Notificar el aislamiento al PROA-HECAM y al CRN-RAM/INSPI conforme a la Norma Técnica del Sistema Integrado de Vigilancia Epidemiológica[[19]].'),
 ];
 
 const s45 = [
@@ -293,15 +297,15 @@ const s45 = [
          'De forma continua; evaluación formal cada 6 horas y reevaluación antimicrobiana a las 48–72 horas con resultados de cultivos.'),
   h3('Parámetros de monitoreo'),
   blt('Signos vitales cada hora en shock séptico activo, o cada 4 horas en sepsis estabilizada. Umbral de alarma: SatO₂ < 88 % en Quito.'),
-  blt('Lactato sérico a las 2 y 6 horas. Meta: descenso ≥ 10 % por medición o normalización por debajo de 2 mmol/L[[15]].'),
+  blt('Lactato sérico a las 2 y 6 horas. Meta: descenso ≥ 10 % por medición o normalización por debajo de 2 mmol/L[[16]].'),
   blt('Diuresis horaria con meta ≥ 0,5 mL/kg/h. Instalar sonda vesical en todo paciente con shock séptico.'),
-  blt('Cálculo diario del SOFA para evaluar la respuesta y detectar progresión de la disfunción orgánica[[12]].'),
+  blt('Cálculo diario del SOFA para evaluar la respuesta y detectar progresión de la disfunción orgánica[[13]].'),
   blt('Glucemia cada 2–4 horas si el paciente recibe insulinoterapia, con meta de 140–180 mg/dL.'),
-  blt('Procalcitonina a las 48–72 horas. Un valor < 0,5 ng/mL orienta a la suspensión del antimicrobiano según criterio del PROA-HECAM[[8]].'),
+  blt('Procalcitonina a las 48–72 horas como parámetro de monitoreo; el criterio de suspensión que se aplica a ese valor consta en el numeral 4.3.'),
   h3('Desescalada antimicrobiana a las 48–72 horas (PROA-HECAM)'),
-  blt('Revisar hemocultivos y cultivo del foco. Si el microorganismo es sensible a un antimicrobiano de espectro más estrecho, la desescalada es OBLIGATORIA[[8]].'),
+  blt('Revisar hemocultivos y cultivo del foco. Si el microorganismo es sensible a un antimicrobiano de espectro más estrecho, la desescalada es OBLIGATORIA[[9]].'),
   blt('__K. pneumoniae__ sensible a ceftriaxona (situación infrecuente en el HECAM): desescalar. __K. pneumoniae__ CRE sensible a ceftazidima/avibactam: mantener el esquema y consultar a Infectología para definir la duración.'),
-  blt('__E. coli__ sensible a piperacilina/tazobactam: desescalar desde meropenem o ertapenem. __E. coli__ BLEE sensible a ertapenem: desescalar desde meropenem[[11]].'),
+  blt('__E. coli__ sensible a piperacilina/tazobactam: desescalar desde meropenem o ertapenem. __E. coli__ BLEE sensible a ertapenem: desescalar desde meropenem[[12]].'),
   blt('__S. aureus__ meticilino sensible: desescalar de vancomicina a cloxacilina 2 g IV c/6 h, por su superioridad clínica frente a SASM.'),
   blt('Reunión interdisciplinaria (internista, farmacéutico e infectólogo) para cada aislamiento de __K. pneumoniae__ CRE, __A. baumannii__ o __P. aeruginosa__ XDR.'),
   h3('Criterios de egreso, alta y traslado'),
@@ -318,16 +322,16 @@ const s46 = [
     [{ label: 'Área', w: 1400 }, { label: 'Recomendación', w: 5306 }, { label: 'NE', w: 1000, centered: true }, { label: 'GR', w: 1100, centered: true }],
     [
       ['Diagnóstico', 'Adoptar las definiciones Sepsis-3: SOFA ≥ 2 puntos para sepsis, y vasopresores más lactato > 2 mmol/L para shock séptico[[1]].', '1a', 'A'],
-      ['Cribado', 'Utilizar el qSOFA (≥ 2 puntos) como herramienta rápida de identificación de riesgo fuera de la UCI[[13]].', '2a', 'B'],
-      ['Tratamiento', 'Administrar antimicrobianos de amplio espectro en menos de 60 minutos del reconocimiento de la sepsis, y en menos de 30 minutos en shock séptico[[7]].', '1b', 'A'],
+      ['Cribado', 'Utilizar el qSOFA (≥ 2 puntos) como herramienta rápida de identificación de riesgo fuera de la UCI[[14]].', '2a', 'B'],
+      ['Tratamiento', 'Administrar antimicrobianos de amplio espectro en menos de 60 minutos del reconocimiento de la sepsis, y en menos de 30 minutos en shock séptico[[8]].', '1b', 'A'],
       ['Tratamiento', 'Seleccionar el antimicrobiano empírico según la Cartilla de Resistencia HECAM 2025 y el riesgo de BLEE/CRE. No emplear ceftriaxona como primera línea universal en sepsis hospitalaria[[5]].', '2a', 'B'],
-      ['Tratamiento', 'Reservar la ceftazidima/avibactam para __K. pneumoniae__ CRE con autorización del PROA e Infectología (0–2 % R en el HECAM 2025)[[16]].', '2a', 'B'],
-      ['Resucitación', 'Administrar 30 mL/kg de cristaloides IV en 3 horas ante hipotensión o lactato > 4 mmol/L[[15]].', '1b', 'A'],
-      ['Vasopresores', 'Emplear norepinefrina como vasopresor de primera línea para mantener PAM ≥ 65 mmHg[[7]].', '1b', 'A'],
-      ['Cultivos', 'Obtener hemocultivos y cultivo del foco ANTES de iniciar el antimicrobiano, sin retrasarlo más de 30–45 minutos[[14]].', '2a', 'B'],
-      ['Desescalada', 'Desescalar el antimicrobiano a las 48–72 horas con base en el cultivo y la procalcitonina (meta < 0,5 ng/mL)[[8]].', '1b', 'A'],
+      ['Tratamiento', 'Reservar la ceftazidima/avibactam para __K. pneumoniae__ CRE con autorización del PROA e Infectología (0–2 % R en el HECAM 2025)[[17]].', '2a', 'B'],
+      ['Resucitación', 'Administrar 30 mL/kg de cristaloides IV en 3 horas ante hipotensión o lactato > 4 mmol/L[[16]].', '1b', 'A'],
+      ['Vasopresores', 'Emplear norepinefrina como vasopresor de primera línea para mantener PAM ≥ 65 mmHg[[8]].', '1b', 'A'],
+      ['Cultivos', 'Obtener hemocultivos y cultivo del foco ANTES de iniciar el antimicrobiano, sin retrasarlo más de 30–45 minutos[[15]].', '2a', 'B'],
+      ['Desescalada', 'Desescalar el antimicrobiano a las 48–72 horas con base en el cultivo y la procalcitonina (meta < 0,5 ng/mL)[[9]].', '1b', 'A'],
       ['Altitud', 'Ajustar las metas de SpO₂ (92–95 %), los umbrales de alarma y la interpretación del cociente PaO₂/FiO₂ al entorno de 2.850 m.s.n.m.[[6]].', '5', 'D'],
-      ['Vigilancia', 'Notificar los aislamientos CRE y XDR al PROA-HECAM y al CRN-RAM/INSPI conforme a la Norma Técnica del SIVE[[18]].', '5', 'D'],
+      ['Vigilancia', 'Notificar los aislamientos CRE y XDR al PROA-HECAM y al CRN-RAM/INSPI conforme a la Norma Técnica del SIVE[[19]].', '5', 'D'],
     ]
   ),
   note('__Leyenda Oxford CEBM:__ NE 1a = revisión sistemática de ensayos clínicos aleatorizados; 1b = ensayo clínico aleatorizado individual; 2a = revisión sistemática de estudios de cohorte; 2b = cohorte individual; 4 = serie de casos; 5 = opinión de expertos. GR A (nivel 1), B (niveles 2–3), C (nivel 4), D (nivel 5 o evidencia extrapolada).'),
@@ -380,19 +384,20 @@ const refs = [
   /* 3  */ 'World Health Organization. Improving the prevention, diagnosis and clinical management of sepsis. Resolution WHA70.7. Geneva: WHO; 2017.',
   /* 4  */ 'Palacios Rodas R, Narváez M. Informe Técnico SVPCS-DNVE-2026-02: Situación de la Resistencia Antimicrobiana en Ecuador 2020–2024. Quito: Dirección Nacional de Vigilancia Epidemiológica, Ministerio de Salud Pública / INSPI–CRN-RAM; 15 de enero de 2026.',
   /* 5  */ 'Andrade Estévez AC, Gordón A, Cevallos C. Análisis Acumulado de Resistencia Antibiótica 2025. Cartillas de Resistencia 2025. Quito: Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica, HECAM/IESS; abril de 2026.',
-  /* 6  */ 'Gonzalez-Garcia M, Torres-Duque CA, Bustos A, Gaitan J, Maldonado D. Bronchial hyperresponsiveness and hypoxemia in subjects residing at high altitude: implications for sepsis management. High Alt Med Biol. 2020;21(3):241–7. doi:10.1089/ham.2019.0131',
-  /* 7  */ 'Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Crit Care Med. 2021;49(11):e1063–e1143. doi:10.1097/CCM.0000000000005337',
-  /* 8  */ 'Barlam TF, Cosgrove SE, Abbo LM, MacDougall C, Schuetz AN, Septimus EJ, et al. Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America. Clin Infect Dis. 2016;62(10):e51–77. doi:10.1093/cid/ciw118',
-  /* 9  */ 'Ministerio de Salud Pública del Ecuador. Cuadro Nacional de Medicamentos Básicos, 10.ª revisión. Quito: MSP; 2022.',
-  /* 10 */ 'Shankar-Hari M, Phillips GS, Levy ML, Seymour CW, Liu VX, Deutschman CS, et al. Developing a new definition and assessing new clinical criteria for septic shock. JAMA. 2016;315(8):775–87. doi:10.1001/jama.2016.0289',
-  /* 11 */ 'Tamma PD, Aitken SL, Bonomo RA, Mathers AJ, van Duin D, Clancy CJ. Infectious Diseases Society of America guidance on the treatment of AmpC β-lactamase-producing Enterobacterales, ESBL-producing Enterobacterales, and DTR-Pseudomonas aeruginosa. Clin Infect Dis. 2022;74(12):2089–114. doi:10.1093/cid/ciab1013',
-  /* 12 */ 'Vincent JL, Moreno R, Takala J, Willatts S, De Mendonça A, Bruining H, et al. The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. Intensive Care Med. 1996;22(7):707–10. doi:10.1007/BF01709751',
-  /* 13 */ 'Seymour CW, Liu VX, Iwashyna TJ, Brunkhorst FM, Rea TD, Scherag A, et al. Assessment of Clinical Criteria for Sepsis: for the Third International Consensus Definitions for Sepsis and Septic Shock. JAMA. 2016;315(8):762–74. doi:10.1001/jama.2016.0288',
-  /* 14 */ 'Levy MM, Dellinger RP, Townsend SR, Linde-Zwirble WT, Marshall JC, Bion J, et al. The Surviving Sepsis Campaign: results of an international guideline-based performance improvement program targeting severe sepsis. Crit Care Med. 2010;38(2):367–74. doi:10.1097/CCM.0b013e3181cb0cdc',
-  /* 15 */ 'Marik PE, Farkas JD. The Changing Paradigm of Sepsis: Early Goal-Directed Therapy (EGDT) and Beyond. Intensive Care Med. 2018;44(6):890–903. doi:10.1007/s00134-018-5088-3',
-  /* 16 */ 'Ministerio de Salud Pública del Ecuador. Oficio Nro. MSP-CGSSR-2026-0008-O. Traslado de información complementaria para la actualización del Cuadro Nacional de Medicamentos Básicos (Informe RAM 2020–2024). Quito: Coordinación General de Sostenibilidad del Sistema y Recursos, MSP; 11 de febrero de 2026.',
-  /* 17 */ 'Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial 5316. Normas para el manejo de sepsis e infecciones nosocomiales. Quito: MSP; 2020.',
-  /* 18 */ 'Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial Nro. 00001-2025. Norma Técnica del Sistema Integrado de Vigilancia Epidemiológica (SIVE). Registro Oficial Tercer Suplemento N.° 107; 21 de agosto de 2025.',
+  /* 6  */ 'Gonzalez-Garcia M, Maldonado D, Barrero M, Casas A, Perez-Padilla R, Torres-Duque CA. Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude. Eur J Appl Physiol. 2020;120(12):2729–36. doi:10.1007/s00421-020-04498-z',
+  /* 7  */ 'Eltzschig HK, Carmeliet P. Hypoxia and inflammation. N Engl J Med. 2011;364(7):656–65. doi:10.1056/NEJMra0910283',
+  /* 8  */ 'Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Crit Care Med. 2021;49(11):e1063–e1143. doi:10.1097/CCM.0000000000005337',
+  /* 9  */ 'Barlam TF, Cosgrove SE, Abbo LM, MacDougall C, Schuetz AN, Septimus EJ, et al. Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America. Clin Infect Dis. 2016;62(10):e51–77. doi:10.1093/cid/ciw118',
+  /* 10 */ 'Ministerio de Salud Pública del Ecuador. Cuadro Nacional de Medicamentos Básicos, 10.ª revisión. Quito: MSP; 2022.',
+  /* 11 */ 'Shankar-Hari M, Phillips GS, Levy ML, Seymour CW, Liu VX, Deutschman CS, et al. Developing a new definition and assessing new clinical criteria for septic shock. JAMA. 2016;315(8):775–87. doi:10.1001/jama.2016.0289',
+  /* 12 */ 'Tamma PD, Aitken SL, Bonomo RA, Mathers AJ, van Duin D, Clancy CJ. Infectious Diseases Society of America 2022 guidance on the treatment of extended-spectrum β-lactamase producing Enterobacterales (ESBL-E), carbapenem-resistant Enterobacterales (CRE), and Pseudomonas aeruginosa with difficult-to-treat resistance (DTR-P. aeruginosa). Clin Infect Dis. 2022;75(2):187–212. doi:10.1093/cid/ciac268',
+  /* 13 */ 'Vincent JL, Moreno R, Takala J, Willatts S, De Mendonça A, Bruining H, et al. The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. Intensive Care Med. 1996;22(7):707–10. doi:10.1007/BF01709751',
+  /* 14 */ 'Seymour CW, Liu VX, Iwashyna TJ, Brunkhorst FM, Rea TD, Scherag A, et al. Assessment of Clinical Criteria for Sepsis: for the Third International Consensus Definitions for Sepsis and Septic Shock. JAMA. 2016;315(8):762–74. doi:10.1001/jama.2016.0288',
+  /* 15 */ 'Levy MM, Dellinger RP, Townsend SR, Linde-Zwirble WT, Marshall JC, Bion J, et al. The Surviving Sepsis Campaign: results of an international guideline-based performance improvement program targeting severe sepsis. Crit Care Med. 2010;38(2):367–74. doi:10.1097/CCM.0b013e3181cb0cdc',
+  /* 16 */ 'Marik PE, Farkas JD. The Changing Paradigm of Sepsis: Early Diagnosis, Early Antibiotics, Early Pressors, and Early Adjuvant Treatment. Crit Care Med. 2018;46(10):1690–2. doi:10.1097/CCM.0000000000003310',
+  /* 17 */ 'Ministerio de Salud Pública del Ecuador. Oficio Nro. MSP-CGSSR-2026-0008-O. Traslado de información complementaria para la actualización del Cuadro Nacional de Medicamentos Básicos (Informe RAM 2020–2024). Quito: Coordinación General de Sostenibilidad del Sistema y Recursos, MSP; 11 de febrero de 2026.',
+  /* 18 */ 'Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial 5316. Normas para el manejo de sepsis e infecciones nosocomiales. Quito: MSP; 2020.',
+  /* 19 */ 'Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial Nro. 00001-2025. Norma Técnica del Sistema Integrado de Vigilancia Epidemiológica (SIVE). Registro Oficial Tercer Suplemento N.° 107; 21 de agosto de 2025.',
 ];
 const s7 = [h1('7.  Bibliografía'), ...biblio(refs)];
 
@@ -419,7 +424,7 @@ const s8 = [
   ),
   blk(),
   h2('Anexo 2. Escala SOFA: tabla de puntuación ajustada para la altitud del HECAM'),
-  bp('Un aumento agudo ≥ 2 puntos sobre el basal confirma el diagnóstico de sepsis según Sepsis-3[[12]]. **Ajuste HECAM:** la PaO₂ basal en Quito (2.850 m.s.n.m.) es de 65–70 mmHg, con un cociente PaO₂/FiO₂ basal aproximado de 310 en lugar de 400 al nivel del mar; por ello, un paciente con PaO₂/FiO₂ de 300 en Quito puede corresponder a la zona 0–1 de la escala.'),
+  bp('Un aumento agudo ≥ 2 puntos sobre el basal confirma el diagnóstico de sepsis según Sepsis-3[[13]]. **Ajuste HECAM:** la PaO₂ basal de referencia es de 65–70 mmHg, con un cociente PaO₂/FiO₂ basal aproximado de 310 en lugar de 400 al nivel del mar; por ello, un paciente con PaO₂/FiO₂ de 300 en Quito puede corresponder a la zona 0–1 de la escala. Son valores de población andina sana estudiada a 2.640 m, extrapolados a los 2.850 m de Quito y pendientes de validación local; además descienden con la edad, más en mujeres, por lo que en el paciente mayor el basal real puede ser inferior al indicado[[6]].'),
   mkT(
     [{ label: 'Sistema', w: 2306 }, { label: '0', w: 1300, centered: true }, { label: '1', w: 1300, centered: true }, { label: '2', w: 1300, centered: true }, { label: '3', w: 1300, centered: true }, { label: '4', w: 1300, centered: true }],
     [
@@ -456,7 +461,7 @@ const s8 = [
     ]
   ),
   semaforo(),
-  bp('**CONCLUSIÓN CLAVE:** el HECAM presenta una resistencia de __K. pneumoniae__ a carbapenémicos entre 1,5 y 2,5 veces superior al promedio nacional (49–76 % frente a 28–31 %). La ceftazidima/avibactam es la única opción con alta actividad (0–2 % de resistencia) frente a __K. pneumoniae__ CRE en UCI y bacteriemia del HECAM, lo que sustenta su indicación restringida y auditada por el PROA institucional[[16]].'),
+  bp('**CONCLUSIÓN CLAVE:** el HECAM presenta una resistencia de __K. pneumoniae__ a carbapenémicos entre 1,5 y 2,5 veces superior al promedio nacional (49–76 % frente a 28–31 %). La ceftazidima/avibactam es la única opción con alta actividad (0–2 % de resistencia) frente a __K. pneumoniae__ CRE en UCI y bacteriemia del HECAM, lo que sustenta su indicación restringida y auditada por el PROA institucional[[17]].'),
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -514,5 +519,6 @@ const children = [
   ...s10,
 ];
 
-L.escribir(buildDoc(titulo, codigo, version, children, fechaElab), '../salida/HECAM-MI-PR-001_Manejo_Sepsis_Shock_Septico_Adultos.docx')
+L.escribir(buildDoc(titulo, codigo, version, children, fechaElab),
+           path.join(__dirname, 'salida', 'HECAM-MI-PR-001_Manejo_Sepsis_Shock_Septico_Adultos.docx'))
   .then(() => console.log('OK — Sepsis generado'));

@@ -1,6 +1,7 @@
 'use strict';
 const fs = require('fs');
-const L = require('../lib/hecam-lib.js');
+const path = require('path');
+const L = require('../../skill/lib/hecam-lib.js');
 const {
   Packer, Paragraph, TextRun, PageBreak, AlignmentType,
   CW, sp, h1, h2, h3, bp, blt, nmb, blk, dvd, caption, note, who,
@@ -18,11 +19,11 @@ const fechaElab = 'Julio 2026';
 // ═══════════════════════════════════════════════════════════════════════════════
 const s1 = [
   h1('1.  Justificación'),
-  bp('La infección del tracto urinario (ITU) es una de las infecciones bacterianas más frecuentes en la práctica clínica mundial, con más de 400 millones de episodios anuales. Su forma complicada, definida por la coexistencia de factores anatómicos, funcionales, metabólicos o inmunológicos que incrementan el riesgo de fracaso terapéutico, recurrencia y progresión a formas graves[[1]], constituye una causa frecuente de ingreso hospitalario desde los servicios de emergencia y se asocia a una mortalidad del 5–20 % cuando cursa con bacteriemia[[2]]. Cuando la infección urinaria genera disfunción orgánica se configura la urosepsis, definida según los criterios del Tercer Consenso Internacional (Sepsis-3) por un aumento agudo de la puntuación SOFA ≥ 2 puntos, con una mortalidad estimada del 20–40 %[[3]].'),
-  bp('En el Hospital de Especialidades Carlos Andrade Marín (HECAM), establecimiento de referencia de tercer nivel del Instituto Ecuatoriano de Seguridad Social (IESS), el Servicio de Emergencia y el Departamento de Medicina Interna concentran una proporción significativa de pacientes adultos con ITU complicada de origen comunitario e intrahospitalario. La alta prevalencia de comorbilidades como diabetes mellitus, enfermedad renal crónica, litiasis urinaria y el uso prolongado de catéteres vesicales en la población afiliada determina que una proporción relevante de estas infecciones presente un comportamiento clínico grave. Los datos nacionales del Informe Técnico SVPCS-DNVE-2026-02 sobre Resistencia Antimicrobiana en Ecuador 2020-2024 (MSP/INSPI–CRN-RAM), elaborado sobre 58 hospitales centinela incluido el HECAM, confirman que __Escherichia coli__ es el microorganismo más prevalente del país (46–55 % de los aislamientos anuales) y que la mayor carga de aislamientos multirresistentes de esta especie se concentra precisamente en las infecciones del tracto urinario[[4]].'),
-  bp('El desafío terapéutico institucional queda definido por la Cartilla de Resistencia Antibiótica HECAM 2025, elaborada por el Laboratorio de Bacteriología de la Unidad Técnica de Patología Clínica y aprobada por el Programa de Optimización del Uso de Antimicrobianos (PROA)[[5]]. Sus datos muestran que __E. coli__ presenta una resistencia a ceftriaxona del 30 % en Emergencia ambulatoria y del 53 % en Medicina Interna, lo que evidencia una prevalencia de betalactamasas de espectro extendido superior al 50 % en el paciente hospitalizado[[6]]; que la resistencia a ciprofloxacino alcanza el 66 % en Emergencia y a trimetoprima/sulfametoxazol el 57–80 %, lo que excluye a ambos fármacos de la terapia empírica; y que __Klebsiella pneumoniae__ supera el 65 % de resistencia a cefalosporinas de tercera y cuarta generación en todos los servicios, con 42–76 % de resistencia a carbapenémicos en muestras hospitalarias, confirmando la circulación activa de carbapenemasas de tipo KPC[[7]].'),
-  bp('A este escenario microbiológico se suma el contexto fisiopatológico de la altitud de Quito (2.850 m.s.n.m.), donde la hipoxia hipobárica crónica puede enmascarar o potenciar manifestaciones de la ITU complicada —taquipnea, taquicardia y alteración del estado de conciencia— dificultando el reconocimiento precoz de la urosepsis. Los valores de referencia deben ajustarse: la SatO₂ basal normal es de 88–92 %, la PaO₂ basal de 65–70 mmHg y el umbral de fiebre se sitúa en T > 37,5 °C axilar. La hipoxia crónica influye además en la masa muscular y en la estimación de la función renal, lo que condiciona el ajuste de dosis de antimicrobianos nefrotóxicos[[8]].'),
-  bp('El presente protocolo abandona los esquemas empíricos que no se corresponden con la epidemiología institucional y establece una estrategia estratificada por servicio de origen y por factores de riesgo para microorganismos productores de betalactamasas de espectro extendido (BLEE) o resistentes a carbapenémicos (CRE). El uso restringido de ceftazidima/avibactam como agente de rescate se sustenta en el proceso nacional de actualización del Cuadro Nacional de Medicamentos Básicos impulsado por el Ministerio de Salud Pública ante el Consejo Nacional de Salud[[9]]. Está dirigido a todos los pacientes adultos (≥ 18 años) con ITU complicada que ingresan por el Servicio de Emergencia y son admitidos por el Departamento de Medicina Interna del HECAM. Las Unidades Técnicas involucradas son: Emergencia, Medicina Interna e Infectología, Laboratorio de Bacteriología/PROA, Nefrología, Urología, Imagenología, Farmacia y Unidad de Cuidados Intensivos. Los resultados esperados son el diagnóstico oportuno y estandarizado, el inicio de antimicrobianos apropiados en menos de 60 minutos, la reducción de la mortalidad asociada a urosepsis, la disminución de la estancia hospitalaria y la optimización del uso de antibióticos de reserva.'),
+  bp('La infección del tracto urinario (ITU) es de las infecciones bacterianas más frecuentes del mundo, con más de 400 millones de episodios anuales. Su forma complicada —factores anatómicos, funcionales, metabólicos o inmunológicos que elevan el riesgo de fracaso terapéutico y de progresión a formas graves[[1]]— es causa frecuente de ingreso desde emergencia y se asocia a una mortalidad del 5–20 % con bacteriemia[[2]]. Si genera disfunción orgánica se configura la urosepsis, definida por Sepsis-3 como un aumento agudo del SOFA ≥ 2 puntos, con mortalidad del 20–40 %[[3]].'),
+  bp('En el Hospital de Especialidades Carlos Andrade Marín (HECAM), tercer nivel del Instituto Ecuatoriano de Seguridad Social (IESS), Emergencia y Medicina Interna concentran buena parte de estos pacientes, en una población afiliada donde la diabetes, la enfermedad renal crónica, la litiasis urinaria y los catéteres vesicales permanentes explican que muchos cursen de forma grave. El Informe Técnico SVPCS-DNVE-2026-02 (MSP/INSPI–CRN-RAM), sobre 58 hospitales centinela incluido el HECAM, confirma que __Escherichia coli__ es el microorganismo más prevalente del país (46–55 % de los aislamientos) y concentra su mayor carga de multirresistencia en las infecciones urinarias[[4]].'),
+  bp('El desafío terapéutico lo define la Cartilla de Resistencia Antibiótica HECAM 2025[[5]]. __E. coli__ presenta una resistencia a ceftriaxona del 30 % en Emergencia ambulatoria y del 53 % en Medicina Interna, con una prevalencia de betalactamasas de espectro extendido superior al 50 % en el hospitalizado[[6]]; la resistencia a ciprofloxacino alcanza el 66 % en Emergencia y a trimetoprima/sulfametoxazol el 57–80 %, lo que excluye a ambos de la terapia empírica; y __Klebsiella pneumoniae__ supera el 65 % de resistencia a cefalosporinas de tercera y cuarta generación, con 42–76 % a carbapenémicos en muestras hospitalarias, lo que confirma circulación activa de carbapenemasas KPC[[7]].'),
+  bp('A ello se suma la altitud de Quito (2.850 m.s.n.m.): la hipoxia hipobárica crónica puede enmascarar la taquipnea, la taquicardia y la alteración del estado de conciencia, y retrasar el reconocimiento de la urosepsis. Los valores de referencia se ajustan: SatO₂ basal 88–92 %, PaO₂ basal 65–70 mmHg —extrapolados desde población andina sana estudiada a 2.640 m— y fiebre en T > 37,5 °C axilar. La hipoxia crónica altera además la masa muscular y la estimación de la función renal, lo que condiciona el ajuste de nefrotóxicos[[8]].'),
+  bp('El protocolo abandona los esquemas empíricos ajenos a la epidemiología institucional y estratifica la terapia por servicio de origen y por factores de riesgo para microorganismos BLEE o CRE. El uso restringido de ceftazidima/avibactam como rescate se sustenta en la actualización del Cuadro Nacional de Medicamentos Básicos impulsada por el MSP ante el Consejo Nacional de Salud[[9]]. Se dirige a los adultos (≥ 18 años) con ITU complicada admitidos por Medicina Interna desde Emergencia. Participan Emergencia, Medicina Interna e Infectología, Laboratorio de Bacteriología/PROA, Nefrología, Urología, Imagenología, Farmacia y Cuidados Intensivos. Se espera un diagnóstico estandarizado, antimicrobianos apropiados en menos de 60 minutos, menor mortalidad por urosepsis, menor estancia y mejor uso de los antibióticos de reserva.'),
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -109,14 +110,10 @@ const s41 = [
     ]
   ),
   blk(),
-  h3('Criterios de exclusión del protocolo'),
-  blt('Pacientes menores de 18 años, que deben ser derivados al Servicio de Pediatría.'),
-  blt('ITU no complicada en mujer adulta sin factores de riesgo: manejo ambulatorio con fosfomicina trometamol 3 g en dosis única o nitrofurantoína 100 mg cada 12 horas durante 5 días, ambas incluidas en el CNMB[[11]]. La Cartilla HECAM 2025 registra para __E. coli__ de Emergencia una resistencia a fosfomicina del 8 % y a nitrofurantoína del 7 %, restringiendo su uso exclusivamente a la cistitis no complicada[[5]].'),
-  blt('Bacteriuria asintomática en paciente no embarazada y sin procedimiento urológico programado: NO debe tratarse[[12]].'),
   h3('Anamnesis y examen físico dirigidos'),
   blt('Síntomas urinarios: disuria, polaquiuria, urgencia miccional, hematuria y orina turbia o de olor fétido.'),
   blt('Síntomas sistémicos: fiebre, escalofríos, malestar general, náuseas, vómitos y dolor lumbar o en flanco. **NOTA DE ALTITUD:** en Quito el umbral de fiebre se ajusta a T > 37,5 °C axilar[[8]].'),
-  blt('Signos vitales completos incluida la saturación de oxígeno. La SatO₂ basal normal en Quito es de 88–92 %; debe alarmar un valor < 88 %.'),
+  blt('Signos vitales completos incluida la saturación de oxígeno. La SatO₂ basal de referencia es de 88–92 %; debe alarmar un valor < 88 %. Es una cifra extrapolada desde 2.640 m que desciende con la edad, así que en el paciente mayor conviene contrastarla con la gasometría[[8]].'),
   blt('Exploración dirigida: puñopercusión lumbar, palpación abdominal en busca de globo vesical o masas, y valoración del meato y del sistema de drenaje si el paciente porta catéter urinario.'),
   blt('**Antecedente microbiológico clave:** antibióticos recibidos en los últimos 90 días, hospitalización reciente y urocultivos previos con microorganismos resistentes. Estos factores determinan la selección empírica (véase el numeral 4.3).'),
 ];
@@ -244,6 +241,17 @@ const oralRows = [
   ['Nitrofurantoína 100 mg VO c/12 h', 'Resistencia del 7 % en __E. coli__ de Emergencia. Indicada solo en cistitis no complicada. CONTRAINDICADA en ITU complicada y con TFG < 45 mL/min.', 'Contraindicada si TFG < 45'],
 ];
 
+const duracionRows = [
+  ['Cistitis complicada', '7 días'],
+  ['Pielonefritis aguda complicada sin bacteriemia', '10–14 días'],
+  ['Pielonefritis aguda complicada con bacteriemia', '14 días como mínimo'],
+  ['ITU asociada a catéter con retiro del dispositivo en 24 horas', '7 días'],
+  ['ITU asociada a catéter sin retiro del dispositivo', '14 días'],
+  ['Urosepsis por K. pneumoniae CRE', '14–21 días según evolución y control microbiológico'],
+  ['Prostatitis bacteriana aguda', '4–6 semanas, con antimicrobiano oral avalado por antibiograma'],
+  ['Absceso renal o pionefrosis tras el drenaje', '21 días como mínimo, con seguimiento por imagen'],
+];
+
 const s43 = [
   h2('4.3.  Plan Terapéutico / Intervenciones no farmacológicas'),
   ...who('Médico tratante, con el soporte de Farmacia (PROA-HECAM) y Microbiología.',
@@ -282,6 +290,18 @@ const s43 = [
     [{ label: 'Antimicrobiano oral', w: 2500 }, { label: 'Resistencia HECAM 2025 e indicación', w: 4600 }, { label: 'Ajuste renal', w: 1706 }],
     oralRows
   ),
+  blk(),
+  h3('F. Criterios de inclusión y exclusión, duración y suspensión del tratamiento'),
+  blt('__Inclusión:__ paciente adulto (≥ 18 años) con infección urinaria y al menos uno de los factores de complicación de la Tabla 3 (numeral 4.1).'),
+  blt('__Exclusión:__ pacientes menores de 18 años, que deben ser derivados al Servicio de Pediatría.'),
+  blt('__Exclusión:__ ITU no complicada en mujer adulta sin factores de riesgo: manejo ambulatorio con fosfomicina trometamol 3 g en dosis única o nitrofurantoína 100 mg cada 12 horas durante 5 días, ambas incluidas en el CNMB[[11]]. La Cartilla HECAM 2025 registra para __E. coli__ de Emergencia una resistencia a fosfomicina del 8 % y a nitrofurantoína del 7 %, restringiendo su uso exclusivamente a la cistitis no complicada[[5]].'),
+  blt('__Exclusión:__ bacteriuria asintomática en paciente no embarazada y sin procedimiento urológico programado: NO debe tratarse[[12]].'),
+  blt('__Criterios de suspensión:__ emplear la procalcitonina como criterio complementario de suspensión, con meta < 0,5 ng/mL cuando esté disponible. En __K. pneumoniae__ CRE la duración total la define Infectología caso por caso[[16]].'),
+  caption('Tabla 9. Duración total recomendada del tratamiento antimicrobiano'),
+  mkT(
+    [{ label: 'Diagnóstico', w: 3400 }, { label: 'Duración total (intravenosa más oral)', w: 5406 }],
+    duracionRows
+  ),
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -291,7 +311,7 @@ const s44 = [
   h2('4.4.  Clasificación de severidad / Manejo de complicaciones'),
   ...who('Médico especialista de Medicina Interna o UCI.',
          'Al completar la evaluación inicial y de forma continua durante la hospitalización.'),
-  caption('Tabla 9. Clasificación de severidad de la infección urinaria complicada'),
+  caption('Tabla 10. Clasificación de severidad de la infección urinaria complicada'),
   mkT(
     [{ label: 'Severidad', w: 1300 }, { label: 'Criterios', w: 4000 }, { label: 'Mortalidad', w: 1100, centered: true }, { label: 'Conducta inmediata', w: 2406 }],
     [
@@ -323,7 +343,7 @@ const s45 = [
   blt('Revisar el urocultivo y el antibiograma a las 48–72 horas. Si el microorganismo es sensible a un antimicrobiano de espectro más estrecho, la desescalada es OBLIGATORIA[[10]].'),
   blt('__E. coli__ sensible a piperacilina/tazobactam: desescalar desde ertapenem o meropenem. __E. coli__ productora de BLEE sensible a ertapenem: desescalar desde meropenem[[6]].'),
   blt('__K. pneumoniae__ CRE sensible a ceftazidima/avibactam: mantener el esquema y consultar a Infectología para definir la duración total del tratamiento[[16]].'),
-  blt('Emplear la procalcitonina como criterio complementario de suspensión, con meta < 0,5 ng/mL cuando esté disponible.'),
+  blt('Registrar la procalcitonina cuando esté disponible; el criterio de suspensión que se aplica a ese valor consta en el numeral 4.3.'),
   blt('Realizar una reunión interdisciplinaria (internista, farmacéutico e infectólogo) para cada aislamiento CRE o de manejo difícil, conforme a las políticas de vigilancia nacional de la resistencia antimicrobiana[[17]].'),
   h3('Criterios de alta hospitalaria'),
   blt('Afebril durante al menos 48 horas, considerando el umbral de altitud de T < 37,5 °C axilar.'),
@@ -331,21 +351,6 @@ const s45 = [
   blt('Función renal estable, con creatinina en su valor basal o con una nueva línea de base documentada.'),
   blt('El urocultivo de control no se requiere de forma rutinaria al alta, salvo en pacientes con aislamiento CRE, embarazadas, receptores de trasplante o ante persistencia de síntomas.'),
   blt('Plan de seguimiento ambulatorio confirmado a los 7 días, con control clínico y de laboratorio.'),
-  blk(),
-  caption('Tabla 10. Duración total recomendada del tratamiento antimicrobiano'),
-  mkT(
-    [{ label: 'Diagnóstico', w: 3400 }, { label: 'Duración total (intravenosa más oral)', w: 5406 }],
-    [
-      ['Cistitis complicada', '7 días'],
-      ['Pielonefritis aguda complicada sin bacteriemia', '10–14 días'],
-      ['Pielonefritis aguda complicada con bacteriemia', '14 días como mínimo'],
-      ['ITU asociada a catéter con retiro del dispositivo en 24 horas', '7 días'],
-      ['ITU asociada a catéter sin retiro del dispositivo', '14 días'],
-      ['Urosepsis por K. pneumoniae CRE', '14–21 días según evolución y control microbiológico'],
-      ['Prostatitis bacteriana aguda', '4–6 semanas, con antimicrobiano oral avalado por antibiograma'],
-      ['Absceso renal o pionefrosis tras el drenaje', '21 días como mínimo, con seguimiento por imagen'],
-    ]
-  ),
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -406,7 +411,7 @@ const s6 = [
       ['Retiro del catéter en ITU asociada a catéter (seguimiento)', 'Pacientes con ITU asociada a catéter en quienes se retiró o recambió el dispositivo dentro de las primeras 24 horas.', '(N.º con catéter retirado ≤ 24 h / total de ITU asociadas a catéter) × 100', '≥ 90 %', 'Mensual', 'Enfermería, Medicina Interna'],
       ['Tasa de urosepsis secundaria (seguimiento)', 'Pacientes hospitalizados por ITU complicada que desarrollan urosepsis durante la hospitalización.', '(N.º con urosepsis secundaria / total de ITU complicadas hospitalizadas) × 100', '≤ 10 %', 'Trimestral', 'Control de Calidad, Medicina Interna'],
       ['Mortalidad hospitalaria por urosepsis (resultado)', 'Pacientes con urosepsis que fallecen durante la hospitalización.', '(N.º de fallecidos con urosepsis / total de pacientes con urosepsis) × 100', 'Reducción 5 % anual', 'Anual', 'Dirección Técnica, Control de Calidad'],
-      ['Estancia hospitalaria por ITU complicada (resultado)', 'Mediana de días de hospitalización por ITU complicada, excluyendo los casos de urosepsis por CRE.', 'Mediana de días de hospitalización de la cohorte', 'Reducción 10 % anual', 'Trimestral', 'Medicina Interna, Control de Calidad'],
+      ['Estancia hospitalaria prolongada en ITU complicada (resultado)', 'Egresos por ITU complicada, excluida la urosepsis por CRE, cuya estancia supera los 10 días. El umbral es el límite inferior de la duración recomendada para pielonefritis complicada sin bacteriemia (Tabla 9).', '(N.º de egresos con estancia > 10 días / total de egresos por ITU complicada sin CRE) × 100', '≤ 30 %, con reducción del 10 % anual sobre la línea base del primer trimestre', 'Trimestral', 'Medicina Interna, Control de Calidad'],
       ['Notificación de CRE al PROA y CRN-RAM (resultado)', 'Aislamientos CRE o XDR de origen urinario notificados al PROA-HECAM y al CRN-RAM/INSPI conforme a la Norma SIVE.', '(N.º de aislamientos notificados / total de CRE-XDR urinarios) × 100', '100 %', 'Mensual', 'PROA, Microbiología'],
     ]
   ),
@@ -422,8 +427,8 @@ const refs = [
   /* 4  */ 'Palacios Rodas R, Narváez M. Informe Técnico SVPCS-DNVE-2026-02: Situación de la Resistencia Antimicrobiana en Ecuador 2020–2024. Quito: Dirección Nacional de Vigilancia Epidemiológica, Ministerio de Salud Pública / INSPI–CRN-RAM; 15 de enero de 2026.',
   /* 5  */ 'Andrade Estévez AC, Gordón A, Cevallos C. Análisis Acumulado de Resistencia Antibiótica 2025. Cartillas de Resistencia 2025. Quito: Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica, HECAM/IESS; abril de 2026.',
   /* 6  */ 'Pitout JD, Laupland KB. Extended-spectrum beta-lactamase-producing Enterobacteriaceae: an emerging public-health concern. Lancet Infect Dis. 2008;8(3):159–66. doi:10.1016/S1473-3099(08)70041-0',
-  /* 7  */ 'Tamma PD, Aitken SL, Bonomo RA, Mathers AJ, van Duin D, Clancy CJ. Infectious Diseases Society of America guidance on the treatment of AmpC β-lactamase-producing Enterobacterales, ESBL-producing Enterobacterales, and DTR-Pseudomonas aeruginosa. Clin Infect Dis. 2022;74(12):2089–114. doi:10.1093/cid/ciab1013',
-  /* 8  */ 'Gonzalez-Garcia M, Torres-Duque CA, Bustos A, Gaitan J, Maldonado D. Bronchial hyperresponsiveness and hypoxemia in subjects residing at high altitude: physiological implications. High Alt Med Biol. 2020;21(3):241–7. doi:10.1089/ham.2019.0131',
+  /* 7  */ 'Tamma PD, Aitken SL, Bonomo RA, Mathers AJ, van Duin D, Clancy CJ. Infectious Diseases Society of America 2022 guidance on the treatment of extended-spectrum β-lactamase producing Enterobacterales (ESBL-E), carbapenem-resistant Enterobacterales (CRE), and Pseudomonas aeruginosa with difficult-to-treat resistance (DTR-P. aeruginosa). Clin Infect Dis. 2022;75(2):187–212. doi:10.1093/cid/ciac268',
+  /* 8  */ 'Gonzalez-Garcia M, Maldonado D, Barrero M, Casas A, Perez-Padilla R, Torres-Duque CA. Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude. Eur J Appl Physiol. 2020;120(12):2729–36. doi:10.1007/s00421-020-04498-z',
   /* 9  */ 'Ministerio de Salud Pública del Ecuador. Oficio Nro. MSP-CGSSR-2026-0008-O. Traslado de información complementaria para la actualización del Cuadro Nacional de Medicamentos Básicos (Informe RAM 2020–2024). Quito: Coordinación General de Sostenibilidad del Sistema y Recursos, MSP; 11 de febrero de 2026.',
   /* 10 */ 'Barlam TF, Cosgrove SE, Abbo LM, MacDougall C, Schuetz AN, Septimus EJ, et al. Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America. Clin Infect Dis. 2016;62(10):e51–77. doi:10.1093/cid/ciw118',
   /* 11 */ 'Ministerio de Salud Pública del Ecuador. Cuadro Nacional de Medicamentos Básicos, 10.ª revisión. Quito: MSP; 2022.',
@@ -431,7 +436,7 @@ const refs = [
   /* 13 */ 'Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int Suppl. 2013;3(1):1–150. doi:10.1038/kisup.2012.73',
   /* 14 */ 'Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial Nro. 00001-2025. Norma Técnica del Sistema Integrado de Vigilancia Epidemiológica (SIVE). Registro Oficial Tercer Suplemento N.° 107; 21 de agosto de 2025.',
   /* 15 */ 'Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Crit Care Med. 2021;49(11):e1063–e1143. doi:10.1097/CCM.0000000000005337',
-  /* 16 */ 'Carmeli Y, Armstrong J, Laud PJ, Newell P, Stone G, Wardman A, et al. Ceftazidime-avibactam or best available therapy in patients with ceftazidime-resistant Enterobacteriaceae and Pseudomonas aeruginosa complicated urinary tract infection or complicated intra-abdominal infection (REPRISE): a randomised, pathogen-directed, phase 3 study. Lancet Infect Dis. 2016;16(6):661–73. doi:10.1016/S1473-3099(16)30004-4',
+  /* 16 */ 'Carmeli Y, Armstrong J, Laud PJ, Newell P, Stone G, Wardman A, et al. Ceftazidime-avibactam or best available therapy in patients with ceftazidime-resistant Enterobacteriaceae and Pseudomonas aeruginosa complicated urinary tract infections or complicated intra-abdominal infections (REPRISE): a randomised, pathogen-directed, phase 3 study. Lancet Infect Dis. 2016;16(6):661–73. doi:10.1016/S1473-3099(16)30004-4',
   /* 17 */ 'World Health Organization. Global Antimicrobial Resistance and Use Surveillance System (GLASS) Report 2023. Geneva: WHO; 2023.',
   /* 18 */ 'Rodríguez-Baño J, Cisneros JM, Cobos-Trigueros N, Fresco G, Navarro-San Francisco C, Gudiol C, et al. Diagnosis and antimicrobial treatment of invasive infections due to multidrug-resistant Enterobacteriaceae. Enferm Infecc Microbiol Clin. 2015;33(5):337.e1–337.e21. doi:10.1016/j.eimc.2014.11.009',
 ];
@@ -557,5 +562,6 @@ const children = [
   ...s10,
 ];
 
-L.escribir(buildDoc(titulo, codigo, version, children, fechaElab), '../salida/HECAM-MI-PR-002_Manejo_ITU_Aguda_Complicada_Adultos.docx')
+L.escribir(buildDoc(titulo, codigo, version, children, fechaElab),
+           path.join(__dirname, 'salida', 'HECAM-MI-PR-002_Manejo_ITU_Aguda_Complicada_Adultos.docx'))
   .then(() => console.log('OK — ITU generado'));
