@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "generar": "cd protocolos && node sepsis.js && node itu.js",
-    "verificar": "python3 scripts/verificar_caratula.py salida/HECAM-MI-PR-001_Manejo_Sepsis_Shock_Septico_Adultos.docx"
+    "verificar": "python3 scripts/verificar_caratula.py salida/HECAM-MI-PR-001_Manejo_Sepsis_Shock_Septico_Adultos.docx",
+    "fuentes": "python3 scripts/verificar_pmid.py protocolos/sepsis.js protocolos/itu.js"
   },
   "dependencies": { "docx": "^9.6.1" }
 }

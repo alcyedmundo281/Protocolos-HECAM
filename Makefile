@@ -4,9 +4,12 @@ generar:
 verificar:
 	@for f in salida/*.docx; do python3 scripts/verificar_caratula.py "$$f" || exit 1; done
 
-todo: generar verificar
+fuentes:
+	python3 scripts/verificar_pmid.py protocolos/*.js
+
+todo: generar verificar fuentes
 
 referencia:
 	python3 scripts/verificar_caratula.py --generar-referencia $(DOCX)
 
-.PHONY: generar verificar todo referencia
+.PHONY: generar verificar fuentes todo referencia

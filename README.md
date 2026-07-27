@@ -31,7 +31,8 @@ pip install pypdfium2 Pillow numpy     # opcional
 ```bash
 make generar      # compila los .docx en salida/
 make verificar    # comprueba que la maquetación no se movió
-make todo         # ambas cosas
+make fuentes      # comprueba contra PubMed que la bibliografía exista
+make todo         # las tres cosas
 ```
 
 Sin `make`:
@@ -39,6 +40,7 @@ Sin `make`:
 ```bash
 cd protocolos && node sepsis.js && node itu.js
 python3 scripts/verificar_caratula.py salida/HECAM-MI-PR-001_*.docx
+python3 scripts/verificar_pmid.py protocolos/sepsis.js
 ```
 
 ---
@@ -68,6 +70,55 @@ python3 scripts/verificar_caratula.py --generar-referencia salida/APROBADO.docx
 
 Conviene revisar el `git diff` de `referencia/caratula.json` antes de confirmar:
 ahí se ve exactamente qué se movió y cuánto.
+
+---
+
+## La verificación de fuentes
+
+`scripts/verificar_pmid.py` comprueba contra PubMed que cada referencia de la
+bibliografía exista de verdad. Acepta el generador `.js`, el `.docx` compilado o
+un `protocolo.jsonld`, y busca el PMID en tres pasadas: por DOI, por título y,
+como último recurso, por autor, año y revista.
+
+```bash
+python3 scripts/verificar_pmid.py protocolos/sepsis.js
+python3 scripts/verificar_pmid.py --offline protocolos/*.js   # solo caché, sin red
+```
+
+| Veredicto | Qué significa |
+|---|---|
+| `OK` | el registro de PubMed coincide con la referencia local |
+| `REVISAR` | el artículo existe pero algún dato no cuadra: título, año, revista o DOI |
+| `SIN PMID` | ni PubMed ni Crossref lo conocen; la cita es sospechosa |
+| `SOLO DOI` | el DOI es válido en Crossref pero la revista no está indexada en PubMed |
+| `NO INDEXADA` | literatura gris: normativa, informes, monografías |
+
+Falla (código 1) solo con `REVISAR` y `SIN PMID`. `SOLO DOI` y `NO INDEXADA` son
+avisos: hay fuentes legítimas que nunca tendrán PMID, y acusarlas de inventadas
+haría que se dejara de mirar el informe.
+
+Tres decisiones que evitan falsos positivos, y que conviene no revertir:
+
+- **Un título local más corto que el de PubMed se acepta.** Vancouver permite
+  podar el subtítulo posterior a los dos puntos y la coletilla de autoría
+  corporativa. La comprobación es asimétrica a propósito: si es el título local
+  el que *añade* texto que PubMed no tiene, se marca. Ese es justo el patrón de
+  una referencia adulterada.
+- **Solo la búsqueda por DOI se considera concluyente.** Cuando una frase
+  entrecomillada no existe, PubMed no devuelve vacío: la rompe en términos
+  sueltos y busca igual, así que un título inventado puede devolver cualquier
+  artículo del mismo campo. Los resultados que no llegan por DOI se descartan si
+  el título no se corresponde.
+- **Crossref es la segunda opinión.** No todo artículo real está en PubMed, pero
+  casi todo tiene DOI registrado. Es lo que separa «esta cita no existe» de
+  «esta revista no está indexada».
+
+`referencia/pmid-cache.json` guarda cada registro recuperado y la fecha de
+consulta. Permite repetir la verificación sin red y deja constancia de qué se
+comprobó. Se regenera solo; no se edita a mano.
+
+Con `NCBI_API_KEY` en el entorno, el límite de PubMed sube de 3 a 10 consultas
+por segundo.
 
 ---
 
@@ -106,8 +157,8 @@ transparente y margen recortado, sin tocar ningún color.
 lib/hecam-lib.js        librería de composición (membrete, portada, tablas, firmas)
 protocolos/*.js         un archivo por protocolo: contenido clínico y llamadas a la librería
 assets/                 logotipos y barra
-scripts/                verificador de maquetación y validadores de la matriz
-referencia/             plantilla JSON-LD, contexto, plantilla JATS y caratula.json
+scripts/                verificadores de maquetación y de fuentes, validadores de la matriz
+referencia/             plantilla JSON-LD, contexto, plantilla JATS, caratula.json y pmid-cache.json
 docs/                   matriz editorial, mapeo JATS y datos institucionales
 salida/                 documentos compilados (ignorados por git)
 ```

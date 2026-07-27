@@ -1,0 +1,483 @@
+{
+  "_nota": "Registros de PubMed verificados por scripts/verificar_pmid.py. Se regenera solo; no editar a mano.",
+  "_actualizado": "2026-07-26",
+  "entradas": {
+    "doi:10.1001/jama.2016.0287": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "26903338",
+        "titulo": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+        "revista": "JAMA",
+        "anio": "2016",
+        "volumen": "315",
+        "numero": "8",
+        "paginas": "801-10",
+        "doi": "10.1001/jama.2016.0287",
+        "autores": [
+          "Singer M",
+          "Deutschman CS",
+          "Seymour CW"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1001/jama.2016.0288": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "26903335",
+        "titulo": "Assessment of Clinical Criteria for Sepsis: For the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+        "revista": "JAMA",
+        "anio": "2016",
+        "volumen": "315",
+        "numero": "8",
+        "paginas": "762-74",
+        "doi": "10.1001/jama.2016.0288",
+        "autores": [
+          "Seymour CW",
+          "Liu VX",
+          "Iwashyna TJ"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1001/jama.2016.0289": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "26903336",
+        "titulo": "Developing a New Definition and Assessing New Clinical Criteria for Septic Shock: For the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+        "revista": "JAMA",
+        "anio": "2016",
+        "volumen": "315",
+        "numero": "8",
+        "paginas": "775-87",
+        "doi": "10.1001/jama.2016.0289",
+        "autores": [
+          "Shankar-Hari M",
+          "Phillips GS",
+          "Levy ML"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1001/jamanetworkopen.2023.18036": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "37326993",
+        "titulo": "Partial Pressure of Arterial Oxygen in Healthy Adults at High Altitudes: A Systematic Review and Meta-Analysis",
+        "revista": "JAMA Netw Open",
+        "anio": "2023",
+        "volumen": "6",
+        "numero": "6",
+        "paginas": "e2318036",
+        "doi": "10.1001/jamanetworkopen.2023.18036",
+        "autores": [
+          "Forrer A",
+          "Gaisl T",
+          "Sevik A"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1007/bf01709751": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "8844239",
+        "titulo": "The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. On behalf of the Working Group on Sepsis-Related Problems of the European Society of Intensive Care Medicine",
+        "revista": "Intensive Care Med",
+        "anio": "1996",
+        "volumen": "22",
+        "numero": "7",
+        "paginas": "707-10",
+        "doi": "10.1007/BF01709751",
+        "autores": [
+          "Vincent JL",
+          "Moreno R",
+          "Takala J"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1007/s00134-018-5088-3": {
+      "via": null,
+      "consultado": "2026-07-26",
+      "registro": null,
+      "descartado": {
+        "pmid": "29476199",
+        "titulo": "Correction to: Guidelines for the diagnosis and management of critical illness-related corticosteroid insufficiency (CIRCI) in critically ill patients (Part I): Society of Critical Care Medicine (SCCM) and European Society of Intensive Care Medicine (ESICM) 2017",
+        "revista": "Intensive Care Med",
+        "anio": "2018",
+        "volumen": "44",
+        "numero": "3",
+        "paginas": "401-402",
+        "doi": "10.1007/s00134-018-5071-6",
+        "autores": [
+          "Annane D",
+          "Pastores SM",
+          "Rochwerg B"
+        ]
+      },
+      "crossref": null
+    },
+    "doi:10.1007/s00421-020-04498-z": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "32939642",
+        "titulo": "Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude",
+        "revista": "Eur J Appl Physiol",
+        "anio": "2020",
+        "volumen": "120",
+        "numero": "12",
+        "paginas": "2729-2736",
+        "doi": "10.1007/s00421-020-04498-z",
+        "autores": [
+          "Gonzalez-Garcia M",
+          "Maldonado D",
+          "Barrero M"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1016/j.eimc.2014.11.009": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "25600218",
+        "titulo": "Diagnosis and antimicrobial treatment of invasive infections due to multidrug-resistant Enterobacteriaceae. Guidelines of the Spanish Society of Infectious Diseases and Clinical Microbiology",
+        "revista": "Enferm Infecc Microbiol Clin",
+        "anio": "2015",
+        "volumen": "33",
+        "numero": "5",
+        "paginas": "337.e1-337.e21",
+        "doi": "10.1016/j.eimc.2014.11.009",
+        "autores": [
+          "Rodríguez-Baño J",
+          "Cisneros JM",
+          "Cobos-Trigueros N"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1016/j.medine.2021.05.010": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "36057441",
+        "titulo": "Correlation and validity of imputed PaO2/FiO2 and SpO2/FiO2 in patients with invasive mechanical ventilation at 2600m above sea level",
+        "revista": "Med Intensiva (Engl Ed)",
+        "anio": "2022",
+        "volumen": "46",
+        "numero": "9",
+        "paginas": "501-507",
+        "doi": "10.1016/j.medine.2021.05.010",
+        "autores": [
+          "Ortiz G",
+          "Bastidas A",
+          "Garay-Fernández M"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1016/s0140-6736(19)32989-7": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "31954465",
+        "titulo": "Global, regional, and national sepsis incidence and mortality, 1990-2017: analysis for the Global Burden of Disease Study",
+        "revista": "Lancet",
+        "anio": "2020",
+        "volumen": "395",
+        "numero": "10219",
+        "paginas": "200-211",
+        "doi": "10.1016/S0140-6736(19)32989-7",
+        "autores": [
+          "Rudd KE",
+          "Johnson SC",
+          "Agesa KM"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1016/s1473-3099(08)70041-0": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "18291338",
+        "titulo": "Extended-spectrum beta-lactamase-producing Enterobacteriaceae: an emerging public-health concern",
+        "revista": "Lancet Infect Dis",
+        "anio": "2008",
+        "volumen": "8",
+        "numero": "3",
+        "paginas": "159-66",
+        "doi": "10.1016/S1473-3099(08)70041-0",
+        "autores": [
+          "Pitout JD",
+          "Laupland KB"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1016/s1473-3099(16)30004-4": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "27107460",
+        "titulo": "Ceftazidime-avibactam or best available therapy in patients with ceftazidime-resistant Enterobacteriaceae and Pseudomonas aeruginosa complicated urinary tract infections or complicated intra-abdominal infections (REPRISE): a randomised, pathogen-directed, phase 3 study",
+        "revista": "Lancet Infect Dis",
+        "anio": "2016",
+        "volumen": "16",
+        "numero": "6",
+        "paginas": "661-673",
+        "doi": "10.1016/S1473-3099(16)30004-4",
+        "autores": [
+          "Carmeli Y",
+          "Armstrong J",
+          "Laud PJ"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1038/kisup.2012.73": {
+      "via": null,
+      "consultado": "2026-07-26",
+      "registro": null,
+      "descartado": null,
+      "crossref": {
+        "doi": "10.1038/kisup.2012.73",
+        "titulo": "Notice",
+        "revista": "Kidney International Supplements",
+        "anio": "2013",
+        "tipo": "journal-article"
+      }
+    },
+    "doi:10.1056/nejmra0910283": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "21323543",
+        "titulo": "Hypoxia and inflammation",
+        "revista": "N Engl J Med",
+        "anio": "2011",
+        "volumen": "364",
+        "numero": "7",
+        "paginas": "656-65",
+        "doi": "10.1056/NEJMra0910283",
+        "autores": [
+          "Eltzschig HK",
+          "Carmeliet P"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1086/650482": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "20175247",
+        "titulo": "Diagnosis, prevention, and treatment of catheter-associated urinary tract infection in adults: 2009 International Clinical Practice Guidelines from the Infectious Diseases Society of America",
+        "revista": "Clin Infect Dis",
+        "anio": "2010",
+        "volumen": "50",
+        "numero": "5",
+        "paginas": "625-63",
+        "doi": "10.1086/650482",
+        "autores": [
+          "Hooton TM",
+          "Bradley SF",
+          "Cardenas DD"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1089/ham.2019.0131": {
+      "via": null,
+      "consultado": "2026-07-26",
+      "registro": null,
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1093/cid/ciab1013": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "34864936",
+        "titulo": "Infectious Diseases Society of America Guidance on the Treatment of AmpC β-Lactamase-Producing Enterobacterales, Carbapenem-Resistant Acinetobacter baumannii, and Stenotrophomonas maltophilia Infections",
+        "revista": "Clin Infect Dis",
+        "anio": "2022",
+        "volumen": "74",
+        "numero": "12",
+        "paginas": "2089-2114",
+        "doi": "10.1093/cid/ciab1013",
+        "autores": [
+          "Tamma PD",
+          "Aitken SL",
+          "Bonomo RA"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1093/cid/ciac268": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "35439291",
+        "titulo": "Infectious Diseases Society of America 2022 Guidance on the Treatment of Extended-Spectrum β-lactamase Producing Enterobacterales (ESBL-E), Carbapenem-Resistant Enterobacterales (CRE), and Pseudomonas aeruginosa with Difficult-to-Treat Resistance (DTR-P. aeruginosa)",
+        "revista": "Clin Infect Dis",
+        "anio": "2022",
+        "volumen": "75",
+        "numero": "2",
+        "paginas": "187-212",
+        "doi": "10.1093/cid/ciac268",
+        "autores": [
+          "Tamma PD",
+          "Aitken SL",
+          "Bonomo RA"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1093/cid/ciq257": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "21292654",
+        "titulo": "International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: A 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases",
+        "revista": "Clin Infect Dis",
+        "anio": "2011",
+        "volumen": "52",
+        "numero": "5",
+        "paginas": "e103-20",
+        "doi": "10.1093/cid/ciq257",
+        "autores": [
+          "Gupta K",
+          "Hooton TM",
+          "Naber KG"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1093/cid/ciw118": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "27080992",
+        "titulo": "Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America",
+        "revista": "Clin Infect Dis",
+        "anio": "2016",
+        "volumen": "62",
+        "numero": "10",
+        "paginas": "e51-77",
+        "doi": "10.1093/cid/ciw118",
+        "autores": [
+          "Barlam TF",
+          "Cosgrove SE",
+          "Abbo LM"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1097/ccm.0000000000003310": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "30216303",
+        "titulo": "The Changing Paradigm of Sepsis: Early Diagnosis, Early Antibiotics, Early Pressors, and Early Adjuvant Treatment",
+        "revista": "Crit Care Med",
+        "anio": "2018",
+        "volumen": "46",
+        "numero": "10",
+        "paginas": "1690-1692",
+        "doi": "10.1097/CCM.0000000000003310",
+        "autores": [
+          "Marik PE",
+          "Farkas JD"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1097/ccm.0000000000005337": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "34605781",
+        "titulo": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+        "revista": "Crit Care Med",
+        "anio": "2021",
+        "volumen": "49",
+        "numero": "11",
+        "paginas": "e1063-e1143",
+        "doi": "10.1097/CCM.0000000000005337",
+        "autores": [
+          "Evans L",
+          "Rhodes A",
+          "Alhazzani W"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1097/ccm.0b013e3181cb0cdc": {
+      "via": "doi",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "20035219",
+        "titulo": "The Surviving Sepsis Campaign: results of an international guideline-based performance improvement program targeting severe sepsis",
+        "revista": "Crit Care Med",
+        "anio": "2010",
+        "volumen": "38",
+        "numero": "2",
+        "paginas": "367-74",
+        "doi": "10.1097/CCM.0b013e3181cb0cdc",
+        "autores": [
+          "Levy MM",
+          "Dellinger RP",
+          "Townsend SR"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "titulo:european association of urology": {
+      "via": "titulo",
+      "consultado": "2026-07-26",
+      "registro": {
+        "pmid": "42471481",
+        "titulo": "Comprehensive survey on urological stent practices by the European Association of Urology (EAU) Endourology",
+        "revista": "World J Urol",
+        "anio": "2026",
+        "volumen": "44",
+        "numero": "1",
+        "paginas": "",
+        "doi": "10.1007/s00345-026-06612-w",
+        "autores": [
+          "Akgul B",
+          "Guven S",
+          "Ortner G"
+        ]
+      }
+    }
+  }
+}
