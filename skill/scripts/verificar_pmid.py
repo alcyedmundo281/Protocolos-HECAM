@@ -594,6 +594,37 @@ def informe(ruta, resultados):
 
 # ── principal ─────────────────────────────────────────────────────────────────
 
+def anotar_jsonld(ruta, resultados):
+    """Escribe pmid, doi y verificado en cada entrada de citation[].
+
+    Solo anota lo comprobado: una referencia sin PMID confirmado no recibe
+    campo, en vez de recibir uno vacío que después parecería un dato ausente por
+    descuido. El orden de citation[] es el de la bibliografía, y verificar_una
+    respeta ese orden, así que se emparejan por posición.
+    """
+    with open(ruta, encoding="utf-8") as f:
+        doc = json.load(f)
+
+    citas = doc.get("citation") or []
+    n = 0
+    for cita, r in zip(citas, resultados):
+        reg = r.get("registro") or {}
+        if reg.get("pmid"):
+            cita["pmid"] = reg["pmid"]
+            n += 1
+        doi = r.get("doi") or reg.get("doi")
+        if doi:
+            cita["doi"] = doi
+            cita.setdefault("url", "https://doi.org/" + doi)
+        if reg.get("pmid") or doi:
+            cita["verificado"] = date.today().isoformat()
+
+    with open(ruta, "w", encoding="utf-8") as f:
+        json.dump(doc, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    return n
+
+
 def main():
     ap = argparse.ArgumentParser(
         description="Verifica contra PubMed las referencias de un protocolo HECAM.")
@@ -607,6 +638,8 @@ def main():
                     help="no escribir la caché")
     ap.add_argument("--json", action="store_true",
                     help="salida en JSON en vez de informe legible")
+    ap.add_argument("--anotar", action="store_true",
+                    help="escribe pmid, doi y verificado en el .jsonld comprobado")
     args = ap.parse_args()
 
     rutas = []
@@ -638,6 +671,15 @@ def main():
         resultados = [verificar_una(r, cache, args.offline, args.refrescar)
                       for r in refs]
         todo[ruta] = resultados
+
+        if args.anotar:
+            if not ruta.endswith((".json", ".jsonld")):
+                print("--anotar solo se aplica a un .jsonld; %s se omite" % ruta,
+                      file=sys.stderr)
+            else:
+                n = anotar_jsonld(ruta, resultados)
+                print("  anotadas %d referencias con su PMID en %s\n"
+                      % (n, os.path.basename(ruta)))
 
         if not args.json:
             codigo = max(codigo, informe(ruta, resultados))
