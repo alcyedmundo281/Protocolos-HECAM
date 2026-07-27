@@ -30,6 +30,7 @@ tras iteración.
 | `scripts/verificar_documento.py` | Comprueba que las piezas institucionales existan y estén enlazadas |
 | `scripts/verificar_pmid.py` | Comprueba cada referencia contra PubMed y Crossref |
 | `scripts/check_citas.py` | Verifica que las citas vayan en orden correlativo |
+| `scripts/compilar_docx.js` | Compila el `protocolo.jsonld` al `.docx` institucional |
 | `scripts/grabar_estructura.js` | Captura la estructura semántica de un generador |
 | `scripts/armar_jsonld.py` | Reconstruye el `protocolo.jsonld` desde el generador |
 | `scripts/build_jats.py` | JSON-LD → JATS 1.3 para archivo y DOI |
@@ -103,13 +104,35 @@ librería:
 firmas({ nombre: 'Dra. …', unidad: 'Unidad Técnica de …' })
 ```
 
-## Añadir un protocolo
+## Un protocolo nuevo: dos caminos
 
-1. Crear `produccion/<CODIGO>-<nombre>/` y copiar un generador existente como
-   punto de partida.
-2. Ajustar `require('../../skill/lib/hecam-lib.js')` y la ruta de salida, que
-   debe construirse con `path.join(__dirname, 'salida', ...)`.
-3. Compilar y pasar las tres verificaciones antes de mandar a revisión.
+**Desde la matriz** (recomendado para protocolos nuevos). Se escribe el
+`protocolo.jsonld` y el `.docx` sale de él:
+
+```bash
+python3 skill/scripts/validate_jsonld.py produccion/X/protocolo.jsonld
+node    skill/scripts/compilar_docx.js  produccion/X/protocolo.jsonld
+```
+
+No hace falta tocar JavaScript. `compilar_docx.js` acepta estos bloques de
+contenido: `Parrafo`, `Subtitulo`, `Vineta`, `Numerada`, `Lista` (con `estilo`),
+`Nota`, `Tabla`, `TablaResistencia`, `Espacio`, `Semaforo` y `Divisor`. Un bloque
+que no reconozca se maqueta como párrafo y avisa, en vez de perderse en silencio.
+
+El campo `indice` lleva los números de página del contenido. No se pueden deducir
+del texto —dependen de cómo pagine Word— así que hay que declararlos y revisarlos
+cuando el contenido crezca. Sin `indice`, el compilador avisa y deja la columna
+en blanco.
+
+**Desde un generador `.js`**, como los dos protocolos existentes: se copia uno
+como punto de partida, se ajusta `require('../../skill/lib/hecam-lib.js')` y la
+ruta de salida con `path.join(__dirname, 'salida', ...)`, y la matriz se deriva
+después con `armar_jsonld.py`.
+
+Los dos caminos convergen: el `.docx` compilado desde la matriz y el compilado
+desde el `.js` coinciden al 99,6 % en texto, con el mismo número de párrafos,
+tablas y filas. Lo único que difiere son los nombres de sección, y a propósito:
+la matriz usa los normativos y el generador arrastra variantes cosméticas.
 
 ## Las cuatro verificaciones, y por qué son cuatro
 

@@ -17,7 +17,8 @@
   "estado": "borrador",
   "inLanguage": "es-EC",
   "dateCreated": "2026-07-15",
-  "mesAnioPortada": "Julio 2026",
+  "mesAnioPortada": "Julio, 2026",
+  "fechaElaboracionTexto": "Julio 2026",
   "vigenciaAnios": 3,
   "description": "Protocolo institucional para el diagnóstico y el tratamiento de la infección urinaria aguda complicada en pacientes adultos del HECAM, con estratificación por servicio de origen y por factores de riesgo para microorganismos BLEE o resistentes a carbapenémicos, uso restringido de ceftazidima/avibactam como rescate y ajustes por la altitud de Quito.",
   "publisher": {
@@ -428,6 +429,10 @@
                 2200,
                 6606
               ],
+              "centrados": [
+                false,
+                false
+              ],
               "filas": [
                 [
                   "Anatómicos y urológicos",
@@ -451,6 +456,9 @@
                 ]
               ],
               "titulo": "Tabla 3. Factores de complicación de la infección urinaria"
+            },
+            {
+              "type": "Espacio"
             },
             {
               "type": "Subtitulo",
@@ -501,6 +509,9 @@
               "text": "Calcular la puntuación SOFA ante sospecha de disfunción orgánica. Un aumento agudo ≥ 2 puntos sobre el basal define UROSEPSIS y obliga a activar en paralelo el protocolo HECAM-MI-PR-001 de manejo de sepsis y shock séptico[[3]]."
             },
             {
+              "type": "Espacio"
+            },
+            {
               "type": "Tabla",
               "columnas": [
                 "Diagnóstico",
@@ -513,6 +524,12 @@
                 3600,
                 1000,
                 2206
+              ],
+              "centrados": [
+                false,
+                false,
+                true,
+                false
               ],
               "filas": [
                 [
@@ -549,6 +566,9 @@
               "titulo": "Tabla 4. Clasificación diagnóstica y destino del paciente"
             },
             {
+              "type": "Espacio"
+            },
+            {
               "type": "Tabla",
               "columnas": [
                 "Prioridad",
@@ -559,6 +579,11 @@
                 900,
                 2500,
                 5406
+              ],
+              "centrados": [
+                true,
+                false,
+                false
               ],
               "filas": [
                 [
@@ -624,6 +649,9 @@
               ]
             },
             {
+              "type": "Espacio"
+            },
+            {
               "type": "Subtitulo",
               "text": "B. Perfil de resistencia local en infección urinaria (Cartilla HECAM 2025)"
             },
@@ -650,6 +678,15 @@
                 1200,
                 1200,
                 1150
+              ],
+              "centrados": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
               ],
               "filas": [
                 [
@@ -782,8 +819,14 @@
               "titulo": "Tabla 6. Porcentaje de resistencia antibiótica en uropatógenos por servicio (HECAM 2025)"
             },
             {
+              "type": "Semaforo"
+            },
+            {
               "type": "Nota",
               "text": "Fosfomicina y nitrofurantoína se recomiendan exclusivamente para la cistitis no complicada; la nitrofurantoína está contraindicada con TFG < 45 mL/min."
+            },
+            {
+              "type": "Espacio"
             },
             {
               "type": "Subtitulo",
@@ -800,6 +843,9 @@
                 "**Piperacilina/tazobactam:** excelente frente a __E. coli__ (7 % R) pero inadecuada frente a __K. pneumoniae__ (71 % R en Emergencia). No debe emplearse como monoterapia si __K. pneumoniae__ es el patógeno probable.",
                 "**Ciprofloxacino en Urología:** presenta solo 13 % de resistencia en __E. coli__, el valor más bajo de todos los servicios. Puede utilizarse guiado por antibiograma en infecciones urológicas por __E. coli__, pero nunca de forma empírica generalizada."
               ]
+            },
+            {
+              "type": "Espacio"
             },
             {
               "type": "Subtitulo",
@@ -824,6 +870,13 @@
                 1900,
                 1800,
                 1406
+              ],
+              "centrados": [
+                false,
+                false,
+                false,
+                false,
+                false
               ],
               "filas": [
                 [
@@ -879,6 +932,9 @@
               "titulo": "Tabla 7. Antibioticoterapia empírica estratificada en infección urinaria complicada"
             },
             {
+              "type": "Espacio"
+            },
+            {
               "type": "Subtitulo",
               "text": "E. Terapia secuencial oral guiada por antibiograma"
             },
@@ -897,6 +953,11 @@
                 2500,
                 4600,
                 1706
+              ],
+              "centrados": [
+                false,
+                false,
+                false
               ],
               "filas": [
                 [
@@ -928,6 +989,9 @@
               "titulo": "Tabla 8. Opciones de terapia secuencial oral"
             },
             {
+              "type": "Espacio"
+            },
+            {
               "type": "Subtitulo",
               "text": "F. Criterios de inclusión y exclusión, duración y suspensión del tratamiento"
             },
@@ -951,6 +1015,10 @@
               "anchos": [
                 3400,
                 5406
+              ],
+              "centrados": [
+                false,
+                false
               ],
               "filas": [
                 [
@@ -1011,6 +1079,12 @@
                 1100,
                 2406
               ],
+              "centrados": [
+                false,
+                false,
+                true,
+                false
+              ],
               "filas": [
                 [
                   "LEVE",
@@ -1038,6 +1112,9 @@
                 ]
               ],
               "titulo": "Tabla 10. Clasificación de severidad de la infección urinaria complicada"
+            },
+            {
+              "type": "Espacio"
             },
             {
               "type": "Subtitulo",
@@ -1119,6 +1196,12 @@
                 5306,
                 1000,
                 1100
+              ],
+              "centrados": [
+                false,
+                false,
+                true,
+                true
               ],
               "filas": [
                 [
@@ -1342,7 +1425,8 @@
           "periodo": "Mensual",
           "responsable": "PROA, Microbiología"
         }
-      ]
+      ],
+      "tituloTabla": "Tabla 12. Indicadores de calidad del protocolo"
     },
     {
       "type": "Seccion",
@@ -1360,6 +1444,120 @@
           "type": "Anexo",
           "position": 1,
           "name": "Cronograma de implementación",
+          "contenido": [
+            {
+              "type": "Tabla",
+              "columnas": [
+                "ID",
+                "Tarea",
+                "Responsable",
+                "Inicio",
+                "Fin",
+                "Recursos"
+              ],
+              "anchos": [
+                500,
+                2500,
+                1900,
+                800,
+                800,
+                2306
+              ],
+              "centrados": [
+                true,
+                false,
+                false,
+                true,
+                true,
+                false
+              ],
+              "filas": [
+                [
+                  "1",
+                  "Aprobación formal por el Director Técnico del HECAM.",
+                  "Dirección Técnica / Control de Calidad",
+                  "Ago 2026",
+                  "Ago 2026",
+                  "Documento de aprobación firmado"
+                ],
+                [
+                  "2",
+                  "Registro en el sistema de gestión documental institucional.",
+                  "Coordinación de Control de Calidad",
+                  "Ago 2026",
+                  "Sep 2026",
+                  "Plataforma documental HECAM"
+                ],
+                [
+                  "3",
+                  "Socialización a médicos de Emergencia y residentes de Medicina Interna.",
+                  "Coordinadores de Unidad",
+                  "Sep 2026",
+                  "Sep 2026",
+                  "Cartilla de Resistencia HECAM 2025"
+                ],
+                [
+                  "4",
+                  "Taller sobre interpretación de la Cartilla 2025 y selección empírica estratificada.",
+                  "PROA, Farmacia y Microbiología",
+                  "Sep 2026",
+                  "Oct 2026",
+                  "Casos clínicos, CNMB, cartilla vigente"
+                ],
+                [
+                  "5",
+                  "Elaboración del diagrama de flujo en Bizagi.",
+                  "Coordinación de Control de Calidad",
+                  "Sep 2026",
+                  "Oct 2026",
+                  "Licencia Bizagi"
+                ],
+                [
+                  "6",
+                  "Implementación de la alerta electrónica de ITU complicada en el HIS-HECAM.",
+                  "Tecnologías de la Información / PROA",
+                  "Oct 2026",
+                  "Nov 2026",
+                  "HIS-HECAM, módulo PROA"
+                ],
+                [
+                  "7",
+                  "Implementación piloto en Emergencia y Medicina Interna durante 3 meses.",
+                  "Jefes de Emergencia y Medicina Interna",
+                  "Nov 2026",
+                  "Ene 2027",
+                  "Hoja de seguimiento de cultivos"
+                ],
+                [
+                  "8",
+                  "Recolección de indicadores de la fase piloto.",
+                  "Control de Calidad / PROA",
+                  "Dic 2026",
+                  "Ene 2027",
+                  "HIS-HECAM, registro de farmacia"
+                ],
+                [
+                  "9",
+                  "Evaluación de resultados del piloto y ajuste del protocolo.",
+                  "Comité de ITU y PROA-HECAM",
+                  "Feb 2027",
+                  "Feb 2027",
+                  "Informe piloto, Cartilla 2026"
+                ],
+                [
+                  "10",
+                  "Extensión a todas las unidades y revisión anual sincronizada con la Cartilla de Resistencia.",
+                  "Dirección Técnica / Control de Calidad / PROA",
+                  "Mar 2027",
+                  "Dic 2027",
+                  "Actualización anual de la Cartilla"
+                ]
+              ]
+            },
+            {
+              "type": "Espacio"
+            }
+          ],
           "columnas": [
             "ID",
             "Tarea",
@@ -1455,6 +1653,75 @@
           "type": "Anexo",
           "position": 2,
           "name": "Factores de riesgo para BLEE y CRE: guía rápida de selección empírica",
+          "contenido": [
+            {
+              "type": "Parrafo",
+              "text": "Esta tabla debe consultarse junto con la Cartilla de Resistencia vigente del Laboratorio de Bacteriología del HECAM. La selección final siempre debe adaptarse a los patrones locales actualizados[[5]]."
+            },
+            {
+              "type": "Tabla",
+              "columnas": [
+                "Factor de riesgo",
+                "Detalle",
+                "Impacto en la selección antimicrobiana"
+              ],
+              "anchos": [
+                2200,
+                3300,
+                3306
+              ],
+              "centrados": [
+                false,
+                false,
+                false
+              ],
+              "filas": [
+                [
+                  "Antibióticos en los últimos 90 días",
+                  "Cualquier antimicrobiano sistémico, especialmente cefalosporinas, fluoroquinolonas o cotrimoxazol.",
+                  "Riesgo alto de BLEE: emplear ertapenem como terapia empírica."
+                ],
+                [
+                  "Hospitalización reciente",
+                  "Internación de al menos 48 horas en cualquier servicio durante los últimos 90 días.",
+                  "Riesgo de BLEE y CRE: ertapenem, o meropenem si el riesgo de CRE es alto."
+                ],
+                [
+                  "Aislamiento previo de BLEE o CRE",
+                  "Urocultivo previo con betalactamasa de espectro extendido o carbapenemasa documentada.",
+                  "Riesgo alto de CRE: meropenem con ceftazidima/avibactam según antibiograma."
+                ],
+                [
+                  "Diabetes mellitus descompensada",
+                  "Glucemia superior a 250 mg/dL o hemoglobina glicosilada mayor al 9 %.",
+                  "Mayor riesgo de infección por __Candida__, __Klebsiella__ y __E. coli__ productora de BLEE."
+                ],
+                [
+                  "Catéter vesical por más de 7 días",
+                  "Sonda vesical permanente, especialmente en el paciente hospitalizado.",
+                  "Riesgo alto de BLEE, __Pseudomonas__ y __Enterococcus__: ampliar la cobertura y retirar el catéter."
+                ],
+                [
+                  "Enfermedad renal crónica avanzada",
+                  "TFG menor a 30 mL/min documentada previamente.",
+                  "Ajustar dosis, evitar aminoglucósidos y nitrofurantoína; el ertapenem requiere ajuste bajo 30 mL/min."
+                ],
+                [
+                  "Procedimiento urológico reciente",
+                  "Cistoscopia, resección transuretral, nefrostomía, litotricia o biopsia prostática en los últimos 30 días.",
+                  "Riesgo de microorganismos hospitalarios resistentes; cubrir __Pseudomonas__ tras biopsia prostática."
+                ],
+                [
+                  "Inmunodepresión",
+                  "CD4 menor a 200 células/µL, trasplante, corticoterapia prolongada o quimioterapia activa.",
+                  "Ampliar la cobertura y descartar candiduria en el urocultivo."
+                ]
+              ]
+            },
+            {
+              "type": "Espacio"
+            }
+          ],
           "columnas": [
             "Factor de riesgo",
             "Detalle",
@@ -1501,18 +1768,129 @@
               "CD4 menor a 200 células/µL, trasplante, corticoterapia prolongada o quimioterapia activa.",
               "Ampliar la cobertura y descartar candiduria en el urocultivo."
             ]
-          ],
-          "contenido": [
-            {
-              "type": "Parrafo",
-              "text": "Esta tabla debe consultarse junto con la Cartilla de Resistencia vigente del Laboratorio de Bacteriología del HECAM. La selección final siempre debe adaptarse a los patrones locales actualizados[[5]]."
-            }
           ]
         },
         {
           "type": "Anexo",
           "position": 3,
           "name": "Perfil de resistencia consolidado: Ecuador 2020-2024 frente a HECAM 2025",
+          "contenido": [
+            {
+              "type": "Parrafo",
+              "text": "Comparación entre los datos nacionales del Informe Técnico SVPCS-DNVE-2026-02[[4]] y los datos institucionales de la Cartilla de Resistencia HECAM 2025[[5]] para los uropatógenos prioritarios."
+            },
+            {
+              "type": "TablaResistencia",
+              "columnas": [
+                "Organismo / fuente",
+                "Ceftriaxona % R",
+                "Imipenem % R",
+                "Meropenem % R",
+                "Ciprofloxacino % R",
+                "TMP/SMX % R",
+                "Ceftaz/Avibactam % R"
+              ],
+              "anchos": [
+                2506,
+                1050,
+                1050,
+                1050,
+                1050,
+                1050,
+                1050
+              ],
+              "centrados": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "filas": [
+                [
+                  "E. coli — Emergencia (n=751)",
+                  "30 %",
+                  "0 %",
+                  "0 %",
+                  "66 %",
+                  "57 %",
+                  "(-)"
+                ],
+                [
+                  "E. coli — Medicina Interna (n=162)",
+                  "53 %",
+                  "(-)",
+                  "(-)",
+                  "22 %",
+                  "80 %",
+                  "1 %"
+                ],
+                [
+                  "E. coli — Urología (n=201)",
+                  "63 %",
+                  "(-)",
+                  "(-)",
+                  "13 %",
+                  "80 %",
+                  "1 %"
+                ],
+                [
+                  "K. pneumoniae — Emergencia (n=158)",
+                  "69 %",
+                  "42 %",
+                  "24 %",
+                  "75 %",
+                  "56 %",
+                  "(-)"
+                ],
+                [
+                  "K. pneumoniae — Med. Interna (n=73)",
+                  "78 %",
+                  "(-)",
+                  "(-)",
+                  "53 %",
+                  "84 %",
+                  "49 %"
+                ],
+                [
+                  "K. pneumoniae — bacteriemia (n=48)",
+                  "(-)",
+                  "76 %",
+                  "56 %",
+                  "79 %",
+                  "(-)",
+                  "2 %"
+                ],
+                [
+                  "NACIONAL — E. coli (n=85.291)",
+                  "25 %",
+                  "1.1 %",
+                  "1.2 %",
+                  "28 %",
+                  "54 %",
+                  "2.6 %"
+                ],
+                [
+                  "NACIONAL — K. pneumoniae (n=21.226)",
+                  "55 %",
+                  "31.4 %",
+                  "28.1 %",
+                  "59.5 %",
+                  "51.9 %",
+                  "14.2 %"
+                ]
+              ]
+            },
+            {
+              "type": "Semaforo"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**CONCLUSIÓN CLAVE:** en el HECAM, __E. coli__ presenta una resistencia a ciprofloxacino del 66 % en Emergencia frente al 28 % nacional, lo que descarta su uso empírico. La resistencia de __K. pneumoniae__ a carbapenémicos alcanza el 42–76 % en el hospital frente al 28–31 % nacional. La ceftazidima/avibactam mantiene alta actividad en __E. coli__ (1 % R) y en la bacteriemia por __K. pneumoniae__ (2 % R), aunque en aislamientos urinarios de Medicina Interna alcanza el 49 % de resistencia, lo que obliga a confirmar la sensibilidad antes de su uso prolongado[[18]]."
+            }
+          ],
           "columnas": [
             "Organismo / fuente",
             "Ceftriaxona % R",
@@ -1595,16 +1973,6 @@
               "51.9 %",
               "14.2 %"
             ]
-          ],
-          "contenido": [
-            {
-              "type": "Parrafo",
-              "text": "Comparación entre los datos nacionales del Informe Técnico SVPCS-DNVE-2026-02[[4]] y los datos institucionales de la Cartilla de Resistencia HECAM 2025[[5]] para los uropatógenos prioritarios."
-            },
-            {
-              "type": "Parrafo",
-              "text": "**CONCLUSIÓN CLAVE:** en el HECAM, __E. coli__ presenta una resistencia a ciprofloxacino del 66 % en Emergencia frente al 28 % nacional, lo que descarta su uso empírico. La resistencia de __K. pneumoniae__ a carbapenémicos alcanza el 42–76 % en el hospital frente al 28–31 % nacional. La ceftazidima/avibactam mantiene alta actividad en __E. coli__ (1 % R) y en la bacteriemia por __K. pneumoniae__ (2 % R), aunque en aislamientos urinarios de Medicina Interna alcanza el 49 % de resistencia, lo que obliga a confirmar la sensibilidad antes de su uso prolongado[[18]]."
-            }
           ]
         }
       ]
@@ -1645,7 +2013,7 @@
       "doi": "10.1093/cid/ciq257",
       "url": "https://doi.org/10.1093/cid/ciq257",
       "pmid": "21292654",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1667,7 +2035,7 @@
       "doi": "10.1001/jama.2016.0287",
       "url": "https://doi.org/10.1001/jama.2016.0287",
       "pmid": "26903338",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1695,7 +2063,7 @@
       "doi": "10.1016/S1473-3099(08)70041-0",
       "url": "https://doi.org/10.1016/S1473-3099(08)70041-0",
       "pmid": "18291338",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1711,7 +2079,7 @@
       "doi": "10.1093/cid/ciac268",
       "url": "https://doi.org/10.1093/cid/ciac268",
       "pmid": "35439291",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1727,7 +2095,7 @@
       "doi": "10.1007/s00421-020-04498-z",
       "url": "https://doi.org/10.1007/s00421-020-04498-z",
       "pmid": "32939642",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1749,7 +2117,7 @@
       "doi": "10.1093/cid/ciw118",
       "url": "https://doi.org/10.1093/cid/ciw118",
       "pmid": "27080992",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1771,7 +2139,7 @@
       "doi": "10.1086/650482",
       "url": "https://doi.org/10.1086/650482",
       "pmid": "20175247",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1780,7 +2148,7 @@
       "vancouver": "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int Suppl. 2013;3(1):1–150. doi:10.1038/kisup.2012.73",
       "doi": "10.1038/kisup.2012.73",
       "url": "https://doi.org/10.1038/kisup.2012.73",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1802,7 +2170,7 @@
       "doi": "10.1097/CCM.0000000000005337",
       "url": "https://doi.org/10.1097/CCM.0000000000005337",
       "pmid": "34605781",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1818,7 +2186,7 @@
       "doi": "10.1016/S1473-3099(16)30004-4",
       "url": "https://doi.org/10.1016/S1473-3099(16)30004-4",
       "pmid": "27107460",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1840,7 +2208,95 @@
       "doi": "10.1016/j.eimc.2014.11.009",
       "url": "https://doi.org/10.1016/j.eimc.2014.11.009",
       "pmid": "25600218",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
+    }
+  ],
+  "indice": [
+    {
+      "numeral": "1",
+      "name": "Justificación",
+      "pagina": 2
+    },
+    {
+      "numeral": "2",
+      "name": "Objetivos",
+      "pagina": 3
+    },
+    {
+      "numeral": "3",
+      "name": "Glosario de términos / Abreviaciones",
+      "pagina": 4
+    },
+    {
+      "numeral": "4",
+      "name": "Procedimiento (Plan de Acción/Actuación)",
+      "pagina": 5
+    },
+    {
+      "numeral": "4.1",
+      "name": "Evaluación inicial del paciente",
+      "pagina": 5,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.2",
+      "name": "Diagnóstico / Identificación de problemas basados en las necesidades",
+      "pagina": 6,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.3",
+      "name": "Plan Terapéutico / Intervenciones no farmacológicas",
+      "pagina": 8,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.4",
+      "name": "Clasificación de severidad / Manejo de complicaciones",
+      "pagina": 10,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.5",
+      "name": "Plan de Egreso de la Unidad / Seguimiento / Evaluación integral",
+      "pagina": 11,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.6",
+      "name": "Nivel de evidencia y grado de recomendaciones",
+      "pagina": 12,
+      "subseccion": true
+    },
+    {
+      "numeral": "5",
+      "name": "Algoritmo de actuación",
+      "pagina": 12
+    },
+    {
+      "numeral": "6",
+      "name": "Indicadores",
+      "pagina": 13
+    },
+    {
+      "numeral": "7",
+      "name": "Bibliografía",
+      "pagina": 14
+    },
+    {
+      "numeral": "8",
+      "name": "Anexos",
+      "pagina": 15
+    },
+    {
+      "numeral": "9",
+      "name": "Firmas de los involucrados",
+      "pagina": 17
+    },
+    {
+      "numeral": "10",
+      "name": "Control de cambios",
+      "pagina": 17
     }
   ]
 }

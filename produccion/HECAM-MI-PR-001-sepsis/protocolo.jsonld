@@ -17,7 +17,8 @@
   "estado": "borrador",
   "inLanguage": "es-EC",
   "dateCreated": "2026-07-15",
-  "mesAnioPortada": "Julio 2026",
+  "mesAnioPortada": "Julio, 2026",
+  "fechaElaboracionTexto": "Julio 2026",
   "vigenciaAnios": 3,
   "description": "Protocolo institucional para el reconocimiento precoz y el manejo de la sepsis y el shock séptico en pacientes adultos del HECAM, con criterios Sepsis-3, el paquete de intervenciones «HECAM Hora-1», antibioticoterapia empírica estratificada según el perfil de resistencia local y ajustes diagnósticos por la altitud de Quito.",
   "publisher": {
@@ -467,6 +468,9 @@
               "text": "ELIMINAR el término \"sepsis severa\" del registro clínico: es obsoleto según Sepsis-3[[1]]."
             },
             {
+              "type": "Espacio"
+            },
+            {
               "type": "Tabla",
               "columnas": [
                 "Prioridad",
@@ -477,6 +481,11 @@
                 900,
                 2400,
                 5506
+              ],
+              "centrados": [
+                true,
+                false,
+                false
               ],
               "filas": [
                 [
@@ -557,6 +566,9 @@
               ]
             },
             {
+              "type": "Espacio"
+            },
+            {
               "type": "Subtitulo",
               "text": "B. Perfil de resistencia local — organismos relevantes para sepsis"
             },
@@ -585,6 +597,16 @@
                 1000,
                 1050,
                 1056
+              ],
+              "centrados": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
               ],
               "filas": [
                 [
@@ -751,6 +773,12 @@
               "titulo": "Tabla 4. Porcentaje de resistencia antibiótica en organismos relevantes para sepsis (HECAM 2025)"
             },
             {
+              "type": "Semaforo"
+            },
+            {
+              "type": "Espacio"
+            },
+            {
               "type": "Subtitulo",
               "text": "C. Hallazgos críticos de la Cartilla 2025 aplicados a la sepsis"
             },
@@ -765,6 +793,9 @@
                 "**Ceftriaxona:** NO debe utilizarse como primera línea empírica en sepsis hospitalaria (__K. pneumoniae__ de UCI 54 % R; __E. coli__ de Medicina Interna 53 % R). Solo es aceptable en sepsis comunitaria de bajo riesgo de BLEE con foco respiratorio o urinario.",
                 "**Contraste nacional:** la resistencia nacional de __K. pneumoniae__ a carbapenémicos es del 28–31 % sobre 21.226 aislamientos; el HECAM duplica ese promedio en UCI y bacteriemia, lo que justifica un esquema empírico institucional propio[[4]]."
               ]
+            },
+            {
+              "type": "Espacio"
             },
             {
               "type": "Subtitulo",
@@ -789,6 +820,13 @@
                 1900,
                 1900,
                 1756
+              ],
+              "centrados": [
+                false,
+                false,
+                false,
+                false,
+                false
               ],
               "filas": [
                 [
@@ -865,6 +903,9 @@
               "titulo": "Tabla 5. Antibioticoterapia empírica estratificada por foco y riesgo de resistencia"
             },
             {
+              "type": "Espacio"
+            },
+            {
               "type": "Subtitulo",
               "text": "E. Tratamiento farmacológico complementario: vasopresores e inotrópicos"
             },
@@ -877,6 +918,9 @@
                 "**Dobutamina:** considerar ante disfunción miocárdica confirmada por ecocardiografía. Dosis de 2–20 mcg/kg/min IV.",
                 "**Corticoesteroides:** hidrocortisona 200 mg/día IV en shock séptico refractario que persiste con requerimiento vasopresor creciente pese a resucitación adecuada[[8]]."
               ]
+            },
+            {
+              "type": "Espacio"
             },
             {
               "type": "Subtitulo",
@@ -915,6 +959,12 @@
                 1100,
                 2106
               ],
+              "centrados": [
+                false,
+                false,
+                true,
+                false
+              ],
               "filas": [
                 [
                   "SEPSIS",
@@ -930,6 +980,9 @@
                 ]
               ],
               "titulo": "Tabla 6. Clasificación de severidad según Sepsis-3"
+            },
+            {
+              "type": "Espacio"
             },
             {
               "type": "Subtitulo",
@@ -1025,6 +1078,12 @@
                 5306,
                 1000,
                 1100
+              ],
+              "centrados": [
+                false,
+                false,
+                true,
+                true
               ],
               "filas": [
                 [
@@ -1222,7 +1281,8 @@
           "periodo": "Mensual",
           "responsable": "PROA, Microbiología"
         }
-      ]
+      ],
+      "tituloTabla": "Tabla 8. Indicadores de calidad del protocolo"
     },
     {
       "type": "Seccion",
@@ -1240,6 +1300,120 @@
           "type": "Anexo",
           "position": 1,
           "name": "Cronograma de implementación",
+          "contenido": [
+            {
+              "type": "Tabla",
+              "columnas": [
+                "ID",
+                "Tarea",
+                "Responsable",
+                "Inicio",
+                "Fin",
+                "Recursos"
+              ],
+              "anchos": [
+                500,
+                2500,
+                1900,
+                800,
+                800,
+                2306
+              ],
+              "centrados": [
+                true,
+                false,
+                false,
+                true,
+                true,
+                false
+              ],
+              "filas": [
+                [
+                  "1",
+                  "Aprobación formal por el Director Técnico del HECAM.",
+                  "Dirección Técnica / Control de Calidad",
+                  "Ago 2026",
+                  "Ago 2026",
+                  "Documento de aprobación firmado"
+                ],
+                [
+                  "2",
+                  "Registro en el sistema de gestión documental institucional.",
+                  "Coordinación de Control de Calidad",
+                  "Ago 2026",
+                  "Sep 2026",
+                  "Plataforma documental HECAM"
+                ],
+                [
+                  "3",
+                  "Socialización a jefes de Emergencia, UCI y Medicina Interna de la nueva tabla antimicrobiana.",
+                  "Coordinadores de Unidad",
+                  "Sep 2026",
+                  "Sep 2026",
+                  "Cartilla de Resistencia HECAM 2025"
+                ],
+                [
+                  "4",
+                  "Capacitación sobre estratificación empírica BLEE/CRE y uso de ceftazidima/avibactam.",
+                  "Comité de Sepsis / PROA",
+                  "Sep 2026",
+                  "Oct 2026",
+                  "Aulas de docencia, simuladores, Informe RAM"
+                ],
+                [
+                  "5",
+                  "Elaboración del diagrama de flujo en Bizagi.",
+                  "Coordinación de Control de Calidad",
+                  "Sep 2026",
+                  "Oct 2026",
+                  "Licencia Bizagi"
+                ],
+                [
+                  "6",
+                  "Alerta electrónica de sepsis en el HIS-HECAM con integración de la Cartilla 2025.",
+                  "Tecnologías de la Información / PROA",
+                  "Oct 2026",
+                  "Nov 2026",
+                  "HIS-HECAM, módulo PROA"
+                ],
+                [
+                  "7",
+                  "Implementación piloto en Emergencia y UCI durante 3 meses.",
+                  "Jefes de Emergencia y UCI",
+                  "Nov 2026",
+                  "Ene 2027",
+                  "Hoja de seguimiento antimicrobiano"
+                ],
+                [
+                  "8",
+                  "Recolección de indicadores de la fase piloto.",
+                  "Control de Calidad / PROA",
+                  "Dic 2026",
+                  "Ene 2027",
+                  "HIS-HECAM, registro de farmacia"
+                ],
+                [
+                  "9",
+                  "Evaluación de resultados del piloto y ajuste del protocolo.",
+                  "Comité de Sepsis HECAM",
+                  "Feb 2027",
+                  "Feb 2027",
+                  "Informe piloto, Cartilla 2026"
+                ],
+                [
+                  "10",
+                  "Extensión a todas las unidades y revisión anual sincronizada con la Cartilla de Resistencia.",
+                  "Dirección Técnica / Control de Calidad / PROA",
+                  "Mar 2027",
+                  "Dic 2027",
+                  "Actualización anual de la Cartilla"
+                ]
+              ]
+            },
+            {
+              "type": "Espacio"
+            }
+          ],
           "columnas": [
             "ID",
             "Tarea",
@@ -1335,6 +1509,96 @@
           "type": "Anexo",
           "position": 2,
           "name": "Escala SOFA: tabla de puntuación ajustada para la altitud del HECAM",
+          "contenido": [
+            {
+              "type": "Parrafo",
+              "text": "Un aumento agudo ≥ 2 puntos sobre el basal confirma el diagnóstico de sepsis según Sepsis-3[[13]]. **Ajuste HECAM:** la PaO₂ basal de referencia es de 65–70 mmHg, con un cociente PaO₂/FiO₂ basal aproximado de 310 en lugar de 400 al nivel del mar; por ello, un paciente con PaO₂/FiO₂ de 300 en Quito puede corresponder a la zona 0–1 de la escala. Son valores de población andina sana estudiada a 2.640 m, extrapolados a los 2.850 m de Quito y pendientes de validación local; además descienden con la edad, más en mujeres, por lo que en el paciente mayor el basal real puede ser inferior al indicado[[6]]."
+            },
+            {
+              "type": "Tabla",
+              "columnas": [
+                "Sistema",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "anchos": [
+                2306,
+                1300,
+                1300,
+                1300,
+                1300,
+                1300
+              ],
+              "centrados": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "filas": [
+                [
+                  "Respiratorio (PaO₂/FiO₂)",
+                  "≥ 400",
+                  "< 400",
+                  "< 300",
+                  "< 200 con SR",
+                  "< 100 con SR"
+                ],
+                [
+                  "Coagulación (plaquetas ×10³/µL)",
+                  "≥ 150",
+                  "< 150",
+                  "< 100",
+                  "< 50",
+                  "< 20"
+                ],
+                [
+                  "Hepático (bilirrubina mg/dL)",
+                  "< 1,2",
+                  "1,2–1,9",
+                  "2,0–5,9",
+                  "6,0–11,9",
+                  "> 12,0"
+                ],
+                [
+                  "Cardiovascular (PAM / vasopresores)",
+                  "PAM ≥ 70",
+                  "PAM < 70",
+                  "Dopa ≤ 5 o Dobu",
+                  "Dopa 5–15 o NE/Epi ≤ 0,1",
+                  "Dopa > 15 o NE/Epi > 0,1"
+                ],
+                [
+                  "Neurológico (Glasgow)",
+                  "15",
+                  "13–14",
+                  "10–12",
+                  "6–9",
+                  "< 6"
+                ],
+                [
+                  "Renal (creatinina mg/dL o diuresis)",
+                  "< 1,2",
+                  "1,2–1,9",
+                  "2,0–3,4",
+                  "3,5–4,9 o < 500 mL/d",
+                  "> 5,0 o < 200 mL/d"
+                ]
+              ]
+            },
+            {
+              "type": "Nota",
+              "text": "SR = soporte respiratorio (ventilación mecánica invasiva o no invasiva). Dopa = dopamina (mcg/kg/min). NE = norepinefrina. Epi = epinefrina. Dobu = dobutamina."
+            },
+            {
+              "type": "Espacio"
+            }
+          ],
           "columnas": [
             "Sistema",
             "0",
@@ -1392,22 +1656,120 @@
               "3,5–4,9 o < 500 mL/d",
               "> 5,0 o < 200 mL/d"
             ]
-          ],
-          "contenido": [
-            {
-              "type": "Parrafo",
-              "text": "Un aumento agudo ≥ 2 puntos sobre el basal confirma el diagnóstico de sepsis según Sepsis-3[[13]]. **Ajuste HECAM:** la PaO₂ basal de referencia es de 65–70 mmHg, con un cociente PaO₂/FiO₂ basal aproximado de 310 en lugar de 400 al nivel del mar; por ello, un paciente con PaO₂/FiO₂ de 300 en Quito puede corresponder a la zona 0–1 de la escala. Son valores de población andina sana estudiada a 2.640 m, extrapolados a los 2.850 m de Quito y pendientes de validación local; además descienden con la edad, más en mujeres, por lo que en el paciente mayor el basal real puede ser inferior al indicado[[6]]."
-            },
-            {
-              "type": "Nota",
-              "text": "SR = soporte respiratorio (ventilación mecánica invasiva o no invasiva). Dopa = dopamina (mcg/kg/min). NE = norepinefrina. Epi = epinefrina. Dobu = dobutamina."
-            }
           ]
         },
         {
           "type": "Anexo",
           "position": 3,
           "name": "Perfil de resistencia consolidado: Ecuador 2020-2024 frente a HECAM 2025",
+          "contenido": [
+            {
+              "type": "Parrafo",
+              "text": "Comparación entre los datos nacionales del Informe Técnico SVPCS-DNVE-2026-02[[4]] y los datos institucionales de la Cartilla de Resistencia HECAM 2025[[5]] para los microorganismos prioritarios en sepsis."
+            },
+            {
+              "type": "TablaResistencia",
+              "columnas": [
+                "Organismo / fuente",
+                "Ceftriaxona % R",
+                "Imipenem % R",
+                "Meropenem % R",
+                "Ciprofloxacino % R",
+                "TMP/SMX % R",
+                "Ceftaz/Avibactam % R"
+              ],
+              "anchos": [
+                2506,
+                1050,
+                1050,
+                1050,
+                1050,
+                1050,
+                1050
+              ],
+              "centrados": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "filas": [
+                [
+                  "E. coli — orina UCI/CC (n=64)",
+                  "38 %",
+                  "10 %",
+                  "0 %",
+                  "73 %",
+                  "54 %",
+                  "2 %"
+                ],
+                [
+                  "E. coli — bacteriemia UCI (n=30)",
+                  "(-)",
+                  "10 %",
+                  "0 %",
+                  "76 %",
+                  "(-)",
+                  "(-)"
+                ],
+                [
+                  "K. pneumoniae — UCI resp./sangre (n=67)",
+                  "54 %",
+                  "50 %",
+                  "49 %",
+                  "67 %",
+                  "(-)",
+                  "0 %"
+                ],
+                [
+                  "K. pneumoniae — bacteriemia MI (n=48)",
+                  "(-)",
+                  "76 %",
+                  "56 %",
+                  "79 %",
+                  "(-)",
+                  "2 %"
+                ],
+                [
+                  "K. pneumoniae — Emergencia (n=158)",
+                  "69 %",
+                  "42 %",
+                  "24 %",
+                  "75 %",
+                  "(-)",
+                  "(-)"
+                ],
+                [
+                  "NACIONAL — E. coli (n=85.291)",
+                  "25 %",
+                  "1.1 %",
+                  "1.2 %",
+                  "28 %",
+                  "54 %",
+                  "2.6 %"
+                ],
+                [
+                  "NACIONAL — K. pneumoniae (n=21.226)",
+                  "55 %",
+                  "31.4 %",
+                  "28.1 %",
+                  "59.5 %",
+                  "51.9 %",
+                  "14.2 %"
+                ]
+              ]
+            },
+            {
+              "type": "Semaforo"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**CONCLUSIÓN CLAVE:** el HECAM presenta una resistencia de __K. pneumoniae__ a carbapenémicos entre 1,5 y 2,5 veces superior al promedio nacional (49–76 % frente a 28–31 %). La ceftazidima/avibactam es la única opción con alta actividad (0–2 % de resistencia) frente a __K. pneumoniae__ CRE en UCI y bacteriemia del HECAM, lo que sustenta su indicación restringida y auditada por el PROA institucional[[17]]."
+            }
+          ],
           "columnas": [
             "Organismo / fuente",
             "Ceftriaxona % R",
@@ -1481,16 +1843,6 @@
               "51.9 %",
               "14.2 %"
             ]
-          ],
-          "contenido": [
-            {
-              "type": "Parrafo",
-              "text": "Comparación entre los datos nacionales del Informe Técnico SVPCS-DNVE-2026-02[[4]] y los datos institucionales de la Cartilla de Resistencia HECAM 2025[[5]] para los microorganismos prioritarios en sepsis."
-            },
-            {
-              "type": "Parrafo",
-              "text": "**CONCLUSIÓN CLAVE:** el HECAM presenta una resistencia de __K. pneumoniae__ a carbapenémicos entre 1,5 y 2,5 veces superior al promedio nacional (49–76 % frente a 28–31 %). La ceftazidima/avibactam es la única opción con alta actividad (0–2 % de resistencia) frente a __K. pneumoniae__ CRE en UCI y bacteriemia del HECAM, lo que sustenta su indicación restringida y auditada por el PROA institucional[[17]]."
-            }
           ]
         }
       ]
@@ -1531,7 +1883,7 @@
       "doi": "10.1001/jama.2016.0287",
       "url": "https://doi.org/10.1001/jama.2016.0287",
       "pmid": "26903338",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1547,7 +1899,7 @@
       "doi": "10.1016/S0140-6736(19)32989-7",
       "url": "https://doi.org/10.1016/S0140-6736(19)32989-7",
       "pmid": "31954465",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1581,7 +1933,7 @@
       "doi": "10.1007/s00421-020-04498-z",
       "url": "https://doi.org/10.1007/s00421-020-04498-z",
       "pmid": "32939642",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1597,7 +1949,7 @@
       "doi": "10.1056/NEJMra0910283",
       "url": "https://doi.org/10.1056/NEJMra0910283",
       "pmid": "21323543",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1613,7 +1965,7 @@
       "doi": "10.1097/CCM.0000000000005337",
       "url": "https://doi.org/10.1097/CCM.0000000000005337",
       "pmid": "34605781",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1629,7 +1981,7 @@
       "doi": "10.1093/cid/ciw118",
       "url": "https://doi.org/10.1093/cid/ciw118",
       "pmid": "27080992",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1651,7 +2003,7 @@
       "doi": "10.1001/jama.2016.0289",
       "url": "https://doi.org/10.1001/jama.2016.0289",
       "pmid": "26903336",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1667,7 +2019,7 @@
       "doi": "10.1093/cid/ciac268",
       "url": "https://doi.org/10.1093/cid/ciac268",
       "pmid": "35439291",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1683,7 +2035,7 @@
       "doi": "10.1007/BF01709751",
       "url": "https://doi.org/10.1007/BF01709751",
       "pmid": "8844239",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1699,7 +2051,7 @@
       "doi": "10.1001/jama.2016.0288",
       "url": "https://doi.org/10.1001/jama.2016.0288",
       "pmid": "26903335",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1715,7 +2067,7 @@
       "doi": "10.1097/CCM.0b013e3181cb0cdc",
       "url": "https://doi.org/10.1097/CCM.0b013e3181cb0cdc",
       "pmid": "20035219",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1731,7 +2083,7 @@
       "doi": "10.1097/CCM.0000000000003310",
       "url": "https://doi.org/10.1097/CCM.0000000000003310",
       "pmid": "30216303",
-      "verificado": "2026-07-26"
+      "verificado": "2026-07-27"
     },
     {
       "type": "ArticuloAcademico",
@@ -1750,6 +2102,94 @@
       "position": 19,
       "primeraAparicion": "19",
       "vancouver": "Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial Nro. 00001-2025. Norma Técnica del Sistema Integrado de Vigilancia Epidemiológica (SIVE). Registro Oficial Tercer Suplemento N.° 107; 21 de agosto de 2025."
+    }
+  ],
+  "indice": [
+    {
+      "numeral": "1",
+      "name": "Justificación",
+      "pagina": 2
+    },
+    {
+      "numeral": "2",
+      "name": "Objetivos",
+      "pagina": 3
+    },
+    {
+      "numeral": "3",
+      "name": "Glosario de términos / Abreviaciones",
+      "pagina": 4
+    },
+    {
+      "numeral": "4",
+      "name": "Procedimiento (Plan de Acción/Actuación)",
+      "pagina": 5
+    },
+    {
+      "numeral": "4.1",
+      "name": "Evaluación inicial del paciente",
+      "pagina": 5,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.2",
+      "name": "Diagnóstico / Identificación de problemas basados en las necesidades",
+      "pagina": 6,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.3",
+      "name": "Plan Terapéutico / Intervenciones no farmacológicas",
+      "pagina": 7,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.4",
+      "name": "Clasificación de severidad / Manejo de complicaciones",
+      "pagina": 9,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.5",
+      "name": "Plan de Egreso de la Unidad / Seguimiento / Evaluación integral",
+      "pagina": 10,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.6",
+      "name": "Nivel de evidencia y grado de recomendaciones",
+      "pagina": 11,
+      "subseccion": true
+    },
+    {
+      "numeral": "5",
+      "name": "Algoritmo de actuación",
+      "pagina": 11
+    },
+    {
+      "numeral": "6",
+      "name": "Indicadores",
+      "pagina": 12
+    },
+    {
+      "numeral": "7",
+      "name": "Bibliografía",
+      "pagina": 13
+    },
+    {
+      "numeral": "8",
+      "name": "Anexos",
+      "pagina": 14
+    },
+    {
+      "numeral": "9",
+      "name": "Firmas de los involucrados",
+      "pagina": 16
+    },
+    {
+      "numeral": "10",
+      "name": "Control de cambios",
+      "pagina": 16
     }
   ]
 }

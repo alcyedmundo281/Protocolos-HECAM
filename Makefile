@@ -19,6 +19,9 @@ matriz:
 validar:
 	@for f in produccion/*/protocolo.jsonld; do python3 skill/scripts/validate_jsonld.py "$$f" || exit 1; done
 
+docx:
+	@for f in produccion/*/protocolo.jsonld; do node skill/scripts/compilar_docx.js "$$f" || exit 1; done
+
 jats:
 	@for d in produccion/*/; do \
 		python3 skill/scripts/build_jats.py "$$d/protocolo.jsonld" \
@@ -30,4 +33,4 @@ todo: generar verificar fuentes
 referencia:
 	python3 skill/scripts/verificar_caratula.py --generar-referencia $(APROBADO)
 
-.PHONY: generar verificar fuentes matriz validar jats todo referencia
+.PHONY: generar verificar fuentes matriz validar docx jats todo referencia

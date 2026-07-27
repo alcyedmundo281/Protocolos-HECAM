@@ -109,6 +109,12 @@ def anchos_de(tabla_args):
     return [c.get("w", 0) for c in tabla_args[0]]
 
 
+def centrados_de(tabla_args):
+    """Qué columnas van centradas. Se guarda para que compilar_docx.js pueda
+    reproducir la tabla tal cual y no solo su contenido."""
+    return [bool(c.get("centered")) for c in tabla_args[0]]
+
+
 def bloques(tramo, saltar_hasta=0):
     """Traduce las llamadas de un tramo a bloques de contenido de la matriz."""
     salida = []
@@ -129,10 +135,15 @@ def bloques(tramo, saltar_hasta=0):
             salida.append({"type": "Nota", "text": a[0]})
         elif fn == "caption":
             salida.append({"type": "_titulo_tabla", "text": a[0]})
+        elif fn == "blk":
+            salida.append({"type": "Espacio"})
+        elif fn == "semaforo":
+            salida.append({"type": "Semaforo"})
         elif fn in ("mkT", "rTable"):
             bloque = {
                 "type": "Tabla" if fn == "mkT" else "TablaResistencia",
-                "columnas": cols_de(a), "anchos": anchos_de(a), "filas": a[1],
+                "columnas": cols_de(a), "anchos": anchos_de(a),
+                "centrados": centrados_de(a), "filas": a[1],
             }
             # el caption inmediatamente anterior es el título de esta tabla
             if salida and salida[-1].get("type") == "_titulo_tabla":
@@ -179,6 +190,11 @@ def seccion_3(tramo):
     return glosario, abreviaciones
 
 
+def titulo_tabla_6(tramo):
+    cap = next((x for x in tramo if x["fn"] == "caption"), None)
+    return cap["args"][0] if cap else None
+
+
 def seccion_6(tramo):
     tablas = [x["args"] for x in tramo if x["fn"] in ("mkT", "rTable")]
     if not tablas:
@@ -211,13 +227,16 @@ def seccion_8(tramo):
         nombre = re.sub(r"^Anexo\s*\d+\.\s*", "", titulo).strip()
         anexo = {"type": "Anexo", "position": n + 1, "name": nombre}
         cuerpo = bloques(tramo[ini + 1:fin])
+        # El cuerpo se guarda entero y en orden, que es lo que necesita
+        # compilar_docx.js. columnas/filas se exponen además al margen porque la
+        # plantilla y el validador los esperan ahí, pero son un reflejo del
+        # primer bloque de tabla, no una segunda copia que haya que maquetar.
+        if cuerpo:
+            anexo["contenido"] = cuerpo
         tabla = next((b for b in cuerpo if b["type"].startswith("Tabla")), None)
         if tabla:
             anexo["columnas"] = tabla["columnas"]
             anexo["filas"] = tabla["filas"]
-        otros = [b for b in cuerpo if not b["type"].startswith("Tabla")]
-        if otros:
-            anexo["contenido"] = otros
         anexos.append(anexo)
     return anexos
 
@@ -297,7 +316,11 @@ def armar(generador, meta):
         tramos[numeral(titulo) or str(n + 1)] = rec[h1[n]:h1[n + 1]]
 
     doc_meta = next((x for x in rec if x["fn"] == "buildDoc"), None)
-    titulo, codigo, version, _, fecha_port = doc_meta["args"]
+    titulo, codigo, version, _, fecha_elab = doc_meta["args"]
+    # La portada y el membrete llevan la fecha con distinta puntuación
+    # («Julio, 2026» frente a «Julio 2026»); se guardan las dos.
+    port = next((x for x in rec if x["fn"] == "portada"), None)
+    fecha_port = port["args"][2] if port and len(port["args"]) > 2 else fecha_elab
 
     partes = []
     for num, nombre, sec_type in SECCIONES:
@@ -331,6 +354,9 @@ def armar(generador, meta):
             sec["hasPart"] = subs
         elif num == "6":
             sec["indicadores"] = seccion_6(tramo)
+            titulo_tabla = titulo_tabla_6(tramo)
+            if titulo_tabla:
+                sec["tituloTabla"] = titulo_tabla
         elif num == "8":
             sec["anexos"] = seccion_8(tramo)
         elif num == "10":
@@ -355,6 +381,7 @@ def armar(generador, meta):
         "inLanguage": "es-EC",
         "dateCreated": meta["dateCreated"],
         "mesAnioPortada": fecha_port,
+        "fechaElaboracionTexto": fecha_elab,
         "vigenciaAnios": meta.get("vigenciaAnios", 3),
         "description": meta["description"],
         "publisher": {
@@ -439,6 +466,17 @@ def armar(generador, meta):
         "hasPart": partes,
         "citation": citaciones(rec, cargar_cache()),
     }
+
+    # El índice lleva números de página, que no se pueden deducir del contenido:
+    # dependen de cómo pagine Word. Se conservan tal y como los declaró el
+    # generador para que compilar_docx.js pueda reproducirlos.
+    indice = [{"numeral": x["args"][0], "name": x["args"][1],
+               "pagina": x["args"][2],
+               **({"subseccion": True} if len(x["args"]) > 3 and x["args"][3] else {})}
+              for x in rec if x["fn"] == "tocItem"]
+    if indice:
+        doc["indice"] = indice
+
     return doc
 
 

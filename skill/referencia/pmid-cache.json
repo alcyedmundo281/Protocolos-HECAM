@@ -1,10 +1,10 @@
 {
   "_nota": "Registros de PubMed verificados por scripts/verificar_pmid.py. Se regenera solo; no editar a mano.",
-  "_actualizado": "2026-07-26",
+  "_actualizado": "2026-07-27",
   "entradas": {
     "doi:10.1001/jama.2016.0287": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "26903338",
         "titulo": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
@@ -25,7 +25,7 @@
     },
     "doi:10.1001/jama.2016.0288": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "26903335",
         "titulo": "Assessment of Clinical Criteria for Sepsis: For the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
@@ -46,7 +46,7 @@
     },
     "doi:10.1001/jama.2016.0289": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "26903336",
         "titulo": "Developing a New Definition and Assessing New Clinical Criteria for Septic Shock: For the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
@@ -60,6 +60,26 @@
           "Shankar-Hari M",
           "Phillips GS",
           "Levy ML"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1001/jama.2017.17687": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "29297082",
+        "titulo": "Enhancing Recovery From Sepsis: A Review",
+        "revista": "JAMA",
+        "anio": "2018",
+        "volumen": "319",
+        "numero": "1",
+        "paginas": "62-75",
+        "doi": "10.1001/jama.2017.17687",
+        "autores": [
+          "Prescott HC",
+          "Angus DC"
         ]
       },
       "descartado": null,
@@ -88,7 +108,7 @@
     },
     "doi:10.1007/bf01709751": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "8844239",
         "titulo": "The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. On behalf of the Working Group on Sepsis-Related Problems of the European Society of Intensive Care Medicine",
@@ -128,9 +148,30 @@
       },
       "crossref": null
     },
+    "doi:10.1007/s00134-022-06852-5": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "36102944",
+        "titulo": "Source control in the management of sepsis and septic shock",
+        "revista": "Intensive Care Med",
+        "anio": "2022",
+        "volumen": "48",
+        "numero": "12",
+        "paginas": "1799-1802",
+        "doi": "10.1007/s00134-022-06852-5",
+        "autores": [
+          "De Waele JJ",
+          "Girardis M",
+          "Martin-Loeches I"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.1007/s00421-020-04498-z": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "32939642",
         "titulo": "Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude",
@@ -149,9 +190,16 @@
       "descartado": null,
       "crossref": null
     },
+    "doi:10.1016/j.arbres.2019.05.024": {
+      "via": null,
+      "consultado": "2026-07-27",
+      "registro": null,
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.1016/j.eimc.2014.11.009": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "25600218",
         "titulo": "Diagnosis and antimicrobial treatment of invasive infections due to multidrug-resistant Enterobacteriaceae. Guidelines of the Spanish Society of Infectious Diseases and Clinical Microbiology",
@@ -193,7 +241,7 @@
     },
     "doi:10.1016/s0140-6736(19)32989-7": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "31954465",
         "titulo": "Global, regional, and national sepsis incidence and mortality, 1990-2017: analysis for the Global Burden of Disease Study",
@@ -214,7 +262,7 @@
     },
     "doi:10.1016/s1473-3099(08)70041-0": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "18291338",
         "titulo": "Extended-spectrum beta-lactamase-producing Enterobacteriaceae: an emerging public-health concern",
@@ -232,9 +280,30 @@
       "descartado": null,
       "crossref": null
     },
+    "doi:10.1016/s1473-3099(12)70323-7": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "23375419",
+        "titulo": "Procalcitonin as a diagnostic marker for sepsis: a systematic review and meta-analysis",
+        "revista": "Lancet Infect Dis",
+        "anio": "2013",
+        "volumen": "13",
+        "numero": "5",
+        "paginas": "426-35",
+        "doi": "10.1016/S1473-3099(12)70323-7",
+        "autores": [
+          "Wacker C",
+          "Prkno A",
+          "Brunkhorst FM"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.1016/s1473-3099(16)30004-4": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "27107460",
         "titulo": "Ceftazidime-avibactam or best available therapy in patients with ceftazidime-resistant Enterobacteriaceae and Pseudomonas aeruginosa complicated urinary tract infections or complicated intra-abdominal infections (REPRISE): a randomised, pathogen-directed, phase 3 study",
@@ -255,7 +324,7 @@
     },
     "doi:10.1038/kisup.2012.73": {
       "via": null,
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": null,
       "descartado": null,
       "crossref": {
@@ -266,9 +335,135 @@
         "tipo": "journal-article"
       }
     },
+    "doi:10.1056/nejm200005043421801": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "10793162",
+        "titulo": "Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and the acute respiratory distress syndrome",
+        "revista": "N Engl J Med",
+        "anio": "2000",
+        "volumen": "342",
+        "numero": "18",
+        "paginas": "1301-8",
+        "doi": "10.1056/NEJM200005043421801",
+        "autores": [
+          "Acute Respiratory Distress Syndrome Network",
+          "Brower RG",
+          "Matthay MA"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1056/nejmoa0810625": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "19318384",
+        "titulo": "Intensive versus conventional glucose control in critically ill patients",
+        "revista": "N Engl J Med",
+        "anio": "2009",
+        "volumen": "360",
+        "numero": "13",
+        "paginas": "1283-97",
+        "doi": "10.1056/NEJMoa0810625",
+        "autores": [
+          "NICE-SUGAR Study Investigators",
+          "Finfer S",
+          "Chittock DR"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1056/nejmoa0907118": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "20200382",
+        "titulo": "Comparison of dopamine and norepinephrine in the treatment of shock",
+        "revista": "N Engl J Med",
+        "anio": "2010",
+        "volumen": "362",
+        "numero": "9",
+        "paginas": "779-89",
+        "doi": "10.1056/NEJMoa0907118",
+        "autores": [
+          "De Backer D",
+          "Biston P",
+          "Devriendt J"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1056/nejmoa1415236": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "25776936",
+        "titulo": "Systemic inflammatory response syndrome criteria in defining severe sepsis",
+        "revista": "N Engl J Med",
+        "anio": "2015",
+        "volumen": "372",
+        "numero": "17",
+        "paginas": "1629-38",
+        "doi": "10.1056/NEJMoa1415236",
+        "autores": [
+          "Kaukonen KM",
+          "Bailey M",
+          "Pilcher D"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1056/nejmoa1705716": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "29490185",
+        "titulo": "Hydrocortisone plus Fludrocortisone for Adults with Septic Shock",
+        "revista": "N Engl J Med",
+        "anio": "2018",
+        "volumen": "378",
+        "numero": "9",
+        "paginas": "809-818",
+        "doi": "10.1056/NEJMoa1705716",
+        "autores": [
+          "Annane D",
+          "Renault A",
+          "Brun-Buisson C"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1056/nejmoa1711584": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "29485925",
+        "titulo": "Balanced Crystalloids versus Saline in Critically Ill Adults",
+        "revista": "N Engl J Med",
+        "anio": "2018",
+        "volumen": "378",
+        "numero": "9",
+        "paginas": "829-839",
+        "doi": "10.1056/NEJMoa1711584",
+        "autores": [
+          "Semler MW",
+          "Self WH",
+          "Wanderer JP"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.1056/nejmra0910283": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "21323543",
         "titulo": "Hypoxia and inflammation",
@@ -288,7 +483,7 @@
     },
     "doi:10.1086/650482": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "20175247",
         "titulo": "Diagnosis, prevention, and treatment of catheter-associated urinary tract infection in adults: 2009 International Clinical Practice Guidelines from the Infectious Diseases Society of America",
@@ -337,7 +532,7 @@
     },
     "doi:10.1093/cid/ciac268": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "35439291",
         "titulo": "Infectious Diseases Society of America 2022 Guidance on the Treatment of Extended-Spectrum β-lactamase Producing Enterobacterales (ESBL-E), Carbapenem-Resistant Enterobacterales (CRE), and Pseudomonas aeruginosa with Difficult-to-Treat Resistance (DTR-P. aeruginosa)",
@@ -358,7 +553,7 @@
     },
     "doi:10.1093/cid/ciq257": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "21292654",
         "titulo": "International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: A 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases",
@@ -379,7 +574,7 @@
     },
     "doi:10.1093/cid/ciw118": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "27080992",
         "titulo": "Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America",
@@ -398,9 +593,51 @@
       "descartado": null,
       "crossref": null
     },
+    "doi:10.1097/ccm.0000000000000742": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "25479113",
+        "titulo": "Lactate measurements in sepsis-induced tissue hypoperfusion: results from the Surviving Sepsis Campaign database",
+        "revista": "Crit Care Med",
+        "anio": "2015",
+        "volumen": "43",
+        "numero": "3",
+        "paginas": "567-73",
+        "doi": "10.1097/CCM.0000000000000742",
+        "autores": [
+          "Casserly B",
+          "Phillips GS",
+          "Schorr C"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1097/ccm.0000000000003119": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "29767636",
+        "titulo": "The Surviving Sepsis Campaign Bundle: 2018 Update",
+        "revista": "Crit Care Med",
+        "anio": "2018",
+        "volumen": "46",
+        "numero": "6",
+        "paginas": "997-1000",
+        "doi": "10.1097/CCM.0000000000003119",
+        "autores": [
+          "Levy MM",
+          "Evans LE",
+          "Rhodes A"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.1097/ccm.0000000000003310": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "30216303",
         "titulo": "The Changing Paradigm of Sepsis: Early Diagnosis, Early Antibiotics, Early Pressors, and Early Adjuvant Treatment",
@@ -420,7 +657,7 @@
     },
     "doi:10.1097/ccm.0000000000005337": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "34605781",
         "titulo": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
@@ -441,7 +678,7 @@
     },
     "doi:10.1097/ccm.0b013e3181cb0cdc": {
       "via": "doi",
-      "consultado": "2026-07-26",
+      "consultado": "2026-07-27",
       "registro": {
         "pmid": "20035219",
         "titulo": "The Surviving Sepsis Campaign: results of an international guideline-based performance improvement program targeting severe sepsis",
@@ -455,6 +692,48 @@
           "Levy MM",
           "Dellinger RP",
           "Townsend SR"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1378/chest.101.6.1644": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "1303622",
+        "titulo": "Definitions for sepsis and organ failure and guidelines for the use of innovative therapies in sepsis. The ACCP/SCCM Consensus Conference Committee. American College of Chest Physicians/Society of Critical Care Medicine",
+        "revista": "Chest",
+        "anio": "1992",
+        "volumen": "101",
+        "numero": "6",
+        "paginas": "1644-55",
+        "doi": "10.1378/chest.101.6.1644",
+        "autores": [
+          "Bone RC",
+          "Balk RA",
+          "Cerra FB"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.24875/ric.22000281": {
+      "via": "doi",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "36854075",
+        "titulo": "Arterial Blood Gases in Normal Subjects at 2240 Meters Above Sea Level: Impact of Age, Gender, and Body Mass Index",
+        "revista": "Rev Invest Clin",
+        "anio": "2023",
+        "volumen": "75",
+        "numero": "1",
+        "paginas": "29-36",
+        "doi": "10.24875/RIC.22000281",
+        "autores": [
+          "Cid-Juárez S",
+          "Téllez-Navarrete NA",
+          "Bautista-Bernal A"
         ]
       },
       "descartado": null,
@@ -478,6 +757,27 @@
           "Ortner G"
         ]
       }
+    },
+    "titulo:systemic inflammatory response syndrome": {
+      "via": "titulo",
+      "consultado": "2026-07-27",
+      "registro": {
+        "pmid": "42471588",
+        "titulo": "Serum meprin α levels for the detection of systemic inflammatory response syndrome",
+        "revista": "Mol Med",
+        "anio": "2026",
+        "volumen": "32",
+        "numero": "1",
+        "paginas": "",
+        "doi": "10.1186/s10020-026-01570-w",
+        "autores": [
+          "Beckinger S",
+          "Mengel M",
+          "Lindner M"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
     }
   }
 }

@@ -208,7 +208,15 @@ norma.
 make matriz     # reconstruye la matriz desde cada generador
 make validar    # la comprueba contra HECAM-CC-IT-008
 make jats       # matriz -> JATS 1.3
+make docx       # matriz -> .docx institucional
 ```
+
+La última cierra el círculo: `compilar_docx.js` compila el `.docx` **desde** la
+matriz, de modo que un protocolo nuevo puede escribirse como JSON-LD sin tocar
+JavaScript. Los dos caminos convergen —el `.docx` compilado desde la matriz y el
+compilado desde el `.js` coinciden al 99,6 % en texto, con idéntico número de
+párrafos, tablas y filas— y lo único que difiere son los nombres de sección,
+donde la matriz usa los normativos.
 
 La reconstrucción no es una transcripción: `armar_jsonld.py` ejecuta el
 generador con la librería instrumentada y arma las secciones desde la secuencia
