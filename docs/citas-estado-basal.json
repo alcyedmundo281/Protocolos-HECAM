@@ -1,0 +1,326 @@
+[
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Singer M, Deutschman CS, Seymour CW, Shankar-Hari M, Annane D, Bauer M, et al.. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):801-10. doi:10.1001/jama.2016.0287",
+    "name": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+    "datePublished": "2016",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "JAMA"
+    },
+    "pmid": "26903338",
+    "doi": "10.1001/jama.2016.0287",
+    "url": "https://doi.org/10.1001/jama.2016.0287",
+    "position": 1,
+    "primeraAparicion": "1"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Ferreira FL, Bota DP, Bross A, Mélot C, Vincent JL. Serial evaluation of the SOFA score to predict outcome in critically ill patients. JAMA. 2001;286(14):1754-8. doi:10.1001/jama.286.14.1754",
+    "name": "Serial evaluation of the SOFA score to predict outcome in critically ill patients",
+    "datePublished": "2001",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "JAMA"
+    },
+    "pmid": "11594901",
+    "doi": "10.1001/jama.286.14.1754",
+    "url": "https://doi.org/10.1001/jama.286.14.1754",
+    "position": 2,
+    "primeraAparicion": "2"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Bhavani SV, Semler M, Qian ET, Verhoef PA, Robichaux C, Churpek MM, et al.. Development and validation of novel sepsis subphenotypes using trajectories of vital signs. Intensive Care Med. 2022;48(11):1582-1592. doi:10.1007/s00134-022-06890-z",
+    "name": "Development and validation of novel sepsis subphenotypes using trajectories of vital signs",
+    "datePublished": "2022",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Intensive Care Med"
+    },
+    "pmid": "36152041",
+    "doi": "10.1007/s00134-022-06890-z",
+    "url": "https://doi.org/10.1007/s00134-022-06890-z",
+    "position": 3,
+    "primeraAparicion": "3"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Subbe CP, Kruger M, Rutherford P, Gemmel L. Validation of a modified Early Warning Score in medical admissions. QJM. 2001;94(10):521-6. doi:10.1093/qjmed/94.10.521",
+    "name": "Validation of a modified Early Warning Score in medical admissions",
+    "datePublished": "2001",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "QJM"
+    },
+    "pmid": "11588210",
+    "doi": "10.1093/qjmed/94.10.521",
+    "url": "https://doi.org/10.1093/qjmed/94.10.521",
+    "position": 4,
+    "primeraAparicion": "4"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Gerry S, Bonnici T, Birks J, Kirtley S, Virdee PS, Watkinson PJ, et al.. Early warning scores for detecting deterioration in adult hospital patients: systematic review and critical appraisal of methodology. BMJ. 2020;369:m1501. doi:10.1136/bmj.m1501",
+    "name": "Early warning scores for detecting deterioration in adult hospital patients: systematic review and critical appraisal of methodology",
+    "datePublished": "2020",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "BMJ"
+    },
+    "pmid": "32434791",
+    "doi": "10.1136/bmj.m1501",
+    "url": "https://doi.org/10.1136/bmj.m1501",
+    "position": 5,
+    "primeraAparicion": "5"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Gonzalez-Garcia M, Maldonado D, Barrero M, Casas A, Perez-Padilla R, Torres-Duque CA. Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude. Eur J Appl Physiol. 2020;120(12):2729-2736. doi:10.1007/s00421-020-04498-z",
+    "name": "Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude",
+    "datePublished": "2020",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Eur J Appl Physiol"
+    },
+    "pmid": "32939642",
+    "doi": "10.1007/s00421-020-04498-z",
+    "url": "https://doi.org/10.1007/s00421-020-04498-z",
+    "position": 6,
+    "primeraAparicion": "6"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Pereira-Victorio CJ, Huamanquispe-Quintana J, Castelo-Tamayo LE. [Arterial blood gases in clinically healthy adults living at 3,350 meters of altitude]. Rev Peru Med Exp Salud Publica. 2014;31(3):473-9.",
+    "name": "[Arterial blood gases in clinically healthy adults living at 3,350 meters of altitude]",
+    "datePublished": "2014",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Rev Peru Med Exp Salud Publica"
+    },
+    "pmid": "25418645",
+    "position": 7,
+    "primeraAparicion": "7"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Forrer A, Gaisl T, Sevik A, Meyer M, Senteler L, Lichtblau M, et al.. Partial Pressure of Arterial Oxygen in Healthy Adults at High Altitudes: A Systematic Review and Meta-Analysis. JAMA Netw Open. 2023;6(6):e2318036. doi:10.1001/jamanetworkopen.2023.18036",
+    "name": "Partial Pressure of Arterial Oxygen in Healthy Adults at High Altitudes: A Systematic Review and Meta-Analysis",
+    "datePublished": "2023",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "JAMA Netw Open"
+    },
+    "pmid": "37326993",
+    "doi": "10.1001/jamanetworkopen.2023.18036",
+    "url": "https://doi.org/10.1001/jamanetworkopen.2023.18036",
+    "position": 8,
+    "primeraAparicion": "8"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Pérez Padilla JR, Vázquez García JC. [Estimation of gasometric values at different altitudes above sea level in Mexico]. Rev Invest Clin. 2000;52(2):148-55.",
+    "name": "[Estimation of gasometric values at different altitudes above sea level in Mexico]",
+    "datePublished": "2000",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Rev Invest Clin"
+    },
+    "pmid": "10846438",
+    "position": 9,
+    "primeraAparicion": "9"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Grupo de trabajo. Heart rate variability. Standards of measurement, physiological interpretation, and clinical use. Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology. Eur Heart J. 1996;17(3):354-81.",
+    "name": "Heart rate variability. Standards of measurement, physiological interpretation, and clinical use. Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology",
+    "datePublished": "1996",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Eur Heart J"
+    },
+    "pmid": "8737210",
+    "position": 10,
+    "primeraAparicion": "10"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Dantas EM, Kemp AH, Andreão RV, da Silva VJD, Brunoni AR, Hoshi RA, et al.. Reference values for short-term resting-state heart rate variability in healthy adults: Results from the Brazilian Longitudinal Study of Adult Health-ELSA-Brasil study. Psychophysiology. 2018;55(6):e13052. doi:10.1111/psyp.13052",
+    "name": "Reference values for short-term resting-state heart rate variability in healthy adults: Results from the Brazilian Longitudinal Study of Adult Health-ELSA-Brasil study",
+    "datePublished": "2018",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Psychophysiology"
+    },
+    "pmid": "29292837",
+    "doi": "10.1111/psyp.13052",
+    "url": "https://doi.org/10.1111/psyp.13052",
+    "position": 11,
+    "primeraAparicion": "11"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Nunan D, Sandercock GR, Brodie DA. A quantitative systematic review of normal values for short-term heart rate variability in healthy adults. Pacing Clin Electrophysiol. 2010;33(11):1407-17. doi:10.1111/j.1540-8159.2010.02841.x",
+    "name": "A quantitative systematic review of normal values for short-term heart rate variability in healthy adults",
+    "datePublished": "2010",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Pacing Clin Electrophysiol"
+    },
+    "pmid": "20663071",
+    "doi": "10.1111/j.1540-8159.2010.02841.x",
+    "url": "https://doi.org/10.1111/j.1540-8159.2010.02841.x",
+    "position": 12,
+    "primeraAparicion": "12"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Koenig J, Thayer JF. Sex differences in healthy human heart rate variability: A meta-analysis. Neurosci Biobehav Rev. 2016;64:288-310. doi:10.1016/j.neubiorev.2016.03.007",
+    "name": "Sex differences in healthy human heart rate variability: A meta-analysis",
+    "datePublished": "2016",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Neurosci Biobehav Rev"
+    },
+    "pmid": "26964804",
+    "doi": "10.1016/j.neubiorev.2016.03.007",
+    "url": "https://doi.org/10.1016/j.neubiorev.2016.03.007",
+    "position": 13,
+    "primeraAparicion": "13"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Hou J, Lu K, Chen P, Wang P, Li J, Yang J, et al.. Comprehensive viewpoints on heart rate variability at high altitude. Clin Exp Hypertens. 2023;45(1):2238923. doi:10.1080/10641963.2023.2238923",
+    "name": "Comprehensive viewpoints on heart rate variability at high altitude",
+    "datePublished": "2023",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Clin Exp Hypertens"
+    },
+    "pmid": "37552638",
+    "doi": "10.1080/10641963.2023.2238923",
+    "url": "https://doi.org/10.1080/10641963.2023.2238923",
+    "position": 14,
+    "primeraAparicion": "14"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "de Castilho FM, Ribeiro ALP, Nobre V, Barros G, de Sousa MR. Heart rate variability as predictor of mortality in sepsis: A systematic review. PLoS One. 2018;13(9):e0203487. doi:10.1371/journal.pone.0203487",
+    "name": "Heart rate variability as predictor of mortality in sepsis: A systematic review",
+    "datePublished": "2018",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "PLoS One"
+    },
+    "pmid": "30204803",
+    "doi": "10.1371/journal.pone.0203487",
+    "url": "https://doi.org/10.1371/journal.pone.0203487",
+    "position": 15,
+    "primeraAparicion": "15"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Adam J, Rupprecht S, Künstler ECS, Hoyer D. Heart rate variability as a marker and predictor of inflammation, nosocomial infection, and sepsis - A systematic review. Auton Neurosci. 2023;249:103116. doi:10.1016/j.autneu.2023.103116",
+    "name": "Heart rate variability as a marker and predictor of inflammation, nosocomial infection, and sepsis - A systematic review",
+    "datePublished": "2023",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Auton Neurosci"
+    },
+    "pmid": "37651781",
+    "doi": "10.1016/j.autneu.2023.103116",
+    "url": "https://doi.org/10.1016/j.autneu.2023.103116",
+    "position": 16,
+    "primeraAparicion": "16"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Ranpuria R, Hall M, Chan CT, Unruh M. Heart rate variability (HRV) in kidney failure: measurement and consequences of reduced HRV. Nephrol Dial Transplant. 2008;23(2):444-9. doi:10.1093/ndt/gfm634",
+    "name": "Heart rate variability (HRV) in kidney failure: measurement and consequences of reduced HRV",
+    "datePublished": "2008",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Nephrol Dial Transplant"
+    },
+    "pmid": "18003665",
+    "doi": "10.1093/ndt/gfm634",
+    "url": "https://doi.org/10.1093/ndt/gfm634",
+    "position": 17,
+    "primeraAparicion": "17"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Soria R, Egger M, Scherrer U, Bender N, Rimoldi SF. Pulmonary artery pressure and arterial oxygen saturation in people living at high or low altitude: systematic review and meta-analysis. J Appl Physiol (1985). 2016;121(5):1151-1159. doi:10.1152/japplphysiol.00394.2016",
+    "name": "Pulmonary artery pressure and arterial oxygen saturation in people living at high or low altitude: systematic review and meta-analysis",
+    "datePublished": "2016",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "J Appl Physiol (1985)"
+    },
+    "pmid": "27660297",
+    "doi": "10.1152/japplphysiol.00394.2016",
+    "url": "https://doi.org/10.1152/japplphysiol.00394.2016",
+    "position": 18,
+    "primeraAparicion": "18"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Hasegawa D, Ishisaka Y, Maeda T, Prasitlumkum N, Nishida K, Dugar S, et al.. Prevalence and Prognosis of Sepsis-Induced Cardiomyopathy: A Systematic Review and Meta-Analysis. J Intensive Care Med. 2023;38(9):797-808. doi:10.1177/08850666231180526",
+    "name": "Prevalence and Prognosis of Sepsis-Induced Cardiomyopathy: A Systematic Review and Meta-Analysis",
+    "datePublished": "2023",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "J Intensive Care Med"
+    },
+    "pmid": "37272081",
+    "doi": "10.1177/08850666231180526",
+    "url": "https://doi.org/10.1177/08850666231180526",
+    "position": 19,
+    "primeraAparicion": "19"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Lanspa MJ, Cirulis MM, Wiley BM, Olsen TD, Wilson EL, Beesley SJ, et al.. Right Ventricular Dysfunction in Early Sepsis and Septic Shock. Chest. 2021;159(3):1055-1063. doi:10.1016/j.chest.2020.09.274",
+    "name": "Right Ventricular Dysfunction in Early Sepsis and Septic Shock",
+    "datePublished": "2021",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Chest"
+    },
+    "pmid": "33068615",
+    "doi": "10.1016/j.chest.2020.09.274",
+    "url": "https://doi.org/10.1016/j.chest.2020.09.274",
+    "position": 20,
+    "primeraAparicion": "20"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Yoshida T, Yoshida T, Noma H, Nomura T, Suzuki A, Mihara T. Diagnostic accuracy of point-of-care ultrasound for shock: a systematic review and meta-analysis. Crit Care. 2023;27(1):200. doi:10.1186/s13054-023-04495-6",
+    "name": "Diagnostic accuracy of point-of-care ultrasound for shock: a systematic review and meta-analysis",
+    "datePublished": "2023",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Crit Care"
+    },
+    "pmid": "37231510",
+    "doi": "10.1186/s13054-023-04495-6",
+    "url": "https://doi.org/10.1186/s13054-023-04495-6",
+    "position": 21,
+    "primeraAparicion": "21"
+  },
+  {
+    "type": "ArticuloAcademico",
+    "vancouver": "Mekonnen D, Ren CB, Mercado J, Garcia-Ruiz V, Kurmann R, Zürcher F, et al.. Echocardiographic nomograms in children living at high altitude according to sex. Eur Heart J Imaging Methods Pract. 2025;3(1):qyaf053. doi:10.1093/ehjimp/qyaf053",
+    "name": "Echocardiographic nomograms in children living at high altitude according to sex",
+    "datePublished": "2025",
+    "schema:isPartOf": {
+      "type": "schema:Periodical",
+      "name": "Eur Heart J Imaging Methods Pract"
+    },
+    "pmid": "40416836",
+    "doi": "10.1093/ehjimp/qyaf053",
+    "url": "https://doi.org/10.1093/ehjimp/qyaf053",
+    "position": 22,
+    "primeraAparicion": "22"
+  }
+]
