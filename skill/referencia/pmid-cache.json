@@ -1,10 +1,10 @@
 {
   "_nota": "Registros de PubMed verificados por scripts/verificar_pmid.py. Se regenera solo; no editar a mano.",
-  "_actualizado": "2026-07-27",
+  "_actualizado": "2026-07-29",
   "entradas": {
     "doi:10.1001/jama.2016.0287": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "26903338",
         "titulo": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
@@ -25,7 +25,7 @@
     },
     "doi:10.1001/jama.2016.0288": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "26903335",
         "titulo": "Assessment of Clinical Criteria for Sepsis: For the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
@@ -46,7 +46,7 @@
     },
     "doi:10.1001/jama.2016.0289": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "26903336",
         "titulo": "Developing a New Definition and Assessing New Clinical Criteria for Septic Shock: For the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
@@ -67,7 +67,7 @@
     },
     "doi:10.1001/jama.2017.17687": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "29297082",
         "titulo": "Enhancing Recovery From Sepsis: A Review",
@@ -80,6 +80,48 @@
         "autores": [
           "Prescott HC",
           "Angus DC"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1001/jama.2022.11176": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "35852524",
+        "titulo": "Diagnosis and Management of Hyponatremia: A Review",
+        "revista": "JAMA",
+        "anio": "2022",
+        "volumen": "328",
+        "numero": "3",
+        "paginas": "280-291",
+        "doi": "10.1001/jama.2022.11176",
+        "autores": [
+          "Adrogué HJ",
+          "Tucker BM",
+          "Madias NE"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1001/jamainternmed.2020.5519": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "33104189",
+        "titulo": "Risk of Overcorrection in Rapid Intermittent Bolus vs Slow Continuous Infusion Therapies of Hypertonic Saline for Patients With Symptomatic Hyponatremia: The SALSA Randomized Clinical Trial",
+        "revista": "JAMA Intern Med",
+        "anio": "2021",
+        "volumen": "181",
+        "numero": "1",
+        "paginas": "81-92",
+        "doi": "10.1001/jamainternmed.2020.5519",
+        "autores": [
+          "Baek SH",
+          "Jo YH",
+          "Ahn S"
         ]
       },
       "descartado": null,
@@ -108,7 +150,7 @@
     },
     "doi:10.1007/bf01709751": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "8844239",
         "titulo": "The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. On behalf of the Working Group on Sepsis-Related Problems of the European Society of Intensive Care Medicine",
@@ -150,7 +192,7 @@
     },
     "doi:10.1007/s00134-022-06852-5": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "36102944",
         "titulo": "Source control in the management of sepsis and septic shock",
@@ -171,7 +213,7 @@
     },
     "doi:10.1007/s00421-020-04498-z": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "32939642",
         "titulo": "Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude",
@@ -190,6 +232,26 @@
       "descartado": null,
       "crossref": null
     },
+    "doi:10.1016/j.amjmed.2017.09.048": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "29061503",
+        "titulo": "Outcomes in Severe Hyponatremia Treated With and Without Desmopressin",
+        "revista": "Am J Med",
+        "anio": "2018",
+        "volumen": "131",
+        "numero": "3",
+        "paginas": "317.e1-317.e10",
+        "doi": "10.1016/j.amjmed.2017.09.048",
+        "autores": [
+          "MacMillan TE",
+          "Cavalcanti RB"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.1016/j.arbres.2019.05.024": {
       "via": null,
       "consultado": "2026-07-27",
@@ -199,7 +261,7 @@
     },
     "doi:10.1016/j.eimc.2014.11.009": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "25600218",
         "titulo": "Diagnosis and antimicrobial treatment of invasive infections due to multidrug-resistant Enterobacteriaceae. Guidelines of the Spanish Society of Infectious Diseases and Clinical Microbiology",
@@ -213,6 +275,25 @@
           "Rodríguez-Baño J",
           "Cisneros JM",
           "Cobos-Trigueros N"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1016/j.jhep.2018.03.024": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "29653741",
+        "titulo": "EASL Clinical Practice Guidelines for the management of patients with decompensated cirrhosis",
+        "revista": "J Hepatol",
+        "anio": "2018",
+        "volumen": "69",
+        "numero": "2",
+        "paginas": "406-460",
+        "doi": "10.1016/j.jhep.2018.03.024",
+        "autores": [
+          "European Association for the Study of the Liver"
         ]
       },
       "descartado": null,
@@ -239,9 +320,30 @@
       "descartado": null,
       "crossref": null
     },
+    "doi:10.1016/j.xkme.2024.100953": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "39967825",
+        "titulo": "Hyponatremia Correction and Osmotic Demyelination Syndrome Risk: A Systematic Review and Meta-Analysis",
+        "revista": "Kidney Med",
+        "anio": "2025",
+        "volumen": "7",
+        "numero": "3",
+        "paginas": "100953",
+        "doi": "10.1016/j.xkme.2024.100953",
+        "autores": [
+          "Suppadungsuk S",
+          "Krisanapan P",
+          "Kazeminia S"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.1016/s0140-6736(19)32989-7": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "31954465",
         "titulo": "Global, regional, and national sepsis incidence and mortality, 1990-2017: analysis for the Global Burden of Disease Study",
@@ -262,7 +364,7 @@
     },
     "doi:10.1016/s1473-3099(08)70041-0": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "18291338",
         "titulo": "Extended-spectrum beta-lactamase-producing Enterobacteriaceae: an emerging public-health concern",
@@ -282,7 +384,7 @@
     },
     "doi:10.1016/s1473-3099(12)70323-7": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "23375419",
         "titulo": "Procalcitonin as a diagnostic marker for sepsis: a systematic review and meta-analysis",
@@ -303,7 +405,7 @@
     },
     "doi:10.1016/s1473-3099(16)30004-4": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "27107460",
         "titulo": "Ceftazidime-avibactam or best available therapy in patients with ceftazidime-resistant Enterobacteriaceae and Pseudomonas aeruginosa complicated urinary tract infections or complicated intra-abdominal infections (REPRISE): a randomised, pathogen-directed, phase 3 study",
@@ -324,7 +426,7 @@
     },
     "doi:10.1038/kisup.2012.73": {
       "via": null,
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": null,
       "descartado": null,
       "crossref": {
@@ -337,7 +439,7 @@
     },
     "doi:10.1056/nejm200005043421801": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "10793162",
         "titulo": "Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and the acute respiratory distress syndrome",
@@ -358,7 +460,7 @@
     },
     "doi:10.1056/nejmoa0810625": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "19318384",
         "titulo": "Intensive versus conventional glucose control in critically ill patients",
@@ -379,7 +481,7 @@
     },
     "doi:10.1056/nejmoa0907118": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "20200382",
         "titulo": "Comparison of dopamine and norepinephrine in the treatment of shock",
@@ -400,7 +502,7 @@
     },
     "doi:10.1056/nejmoa1415236": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "25776936",
         "titulo": "Systemic inflammatory response syndrome criteria in defining severe sepsis",
@@ -421,7 +523,7 @@
     },
     "doi:10.1056/nejmoa1705716": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "29490185",
         "titulo": "Hydrocortisone plus Fludrocortisone for Adults with Septic Shock",
@@ -442,7 +544,7 @@
     },
     "doi:10.1056/nejmoa1711584": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "29485925",
         "titulo": "Balanced Crystalloids versus Saline in Critically Ill Adults",
@@ -463,7 +565,7 @@
     },
     "doi:10.1056/nejmra0910283": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "21323543",
         "titulo": "Hypoxia and inflammation",
@@ -483,7 +585,7 @@
     },
     "doi:10.1086/650482": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "20175247",
         "titulo": "Diagnosis, prevention, and treatment of catheter-associated urinary tract infection in adults: 2009 International Clinical Practice Guidelines from the Infectious Diseases Society of America",
@@ -497,6 +599,26 @@
           "Hooton TM",
           "Bradley SF",
           "Cardenas DD"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1089/ham.2016.0031": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "27218284",
+        "titulo": "Chronic Mountain Sickness: Clinical Aspects, Etiology, Management, and Treatment",
+        "revista": "High Alt Med Biol",
+        "anio": "2016",
+        "volumen": "17",
+        "numero": "2",
+        "paginas": "61-9",
+        "doi": "10.1089/ham.2016.0031",
+        "autores": [
+          "Villafuerte FC",
+          "Corante N"
         ]
       },
       "descartado": null,
@@ -532,7 +654,7 @@
     },
     "doi:10.1093/cid/ciac268": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "35439291",
         "titulo": "Infectious Diseases Society of America 2022 Guidance on the Treatment of Extended-Spectrum β-lactamase Producing Enterobacterales (ESBL-E), Carbapenem-Resistant Enterobacterales (CRE), and Pseudomonas aeruginosa with Difficult-to-Treat Resistance (DTR-P. aeruginosa)",
@@ -553,7 +675,7 @@
     },
     "doi:10.1093/cid/ciq257": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "21292654",
         "titulo": "International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: A 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases",
@@ -574,7 +696,7 @@
     },
     "doi:10.1093/cid/ciw118": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "27080992",
         "titulo": "Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America",
@@ -593,9 +715,30 @@
       "descartado": null,
       "crossref": null
     },
+    "doi:10.1093/ndt/gfu040": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "24569496",
+        "titulo": "Clinical practice guideline on diagnosis and treatment of hyponatraemia",
+        "revista": "Nephrol Dial Transplant",
+        "anio": "2014",
+        "volumen": "29 Suppl 2",
+        "numero": "",
+        "paginas": "i1-i39",
+        "doi": "10.1093/ndt/gfu040",
+        "autores": [
+          "Spasovski G",
+          "Vanholder R",
+          "Allolio B"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.1097/ccm.0000000000000742": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "25479113",
         "titulo": "Lactate measurements in sepsis-induced tissue hypoperfusion: results from the Surviving Sepsis Campaign database",
@@ -616,7 +759,7 @@
     },
     "doi:10.1097/ccm.0000000000003119": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "29767636",
         "titulo": "The Surviving Sepsis Campaign Bundle: 2018 Update",
@@ -637,7 +780,7 @@
     },
     "doi:10.1097/ccm.0000000000003310": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "30216303",
         "titulo": "The Changing Paradigm of Sepsis: Early Diagnosis, Early Antibiotics, Early Pressors, and Early Adjuvant Treatment",
@@ -657,7 +800,7 @@
     },
     "doi:10.1097/ccm.0000000000005337": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "34605781",
         "titulo": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
@@ -678,7 +821,7 @@
     },
     "doi:10.1097/ccm.0b013e3181cb0cdc": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "20035219",
         "titulo": "The Surviving Sepsis Campaign: results of an international guideline-based performance improvement program targeting severe sepsis",
@@ -697,9 +840,135 @@
       "descartado": null,
       "crossref": null
     },
+    "doi:10.1111/cen.13930": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "30614552",
+        "titulo": "Urea treatment in fluid restriction-refractory hyponatraemia",
+        "revista": "Clin Endocrinol (Oxf)",
+        "anio": "2019",
+        "volumen": "90",
+        "numero": "4",
+        "paginas": "630-636",
+        "doi": "10.1111/cen.13930",
+        "autores": [
+          "Lockett J",
+          "Berkman KE",
+          "Dimeski G"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.11909/j.issn.1671-5411.2016.02.001": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "27168745",
+        "titulo": "Thiazide-associated hyponatremia in the elderly: what the clinician needs to know",
+        "revista": "J Geriatr Cardiol",
+        "anio": "2016",
+        "volumen": "13",
+        "numero": "2",
+        "paginas": "175-82",
+        "doi": "10.11909/j.issn.1671-5411.2016.02.001",
+        "autores": [
+          "Liamis G",
+          "Filippatos TD",
+          "Elisaf MS"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1210/clinem/dgaa619": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "32879954",
+        "titulo": "Fluid Restriction Therapy for Chronic SIAD; Results of a Prospective Randomized Controlled Trial",
+        "revista": "J Clin Endocrinol Metab",
+        "anio": "2020",
+        "volumen": "105",
+        "numero": "12",
+        "paginas": "",
+        "doi": "10.1210/clinem/dgaa619",
+        "autores": [
+          "Garrahy A",
+          "Galloway I",
+          "Hannon AM"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1210/clinem/dgad238": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "37098131",
+        "titulo": "An Increase in Plasma Sodium Levels Is Associated With an Increase in Osteoblast Function in Chronic SIAD",
+        "revista": "J Clin Endocrinol Metab",
+        "anio": "2023",
+        "volumen": "108",
+        "numero": "10",
+        "paginas": "e1027-e1033",
+        "doi": "10.1210/clinem/dgad238",
+        "autores": [
+          "Monnerat S",
+          "Refardt J",
+          "Potasso L"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1210/endrev/bnad010": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "36974717",
+        "titulo": "Syndrome of Inappropriate Antidiuresis: From Pathophysiology to Management",
+        "revista": "Endocr Rev",
+        "anio": "2023",
+        "volumen": "44",
+        "numero": "5",
+        "paginas": "819-861",
+        "doi": "10.1210/endrev/bnad010",
+        "autores": [
+          "Warren AM",
+          "Grossmann M",
+          "Christ-Crain M"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.1371/journal.pone.0080451": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "24367479",
+        "titulo": "Moderate hyponatremia is associated with increased risk of mortality: evidence from a meta-analysis",
+        "revista": "PLoS One",
+        "anio": "2013",
+        "volumen": "8",
+        "numero": "12",
+        "paginas": "e80451",
+        "doi": "10.1371/journal.pone.0080451",
+        "autores": [
+          "Corona G",
+          "Giuliani C",
+          "Parenti G"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.1378/chest.101.6.1644": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "1303622",
         "titulo": "Definitions for sepsis and organ failure and guidelines for the use of innovative therapies in sepsis. The ACCP/SCCM Consensus Conference Committee. American College of Chest Physicians/Society of Critical Care Medicine",
@@ -718,9 +987,50 @@
       "descartado": null,
       "crossref": null
     },
+    "doi:10.1681/asn.2016101139": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "28174217",
+        "titulo": "Diagnosis and Treatment of Hyponatremia: Compilation of the Guidelines",
+        "revista": "J Am Soc Nephrol",
+        "anio": "2017",
+        "volumen": "28",
+        "numero": "5",
+        "paginas": "1340-1349",
+        "doi": "10.1681/ASN.2016101139",
+        "autores": [
+          "Hoorn EJ",
+          "Zietse R"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
+    "doi:10.2215/cjn.0000000000000244": {
+      "via": "doi",
+      "consultado": "2026-07-29",
+      "registro": {
+        "pmid": "37379081",
+        "titulo": "Treatment Guidelines for Hyponatremia: Stay the Course",
+        "revista": "Clin J Am Soc Nephrol",
+        "anio": "2024",
+        "volumen": "19",
+        "numero": "1",
+        "paginas": "129-135",
+        "doi": "10.2215/CJN.0000000000000244",
+        "autores": [
+          "Sterns RH",
+          "Rondon-Berrios H",
+          "Adrogué HJ"
+        ]
+      },
+      "descartado": null,
+      "crossref": null
+    },
     "doi:10.24875/ric.22000281": {
       "via": "doi",
-      "consultado": "2026-07-27",
+      "consultado": "2026-07-29",
       "registro": {
         "pmid": "36854075",
         "titulo": "Arterial Blood Gases in Normal Subjects at 2240 Meters Above Sea Level: Impact of Age, Gender, and Body Mass Index",

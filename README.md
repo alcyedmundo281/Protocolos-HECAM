@@ -189,6 +189,9 @@ produccion/             un directorio por protocolo, con su código instituciona
   HECAM-MI-PR-002-itu/
     protocolo.jsonld
     salida/
+  HECAM-MI-PR-003-hiponatremia/
+    protocolo.jsonld
+    salida/
 
 docs/                   matriz editorial, mapeo JATS, datos institucionales, valores de altitud
 ```

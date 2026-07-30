@@ -1,0 +1,1407 @@
+{
+  "@context": [
+    "https://schema.org",
+    "./protocolo.context.jsonld"
+  ],
+  "type": [
+    "GuiaMedica",
+    "schema:CreativeWork"
+  ],
+  "id": "urn:hecam:protocolo:HECAM-MI-PR-003",
+  "identifier": "HECAM-MI-PR-003",
+  "codigoProvisional": true,
+  "name": "Diagnóstico y Manejo de la Hiponatremia Crónica en el Paciente Adulto",
+  "nombreArchivo": "HECAM-MI-PR-003_Diagnostico_Manejo_Hiponatremia_Cronica_Adultos.docx",
+  "tipoDocumento": "Protocolo Clínico",
+  "unidadTecnica": "Medicina Interna",
+  "version": "1",
+  "estado": "borrador",
+  "inLanguage": "es-EC",
+  "dateCreated": "2026-07-29",
+  "mesAnioPortada": "Julio, 2026",
+  "vigenciaAnios": 3,
+  "description": "Protocolo institucional para el diagnóstico etiológico, el tratamiento y el seguimiento de la hiponatremia crónica en pacientes adultos hospitalizados y ambulatorios del HECAM, con límites de velocidad de corrección del sodio sérico y consideraciones para la residencia a 2.850 m s. n. m.",
+  "publisher": {
+    "type": "Organizacion",
+    "name": "Hospital de Especialidades Carlos Andrade Marín",
+    "alternateName": "HECAM",
+    "schema:parentOrganization": {
+      "type": "Organizacion",
+      "name": "Instituto Ecuatoriano de Seguridad Social",
+      "alternateName": "IESS"
+    },
+    "schema:address": {
+      "type": "schema:PostalAddress",
+      "schema:addressLocality": "Quito",
+      "schema:addressRegion": "Pichincha",
+      "schema:addressCountry": "EC"
+    }
+  },
+  "recognizingAuthority": {
+    "type": "Organizacion",
+    "name": "Dirección Técnica del HECAM"
+  },
+  "audience": {
+    "type": "AudienciaMedica",
+    "schema:audienceType": "Personal médico y de enfermería del HECAM",
+    "name": "Pacientes adultos (≥18 años) atendidos en el HECAM"
+  },
+  "guidelineSubject": {
+    "type": "CondicionMedica",
+    "name": "Hiponatremia crónica",
+    "schema:code": {
+      "type": "CodigoMedico",
+      "schema:codeValue": "E87.1",
+      "schema:codingSystem": "CIE-10"
+    }
+  },
+  "evidenceOrigin": "Oxford Centre for Evidence-Based Medicine (CEBM), marzo 2009",
+  "normativaAplicable": [
+    {
+      "identifier": "HECAM-CC-P-001 v13",
+      "name": "Creación, Actualización y Control de Documentos"
+    },
+    {
+      "identifier": "HECAM-CC-IT-008 v4",
+      "name": "Elaboración de Protocolos Clínicos"
+    },
+    {
+      "identifier": "HECAM-CC-FR-012 V3.0",
+      "name": "Formato de Protocolos"
+    }
+  ],
+  "author": [
+    {
+      "type": [
+        "Rol",
+        "RolElaboracion"
+      ],
+      "roleName": "Elaborado por",
+      "bloqueFirma": "Elaborado por:",
+      "ordenFirma": 3,
+      "author": {
+        "type": "Persona",
+        "honorificPrefix": "Dr.",
+        "name": "Frank Romo",
+        "jobTitle": "Médico Internista, Tratante de la Unidad Técnica de Medicina Interna",
+        "schema:memberOf": {
+          "type": "Organizacion",
+          "name": "Unidad Técnica de Medicina Interna"
+        },
+        "worksFor": {
+          "type": "Organizacion",
+          "name": "Hospital de Especialidades Carlos Andrade Marín"
+        }
+      }
+    }
+  ],
+  "revisionEditorial": {
+    "type": [
+      "Rol",
+      "RolRevisionEditorial"
+    ],
+    "roleName": "Revisión de forma y estilo editorial",
+    "alcanceRevision": "forma",
+    "instancia": "Coordinación General de Investigación",
+    "startDate": "2026-07-29",
+    "description": "Fija el formato editorial de la serie completa de protocolos. No revisa el contenido científico.",
+    "contributor": {
+      "type": "Persona",
+      "name": "Revisora de Protocolos Clínicos de la Coordinación General de Investigación",
+      "jobTitle": "Revisora de Protocolos Clínicos",
+      "worksFor": {
+        "type": "Organizacion",
+        "name": "Coordinación General de Investigación — HECAM"
+      }
+    },
+    "reglasVigentes": {
+      "citasEnSuperindice": true,
+      "bibliografiaOrdenAparicion": true,
+      "aplicaASerieCompleta": true,
+      "responsabilidadContenidoCientifico": "autor",
+      "restriccionFarmacos": "CNMB",
+      "documentoDeReglas": "references/matriz-editorial.md"
+    }
+  },
+  "contributor": [
+    {
+      "type": [
+        "Rol",
+        "RolAprobacion"
+      ],
+      "roleName": "Aprobado por",
+      "bloqueFirma": "Aprobado por:",
+      "ordenFirma": 1,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Director Técnico"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 1,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Coordinador General de Investigación"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 2,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Coordinador General de Control de Calidad"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 3,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Coordinador General de Hospitalización y Ambulatorio"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 4,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Coordinador General de Áreas Críticas"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 5,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Coordinador General de Diagnóstico y Tratamiento"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 6,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Jefe de Áreas Clínicas (Presidente PROA)"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "bloqueFirma": "Revisado por:",
+      "ordenFirma": 2,
+      "position": 7,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Jefe de la Unidad de Cuidados Intensivos Adultos"
+      }
+    }
+  ],
+  "hasPart": [
+    {
+      "type": "Seccion",
+      "numeral": "1",
+      "name": "Justificación",
+      "secType": "justificacion",
+      "contenido": [
+        {
+          "type": "Parrafo",
+          "text": "La hiponatremia, definida como una concentración sérica de sodio inferior a 135 mmol/L, es el trastorno hidroelectrolítico más frecuente de la práctica clínica: afecta a cerca del 5 % de los adultos de la población general y hasta al 35 % de los pacientes hospitalizados.[[1]] Se la considera crónica cuando su duración documentada o presumida supera las 48 horas, condición que corresponde a la mayoría de los casos detectados en hospitalización y en consulta externa. Durante décadas se la interpretó como un hallazgo bioquímico incidental; sin embargo, la evidencia acumulada demuestra que incluso descensos moderados del sodio sérico se asocian de forma independiente con un incremento de la mortalidad, con un riesgo relativo global de 2,60 en un metaanálisis de 81 estudios y más de 850.000 pacientes.[[2]] El síndrome de secreción inadecuada de antidiuresis constituye la causa individual más frecuente de hiponatremia hipotónica y explica alrededor de un tercio de los episodios intrahospitalarios.[[3]]"
+        },
+        {
+          "type": "Parrafo",
+          "text": "La morbilidad atribuible a la hiponatremia crónica es específica y con frecuencia subestimada: deterioro cognitivo leve, alteración de la marcha, caídas, osteoporosis y fracturas, manifestaciones que revierten al menos parcialmente cuando el sodio se normaliza.[[1]] En paralelo, el propio tratamiento constituye un riesgo. La corrección demasiado rápida de una hiponatremia crónica puede desencadenar el síndrome de desmielinización osmótica, complicación neurológica grave y con frecuencia irreversible, razón por la cual las guías internacionales fijan límites estrictos de velocidad de corrección.[[4]] Esos límites fueron cuestionados por estudios observacionales recientes, pero un consenso de veinticinco autores de nueve países ratificó la necesidad de mantener la cautela terapéutica y la monitorización estrecha del sodio sérico.[[5]] Un metaanálisis de once cohortes con 26.710 pacientes hospitalizados confirmó que la corrección rápida se asocia a una incidencia de desmielinización osmótica de 0,73 %, frente a 0,10 % con corrección no rápida.[[6]]"
+        },
+        {
+          "type": "Parrafo",
+          "text": "En el Hospital de Especialidades Carlos Andrade Marín la hiponatremia crónica se presenta en una población predominantemente adulta mayor, polimedicada y con comorbilidad cardíaca, hepática, renal y oncológica. A ello se suma un determinante local: la residencia permanente a 2.850 m s. n. m. eleva los valores basales de hemoglobina y hematocrito y condiciona patrones de eritrocitosis e hipoxemia que dificultan la valoración volémica junto a la cama del paciente y desplazan los rangos de referencia usados a nivel del mar.[[7]] La ausencia de un documento institucional normalizado ha generado variabilidad en la solicitud de osmolalidad plasmática y urinaria, en la clasificación etiológica y, sobre todo, en la velocidad de corrección."
+        },
+        {
+          "type": "Parrafo",
+          "text": "Este protocolo se dirige a pacientes de 18 años o más con hiponatremia crónica atendidos en la Unidad Técnica de Medicina Interna, tanto en hospitalización como en consulta externa, con participación de Emergencia, Laboratorio Clínico, Nutrición y Dietética, Farmacia y Enfermería. Se elabora conforme a la instrucción institucional vigente para la elaboración de protocolos clínicos.[[8]] Los resultados esperados son la estandarización del abordaje diagnóstico por estado volémico, la reducción de los episodios de corrección excesiva del sodio sérico y la disminución de los reingresos por hiponatremia recurrente."
+        }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "2",
+      "name": "Objetivos",
+      "secType": "objetivos",
+      "objetivoGeneral": "Estandarizar el diagnóstico etiológico, el tratamiento y el seguimiento de la hiponatremia crónica en pacientes adultos atendidos en el Hospital de Especialidades Carlos Andrade Marín, para reducir la corrección excesiva del sodio sérico y la morbilidad asociada.",
+      "objetivosEspecificos": [
+        "Definir los criterios bioquímicos y clínicos que clasifican la hiponatremia crónica según tonicidad plasmática y estado volémico.",
+        "Establecer la secuencia de estudios de laboratorio necesaria para determinar la etiología dentro de las primeras doce horas de detección.",
+        "Determinar los límites de velocidad de corrección del sodio sérico y las intervenciones de rescate ante corrección excesiva.",
+        "Definir el plan de egreso y el seguimiento ambulatorio de los pacientes con hiponatremia crónica persistente."
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "3",
+      "name": "Glosario de términos / Abreviaciones",
+      "secType": "glosario",
+      "glosario": [
+        {
+          "termino": "Hiponatremia",
+          "definicion": "Concentración sérica de sodio inferior a 135 mmol/L medida por electrodo ion selectivo. Se clasifica en leve (130–134 mmol/L), moderada (125–129 mmol/L) y profunda (menor de 125 mmol/L).[[1]]"
+        },
+        {
+          "termino": "Hiponatremia crónica",
+          "definicion": "Hiponatremia con duración documentada o presumida mayor de 48 horas. En ausencia de documentación previa, toda hiponatremia se maneja como crónica por razones de seguridad.[[4]]"
+        },
+        {
+          "termino": "Hiponatremia hipotónica",
+          "definicion": "Hiponatremia con osmolalidad plasmática medida inferior a 275 mOsm/kg. Es la única forma que refleja exceso real de agua corporal libre respecto del soluto.[[9]]"
+        },
+        {
+          "termino": "Pseudohiponatremia",
+          "definicion": "Falso descenso del sodio medido por métodos indirectos en presencia de hipertrigliceridemia o hiperproteinemia, con osmolalidad plasmática normal.[[9]]"
+        },
+        {
+          "termino": "Hiponatremia traslocacional",
+          "definicion": "Descenso del sodio sérico por desplazamiento osmótico de agua desde el compartimento intracelular, causado por hiperglucemia, manitol o medios de contraste, con osmolalidad plasmática normal o elevada.[[9]]"
+        },
+        {
+          "termino": "Síndrome de secreción inadecuada de antidiuresis",
+          "definicion": "Hiponatremia hipotónica euvolémica con orina inapropiadamente concentrada, sodio urinario elevado y exclusión de hipotiroidismo, insuficiencia suprarrenal y uso de diuréticos.[[3]]"
+        },
+        {
+          "termino": "Osmolalidad urinaria",
+          "definicion": "Concentración de solutos en orina. Un valor inferior a 100 mOsm/kg orienta a polidipsia primaria o baja ingesta de solutos; valores superiores indican acción persistente de la vasopresina.[[9]]"
+        },
+        {
+          "termino": "Sodio urinario",
+          "definicion": "Concentración de sodio en muestra aislada de orina. Valores menores de 30 mmol/L sugieren depleción de volumen circulante efectivo; valores mayores orientan a antidiuresis inapropiada o uso de diuréticos.[[9]]"
+        },
+        {
+          "termino": "Excreción fraccional de ácido úrico",
+          "definicion": "Cociente entre el aclaramiento de ácido úrico y el de creatinina expresado en porcentaje. Valores superiores al 12 % apoyan el diagnóstico de antidiuresis inapropiada frente a hipovolemia.[[9]]"
+        },
+        {
+          "termino": "Síndrome de desmielinización osmótica",
+          "definicion": "Lesión desmielinizante pontina y extrapontina secundaria a la corrección demasiado rápida de una hiponatremia crónica; se manifiesta entre dos y siete días después de la corrección con disartria, disfagia, paraparesia o estado de conciencia fluctuante.[[6]]"
+        },
+        {
+          "termino": "Corrección excesiva",
+          "definicion": "Incremento del sodio sérico mayor de 8 mmol/L en 24 horas o mayor de 18 mmol/L en 48 horas; en pacientes de alto riesgo el límite se reduce a 6 mmol/L en 24 horas.[[5]]"
+        },
+        {
+          "termino": "Hiponatremia asociada a tiazidas",
+          "definicion": "Hiponatremia atribuible al uso de diuréticos tiazídicos, más frecuente en adultos mayores, en las primeras semanas de tratamiento y en usuarios concomitantes de antidepresivos o antiinflamatorios no esteroideos.[[10]]"
+        }
+      ],
+      "abreviaciones": [
+        {
+          "sigla": "SIAD",
+          "significado": "Síndrome de secreción inadecuada de antidiuresis"
+        },
+        {
+          "sigla": "SDO",
+          "significado": "Síndrome de desmielinización osmótica"
+        },
+        {
+          "sigla": "Na⁺",
+          "significado": "Ion sodio; sodio sérico cuando se acompaña de la unidad mmol/L"
+        },
+        {
+          "sigla": "OsmP",
+          "significado": "Osmolalidad plasmática medida"
+        },
+        {
+          "sigla": "OsmU",
+          "significado": "Osmolalidad urinaria medida"
+        },
+        {
+          "sigla": "EFAU",
+          "significado": "Excreción fraccional de ácido úrico"
+        },
+        {
+          "sigla": "TFGe",
+          "significado": "Tasa de filtrado glomerular estimada"
+        },
+        {
+          "sigla": "DDAVP",
+          "significado": "Desmopresina (1-desamino-8-D-arginina vasopresina)"
+        }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "4",
+      "name": "Procedimiento (Plan de Acción/Actuación)",
+      "secType": "procedimiento",
+      "hasPart": [
+        {
+          "type": "Seccion",
+          "numeral": "4.1",
+          "name": "Evaluación inicial del paciente",
+          "quienLoHace": "Médico tratante de Medicina Interna, médico residente asignado y personal de Enfermería de la unidad de hospitalización o de consulta externa. En Emergencia, el médico emergenciólogo de turno.",
+          "cuando": "Dentro de los primeros 60 minutos desde la notificación del resultado de laboratorio con sodio sérico menor de 135 mmol/L, y antes de cualquier indicación de fluidoterapia.",
+          "contenido": [
+            {
+              "type": "Parrafo",
+              "text": "La evaluación inicial persigue tres decisiones simultáneas: establecer si la hiponatremia es aguda o crónica, determinar si existen síntomas neurológicos que obliguen a tratamiento inmediato y estimar el estado volémico. La ausencia de determinaciones previas de sodio obliga a asumir cronicidad, porque el riesgo de desmielinización osmótica por corrección rápida supera al riesgo de retrasar unas horas la corrección de una hiponatremia verdaderamente aguda.[[4]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Anamnesis dirigida.** Registrar: tiempo de evolución de los síntomas; determinaciones previas de sodio sérico en el sistema informático institucional; ingesta hídrica diaria estimada; pérdidas digestivas o cutáneas; antecedente de insuficiencia cardíaca, cirrosis, enfermedad renal crónica, neoplasia, tuberculosis o patología del sistema nervioso central; y revisión farmacológica exhaustiva, con atención a tiazidas, indapamida, inhibidores selectivos de la recaptación de serotonina, carbamazepina, antipsicóticos, antiinflamatorios no esteroideos, ciclofosfamida, vincristina y opioides.[[10]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Valoración de síntomas.** Clasificar los síntomas en tres categorías. Graves: vómito incoercible, somnolencia profunda, convulsiones, coma con puntuación de Glasgow igual o menor de 8, o distrés cardiorrespiratorio. Moderados: náusea sin vómito, cefalea, confusión, desorientación. Leves o ausentes: alteración de la marcha, caídas recientes, déficit de atención, o ningún síntoma atribuible.[[4]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Examen físico.** Consignar presión arterial en decúbito y en bipedestación, frecuencia cardíaca, presión venosa yugular, turgencia cutánea, humedad de mucosas, presencia de edema periférico, ascitis y crepitantes pulmonares. En el paciente residente a gran altitud es indispensable interpretar la hemoglobina y el hematocrito contra valores de referencia locales antes de usarlos como marcadores de hemoconcentración, porque la eritrocitosis fisiológica de altura puede simular depleción de volumen.[[7]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Laboratorio de la primera hora.** Solicitar de forma simultánea: sodio, potasio, cloro, bicarbonato, urea, creatinina, glucosa, osmolalidad plasmática medida, proteínas totales, perfil lipídico, osmolalidad urinaria, sodio urinario y creatinina urinaria en muestra aislada. En pacientes sin diagnóstico etiológico establecido, añadir hormona estimulante del tiroides, tiroxina libre y cortisol sérico matinal.[[9]]"
+            },
+            {
+              "type": "Nota",
+              "text": "Todo resultado de sodio sérico menor de 125 mmol/L se notifica como valor crítico de laboratorio al médico tratante dentro de los 30 minutos posteriores a su validación."
+            }
+          ]
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.2",
+          "name": "Diagnóstico / Identificación de problemas basados en las necesidades",
+          "quienLoHace": "Médico tratante de Medicina Interna con apoyo de Laboratorio Clínico. La interconsulta a Nefrología o Endocrinología la solicita el médico tratante.",
+          "cuando": "Dentro de las primeras 12 horas desde la detección del sodio sérico anormal, una vez disponibles la osmolalidad plasmática y el estudio urinario.",
+          "contenido": [
+            {
+              "type": "Parrafo",
+              "text": "El diagnóstico sigue tres pasos secuenciales y no debe abreviarse: confirmar la hipotonicidad, definir el estado volémico y establecer la causa. Omitir el primer paso conduce a tratar como hiponatremia verdadera cuadros de pseudohiponatremia o de hiponatremia traslocacional, en los que la restricción hídrica es inútil o perjudicial.[[9]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Paso 1. Confirmar la hipotonicidad.** Una osmolalidad plasmática medida menor de 275 mOsm/kg confirma hiponatremia hipotónica. Con osmolalidad normal, descartar hipertrigliceridemia e hiperproteinemia. Con osmolalidad elevada, corregir el sodio por glucemia sumando 2,4 mmol/L de sodio por cada 100 mg/dL de glucosa por encima de 100 mg/dL.[[9]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Paso 2. Definir el estado volémico mediante la orina.** Una osmolalidad urinaria igual o menor de 100 mOsm/kg indica excreción máxima de agua libre y orienta a polidipsia primaria, potomanía por cerveza o dieta de bajo contenido en solutos. Con osmolalidad urinaria mayor de 100 mOsm/kg, el sodio urinario discrimina: valores menores de 30 mmol/L indican volumen circulante efectivo disminuido, sea por hipovolemia verdadera o por hiponatremia hipervolémica; valores iguales o mayores de 30 mmol/L, en ausencia de diuréticos y de enfermedad renal, orientan a antidiuresis inapropiada, insuficiencia suprarrenal o nefropatía perdedora de sal.[[9]]"
+            },
+            {
+              "type": "Tabla",
+              "titulo": "Clasificación etiológica de la hiponatremia hipotónica crónica según estado volémico",
+              "columnas": [
+                "Estado volémico",
+                "Hallazgos de laboratorio",
+                "Causas frecuentes en el HECAM",
+                "Prueba confirmatoria"
+              ],
+              "anchos": [
+                1700,
+                2300,
+                2900,
+                1906
+              ],
+              "filas": [
+                [
+                  "Hipovolémica",
+                  "Na urinario < 30 mmol/L; urea y ácido úrico elevados; EFAU < 12 %",
+                  "Pérdidas digestivas, diuréticos tiazídicos, tercer espacio, insuficiencia suprarrenal primaria",
+                  "Respuesta del Na⁺ a la prueba de sobrecarga con cristaloide isotónico"
+                ],
+                [
+                  "Euvolémica",
+                  "Na urinario ≥ 30 mmol/L; OsmU > 100 mOsm/kg; urea y ácido úrico bajos; EFAU > 12 %",
+                  "SIAD por neoplasia, neumopatía, patología del sistema nervioso central o fármacos; hipotiroidismo; insuficiencia suprarrenal secundaria",
+                  "Cortisol matinal y TSH normales más criterios de Bartter y Schwartz"
+                ],
+                [
+                  "Hipervolémica",
+                  "Na urinario < 30 mmol/L con edema clínico; fracción de eyección reducida o cirrosis conocida",
+                  "Insuficiencia cardíaca descompensada, cirrosis con ascitis, enfermedad renal crónica avanzada, síndrome nefrótico",
+                  "Ecocardiograma, ecografía abdominal y TFGe"
+                ]
+              ],
+              "fuente": "Elaboración propia a partir de las guías europeas y de la compilación de guías.[[4,9]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Paso 3. Establecer la causa.** En la hiponatremia hipervolémica de origen hepático, la hiponatremia dilucional es un marcador de gravedad de la cirrosis descompensada y su manejo se subordina al de la ascitis y de la hipertensión portal; la restricción hídrica se reserva para valores de sodio inferiores a 125 mmol/L y no se recomienda la reposición sistemática de sodio.[[11]] En la hiponatremia euvolémica, el diagnóstico de antidiuresis inapropiada exige la exclusión activa de hipotiroidismo, insuficiencia suprarrenal y uso de diuréticos en las dos semanas previas, así como la búsqueda dirigida de la causa subyacente mediante radiografía o tomografía de tórax y revisión farmacológica.[[3]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Problemas identificados que deben constar en la historia clínica.** Riesgo de deterioro neurológico por hiponatremia; riesgo de desmielinización osmótica por corrección excesiva; riesgo de caída y fractura asociado a hiponatremia crónica; déficit de conocimiento del paciente y su familia sobre la restricción hídrica; y riesgo de recurrencia por fármaco no suspendido."
+            }
+          ]
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.3",
+          "name": "Plan Terapéutico / Intervenciones no farmacológicas",
+          "quienLoHace": "Médico tratante de Medicina Interna prescribe; Enfermería ejecuta el balance hídrico y el registro horario; Nutrición y Dietética ajusta el aporte de solutos; Farmacia valida la disponibilidad de los fármacos en el CNMB.",
+          "cuando": "Dentro de las 12 horas siguientes a la clasificación etiológica y, en pacientes con síntomas graves, de forma inmediata según lo previsto en la sección 4.4.",
+          "contenido": [
+            {
+              "type": "Parrafo",
+              "text": "**Criterios de inclusión en este plan terapéutico.** Paciente de 18 años o más; sodio sérico menor de 135 mmol/L con osmolalidad plasmática menor de 275 mOsm/kg; duración documentada o presumida mayor de 48 horas; ausencia de síntomas neurológicos graves, o síntomas graves ya resueltos tras el tratamiento de rescate descrito en 4.4."
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Criterios de exclusión.** Hiponatremia aguda documentada de menos de 48 horas; hiponatremia no hipotónica; pacientes en terapia de reemplazo renal, cuyo manejo corresponde a Nefrología; hiponatremia posoperatoria de neurocirugía, con protocolo propio; y embarazo, que requiere manejo conjunto con Ginecología y Obstetricia."
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Primera línea: restricción hídrica.** Indicada en la hiponatremia euvolémica por antidiuresis inapropiada y en la hipervolémica. Se prescribe un volumen total de líquidos de 800 a 1.000 mL en 24 horas, computando todas las fuentes orales y parenterales. En un ensayo aleatorizado en antidiuresis inapropiada crónica, la restricción a 1 litro diario elevó el sodio 3 mmol/L a los tres días y 4 mmol/L a los treinta días, frente a 1 mmol/L sin tratamiento; más de un tercio de los pacientes no alcanzó 130 mmol/L, lo que obliga a prever una segunda línea.[[12]] La restricción es poco eficaz cuando la osmolalidad urinaria supera los 500 mOsm/kg o cuando la suma de sodio y potasio urinarios excede al sodio sérico."
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Medidas no farmacológicas complementarias.** Aumentar el aporte de solutos de la dieta a 1 g de sodio y 1 g de proteína por kilogramo de peso al día, en coordinación con Nutrición y Dietética; retirar o sustituir el fármaco causal, con especial atención a tiazidas e inhibidores selectivos de la recaptación de serotonina; corregir el hipotiroidismo o la insuficiencia suprarrenal cuando existan; y registrar el balance hídrico y el peso corporal cada 24 horas."
+            },
+            {
+              "type": "Tabla",
+              "titulo": "Tratamiento farmacológico de la hiponatremia crónica según etiología",
+              "columnas": [
+                "Escenario",
+                "Fármaco",
+                "Dosis, vía y frecuencia",
+                "Duración",
+                "Criterios de suspensión"
+              ],
+              "anchos": [
+                1500,
+                1500,
+                2400,
+                1500,
+                1906
+              ],
+              "filas": [
+                [
+                  "Hipovolémica",
+                  "Cloruro de sodio al 0,9 %",
+                  "500–1.000 mL IV en 4–6 h, luego según balance; velocidad máxima 1 mL/kg/h",
+                  "24–72 h",
+                  "Sodio ≥ 130 mmol/L, normalización de la volemia, o incremento ≥ 6 mmol/L en 24 h"
+                ],
+                [
+                  "SIAD refractario a restricción",
+                  "Furosemida más cloruro de sodio oral",
+                  "Furosemida 20–40 mg VO cada 24 h más NaCl 1–3 g VO cada 8 h",
+                  "7–14 días, reevaluando cada 72 h",
+                  "Hipopotasemia < 3,0 mmol/L, hipotensión, deterioro de la TFGe > 25 %, o sodio ≥ 135 mmol/L"
+                ],
+                [
+                  "SIAD refractario a segunda línea",
+                  "Urea oral",
+                  "15–30 g VO cada 24 h disueltos en jugo cítrico; iniciar con 15 g",
+                  "14–30 días, con reevaluación mensual",
+                  "Intolerancia digestiva, sodio ≥ 135 mmol/L, o corrección > 8 mmol/L en 24 h"
+                ],
+                [
+                  "Hipervolémica por insuficiencia cardíaca",
+                  "Furosemida",
+                  "20–80 mg IV o VO cada 12–24 h ajustada a diuresis y peso",
+                  "Hasta compensación hemodinámica",
+                  "Hipotensión sintomática, deterioro de la función renal, o hipopotasemia refractaria"
+                ],
+                [
+                  "Hipervolémica por cirrosis",
+                  "Restricción hídrica más espironolactona",
+                  "Restricción a 1.000 mL/24 h; espironolactona 100 mg VO cada 24 h, titulable",
+                  "Según evolución de la ascitis",
+                  "Hiperpotasemia > 5,5 mmol/L, ginecomastia dolorosa, o encefalopatía"
+                ],
+                [
+                  "Insuficiencia suprarrenal",
+                  "Hidrocortisona",
+                  "100 mg IV en bolo, luego 50 mg IV cada 6 h",
+                  "48–72 h, con paso a vía oral",
+                  "Confirmación de diagnóstico alternativo o estabilización clínica y bioquímica"
+                ]
+              ],
+              "fuente": "Elaborado contra el Cuadro Nacional de Medicamentos Básicos vigente.[[13,14]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Restricción de disponibilidad.** El cloruro de sodio, la furosemida, la espironolactona y la hidrocortisona constan en el Cuadro Nacional de Medicamentos Básicos y pueden prescribirse sin trámite adicional.[[14]] La urea de grado farmacéutico para uso oral y el tolvaptán no constan en el Cuadro Nacional de Medicamentos Básicos vigente; su empleo requiere solicitud individualizada por la vía institucional de medicamentos no incluidos, con informe del médico tratante y aval del Comité de Farmacoterapia. La urea ha demostrado ser segura y eficaz en antidiuresis inapropiada refractaria a la restricción hídrica, con normalización del sodio a 130 mmol/L o más en el 64 % de los episodios a las 72 horas y sin casos de corrección excesiva en la serie publicada, lo que sustenta la solicitud cuando la segunda línea fracasa.[[13]]"
+            },
+            {
+              "type": "Nota",
+              "text": "En todos los escenarios, la velocidad de corrección se subordina a los límites establecidos en la sección 4.4. Ningún esquema farmacológico autoriza a superarlos."
+            }
+          ]
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.4",
+          "name": "Clasificación de severidad / Manejo de Complicaciones",
+          "quienLoHace": "Médico tratante de Medicina Interna o médico emergenciólogo; Enfermería administra y registra; Laboratorio Clínico procesa los controles seriados con prioridad.",
+          "cuando": "De forma inmediata ante síntomas neurológicos graves, y de manera continua durante las primeras 48 horas de tratamiento en todo paciente en corrección.",
+          "contenido": [
+            {
+              "type": "Parrafo",
+              "text": "**Clasificación de severidad.** Por concentración: leve 130–134 mmol/L, moderada 125–129 mmol/L, profunda menor de 125 mmol/L. Por sintomatología: grave, moderada, o leve o ausente, según lo definido en la sección 4.1. La conducta terapéutica inicial la determina la sintomatología, no la cifra de sodio.[[4]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Síntomas graves: tratamiento de rescate.** Administrar solución de cloruro de sodio al 3 % en bolo de 150 mL por vía intravenosa en 20 minutos, repetible hasta dos veces con control de sodio sérico a los 20 minutos de cada bolo, con el objetivo de elevar el sodio 4 a 6 mmol/L en la primera hora y detener la administración en cuanto los síntomas cedan. El ensayo aleatorizado SALSA comparó el bolo intermitente rápido con la infusión continua lenta en 178 pacientes y no encontró diferencia en el riesgo de corrección excesiva (17,2 % frente a 24,2 %), pero el bolo requirió menos maniobras de descenso terapéutico del sodio (41,4 % frente a 57,1 %) y alcanzó con mayor frecuencia el objetivo en la primera hora, por lo que se adopta como estrategia institucional.[[15]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Límites de velocidad de corrección.** En pacientes de riesgo habitual, el incremento del sodio sérico no debe superar 8 mmol/L en 24 horas ni 18 mmol/L en 48 horas. En pacientes de alto riesgo de desmielinización osmótica —sodio inicial igual o menor de 105 mmol/L, hipopotasemia, desnutrición, alcoholismo, hepatopatía crónica o trasplante hepático— el límite se reduce a 6 mmol/L en 24 horas.[[5]] Estos límites son máximos absolutos, no objetivos terapéuticos."
+            },
+            {
+              "type": "Tabla",
+              "titulo": "Monitorización del sodio sérico durante la corrección",
+              "columnas": [
+                "Escenario clínico",
+                "Frecuencia de control",
+                "Objetivo en 24 h",
+                "Límite absoluto en 24 h"
+              ],
+              "anchos": [
+                2600,
+                2200,
+                2000,
+                2006
+              ],
+              "filas": [
+                [
+                  "Síntomas graves en tratamiento con NaCl 3 %",
+                  "Cada 20 min durante los bolos; luego cada 4 h por 24 h",
+                  "4–6 mmol/L en la primera hora",
+                  "8 mmol/L"
+                ],
+                [
+                  "Hiponatremia crónica sin síntomas graves",
+                  "Cada 6 h durante 24 h; luego cada 12 h por 24 h",
+                  "4–6 mmol/L",
+                  "8 mmol/L"
+                ],
+                [
+                  "Paciente de alto riesgo de SDO",
+                  "Cada 4 h durante 48 h",
+                  "4 mmol/L",
+                  "6 mmol/L"
+                ],
+                [
+                  "Corrección excesiva en curso",
+                  "Cada 2 h hasta descenso del sodio al rango objetivo",
+                  "Descender al rango objetivo",
+                  "No aplica"
+                ]
+              ],
+              "fuente": "Elaboración propia a partir de la guía europea y del consenso de expertos.[[4,5]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Manejo de la corrección excesiva.** Ante un incremento mayor de 8 mmol/L en 24 horas —o mayor de 6 mmol/L en pacientes de alto riesgo— suspender de inmediato toda solución hipertónica y toda fuente de sodio, e iniciar dextrosa al 5 % a 6 mL/kg en 2 horas. Si el sodio no desciende, administrar desmopresina 2 µg por vía intravenosa o subcutánea cada 8 horas, con control de sodio cada 2 horas. Una cohorte retrospectiva de 1.450 ingresos por hiponatremia grave mostró que la estrategia reactiva —desmopresina administrada cuando el sodio ya se aproxima al límite— es la modalidad de uso más frecuente y resulta razonable en el paciente de riesgo habitual, mientras que la estrategia proactiva prolonga la estancia hospitalaria sin beneficio demostrado.[[16]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Criterios de traslado a Unidad de Cuidados Intensivos.** Convulsiones o estado epiléptico; puntuación de Glasgow igual o menor de 8; necesidad de vía aérea artificial; sodio inicial menor de 110 mmol/L con síntomas neurológicos; o corrección excesiva con deterioro neurológico progresivo."
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Sospecha de desmielinización osmótica.** Ante deterioro neurológico de aparición diferida entre dos y siete días tras la corrección, solicitar resonancia magnética de encéfalo con secuencias de difusión, notificar a Neurología e iniciar medidas de soporte. La resonancia puede ser normal en los primeros días y debe repetirse a las dos semanas si la sospecha persiste.[[6]]"
+            }
+          ]
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.5",
+          "name": "Plan de Egreso de la Unidad/Seguimiento/Evaluación integral",
+          "quienLoHace": "Médico tratante de Medicina Interna elabora el plan de egreso; Enfermería imparte la educación al paciente y su familia; la consulta externa de Medicina Interna realiza el seguimiento.",
+          "cuando": "Al momento de definir el alta hospitalaria y en los controles ambulatorios programados a los 15 días, 1 mes, 3 meses y 6 meses.",
+          "contenido": [
+            {
+              "type": "Parrafo",
+              "text": "**Criterios de egreso.** Sodio sérico igual o mayor de 130 mmol/L en dos determinaciones separadas por al menos 12 horas; ausencia de síntomas neurológicos atribuibles; etiología identificada y consignada en la epicrisis; fármaco causal suspendido o sustituido con la alternativa correspondiente; y comprensión verificada de la restricción hídrica por parte del paciente o su cuidador."
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Contenido obligatorio de la epicrisis.** Valor de sodio al ingreso, nadir alcanzado y valor al alta; velocidad máxima de corrección registrada en 24 horas; clasificación etiológica final; fármacos suspendidos y motivo; volumen de restricción hídrica prescrito; y fecha de la primera cita de control."
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Educación al paciente y su familia.** Explicar el volumen diario permitido con referencias concretas de uso doméstico; enseñar el registro del peso corporal diario en ayunas; advertir sobre el consumo oculto de líquidos en sopas, gelatinas y frutas; enumerar los signos de alarma que motivan consulta inmediata —confusión, vómito persistente, alteración de la marcha, somnolencia—; e insistir en que no debe reiniciarse por cuenta propia el diurético suspendido."
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Seguimiento ambulatorio.** Control de sodio sérico y creatinina a los 7 días del alta y en cada cita programada. En pacientes con antidiuresis inapropiada crónica, reevaluar la causa subyacente cada 6 meses. La corrección sostenida del sodio en pacientes ambulatorios con antidiuresis inapropiada crónica se asocia a un incremento de la función osteoblástica medida por el índice de formación ósea, lo que refuerza que la hiponatremia crónica leve no es un hallazgo inocuo y justifica el seguimiento prolongado.[[17]]"
+            },
+            {
+              "type": "Parrafo",
+              "text": "**Evaluación integral.** En todo paciente adulto mayor con hiponatremia crónica, realizar valoración del riesgo de caída, densitometría ósea si no dispone de una en los últimos dos años, y revisión de la conciliación farmacológica completa antes del alta."
+            }
+          ]
+        },
+        {
+          "type": "Seccion",
+          "numeral": "4.6",
+          "name": "Nivel de evidencia y grado de recomendaciones",
+          "contenido": [
+            {
+              "type": "Tabla",
+              "columnas": [
+                "Área",
+                "Recomendación",
+                "Nivel de Evidencia",
+                "Grado"
+              ],
+              "anchos": [
+                1500,
+                4500,
+                1500,
+                1306
+              ],
+              "filas": [
+                [
+                  "Diagnóstico",
+                  "Medir la osmolalidad plasmática antes de clasificar toda hiponatremia, para excluir pseudohiponatremia e hiponatremia traslocacional.",
+                  "2a",
+                  "B"
+                ],
+                [
+                  "Diagnóstico",
+                  "Utilizar la osmolalidad urinaria y el sodio urinario en muestra aislada como primer paso de la clasificación etiológica.",
+                  "1a",
+                  "A"
+                ],
+                [
+                  "Tratamiento",
+                  "Prescribir restricción hídrica de 800 a 1.000 mL en 24 horas como primera línea en la antidiuresis inapropiada.",
+                  "1b",
+                  "A"
+                ],
+                [
+                  "Tratamiento",
+                  "Administrar cloruro de sodio al 3 % en bolo de 150 mL ante síntomas neurológicos graves, con objetivo de 4 a 6 mmol/L en la primera hora.",
+                  "1b",
+                  "A"
+                ],
+                [
+                  "Seguridad",
+                  "No superar un incremento de 8 mmol/L en 24 horas, ni de 6 mmol/L en pacientes de alto riesgo de desmielinización osmótica.",
+                  "2a",
+                  "B"
+                ],
+                [
+                  "Seguridad",
+                  "Emplear desmopresina con estrategia reactiva ante corrección excesiva en curso.",
+                  "2b",
+                  "B"
+                ],
+                [
+                  "Seguimiento",
+                  "Programar control de sodio sérico a los 7 días del alta en todo paciente con hiponatremia crónica.",
+                  "4",
+                  "C"
+                ],
+                [
+                  "Seguimiento",
+                  "Reevaluar la causa de la antidiuresis inapropiada crónica cada 6 meses.",
+                  "5",
+                  "D"
+                ]
+              ]
+            },
+            {
+              "type": "Nota",
+              "text": "Sistema Oxford Centre for Evidence-Based Medicine (CEBM), marzo 2009. Niveles 1a–5; grados A–D. El nivel 1a corresponde a revisión sistemática de ensayos clínicos aleatorizados y el nivel 5 a opinión de expertos sin evaluación crítica explícita.[[18]]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "5",
+      "name": "Algoritmo de actuación",
+      "secType": "algoritmo",
+      "contenido": [
+        {
+          "type": "Parrafo",
+          "text": "El flujo se inicia cuando Laboratorio Clínico valida un sodio sérico menor de 135 mmol/L en un paciente adulto. El sistema informático genera una alerta al médico tratante; si el valor es menor de 125 mmol/L, Laboratorio notifica además por vía telefónica dentro de los 30 minutos."
+        },
+        {
+          "type": "Parrafo",
+          "text": "El médico tratante realiza la evaluación inicial en los primeros 60 minutos y responde la primera pregunta de decisión: ¿existen síntomas neurológicos graves? Si la respuesta es afirmativa, el paciente entra en la vía de rescate: se administra cloruro de sodio al 3 % en bolo de 150 mL en 20 minutos, se controla el sodio a los 20 minutos y se repite el bolo hasta un máximo de tres administraciones o hasta que los síntomas cedan; alcanzado el objetivo de 4 a 6 mmol/L, se suspende la solución hipertónica y el flujo converge con la vía diagnóstica. Si la respuesta es negativa, el paciente entra directamente en la vía diagnóstica."
+        },
+        {
+          "type": "Parrafo",
+          "text": "En la vía diagnóstica se resuelve la segunda pregunta de decisión: ¿la osmolalidad plasmática es menor de 275 mOsm/kg? Si no lo es, el flujo se deriva a la rama de hiponatremia no hipotónica, donde se investiga pseudohiponatremia o causa traslocacional y el proceso concluye con el tratamiento de la causa subyacente. Si lo es, se avanza a la tercera pregunta de decisión: ¿la osmolalidad urinaria es igual o menor de 100 mOsm/kg? La respuesta afirmativa conduce a la rama de exceso de ingesta hídrica o baja carga de solutos, cuyo tratamiento es la restricción hídrica y el ajuste dietético."
+        },
+        {
+          "type": "Parrafo",
+          "text": "La respuesta negativa conduce a la cuarta pregunta de decisión, que bifurca por el sodio urinario. Con sodio urinario menor de 30 mmol/L, el flujo se separa según la presencia de edema: sin edema, rama hipovolémica con reposición de cristaloide isotónico; con edema, rama hipervolémica con restricción hídrica y diurético de asa, y derivación al protocolo de la enfermedad de base. Con sodio urinario igual o mayor de 30 mmol/L, el flujo entra en la rama euvolémica, donde se descartan de forma obligatoria hipotiroidismo, insuficiencia suprarrenal y uso reciente de diuréticos antes de establecer el diagnóstico de antidiuresis inapropiada."
+        },
+        {
+          "type": "Parrafo",
+          "text": "Confirmada la antidiuresis inapropiada, se aplica la secuencia terapéutica escalonada con una compuerta de reevaluación a las 72 horas en cada escalón: primera línea, restricción hídrica; si el sodio no alcanza 130 mmol/L, segunda línea, furosemida con cloruro de sodio oral; si persiste sin respuesta, tercera línea, solicitud de urea por la vía institucional de medicamentos no incluidos en el Cuadro Nacional de Medicamentos Básicos."
+        },
+        {
+          "type": "Parrafo",
+          "text": "En paralelo a todo el flujo corre un subproceso permanente de vigilancia de la velocidad de corrección, con control de sodio según la tabla de monitorización. Ese subproceso contiene una compuerta propia: si el incremento supera 8 mmol/L en 24 horas —o 6 mmol/L en el paciente de alto riesgo—, se activa la vía de corrección excesiva, que suspende el aporte de sodio, inicia dextrosa al 5 % y, de no revertir, administra desmopresina hasta devolver el sodio al rango objetivo, momento en el cual el flujo retorna al subproceso de vigilancia."
+        },
+        {
+          "type": "Parrafo",
+          "text": "El proceso finaliza cuando se cumplen los criterios de egreso de la sección 4.5, con la emisión de la epicrisis y el agendamiento de la cita de control a los 15 días. Todo paciente que no cumpla criterios de egreso permanece en el subproceso de vigilancia."
+        },
+        {
+          "type": "Nota",
+          "text": "El diagrama de flujo será elaborado en la herramienta Bizagi con el soporte de la Coordinación General de Control de Calidad del HECAM."
+        }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "6",
+      "name": "Indicadores",
+      "secType": "indicadores",
+      "indicadores": [
+        {
+          "type": "Indicador",
+          "name": "Estudio etiológico inicial completo (diagnóstico)",
+          "tipoIndicador": "diagnóstico",
+          "definicionIndicador": "Mide la proporción de pacientes con hiponatremia crónica en quienes se solicitaron osmolalidad plasmática, osmolalidad urinaria y sodio urinario dentro de las primeras 12 horas de la detección.",
+          "calculo": "(Numerador: pacientes con las tres determinaciones solicitadas en ≤12 h / Denominador: pacientes con hiponatremia crónica detectada en el periodo) × 100",
+          "meta": "≥90%",
+          "periodo": "Trimestral",
+          "responsable": "Jefe de la Unidad Técnica de Medicina Interna"
+        },
+        {
+          "type": "Indicador",
+          "name": "Clasificación volémica documentada (diagnóstico)",
+          "tipoIndicador": "diagnóstico",
+          "definicionIndicador": "Mide la proporción de pacientes en cuya historia clínica consta la clasificación de la hiponatremia como hipovolémica, euvolémica o hipervolémica antes del inicio del tratamiento.",
+          "calculo": "(Numerador: pacientes con clasificación volémica registrada antes del tratamiento / Denominador: pacientes con hiponatremia hipotónica crónica) × 100",
+          "meta": "≥85%",
+          "periodo": "Trimestral",
+          "responsable": "Coordinador General de Hospitalización y Ambulatorio"
+        },
+        {
+          "type": "Indicador",
+          "name": "Prescripción de restricción hídrica en antidiuresis inapropiada (tratamiento)",
+          "tipoIndicador": "tratamiento",
+          "definicionIndicador": "Mide la proporción de pacientes con diagnóstico de antidiuresis inapropiada en quienes se prescribió restricción hídrica de 800 a 1.000 mL en 24 horas como primera línea.",
+          "calculo": "(Numerador: pacientes con SIAD y restricción hídrica prescrita como primera línea / Denominador: pacientes con diagnóstico de SIAD) × 100",
+          "meta": "≥90%",
+          "periodo": "Trimestral",
+          "responsable": "Jefe de la Unidad Técnica de Medicina Interna"
+        },
+        {
+          "type": "Indicador",
+          "name": "Uso de solución hipertónica en síntomas graves (tratamiento)",
+          "tipoIndicador": "tratamiento",
+          "definicionIndicador": "Mide la proporción de pacientes con síntomas neurológicos graves que recibieron cloruro de sodio al 3 % en bolo dentro de la primera hora desde la identificación de los síntomas.",
+          "calculo": "(Numerador: pacientes con síntomas graves tratados con NaCl 3 % en ≤1 h / Denominador: pacientes con hiponatremia y síntomas neurológicos graves) × 100",
+          "meta": "≥95%",
+          "periodo": "Trimestral",
+          "responsable": "Jefe de Áreas Clínicas"
+        },
+        {
+          "type": "Indicador",
+          "name": "Control de sodio a las 6 horas de iniciada la corrección (seguimiento)",
+          "tipoIndicador": "seguimiento",
+          "definicionIndicador": "Mide la proporción de pacientes en corrección activa con al menos una determinación de sodio sérico dentro de las 6 horas siguientes al inicio del tratamiento.",
+          "calculo": "(Numerador: pacientes con control de sodio en ≤6 h desde el inicio de la corrección / Denominador: pacientes que iniciaron corrección de hiponatremia) × 100",
+          "meta": "≥90%",
+          "periodo": "Mensual",
+          "responsable": "Líder de Enfermería de Hospitalización"
+        },
+        {
+          "type": "Indicador",
+          "name": "Cita de control ambulatorio agendada al alta (seguimiento)",
+          "tipoIndicador": "seguimiento",
+          "definicionIndicador": "Mide la proporción de pacientes egresados con hiponatremia crónica que cuentan con cita de control en consulta externa de Medicina Interna agendada dentro de los 15 días posteriores al alta.",
+          "calculo": "(Numerador: pacientes egresados con cita agendada en ≤15 días / Denominador: pacientes egresados con diagnóstico de hiponatremia crónica) × 100",
+          "meta": "≥85%",
+          "periodo": "Trimestral",
+          "responsable": "Coordinador General de Hospitalización y Ambulatorio"
+        },
+        {
+          "type": "Indicador",
+          "name": "Corrección excesiva del sodio sérico (resultado)",
+          "tipoIndicador": "resultado",
+          "definicionIndicador": "Mide la proporción de pacientes en quienes el sodio sérico se incrementó más de 8 mmol/L en cualquier periodo de 24 horas durante la hospitalización.",
+          "calculo": "(Numerador: pacientes con incremento de Na⁺ >8 mmol/L en 24 h / Denominador: pacientes en corrección de hiponatremia crónica) × 100",
+          "meta": "≤5%",
+          "periodo": "Mensual",
+          "responsable": "Coordinador General de Control de Calidad"
+        },
+        {
+          "type": "Indicador",
+          "name": "Sodio sérico igual o mayor de 130 mmol/L al alta (resultado)",
+          "tipoIndicador": "resultado",
+          "definicionIndicador": "Mide la proporción de pacientes egresados con sodio sérico igual o mayor de 130 mmol/L en la última determinación previa al alta.",
+          "calculo": "(Numerador: pacientes egresados con Na⁺ ≥130 mmol/L / Denominador: pacientes egresados con diagnóstico de hiponatremia crónica) × 100",
+          "meta": "≥80%",
+          "periodo": "Trimestral",
+          "responsable": "Jefe de la Unidad Técnica de Medicina Interna"
+        },
+        {
+          "type": "Indicador",
+          "name": "Reingreso por hiponatremia a los 30 días (resultado)",
+          "tipoIndicador": "resultado",
+          "definicionIndicador": "Mide la proporción de pacientes egresados que reingresan al hospital con diagnóstico principal de hiponatremia dentro de los 30 días posteriores al alta.",
+          "calculo": "(Numerador: reingresos por hiponatremia en ≤30 días / Denominador: pacientes egresados con diagnóstico de hiponatremia crónica) × 100",
+          "meta": "≤10%",
+          "periodo": "Semestral",
+          "responsable": "Coordinador General de Investigación"
+        }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "7",
+      "name": "Bibliografía",
+      "secType": "bibliografia"
+    },
+    {
+      "type": "Seccion",
+      "numeral": "8",
+      "name": "Anexos",
+      "secType": "anexos",
+      "anexos": [
+        {
+          "type": "Anexo",
+          "position": 1,
+          "name": "Cronograma de implementación",
+          "columnas": [
+            "ID",
+            "Tarea",
+            "Responsable",
+            "Inicio",
+            "Fin",
+            "Recursos"
+          ],
+          "filas": [
+            [
+              "1",
+              "Aprobación del protocolo por Dirección Técnica y asignación del código definitivo por el Administrador del SGD[[19]]",
+              "Director Técnico",
+              "01/08/2026",
+              "15/08/2026",
+              "Sistema de Gestión Documental"
+            ],
+            [
+              "2",
+              "Diagramación del flujo en Bizagi",
+              "Coordinación General de Control de Calidad",
+              "16/08/2026",
+              "31/08/2026",
+              "Licencia Bizagi, 1 analista"
+            ],
+            [
+              "3",
+              "Socialización al personal médico de Medicina Interna",
+              "Jefe de la Unidad Técnica de Medicina Interna",
+              "01/09/2026",
+              "15/09/2026",
+              "Auditorio, material impreso[[20]]"
+            ],
+            [
+              "4",
+              "Capacitación a Enfermería en balance hídrico y control seriado de sodio",
+              "Líder de Enfermería de Hospitalización",
+              "01/09/2026",
+              "30/09/2026",
+              "4 sesiones de 2 horas"
+            ],
+            [
+              "5",
+              "Configuración de la alerta informática de sodio crítico",
+              "Coordinación de Tecnologías de la Información",
+              "01/09/2026",
+              "30/09/2026",
+              "Módulo de laboratorio del sistema institucional"
+            ],
+            [
+              "6",
+              "Socialización a Emergencia y Áreas Críticas",
+              "Coordinador General de Áreas Críticas",
+              "01/10/2026",
+              "15/10/2026",
+              "2 sesiones por turno"
+            ],
+            [
+              "7",
+              "Disponibilidad verificada de cloruro de sodio al 3 % en carros de paro y farmacia satélite",
+              "Jefe de Farmacia",
+              "01/10/2026",
+              "31/10/2026",
+              "Inventario y reposición"
+            ],
+            [
+              "8",
+              "Implementación piloto en hospitalización de Medicina Interna",
+              "Jefe de la Unidad Técnica de Medicina Interna",
+              "01/11/2026",
+              "31/12/2026",
+              "Registro de indicadores"
+            ],
+            [
+              "9",
+              "Primera medición de indicadores y retroalimentación",
+              "Coordinación General de Control de Calidad",
+              "01/01/2027",
+              "31/01/2027",
+              "Tablero de indicadores"
+            ],
+            [
+              "10",
+              "Evaluación de resultados y ajustes al protocolo",
+              "Coordinación General de Investigación",
+              "01/02/2027",
+              "28/02/2027",
+              "Informe técnico"
+            ]
+          ]
+        },
+        {
+          "type": "Anexo",
+          "position": 2,
+          "name": "Herramienta clínica de apoyo: ruta diagnóstica por estado volémico y ajuste por altitud",
+          "descripcion": "Tarjeta de bolsillo con la secuencia de tres pasos (tonicidad, orina, volemia), los puntos de corte de osmolalidad urinaria y sodio urinario, los criterios de Bartter y Schwartz para el diagnóstico de antidiuresis inapropiada, y la nota de interpretación de hemoglobina y hematocrito en residentes de Quito a 2.850 m s. n. m., donde la eritrocitosis fisiológica puede simular hemoconcentración por depleción de volumen y llevar a una clasificación volémica equivocada.[[7]]"
+        },
+        {
+          "type": "Anexo",
+          "position": 3,
+          "name": "Fórmulas de cálculo y tabla de monitorización del sodio sérico",
+          "descripcion": "Incluye la fórmula de Adrogué y Madias para estimar el cambio de sodio sérico por litro de solución infundida, la corrección del sodio por glucemia, el cálculo de la excreción fraccional de ácido úrico, el cálculo del cociente electrolítico urinario para predecir la respuesta a la restricción hídrica, y la hoja de registro horario de sodio sérico con los límites de 6 y 8 mmol/L en 24 horas señalizados.[[1,5]]"
+        }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "9",
+      "name": "Firmas de los involucrados",
+      "secType": "firmas",
+      "contenido": [
+        {
+          "type": "Nota",
+          "text": "La legalización se realiza únicamente mediante firma electrónica."
+        }
+      ]
+    },
+    {
+      "type": "Seccion",
+      "numeral": "10",
+      "name": "Control de cambios",
+      "secType": "control-cambios",
+      "controlCambios": [
+        {
+          "type": "CambioVersion",
+          "version": "1",
+          "dateCreated": "2026-07-29",
+          "descripcionCambio": "Creación del Protocolo."
+        }
+      ]
+    }
+  ],
+  "citation": [
+    {
+      "type": "ArticuloAcademico",
+      "position": 1,
+      "primeraAparicion": "1",
+      "vancouver": "Adrogué HJ, Tucker BM, Madias NE. Diagnosis and Management of Hyponatremia: A Review. JAMA. 2022;328(3):280-291. doi:10.1001/jama.2022.11176",
+      "name": "Diagnosis and Management of Hyponatremia: A Review",
+      "datePublished": "2022",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "JAMA"
+      },
+      "url": "https://doi.org/10.1001/jama.2022.11176",
+      "pmid": "35852524",
+      "doi": "10.1001/jama.2022.11176",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 2,
+      "primeraAparicion": "1",
+      "vancouver": "Corona G, Giuliani C, Parenti G, Norello D, Verbalis JG, Forti G, et al. Moderate hyponatremia is associated with increased risk of mortality: evidence from a meta-analysis. PLoS One. 2013;8(12):e80451. doi:10.1371/journal.pone.0080451",
+      "name": "Moderate hyponatremia is associated with increased risk of mortality: evidence from a meta-analysis",
+      "datePublished": "2013",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "PLoS One"
+      },
+      "url": "https://doi.org/10.1371/journal.pone.0080451",
+      "pmid": "24367479",
+      "doi": "10.1371/journal.pone.0080451",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 3,
+      "primeraAparicion": "1",
+      "vancouver": "Warren AM, Grossmann M, Christ-Crain M, Russell N. Syndrome of Inappropriate Antidiuresis: From Pathophysiology to Management. Endocr Rev. 2023;44(5):819-861. doi:10.1210/endrev/bnad010",
+      "name": "Syndrome of Inappropriate Antidiuresis: From Pathophysiology to Management",
+      "datePublished": "2023",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "Endocrine Reviews"
+      },
+      "url": "https://doi.org/10.1210/endrev/bnad010",
+      "pmid": "36974717",
+      "doi": "10.1210/endrev/bnad010",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 4,
+      "primeraAparicion": "1",
+      "vancouver": "Spasovski G, Vanholder R, Allolio B, Annane D, Ball S, Bichet D, et al. Clinical practice guideline on diagnosis and treatment of hyponatraemia. Nephrol Dial Transplant. 2014;29(Suppl 2):i1-i39. doi:10.1093/ndt/gfu040",
+      "name": "Clinical practice guideline on diagnosis and treatment of hyponatraemia",
+      "datePublished": "2014",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "Nephrology Dialysis Transplantation"
+      },
+      "url": "https://doi.org/10.1093/ndt/gfu040",
+      "pmid": "24569496",
+      "doi": "10.1093/ndt/gfu040",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 5,
+      "primeraAparicion": "1",
+      "vancouver": "Sterns RH, Rondon-Berrios H, Adrogué HJ, Berl T, Burst V, Cohen DM, et al. Treatment Guidelines for Hyponatremia: Stay the Course. Clin J Am Soc Nephrol. 2024;19(1):129-135. doi:10.2215/CJN.0000000000000244",
+      "name": "Treatment Guidelines for Hyponatremia: Stay the Course",
+      "datePublished": "2024",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "Clinical Journal of the American Society of Nephrology"
+      },
+      "url": "https://doi.org/10.2215/CJN.0000000000000244",
+      "pmid": "37379081",
+      "doi": "10.2215/CJN.0000000000000244",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 6,
+      "primeraAparicion": "1",
+      "vancouver": "Suppadungsuk S, Krisanapan P, Kazeminia S, Nikravangolsefid N, Singh W, Prokop LJ, et al. Hyponatremia Correction and Osmotic Demyelination Syndrome Risk: A Systematic Review and Meta-Analysis. Kidney Med. 2025;7(3):100953. doi:10.1016/j.xkme.2024.100953",
+      "name": "Hyponatremia Correction and Osmotic Demyelination Syndrome Risk: A Systematic Review and Meta-Analysis",
+      "datePublished": "2025",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "Kidney Medicine"
+      },
+      "url": "https://doi.org/10.1016/j.xkme.2024.100953",
+      "pmid": "39967825",
+      "doi": "10.1016/j.xkme.2024.100953",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 7,
+      "primeraAparicion": "1",
+      "vancouver": "Villafuerte FC, Corante N. Chronic Mountain Sickness: Clinical Aspects, Etiology, Management, and Treatment. High Alt Med Biol. 2016;17(2):61-69. doi:10.1089/ham.2016.0031",
+      "name": "Chronic Mountain Sickness: Clinical Aspects, Etiology, Management, and Treatment",
+      "datePublished": "2016",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "High Altitude Medicine & Biology"
+      },
+      "url": "https://doi.org/10.1089/ham.2016.0031",
+      "pmid": "27218284",
+      "doi": "10.1089/ham.2016.0031",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "DocumentoNormativo",
+      "position": 8,
+      "primeraAparicion": "1",
+      "vancouver": "Hospital de Especialidades Carlos Andrade Marín. HECAM-CC-IT-008 v4: Instructivo de Trabajo para la Elaboración de Protocolos Clínicos. Quito: HECAM–IESS; 2024.",
+      "name": "HECAM-CC-IT-008 v4: Elaboración de Protocolos Clínicos",
+      "datePublished": "2024"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 9,
+      "primeraAparicion": "3",
+      "vancouver": "Hoorn EJ, Zietse R. Diagnosis and Treatment of Hyponatremia: Compilation of the Guidelines. J Am Soc Nephrol. 2017;28(5):1340-1349. doi:10.1681/ASN.2016101139",
+      "name": "Diagnosis and Treatment of Hyponatremia: Compilation of the Guidelines",
+      "datePublished": "2017",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "Journal of the American Society of Nephrology"
+      },
+      "url": "https://doi.org/10.1681/ASN.2016101139",
+      "pmid": "28174217",
+      "doi": "10.1681/ASN.2016101139",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 10,
+      "primeraAparicion": "3",
+      "vancouver": "Liamis G, Filippatos TD, Elisaf MS. Thiazide-associated hyponatremia in the elderly: what the clinician needs to know. J Geriatr Cardiol. 2016;13(2):175-182. doi:10.11909/j.issn.1671-5411.2016.02.001",
+      "name": "Thiazide-associated hyponatremia in the elderly: what the clinician needs to know",
+      "datePublished": "2016",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "Journal of Geriatric Cardiology"
+      },
+      "url": "https://doi.org/10.11909/j.issn.1671-5411.2016.02.001",
+      "pmid": "27168745",
+      "doi": "10.11909/j.issn.1671-5411.2016.02.001",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 11,
+      "primeraAparicion": "4.2",
+      "vancouver": "European Association for the Study of the Liver. EASL Clinical Practice Guidelines for the management of patients with decompensated cirrhosis. J Hepatol. 2018;69(2):406-460. doi:10.1016/j.jhep.2018.03.024",
+      "name": "EASL Clinical Practice Guidelines for the management of patients with decompensated cirrhosis",
+      "datePublished": "2018",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "Journal of Hepatology"
+      },
+      "url": "https://doi.org/10.1016/j.jhep.2018.03.024",
+      "pmid": "29653741",
+      "doi": "10.1016/j.jhep.2018.03.024",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 12,
+      "primeraAparicion": "4.3",
+      "vancouver": "Garrahy A, Galloway I, Hannon AM, Dineen R, O'Kelly P, Tormey WP, et al. Fluid Restriction Therapy for Chronic SIAD; Results of a Prospective Randomized Controlled Trial. J Clin Endocrinol Metab. 2020;105(12):dgaa619. doi:10.1210/clinem/dgaa619",
+      "name": "Fluid Restriction Therapy for Chronic SIAD; Results of a Prospective Randomized Controlled Trial",
+      "datePublished": "2020",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "The Journal of Clinical Endocrinology & Metabolism"
+      },
+      "url": "https://doi.org/10.1210/clinem/dgaa619",
+      "pmid": "32879954",
+      "doi": "10.1210/clinem/dgaa619",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 13,
+      "primeraAparicion": "4.3",
+      "vancouver": "Lockett J, Berkman KE, Dimeski G, Russell AW, Inder WJ. Urea treatment in fluid restriction-refractory hyponatraemia. Clin Endocrinol (Oxf). 2019;90(4):630-636. doi:10.1111/cen.13930",
+      "name": "Urea treatment in fluid restriction-refractory hyponatraemia",
+      "datePublished": "2019",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "Clinical Endocrinology"
+      },
+      "url": "https://doi.org/10.1111/cen.13930",
+      "pmid": "30614552",
+      "doi": "10.1111/cen.13930",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "DocumentoNormativo",
+      "position": 14,
+      "primeraAparicion": "4.3",
+      "vancouver": "Ministerio de Salud Pública del Ecuador, Consejo Nacional de Salud. Cuadro Nacional de Medicamentos Básicos, XI Revisión. Quito: MSP–CONASA; 2023.",
+      "name": "Cuadro Nacional de Medicamentos Básicos, XI Revisión",
+      "datePublished": "2023"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 15,
+      "primeraAparicion": "4.4",
+      "vancouver": "Baek SH, Jo YH, Ahn S, Medina-Liabres K, Oh YK, Lee JB, et al. Risk of Overcorrection in Rapid Intermittent Bolus vs Slow Continuous Infusion Therapies of Hypertonic Saline for Patients With Symptomatic Hyponatremia: The SALSA Randomized Clinical Trial. JAMA Intern Med. 2021;181(1):81-92. doi:10.1001/jamainternmed.2020.5519",
+      "name": "The SALSA Randomized Clinical Trial",
+      "datePublished": "2021",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "JAMA Internal Medicine"
+      },
+      "url": "https://doi.org/10.1001/jamainternmed.2020.5519",
+      "pmid": "33104189",
+      "doi": "10.1001/jamainternmed.2020.5519",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 16,
+      "primeraAparicion": "4.4",
+      "vancouver": "MacMillan TE, Cavalcanti RB. Outcomes in Severe Hyponatremia Treated With and Without Desmopressin. Am J Med. 2018;131(3):317.e1-317.e10. doi:10.1016/j.amjmed.2017.09.048",
+      "name": "Outcomes in Severe Hyponatremia Treated With and Without Desmopressin",
+      "datePublished": "2018",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "The American Journal of Medicine"
+      },
+      "url": "https://doi.org/10.1016/j.amjmed.2017.09.048",
+      "pmid": "29061503",
+      "doi": "10.1016/j.amjmed.2017.09.048",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 17,
+      "primeraAparicion": "4.5",
+      "vancouver": "Monnerat S, Refardt J, Potasso L, Meier C, Christ-Crain M. An Increase in Plasma Sodium Levels Is Associated With an Increase in Osteoblast Function in Chronic SIAD. J Clin Endocrinol Metab. 2023;108(10):e1027-e1033. doi:10.1210/clinem/dgad238",
+      "name": "An Increase in Plasma Sodium Levels Is Associated With an Increase in Osteoblast Function in Chronic SIAD",
+      "datePublished": "2023",
+      "schema:isPartOf": {
+        "type": "schema:Periodical",
+        "name": "The Journal of Clinical Endocrinology & Metabolism"
+      },
+      "url": "https://doi.org/10.1210/clinem/dgad238",
+      "pmid": "37098131",
+      "doi": "10.1210/clinem/dgad238",
+      "verificado": "2026-07-29"
+    },
+    {
+      "type": "DocumentoNormativo",
+      "position": 18,
+      "primeraAparicion": "4.6",
+      "vancouver": "OCEBM Levels of Evidence Working Group. The Oxford 2009 Levels of Evidence. Oxford: Oxford Centre for Evidence-Based Medicine; 2009.",
+      "name": "The Oxford 2009 Levels of Evidence",
+      "datePublished": "2009"
+    },
+    {
+      "type": "DocumentoNormativo",
+      "position": 19,
+      "primeraAparicion": "8",
+      "vancouver": "Hospital de Especialidades Carlos Andrade Marín. HECAM-CC-P-001 v13: Procedimiento de Creación, Actualización y Control de Documentos. Quito: HECAM–IESS; 2024.",
+      "name": "HECAM-CC-P-001 v13: Creación, Actualización y Control de Documentos",
+      "datePublished": "2024"
+    },
+    {
+      "type": "DocumentoNormativo",
+      "position": 20,
+      "primeraAparicion": "8",
+      "vancouver": "Hospital de Especialidades Carlos Andrade Marín. HECAM-CC-FR-012 V3.0: Formato de Protocolos. Quito: HECAM–IESS; 2024.",
+      "name": "HECAM-CC-FR-012 V3.0: Formato de Protocolos",
+      "datePublished": "2024"
+    }
+  ],
+  "indice": [
+    {
+      "numeral": "1",
+      "name": "Justificación",
+      "pagina": 3
+    },
+    {
+      "numeral": "2",
+      "name": "Objetivos",
+      "pagina": 3
+    },
+    {
+      "numeral": "3",
+      "name": "Glosario de términos / Abreviaciones",
+      "pagina": 4
+    },
+    {
+      "numeral": "4",
+      "name": "Procedimiento (Plan de Acción/Actuación)",
+      "pagina": 5
+    },
+    {
+      "numeral": "4.1",
+      "name": "Evaluación inicial del paciente",
+      "pagina": 5,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.2",
+      "name": "Diagnóstico / Identificación de problemas basados en las necesidades",
+      "pagina": 6,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.3",
+      "name": "Plan Terapéutico / Intervenciones no farmacológicas",
+      "pagina": 7,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.4",
+      "name": "Clasificación de severidad / Manejo de Complicaciones",
+      "pagina": 8,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.5",
+      "name": "Plan de Egreso de la Unidad/Seguimiento/Evaluación integral",
+      "pagina": 10,
+      "subseccion": true
+    },
+    {
+      "numeral": "4.6",
+      "name": "Nivel de evidencia y grado de recomendaciones",
+      "pagina": 10,
+      "subseccion": true
+    },
+    {
+      "numeral": "5",
+      "name": "Algoritmo de actuación",
+      "pagina": 11
+    },
+    {
+      "numeral": "6",
+      "name": "Indicadores",
+      "pagina": 12
+    },
+    {
+      "numeral": "7",
+      "name": "Bibliografía",
+      "pagina": 13
+    },
+    {
+      "numeral": "8",
+      "name": "Anexos",
+      "pagina": 14
+    },
+    {
+      "numeral": "9",
+      "name": "Firmas de los involucrados",
+      "pagina": 15
+    },
+    {
+      "numeral": "10",
+      "name": "Control de cambios",
+      "pagina": 16
+    }
+  ]
+}
