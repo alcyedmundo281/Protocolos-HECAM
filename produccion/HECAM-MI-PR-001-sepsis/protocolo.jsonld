@@ -540,7 +540,7 @@
                 ]
               ],
               "titulo": "Tabla 3. Exámenes complementarios por prioridad",
-              "fuente": "Elaboración propia a partir de la Surviving Sepsis Campaign 2021 y del Tercer Consenso Internacional (Sepsis-3)."
+              "fuente": "Elaboración propia a partir de la Surviving Sepsis Campaign 2021 y del Tercer Consenso Internacional (Sepsis-3).[[1,8]]"
             }
           ]
         },
@@ -772,7 +772,7 @@
                 ]
               ],
               "titulo": "Tabla 4. Porcentaje de resistencia antibiótica en organismos relevantes para sepsis (HECAM 2025)",
-              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025, Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica."
+              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025, Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica.[[5]]"
             },
             {
               "type": "Semaforo"
@@ -903,7 +903,7 @@
                 ]
               ],
               "titulo": "Tabla 5. Antibioticoterapia empírica estratificada por foco y riesgo de resistencia",
-              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025 y del Cuadro Nacional de Medicamentos Básicos, 10.ª revisión."
+              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025 y del Cuadro Nacional de Medicamentos Básicos, 10.ª revisión.[[5,10]]"
             },
             {
               "type": "Espacio"
@@ -983,7 +983,7 @@
                 ]
               ],
               "titulo": "Tabla 6. Clasificación de severidad según Sepsis-3",
-              "fuente": "Tercer Consenso Internacional para Sepsis y Shock Séptico (Sepsis-3)."
+              "fuente": "Tercer Consenso Internacional para Sepsis y Shock Séptico (Sepsis-3).[[1]]"
             },
             {
               "type": "Espacio"
@@ -1872,7 +1872,7 @@
                   "> 5,0 o < 200 mL/d"
                 ]
               ],
-              "fuente": "Adaptado de Vincent JL, et al., con el ajuste del dominio respiratorio por la altitud de Quito."
+              "fuente": "Adaptado de Vincent JL, et al., con el ajuste del dominio respiratorio por la altitud de Quito.[[13]]"
             },
             {
               "type": "Nota",
@@ -2044,7 +2044,7 @@
                   "14.2 %"
                 ]
               ],
-              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025 e Informe Técnico SVPCS-DNVE-2026-02 (MSP/INSPI–CRN-RAM)."
+              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025 e Informe Técnico SVPCS-DNVE-2026-02 (MSP/INSPI–CRN-RAM).[[4,5]]"
             },
             {
               "type": "Semaforo"

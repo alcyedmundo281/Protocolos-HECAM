@@ -456,7 +456,7 @@
                 ]
               ],
               "titulo": "Tabla 3. Factores de complicación de la infección urinaria",
-              "fuente": "Elaboración propia a partir de las guías de la Infectious Diseases Society of America y de la European Association of Urology."
+              "fuente": "Elaboración propia a partir de las guías de la Infectious Diseases Society of America y de la European Association of Urology.[[1,2]]"
             },
             {
               "type": "Espacio"
@@ -565,7 +565,7 @@
                 ]
               ],
               "titulo": "Tabla 4. Clasificación diagnóstica y destino del paciente",
-              "fuente": "Elaboración propia a partir del Tercer Consenso Internacional (Sepsis-3)."
+              "fuente": "Elaboración propia a partir del Tercer Consenso Internacional (Sepsis-3).[[3]]"
             },
             {
               "type": "Espacio"
@@ -625,7 +625,7 @@
                 ]
               ],
               "titulo": "Tabla 5. Exámenes complementarios por prioridad",
-              "fuente": "Elaboración propia a partir de las guías de la Infectious Diseases Society of America."
+              "fuente": "Elaboración propia a partir de las guías de la Infectious Diseases Society of America.[[1]]"
             }
           ]
         },
@@ -820,7 +820,7 @@
                 ]
               ],
               "titulo": "Tabla 6. Porcentaje de resistencia antibiótica en uropatógenos por servicio (HECAM 2025)",
-              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025, Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica."
+              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025, Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica.[[5]]"
             },
             {
               "type": "Semaforo"
@@ -934,7 +934,7 @@
                 ]
               ],
               "titulo": "Tabla 7. Antibioticoterapia empírica estratificada en infección urinaria complicada",
-              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025 y del Cuadro Nacional de Medicamentos Básicos, 10.ª revisión."
+              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025 y del Cuadro Nacional de Medicamentos Básicos, 10.ª revisión.[[5,9]]"
             },
             {
               "type": "Espacio"
@@ -992,7 +992,7 @@
                 ]
               ],
               "titulo": "Tabla 8. Opciones de terapia secuencial oral",
-              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025 y del Cuadro Nacional de Medicamentos Básicos, 10.ª revisión."
+              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025 y del Cuadro Nacional de Medicamentos Básicos, 10.ª revisión.[[5,9]]"
             },
             {
               "type": "Espacio"
@@ -1061,7 +1061,7 @@
                 ]
               ],
               "titulo": "Tabla 9. Duración total recomendada del tratamiento antimicrobiano",
-              "fuente": "Elaboración propia a partir de las guías de la Infectious Diseases Society of America."
+              "fuente": "Elaboración propia a partir de las guías de la Infectious Diseases Society of America.[[1]]"
             }
           ]
         },
@@ -1119,7 +1119,7 @@
                 ]
               ],
               "titulo": "Tabla 10. Clasificación de severidad de la infección urinaria complicada",
-              "fuente": "Elaboración propia a partir del Tercer Consenso Internacional (Sepsis-3)."
+              "fuente": "Elaboración propia a partir del Tercer Consenso Internacional (Sepsis-3).[[3]]"
             },
             {
               "type": "Espacio"
@@ -2003,7 +2003,7 @@
                   "Ampliar la cobertura y descartar candiduria en el urocultivo."
                 ]
               ],
-              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025."
+              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025.[[5]]"
             },
             {
               "type": "Espacio"
@@ -2169,7 +2169,7 @@
                   "14.2 %"
                 ]
               ],
-              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025 e Informe Técnico SVPCS-DNVE-2026-02 (MSP/INSPI–CRN-RAM)."
+              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025 e Informe Técnico SVPCS-DNVE-2026-02 (MSP/INSPI–CRN-RAM).[[4,5]]"
             },
             {
               "type": "Semaforo"
