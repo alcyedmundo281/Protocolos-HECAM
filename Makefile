@@ -17,13 +17,17 @@ verificar:
 fuentes:
 	python3 skill/scripts/verificar_pmid.py $(MATRICES)
 
+# Las observaciones que la revisora repite, comprobadas antes de enviarle nada.
+revisora:
+	python3 skill/scripts/verificar_revisora.py $(MATRICES)
+
 jats:
 	@for f in $(MATRICES); do \
 		python3 skill/scripts/build_jats.py "$$f" \
 			-o "$$(dirname $$f)/salida/protocolo.jats.xml" || exit 1; \
 	done
 
-todo: validar generar verificar fuentes
+todo: validar generar verificar fuentes revisora
 
 # Ingeniería inversa: reconstruye la matriz desde un generador .js heredado.
 # Los dos protocolos actuales ya están migrados y no lo necesitan.
@@ -33,4 +37,4 @@ matriz:
 referencia:
 	python3 skill/scripts/verificar_caratula.py --generar-referencia $(APROBADO)
 
-.PHONY: generar validar verificar fuentes jats todo matriz referencia
+.PHONY: generar validar verificar fuentes revisora jats todo matriz referencia
