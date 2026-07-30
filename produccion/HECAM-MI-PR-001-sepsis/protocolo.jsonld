@@ -539,7 +539,8 @@
                   "Según el foco sospechado. No deben retrasar el inicio del antimicrobiano más de 30 minutos."
                 ]
               ],
-              "titulo": "Tabla 3. Exámenes complementarios por prioridad"
+              "titulo": "Tabla 3. Exámenes complementarios por prioridad",
+              "fuente": "Elaboración propia a partir de la Surviving Sepsis Campaign 2021 y del Tercer Consenso Internacional (Sepsis-3)."
             }
           ]
         },
@@ -770,7 +771,8 @@
                   "(-)"
                 ]
               ],
-              "titulo": "Tabla 4. Porcentaje de resistencia antibiótica en organismos relevantes para sepsis (HECAM 2025)"
+              "titulo": "Tabla 4. Porcentaje de resistencia antibiótica en organismos relevantes para sepsis (HECAM 2025)",
+              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025, Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica."
             },
             {
               "type": "Semaforo"
@@ -900,7 +902,8 @@
                   "Vancomicina: monitorización terapéutica y ajuste por TFG."
                 ]
               ],
-              "titulo": "Tabla 5. Antibioticoterapia empírica estratificada por foco y riesgo de resistencia"
+              "titulo": "Tabla 5. Antibioticoterapia empírica estratificada por foco y riesgo de resistencia",
+              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025 y del Cuadro Nacional de Medicamentos Básicos, 10.ª revisión."
             },
             {
               "type": "Espacio"
@@ -979,7 +982,8 @@
                   "UCI de forma inmediata e impostergable."
                 ]
               ],
-              "titulo": "Tabla 6. Clasificación de severidad según Sepsis-3"
+              "titulo": "Tabla 6. Clasificación de severidad según Sepsis-3",
+              "fuente": "Tercer Consenso Internacional para Sepsis y Shock Séptico (Sepsis-3)."
             },
             {
               "type": "Espacio"
@@ -1153,7 +1157,8 @@
                   "D"
                 ]
               ],
-              "titulo": "Tabla 7. Nivel de evidencia y grado de recomendación"
+              "titulo": "Tabla 7. Nivel de evidencia y grado de recomendación",
+              "fuente": "Oxford Centre for Evidence-Based Medicine (CEBM), marzo de 2009."
             },
             {
               "type": "Nota",
@@ -1189,7 +1194,7 @@
           "calculo": "(N.º con lactato en tiempo / total con sospecha de sepsis) × 100",
           "meta": "≥ 90 %",
           "periodo": "Mensual",
-          "responsable": "Laboratorio, Emergencia, UCI"
+          "responsable": "Laboratorio, Emergencia, Unidad Técnica de Cuidados Intensivos"
         },
         {
           "type": "Indicador",
@@ -1199,7 +1204,7 @@
           "calculo": "(N.º con SOFA documentado / total de pacientes con sepsis) × 100",
           "meta": "100 %",
           "periodo": "Mensual",
-          "responsable": "Emergencia, UCI, Medicina Interna"
+          "responsable": "Emergencia, Unidad Técnica de Cuidados Intensivos, Medicina Interna"
         },
         {
           "type": "Indicador",
@@ -1209,7 +1214,7 @@
           "calculo": "(N.º con paquete completo en 1 h / total sepsis y shock) × 100",
           "meta": "≥ 85 %",
           "periodo": "Mensual",
-          "responsable": "Emergencia, UCI, Servicios Quirúrgicos"
+          "responsable": "Emergencia, Unidad Técnica de Cuidados Intensivos, Servicios Quirúrgicos"
         },
         {
           "type": "Indicador",
@@ -1219,7 +1224,7 @@
           "calculo": "(N.º con ATB concordante / total sepsis hospitalizadas) × 100",
           "meta": "≥ 80 %",
           "periodo": "Mensual",
-          "responsable": "PROA, Farmacia, Medicina Interna"
+          "responsable": "Programa de Optimización del Uso de Antimicrobianos, Farmacia, Medicina Interna"
         },
         {
           "type": "Indicador",
@@ -1229,7 +1234,7 @@
           "calculo": "(N.º con desescalada documentada / total con ATB > 72 h) × 100",
           "meta": "≥ 70 %",
           "periodo": "Trimestral",
-          "responsable": "PROA, Medicina Interna, UCI"
+          "responsable": "Programa de Optimización del Uso de Antimicrobianos, Medicina Interna, Unidad Técnica de Cuidados Intensivos"
         },
         {
           "type": "Indicador",
@@ -1239,7 +1244,7 @@
           "calculo": "(N.º con aclaramiento ≥ 10 % / total con lactato > 2 mmol/L) × 100",
           "meta": "≥ 80 %",
           "periodo": "Mensual",
-          "responsable": "UCI, Emergencia"
+          "responsable": "Unidad Técnica de Cuidados Intensivos, Emergencia"
         },
         {
           "type": "Indicador",
@@ -1249,7 +1254,7 @@
           "calculo": "(N.º con PAM ≥ 65 mmHg / total en shock séptico) × 100",
           "meta": "≥ 95 %",
           "periodo": "Mensual",
-          "responsable": "UCI, Emergencia"
+          "responsable": "Unidad Técnica de Cuidados Intensivos, Emergencia"
         },
         {
           "type": "Indicador",
@@ -1269,7 +1274,7 @@
           "calculo": "(N.º de readmisiones en 72 h / total de egresos de UCI por sepsis) × 100",
           "meta": "≤ 5 %",
           "periodo": "Trimestral",
-          "responsable": "UCI, Medicina Interna"
+          "responsable": "Unidad Técnica de Cuidados Intensivos, Medicina Interna"
         },
         {
           "type": "Indicador",
@@ -1279,7 +1284,7 @@
           "calculo": "(N.º de aislamientos notificados / total CRE-XDR en sepsis) × 100",
           "meta": "100 %",
           "periodo": "Mensual",
-          "responsable": "PROA, Microbiología"
+          "responsable": "Programa de Optimización del Uso de Antimicrobianos, Microbiología"
         }
       ],
       "tituloTabla": "Tabla 8. Indicadores de calidad del protocolo"
@@ -1304,205 +1309,482 @@
             {
               "type": "Tabla",
               "columnas": [
-                "ID",
-                "Tarea",
-                "Responsable",
-                "Inicio",
+                "Id",
+                "Nombre de la tarea",
+                "Comienzo",
                 "Fin",
-                "Recursos"
+                "Ago 26",
+                "Sep 26",
+                "Oct 26",
+                "Nov 26",
+                "Dic 26",
+                "Ene 27",
+                "Feb 27",
+                "Mar 27",
+                "Abr 27",
+                "May 27",
+                "Jun 27",
+                "Jul 27"
               ],
               "anchos": [
-                500,
+                350,
                 2500,
-                1900,
                 800,
                 800,
-                2306
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363
               ],
               "centrados": [
                 true,
                 false,
-                false,
                 true,
                 true,
-                false
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
               ],
               "filas": [
                 [
                   "1",
                   "Aprobación formal por el Director Técnico del HECAM.",
-                  "Dirección Técnica / Control de Calidad",
                   "Ago 2026",
                   "Ago 2026",
-                  "Documento de aprobación firmado"
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "2",
                   "Registro en el sistema de gestión documental institucional.",
-                  "Coordinación de Control de Calidad",
                   "Ago 2026",
                   "Sep 2026",
-                  "Plataforma documental HECAM"
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "3",
                   "Socialización a jefes de Emergencia, UCI y Medicina Interna de la nueva tabla antimicrobiana.",
-                  "Coordinadores de Unidad",
                   "Sep 2026",
                   "Sep 2026",
-                  "Cartilla de Resistencia HECAM 2025"
+                  "",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "4",
                   "Capacitación sobre estratificación empírica BLEE/CRE y uso de ceftazidima/avibactam.",
-                  "Comité de Sepsis / PROA",
                   "Sep 2026",
                   "Oct 2026",
-                  "Aulas de docencia, simuladores, Informe RAM"
+                  "",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "5",
                   "Elaboración del diagrama de flujo en Bizagi.",
-                  "Coordinación de Control de Calidad",
                   "Sep 2026",
                   "Oct 2026",
-                  "Licencia Bizagi"
+                  "",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "6",
                   "Alerta electrónica de sepsis en el HIS-HECAM con integración de la Cartilla 2025.",
-                  "Tecnologías de la Información / PROA",
                   "Oct 2026",
                   "Nov 2026",
-                  "HIS-HECAM, módulo PROA"
+                  "",
+                  "",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "7",
                   "Implementación piloto en Emergencia y UCI durante 3 meses.",
-                  "Jefes de Emergencia y UCI",
                   "Nov 2026",
                   "Ene 2027",
-                  "Hoja de seguimiento antimicrobiano"
+                  "",
+                  "",
+                  "",
+                  "x",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "8",
                   "Recolección de indicadores de la fase piloto.",
-                  "Control de Calidad / PROA",
                   "Dic 2026",
                   "Ene 2027",
-                  "HIS-HECAM, registro de farmacia"
+                  "",
+                  "",
+                  "",
+                  "",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "9",
                   "Evaluación de resultados del piloto y ajuste del protocolo.",
-                  "Comité de Sepsis HECAM",
                   "Feb 2027",
                   "Feb 2027",
-                  "Informe piloto, Cartilla 2026"
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "10",
                   "Extensión a todas las unidades y revisión anual sincronizada con la Cartilla de Resistencia.",
-                  "Dirección Técnica / Control de Calidad / PROA",
                   "Mar 2027",
                   "Dic 2027",
-                  "Actualización anual de la Cartilla"
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "x",
+                  "x",
+                  "x",
+                  "x",
+                  "x"
                 ]
-              ]
+              ],
+              "fuente": "Elaboración propia."
             },
             {
               "type": "Espacio"
             }
           ],
           "columnas": [
-            "ID",
-            "Tarea",
-            "Responsable",
-            "Inicio",
+            "Id",
+            "Nombre de la tarea",
+            "Comienzo",
             "Fin",
-            "Recursos"
+            "Ago 26",
+            "Sep 26",
+            "Oct 26",
+            "Nov 26",
+            "Dic 26",
+            "Ene 27",
+            "Feb 27",
+            "Mar 27",
+            "Abr 27",
+            "May 27",
+            "Jun 27",
+            "Jul 27"
           ],
           "filas": [
             [
               "1",
               "Aprobación formal por el Director Técnico del HECAM.",
-              "Dirección Técnica / Control de Calidad",
               "Ago 2026",
               "Ago 2026",
-              "Documento de aprobación firmado"
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "2",
               "Registro en el sistema de gestión documental institucional.",
-              "Coordinación de Control de Calidad",
               "Ago 2026",
               "Sep 2026",
-              "Plataforma documental HECAM"
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "3",
               "Socialización a jefes de Emergencia, UCI y Medicina Interna de la nueva tabla antimicrobiana.",
-              "Coordinadores de Unidad",
               "Sep 2026",
               "Sep 2026",
-              "Cartilla de Resistencia HECAM 2025"
+              "",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "4",
               "Capacitación sobre estratificación empírica BLEE/CRE y uso de ceftazidima/avibactam.",
-              "Comité de Sepsis / PROA",
               "Sep 2026",
               "Oct 2026",
-              "Aulas de docencia, simuladores, Informe RAM"
+              "",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "5",
               "Elaboración del diagrama de flujo en Bizagi.",
-              "Coordinación de Control de Calidad",
               "Sep 2026",
               "Oct 2026",
-              "Licencia Bizagi"
+              "",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "6",
               "Alerta electrónica de sepsis en el HIS-HECAM con integración de la Cartilla 2025.",
-              "Tecnologías de la Información / PROA",
               "Oct 2026",
               "Nov 2026",
-              "HIS-HECAM, módulo PROA"
+              "",
+              "",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "7",
               "Implementación piloto en Emergencia y UCI durante 3 meses.",
-              "Jefes de Emergencia y UCI",
               "Nov 2026",
               "Ene 2027",
-              "Hoja de seguimiento antimicrobiano"
+              "",
+              "",
+              "",
+              "x",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "8",
               "Recolección de indicadores de la fase piloto.",
-              "Control de Calidad / PROA",
               "Dic 2026",
               "Ene 2027",
-              "HIS-HECAM, registro de farmacia"
+              "",
+              "",
+              "",
+              "",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "9",
               "Evaluación de resultados del piloto y ajuste del protocolo.",
-              "Comité de Sepsis HECAM",
               "Feb 2027",
               "Feb 2027",
-              "Informe piloto, Cartilla 2026"
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "10",
               "Extensión a todas las unidades y revisión anual sincronizada con la Cartilla de Resistencia.",
-              "Dirección Técnica / Control de Calidad / PROA",
               "Mar 2027",
               "Dic 2027",
-              "Actualización anual de la Cartilla"
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "x",
+              "x",
+              "x",
+              "x",
+              "x"
             ]
+          ],
+          "anchos": [
+            350,
+            2500,
+            800,
+            800,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363
+          ],
+          "centrados": [
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
           ]
         },
         {
@@ -1589,7 +1871,8 @@
                   "3,5–4,9 o < 500 mL/d",
                   "> 5,0 o < 200 mL/d"
                 ]
-              ]
+              ],
+              "fuente": "Adaptado de Vincent JL, et al., con el ajuste del dominio respiratorio por la altitud de Quito."
             },
             {
               "type": "Nota",
@@ -1760,7 +2043,8 @@
                   "51.9 %",
                   "14.2 %"
                 ]
-              ]
+              ],
+              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025 e Informe Técnico SVPCS-DNVE-2026-02 (MSP/INSPI–CRN-RAM)."
             },
             {
               "type": "Semaforo"

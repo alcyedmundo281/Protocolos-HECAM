@@ -46,23 +46,30 @@ NUMERO_ESCRITO = re.compile(r"^\s*(\d{1,2})[.)]\s+\S")
 
 
 def bloques_tabla(doc):
-    """Todas las tablas del documento, con la sección en la que viven."""
+    """Tablas del documento, con su sección y si viven dentro de un anexo.
+
+    Las de anexo se marcan porque toman el título del encabezado «Anexo N. …» y
+    no necesitan además un «Tabla N.» propio; sí necesitan fuente. Y se recorre
+    solo `contenido`, porque en un anexo las columnas y filas aparecen dos veces:
+    dentro del bloque que se maqueta y al margen, para la plantilla.
+    """
     out = []
 
-    def walk(n, ruta):
+    def walk(n, ruta, en_anexo):
         if isinstance(n, list):
             for x in n:
-                walk(x, ruta)
+                walk(x, ruta, en_anexo)
         elif isinstance(n, dict):
             r = n.get("numeral") or n.get("name") or ruta
-            tipo = str(n.get("type", ""))
-            if tipo.startswith("Tabla") or (tipo == "Anexo" and n.get("columnas")):
-                out.append((r, n))
+            if str(n.get("type", "")).startswith("Tabla"):
+                out.append((r, n, en_anexo))
+            dentro = en_anexo or n.get("type") == "Anexo"
             for k, v in n.items():
-                if k != "type":
-                    walk(v, r)
+                if k in ("type", "columnas", "filas", "anchos", "centrados"):
+                    continue
+                walk(v, r, dentro)
 
-    walk(doc.get("hasPart"), "?")
+    walk(doc.get("hasPart"), "?", False)
     return out
 
 
@@ -98,17 +105,16 @@ def revisar(ruta):
         hallazgos.append((regla, donde, detalle))
 
     # ── 1. Tablas: número, título y fuente ───────────────────────────────────
-    for seccion, t in bloques_tabla(doc):
-        if t.get("type") == "Anexo":
-            continue  # los anexos llevan su propio encabezado
+    for seccion, t, en_anexo in bloques_tabla(doc):
         titulo = t.get("titulo") or ""
-        if not TITULO_TABLA.match(titulo):
+        if not en_anexo and not TITULO_TABLA.match(titulo):
             anota("tabla-sin-numero", seccion,
                   "título %r; debe empezar por «Tabla N.»"
                   % (titulo[:60] or "(ninguno)"))
         if not t.get("fuente"):
             anota("tabla-sin-fuente", seccion,
-                  "«%s» no declara fuente" % (titulo[:60] or "sin título"))
+                  "«%s» no declara fuente"
+                  % (titulo[:60] or ("tabla del anexo" if en_anexo else "sin título")))
 
     # ── 2. Cronograma del Anexo 1 ────────────────────────────────────────────
     s8 = next((s for s in doc.get("hasPart", []) if s.get("numeral") == "8"), None)

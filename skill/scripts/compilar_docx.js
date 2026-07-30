@@ -206,7 +206,14 @@ function seccion8() {
     // está dentro; solo se maquetan si el anexo no trae cuerpo.
     const yaHayTabla = cuerpo.some((b) => String(g(b, 'type', '')).startsWith('Tabla'));
     const filas = g(a, 'filas');
-    if (!yaHayTabla && filas && filas.length) out.push(L.mkT(columnas(a), filas));
+    if (!yaHayTabla && filas && filas.length) {
+      out.push(L.mkT(columnas(a), filas));
+      // La fuente del anexo se maqueta también por esta vía; olvidarla dejaba
+      // la tabla sin atribución y, si la fuente llevaba una cita, rompía el
+      // orden correlativo de la bibliografía.
+      const fuente = g(a, 'fuente');
+      if (fuente) out.push(L.note('Fuente: ' + fuente));
+    }
   });
   return out;
 }

@@ -455,7 +455,8 @@
                   "Antecedente de ITU por microorganismo BLEE o CRE, tratamiento antibiótico en los últimos 90 días y residencia en institución de larga estadía."
                 ]
               ],
-              "titulo": "Tabla 3. Factores de complicación de la infección urinaria"
+              "titulo": "Tabla 3. Factores de complicación de la infección urinaria",
+              "fuente": "Elaboración propia a partir de las guías de la Infectious Diseases Society of America y de la European Association of Urology."
             },
             {
               "type": "Espacio"
@@ -563,7 +564,8 @@
                   "UCI o sala con monitoreo continuo. Activar el protocolo HECAM-MI-PR-001."
                 ]
               ],
-              "titulo": "Tabla 4. Clasificación diagnóstica y destino del paciente"
+              "titulo": "Tabla 4. Clasificación diagnóstica y destino del paciente",
+              "fuente": "Elaboración propia a partir del Tercer Consenso Internacional (Sepsis-3)."
             },
             {
               "type": "Espacio"
@@ -622,7 +624,8 @@
                   "Indicada si la ecografía no es concluyente, si la fiebre persiste más de 72 horas o ante sospecha de absceso o pielonefritis enfisematosa. Verificar la TFG antes del contraste intravenoso."
                 ]
               ],
-              "titulo": "Tabla 5. Exámenes complementarios por prioridad"
+              "titulo": "Tabla 5. Exámenes complementarios por prioridad",
+              "fuente": "Elaboración propia a partir de las guías de la Infectious Diseases Society of America."
             }
           ]
         },
@@ -816,7 +819,8 @@
                   "(-)"
                 ]
               ],
-              "titulo": "Tabla 6. Porcentaje de resistencia antibiótica en uropatógenos por servicio (HECAM 2025)"
+              "titulo": "Tabla 6. Porcentaje de resistencia antibiótica en uropatógenos por servicio (HECAM 2025)",
+              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025, Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica."
             },
             {
               "type": "Semaforo"
@@ -929,7 +933,8 @@
                   "Ceftriaxona sin ajuste. Ciprofloxacino 250 mg c/12 h si TFG < 30."
                 ]
               ],
-              "titulo": "Tabla 7. Antibioticoterapia empírica estratificada en infección urinaria complicada"
+              "titulo": "Tabla 7. Antibioticoterapia empírica estratificada en infección urinaria complicada",
+              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025 y del Cuadro Nacional de Medicamentos Básicos, 10.ª revisión."
             },
             {
               "type": "Espacio"
@@ -986,7 +991,8 @@
                   "Contraindicada si TFG < 45"
                 ]
               ],
-              "titulo": "Tabla 8. Opciones de terapia secuencial oral"
+              "titulo": "Tabla 8. Opciones de terapia secuencial oral",
+              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025 y del Cuadro Nacional de Medicamentos Básicos, 10.ª revisión."
             },
             {
               "type": "Espacio"
@@ -1054,7 +1060,8 @@
                   "21 días como mínimo, con seguimiento por imagen"
                 ]
               ],
-              "titulo": "Tabla 9. Duración total recomendada del tratamiento antimicrobiano"
+              "titulo": "Tabla 9. Duración total recomendada del tratamiento antimicrobiano",
+              "fuente": "Elaboración propia a partir de las guías de la Infectious Diseases Society of America."
             }
           ]
         },
@@ -1111,7 +1118,8 @@
                   "UCI inmediata. Activar el protocolo HECAM-MI-PR-001. Drenaje urológico urgente si existe obstrucción."
                 ]
               ],
-              "titulo": "Tabla 10. Clasificación de severidad de la infección urinaria complicada"
+              "titulo": "Tabla 10. Clasificación de severidad de la infección urinaria complicada",
+              "fuente": "Elaboración propia a partir del Tercer Consenso Internacional (Sepsis-3)."
             },
             {
               "type": "Espacio"
@@ -1277,7 +1285,8 @@
                   "D"
                 ]
               ],
-              "titulo": "Tabla 11. Nivel de evidencia y grado de recomendación"
+              "titulo": "Tabla 11. Nivel de evidencia y grado de recomendación",
+              "fuente": "Oxford Centre for Evidence-Based Medicine (CEBM), marzo de 2009."
             },
             {
               "type": "Nota",
@@ -1323,7 +1332,7 @@
           "calculo": "(N.º con hemocultivos previos / total de pacientes con urosepsis) × 100",
           "meta": "100 %",
           "periodo": "Mensual",
-          "responsable": "UCI, Emergencia"
+          "responsable": "Unidad Técnica de Cuidados Intensivos, Emergencia"
         },
         {
           "type": "Indicador",
@@ -1353,7 +1362,7 @@
           "calculo": "(N.º con ATB ≤ 30 min / total de pacientes con urosepsis) × 100",
           "meta": "≥ 90 %",
           "periodo": "Mensual",
-          "responsable": "UCI, Emergencia, Farmacia"
+          "responsable": "Unidad Técnica de Cuidados Intensivos, Emergencia, Farmacia"
         },
         {
           "type": "Indicador",
@@ -1363,7 +1372,7 @@
           "calculo": "(N.º con ATB concordante / total de ITU complicadas hospitalizadas) × 100",
           "meta": "≥ 80 %",
           "periodo": "Mensual",
-          "responsable": "PROA, Farmacia, Medicina Interna"
+          "responsable": "Programa de Optimización del Uso de Antimicrobianos, Farmacia, Medicina Interna"
         },
         {
           "type": "Indicador",
@@ -1373,7 +1382,7 @@
           "calculo": "(N.º con ATB ajustado por cultivo / total con urocultivo positivo) × 100",
           "meta": "≥ 80 %",
           "periodo": "Trimestral",
-          "responsable": "PROA, Medicina Interna, Infectología"
+          "responsable": "Programa de Optimización del Uso de Antimicrobianos, Medicina Interna, Infectología"
         },
         {
           "type": "Indicador",
@@ -1423,7 +1432,7 @@
           "calculo": "(N.º de aislamientos notificados / total de CRE-XDR urinarios) × 100",
           "meta": "100 %",
           "periodo": "Mensual",
-          "responsable": "PROA, Microbiología"
+          "responsable": "Programa de Optimización del Uso de Antimicrobianos, Microbiología"
         }
       ],
       "tituloTabla": "Tabla 12. Indicadores de calidad del protocolo"
@@ -1448,205 +1457,482 @@
             {
               "type": "Tabla",
               "columnas": [
-                "ID",
-                "Tarea",
-                "Responsable",
-                "Inicio",
+                "Id",
+                "Nombre de la tarea",
+                "Comienzo",
                 "Fin",
-                "Recursos"
+                "Ago 26",
+                "Sep 26",
+                "Oct 26",
+                "Nov 26",
+                "Dic 26",
+                "Ene 27",
+                "Feb 27",
+                "Mar 27",
+                "Abr 27",
+                "May 27",
+                "Jun 27",
+                "Jul 27"
               ],
               "anchos": [
-                500,
+                350,
                 2500,
-                1900,
                 800,
                 800,
-                2306
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363,
+                363
               ],
               "centrados": [
                 true,
                 false,
-                false,
                 true,
                 true,
-                false
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
               ],
               "filas": [
                 [
                   "1",
                   "Aprobación formal por el Director Técnico del HECAM.",
-                  "Dirección Técnica / Control de Calidad",
                   "Ago 2026",
                   "Ago 2026",
-                  "Documento de aprobación firmado"
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "2",
                   "Registro en el sistema de gestión documental institucional.",
-                  "Coordinación de Control de Calidad",
                   "Ago 2026",
                   "Sep 2026",
-                  "Plataforma documental HECAM"
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "3",
                   "Socialización a médicos de Emergencia y residentes de Medicina Interna.",
-                  "Coordinadores de Unidad",
                   "Sep 2026",
                   "Sep 2026",
-                  "Cartilla de Resistencia HECAM 2025"
+                  "",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "4",
                   "Taller sobre interpretación de la Cartilla 2025 y selección empírica estratificada.",
-                  "PROA, Farmacia y Microbiología",
                   "Sep 2026",
                   "Oct 2026",
-                  "Casos clínicos, CNMB, cartilla vigente"
+                  "",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "5",
                   "Elaboración del diagrama de flujo en Bizagi.",
-                  "Coordinación de Control de Calidad",
                   "Sep 2026",
                   "Oct 2026",
-                  "Licencia Bizagi"
+                  "",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "6",
                   "Implementación de la alerta electrónica de ITU complicada en el HIS-HECAM.",
-                  "Tecnologías de la Información / PROA",
                   "Oct 2026",
                   "Nov 2026",
-                  "HIS-HECAM, módulo PROA"
+                  "",
+                  "",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "7",
                   "Implementación piloto en Emergencia y Medicina Interna durante 3 meses.",
-                  "Jefes de Emergencia y Medicina Interna",
                   "Nov 2026",
                   "Ene 2027",
-                  "Hoja de seguimiento de cultivos"
+                  "",
+                  "",
+                  "",
+                  "x",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "8",
                   "Recolección de indicadores de la fase piloto.",
-                  "Control de Calidad / PROA",
                   "Dic 2026",
                   "Ene 2027",
-                  "HIS-HECAM, registro de farmacia"
+                  "",
+                  "",
+                  "",
+                  "",
+                  "x",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "9",
                   "Evaluación de resultados del piloto y ajuste del protocolo.",
-                  "Comité de ITU y PROA-HECAM",
                   "Feb 2027",
                   "Feb 2027",
-                  "Informe piloto, Cartilla 2026"
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "x",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ],
                 [
                   "10",
                   "Extensión a todas las unidades y revisión anual sincronizada con la Cartilla de Resistencia.",
-                  "Dirección Técnica / Control de Calidad / PROA",
                   "Mar 2027",
                   "Dic 2027",
-                  "Actualización anual de la Cartilla"
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "x",
+                  "x",
+                  "x",
+                  "x",
+                  "x"
                 ]
-              ]
+              ],
+              "fuente": "Elaboración propia."
             },
             {
               "type": "Espacio"
             }
           ],
           "columnas": [
-            "ID",
-            "Tarea",
-            "Responsable",
-            "Inicio",
+            "Id",
+            "Nombre de la tarea",
+            "Comienzo",
             "Fin",
-            "Recursos"
+            "Ago 26",
+            "Sep 26",
+            "Oct 26",
+            "Nov 26",
+            "Dic 26",
+            "Ene 27",
+            "Feb 27",
+            "Mar 27",
+            "Abr 27",
+            "May 27",
+            "Jun 27",
+            "Jul 27"
           ],
           "filas": [
             [
               "1",
               "Aprobación formal por el Director Técnico del HECAM.",
-              "Dirección Técnica / Control de Calidad",
               "Ago 2026",
               "Ago 2026",
-              "Documento de aprobación firmado"
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "2",
               "Registro en el sistema de gestión documental institucional.",
-              "Coordinación de Control de Calidad",
               "Ago 2026",
               "Sep 2026",
-              "Plataforma documental HECAM"
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "3",
               "Socialización a médicos de Emergencia y residentes de Medicina Interna.",
-              "Coordinadores de Unidad",
               "Sep 2026",
               "Sep 2026",
-              "Cartilla de Resistencia HECAM 2025"
+              "",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "4",
               "Taller sobre interpretación de la Cartilla 2025 y selección empírica estratificada.",
-              "PROA, Farmacia y Microbiología",
               "Sep 2026",
               "Oct 2026",
-              "Casos clínicos, CNMB, cartilla vigente"
+              "",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "5",
               "Elaboración del diagrama de flujo en Bizagi.",
-              "Coordinación de Control de Calidad",
               "Sep 2026",
               "Oct 2026",
-              "Licencia Bizagi"
+              "",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "6",
               "Implementación de la alerta electrónica de ITU complicada en el HIS-HECAM.",
-              "Tecnologías de la Información / PROA",
               "Oct 2026",
               "Nov 2026",
-              "HIS-HECAM, módulo PROA"
+              "",
+              "",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "7",
               "Implementación piloto en Emergencia y Medicina Interna durante 3 meses.",
-              "Jefes de Emergencia y Medicina Interna",
               "Nov 2026",
               "Ene 2027",
-              "Hoja de seguimiento de cultivos"
+              "",
+              "",
+              "",
+              "x",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "8",
               "Recolección de indicadores de la fase piloto.",
-              "Control de Calidad / PROA",
               "Dic 2026",
               "Ene 2027",
-              "HIS-HECAM, registro de farmacia"
+              "",
+              "",
+              "",
+              "",
+              "x",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "9",
               "Evaluación de resultados del piloto y ajuste del protocolo.",
-              "Comité de ITU y PROA-HECAM",
               "Feb 2027",
               "Feb 2027",
-              "Informe piloto, Cartilla 2026"
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "x",
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             [
               "10",
               "Extensión a todas las unidades y revisión anual sincronizada con la Cartilla de Resistencia.",
-              "Dirección Técnica / Control de Calidad / PROA",
               "Mar 2027",
               "Dic 2027",
-              "Actualización anual de la Cartilla"
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "x",
+              "x",
+              "x",
+              "x",
+              "x"
             ]
+          ],
+          "anchos": [
+            350,
+            2500,
+            800,
+            800,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363,
+            363
+          ],
+          "centrados": [
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
           ]
         },
         {
@@ -1716,7 +2002,8 @@
                   "CD4 menor a 200 células/µL, trasplante, corticoterapia prolongada o quimioterapia activa.",
                   "Ampliar la cobertura y descartar candiduria en el urocultivo."
                 ]
-              ]
+              ],
+              "fuente": "Elaboración propia a partir de la Cartilla de Resistencia Antibiótica HECAM 2025."
             },
             {
               "type": "Espacio"
@@ -1881,7 +2168,8 @@
                   "51.9 %",
                   "14.2 %"
                 ]
-              ]
+              ],
+              "fuente": "Cartilla de Resistencia Antibiótica HECAM 2025 e Informe Técnico SVPCS-DNVE-2026-02 (MSP/INSPI–CRN-RAM)."
             },
             {
               "type": "Semaforo"
