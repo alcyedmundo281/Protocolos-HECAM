@@ -133,14 +133,15 @@ def partir_vancouver(ref):
     """De 'Autores. Título. Revista. Año;Vol(Núm):pp' saca (título, revista, año)."""
     s = DOI_RE.sub("", ref).strip()
 
-    m = ET_AL_RE.search(s)
-    if m:
-        resto = s[m.end():]
-    else:
-        m = CORPORATIVO_RE.match(s) or INICIALES_RE.search(s)
-        resto = s[m.end():] if m else s
+    # En Vancouver la referencia siempre empieza por la autoría, y esta termina
+    # en el primer «. ». Vale igual para personas («Marik PE, Farkas JD. »), para
+    # «et al. » y para autorías corporativas («European Association … Liver. »),
+    # que es lo que una lista de palabras clave nunca acababa de cubrir: fallaba
+    # con «Investigators», con «Liver» y con cualquier nombre institucional nuevo.
+    m = re.search(r"\.\s+", s)
+    resto = s[m.end():] if m else s
 
-    # puntuación sobrante entre autores y título («et al.. Título»), frecuente
+    # puntuación sobrante entre autoría y título («et al.. Título»), frecuente
     # cuando la cadena viene de un exportador y no de la mano
     resto = resto.lstrip(" .,;:")
 
@@ -227,6 +228,12 @@ def esearch(term, exigir_frase=False):
     """
     d = _pedir("esearch", {"db": "pubmed", "term": term, "retmax": "5"})
     res = d.get("esearchresult", {})
+    # NCBI responde 200 con un ERROR en el cuerpo cuando limita el ritmo o falla.
+    # Tratarlo como «sin resultados» convertiría una avería en una acusación de
+    # cita inexistente, que es el peor error que puede cometer este script.
+    if res.get("ERROR") or d.get("error"):
+        raise RuntimeError("PubMed devolvió un error: %s"
+                           % (res.get("ERROR") or d.get("error")))
     if exigir_frase:
         avisos = res.get("warninglist", {}) or {}
         if avisos.get("quotedphrasesnotfound") or avisos.get("phrasesnotfound"):
@@ -263,6 +270,13 @@ def localizar(ref, titulo, revista, anio):
     doi = extraer_doi(ref)
     if doi:
         ids = esearch(f'"{doi}"[AID]')
+        if not ids:
+            # Un DOI que no aparece es la vía a «SIN PMID», la conclusión más
+            # grave que emite este script. Bajo carga, PubMed devuelve a veces
+            # una lista vacía sin marcar error, así que una búsqueda de DOI en
+            # blanco se confirma antes de darla por buena.
+            time.sleep(1.0)
+            ids = esearch(f'"{doi}"[AID]')
         if ids:
             return ids[0], "doi"
 
