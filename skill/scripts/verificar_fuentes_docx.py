@@ -16,6 +16,7 @@ contenido: las firmas y el control de cambios.
 Código de salida 0 si todas la declaran, 1 si falta alguna.
 """
 
+import json
 import os
 import re
 import sys
@@ -24,14 +25,20 @@ from xml.etree import ElementTree as ET
 
 W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 
-# Tablas que forman parte del formulario, no del contenido clínico
-ESTRUCTURALES = re.compile(
-    r"Aprobado por|Revisado por|Elaborado por|No\.\s*Versión|"
-    r"Descripción del Cambio", re.I)
+# La especificación no se escribe aquí: se lee de skill/reglas/formato.json,
+# que es donde queda fijada la observación más repetida de la revisora —cinco de
+# sus trece— junto con su ancla y su porqué.
+_REGLAS = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                       "..", "reglas", "formato.json")
+with open(_REGLAS, encoding="utf-8") as _f:
+    _T = json.load(_f)["tablas"]
 
-FUENTE = re.compile(r"^\s*Fuente\s*:", re.I)
-NUMERO = re.compile(r"^\s*Tabla\s*(\d+)\s*[.:]")
-ANEXOS = re.compile(r"^\s*8\s*[.．]\s*Anexos\s*$")
+# Tablas que forman parte del formulario, no del contenido clínico
+ESTRUCTURALES = re.compile(_T["exentas"]["patron"], re.I)
+
+FUENTE = re.compile(_T["etiquetaFuente"], re.I)
+NUMERO = re.compile(_T["patronNumero"])
+ANEXOS = re.compile(_T["anexosNoCuentan"]["patron"])
 
 
 def texto(nodo):

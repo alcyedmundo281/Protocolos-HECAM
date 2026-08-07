@@ -59,6 +59,43 @@
     ["10", "Control de cambios"]
   ],
 
+  "tablas": {
+    "observaciones": [8, 11, 12, 14, 18],
+    "nota": "Cinco de sus trece observaciones son esta misma frase: «Colocar el número y título de la tabla así como la fuente correspondiente». Es la que más repite, y por eso la especificación vive aquí y no dispersa en expresiones regulares del código.",
+    "patronNumero": "^\\s*Tabla\\s*(\\d+)\\s*[.:]",
+    "ejemploTitulo": "Tabla 3. Esquema antimicrobiano empírico según foco",
+    "numeracionCorrelativa": true,
+    "etiquetaFuente": "^\\s*Fuente\\s*:",
+    "fuenteObligatoria": true,
+    "fuentePropia": "Elaboración propia",
+    "exentas": {
+      "patron": "Aprobado por|Revisado por|Elaborado por|No\\.\\s*Versión|Descripción del Cambio",
+      "porque": "Son parte del formulario institucional, no del contenido clínico: la revisora no numera el bloque de firmas ni el control de cambios."
+    },
+    "anexosNoCuentan": {
+      "patron": "^\\s*8\\s*[.．]\\s*Anexos\\s*$",
+      "porque": "Las tablas de los anexos llevan su propio rótulo de anexo y quedan fuera de la serie «Tabla N.»."
+    }
+  },
+
+  "cronograma": {
+    "observacion": 25,
+    "nota": "Transcrito de la rejilla que ella misma pegó en el comentario. Antes vivía por duplicado, en verificar_revisora.py y en hecam-lib.js, sin nada que impidiera que una copia se desviara de la otra.",
+    "columnasFijas": ["Id", "Nombre de la tarea", "Comienzo", "Fin"],
+    "ventanaMeses": 14,
+    "meses": ["Ene", "Feb", "Mar", "Abr", "May", "Jun",
+              "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+    "anioEnCabeceraPropia": true,
+    "marca": "x",
+    "formatoFecha": "dd/mm/aaaa",
+    "tareasDelModelo": [
+      "Elaboración del Protocolo",
+      "Aprobación",
+      "Difusión",
+      "Implementación"
+    ]
+  },
+
   "firmas": {
     "imprimirCargoNoNombre": true,
     "patronCargo": "{cargo} de la {unidad}",

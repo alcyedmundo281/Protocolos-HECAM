@@ -13,6 +13,13 @@ const {
   HorizontalPositionRelativeFrom, VerticalPositionRelativeFrom, TextWrappingType
 } = require('docx');
 
+// ── La normativa, como datos ──────────────────────────────────────────────────
+// skill/reglas/formato.json es la única copia del formato oficial. Lo leen por
+// igual esta librería y los verificadores en Python, de modo que no puedan
+// desviarse entre sí: el cronograma llegó a estar escrito dos veces.
+const FORMATO = JSON.parse(fs.readFileSync(
+  path.join(__dirname, '..', 'reglas', 'formato.json'), 'utf8'));
+
 // ── Logotipos institucionales ─────────────────────────────────────────────────
 // Fuente única: assets/logo-header.png (encabezado) y assets/logo-up.png (portada).
 // NO reemplazar por otras versiones sin autorización de Comunicación/Imagen HECAM.
@@ -442,8 +449,9 @@ function firmas(autor = AUTOR_POR_DEFECTO, revisores = REVISORES_POR_DEFECTO) {
 function cronograma(anio, meses, filas) {
   const W_ID = 300, W_TAREA = 2000, W_FECHA = 700;
   const wMes = Math.floor((CW - W_ID - W_TAREA - 2 * W_FECHA) / meses.length);
-  const fijas = [['Id', W_ID], ['Nombre de la tarea', W_TAREA],
-                 ['Comienzo', W_FECHA], ['Fin', W_FECHA]];
+  const anchos = { Id: W_ID, 'Nombre de la tarea': W_TAREA,
+                   Comienzo: W_FECHA, Fin: W_FECHA };
+  const fijas = FORMATO.cronograma.columnasFijas.map((c) => [c, anchos[c] || W_FECHA]);
 
   const cabFija = (t, w) => new TableCell({
     width: { size: w, type: WidthType.DXA }, borders: allHdr, rowSpan: 2,
@@ -547,7 +555,15 @@ function buildDoc(titulo, codigo, version, children, fechaElab) {
   });
 }
 
+// `fuente()` compone el pie de tabla que la revisora reclama cinco veces en sus
+// trece observaciones. La etiqueta y el texto por defecto salen de formato.json
+// para que no vuelvan a estar escritos a mano en cinco sitios del compilador.
+function fuente(texto) {
+  return `Fuente: ${texto || FORMATO.tablas.fuentePropia + '.'}`;
+}
+
 module.exports = {
+  FORMATO, fuente,
   Packer, Paragraph, TextRun, Table, TableRow, TableCell, PageBreak, AlignmentType,
   WidthType, ShadingType, VerticalAlign, BorderStyle,
   BLUE, BLUE_LITE, GRAY_BG, WHITE, TEXT, GREEN_BG, AMBER_BG, RED_BG,

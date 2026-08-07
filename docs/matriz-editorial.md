@@ -31,6 +31,10 @@ añadirla también allí; si no, volverá a llegar como comentario.
 
 ## 1. Instrucciones explícitas de la revisora
 
+Sus trece observaciones están transcritas literalmente en
+`skill/reglas/revisora.json`, con el fragmento sobre el que colocó cada una y el
+script que la comprueba. Lo que sigue es la lectura operativa, no la fuente.
+
 Cuatro reglas, en orden de importancia:
 
 1. **Las citas bibliográficas van en superíndice** dentro del cuerpo del texto. Sin
@@ -44,6 +48,27 @@ Cuatro reglas, en orden de importancia:
 Consecuencia operativa: si al añadir un párrafo se introduce una cita nueva en medio del
 documento, hay que **renumerar toda la bibliografía posterior**. Por eso el orden se verifica
 programáticamente (`skill/scripts/check_citas.py`) y nunca a ojo.
+
+### Toda tabla: número, título y fuente
+
+Es su observación más repetida —cinco de las trece, los comentarios 8, 11, 12,
+14 y 18, siempre con la misma frase: «Colocar el número y título de la tabla así
+como la fuente correspondiente».
+
+Encima de la tabla, `Tabla N. Título`, con N correlativo en todo el documento.
+Debajo, `Fuente: …`, y cuando la tabla es nuestra, `Fuente: Elaboración propia.`
+No hay tabla sin fuente.
+
+Quedan fuera de la serie las tablas del formulario —firmas y control de
+cambios—, que ella tampoco numera, y las de los anexos, que llevan su propio
+rótulo. Los patrones, incluidas esas dos excepciones y su porqué, están en
+`skill/reglas/formato.json → tablas`; los leen `verificar_fuentes_docx.py` para
+comprobar y `hecam-lib.js` para componer el pie.
+
+Ojo con el alcance: la comprobación corre sobre el **`.docx` compilado**, no
+sobre la matriz, porque el compilador genera por su cuenta las tablas de
+glosario, abreviaciones e indicadores, que la matriz no describe como tablas y
+que también necesitan fuente.
 
 ---
 
@@ -182,6 +207,12 @@ N. Apellido AA, Apellido BB. Título del artículo. Revista Abrev. Año;Vol(Núm
 | 3 | Comparación del perfil de resistencia nacional vs. HECAM. |
 
 #### Formato del cronograma
+
+La rejilla está fijada en `skill/reglas/formato.json → cronograma`, y esa es la
+**única** copia: la leen tanto `hecam-lib.js`, que compone la tabla, como
+`verificar_revisora.py`, que la comprueba. Antes había una lista de columnas en
+cada archivo, de modo que el verificador podía dar por buena una rejilla que la
+biblioteca ya no producía.
 
 Corregido por la revisora el **20 de julio de 2026**: «Tomar en cuenta el formato
 de cronograma establecido». Sustituye a las columnas anteriores —ID, Tarea,

@@ -103,7 +103,7 @@ function bloque(b) {
                                      : L.rTable(columnas(b), filas));
       }
       const fuente = g(b, 'fuente');
-      if (fuente) salida.push(L.note('Fuente: ' + fuente));
+      if (fuente) salida.push(L.note(L.fuente(fuente)));
       return salida;
     }
     default:
@@ -165,14 +165,14 @@ function seccion3() {
     out.push(L.caption('Tabla 1. Términos clínicos'));
     out.push(L.mkT([{ label: 'TÉRMINO', w: 2200 }, { label: 'DEFINICIÓN', w: L.CW - 2200 }],
                    gl.map((x) => [g(x, 'termino', ''), g(x, 'definicion', '')])));
-    out.push(L.note('Fuente: ' + g(s, 'fuenteGlosario', 'Elaboración propia.')));
+    out.push(L.note(L.fuente(g(s, 'fuenteGlosario', ''))));
   }
   if (ab.length) {
     out.push(L.blk());
     out.push(L.caption('Tabla 2. Abreviaciones'));
     out.push(L.mkT([{ label: 'ABREVIACIÓN', w: 2200 }, { label: 'SIGNIFICADO', w: L.CW - 2200 }],
                    ab.map((x) => [g(x, 'sigla', ''), g(x, 'significado', '')])));
-    out.push(L.note('Fuente: ' + g(s, 'fuenteAbreviaciones', 'Elaboración propia.')));
+    out.push(L.note(L.fuente(g(s, 'fuenteAbreviaciones', ''))));
   }
   return out;
 }
@@ -220,7 +220,7 @@ function seccion6() {
   if (filas.length) {
     out.push(L.caption(g(s, 'tituloTabla', 'Indicadores de calidad del protocolo')));
     out.push(L.mkT(cols, filas));
-    out.push(L.note('Fuente: ' + g(s, 'fuenteTabla', 'Elaboración propia.')));
+    out.push(L.note(L.fuente(g(s, 'fuenteTabla', ''))));
   }
   return out;
 }
@@ -257,7 +257,7 @@ function seccion8() {
       // la tabla sin atribución y, si la fuente llevaba una cita, rompía el
       // orden correlativo de la bibliografía.
       const fuente = g(a, 'fuente');
-      if (fuente) out.push(L.note('Fuente: ' + fuente));
+      if (fuente) out.push(L.note(L.fuente(fuente)));
     }
   });
   return out;

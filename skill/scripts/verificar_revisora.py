@@ -64,8 +64,14 @@ ABREV_SERVICIO = re.compile(
 # acompañado de su expansión o del guion institucional.
 ADMITIDAS = re.compile(r"PROA[- ]HECAM|Programa de Optimización")
 
-# «Tomar en cuenta el formato de cronograma establecido» (comentario 25)
-CRONOGRAMA = ["Id", "Nombre de la tarea", "Comienzo", "Fin"]
+# «Tomar en cuenta el formato de cronograma establecido» (comentario 25).
+# Las columnas se leen de skill/reglas/formato.json, que es la misma fuente que
+# usa hecam-lib.js para componerlas. Antes había una copia en cada sitio, de
+# modo que el verificador podía bendecir una rejilla que ya no era la suya.
+with open(REGISTRO.replace("revisora.json", "formato.json"), encoding="utf-8") as _f:
+    _C = json.load(_f)["cronograma"]
+CRONOGRAMA = _C["columnasFijas"]
+VENTANA_MESES = _C["ventanaMeses"]
 
 # «Revisar esta numeración, en relación a que se encuentra ya que inicia en 5»
 # (comentario 7): la numeración debe ser estructural, no escrita en el texto.
@@ -152,6 +158,14 @@ def revisar(ruta):
             anota("cronograma", "8 / Anexo 1",
                   "columnas %s; el formato establecido empieza por %s más las "
                   "columnas de meses" % (cols[:4], CRONOGRAMA))
+        elif len(cols) - 4 != VENTANA_MESES:
+            anota("cronograma", "8 / Anexo 1",
+                  "%d columnas de mes; la rejilla del modelo tiene %d"
+                  % (len(cols) - 4, VENTANA_MESES))
+        if not anexos[0].get("anioCabecera"):
+            anota("cronograma", "8 / Anexo 1",
+                  "sin 'anioCabecera': el año va en una fila de cabecera propia "
+                  "que abarca los meses")
 
     # ── 3. Nombre completo del servicio ──────────────────────────────────────
     s6 = next((s for s in doc.get("hasPart", []) if s.get("numeral") == "6"), None)
