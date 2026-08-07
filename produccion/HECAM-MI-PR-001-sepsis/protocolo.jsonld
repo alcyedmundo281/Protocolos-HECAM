@@ -91,7 +91,8 @@
         "worksFor": {
           "type": "Organizacion",
           "name": "Hospital de Especialidades Carlos Andrade Marín"
-        }
+        },
+        "cargoFirma": "Médico Tratante de la Unidad Técnica de Medicina Interna"
       }
     }
   ],

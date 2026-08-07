@@ -379,11 +379,26 @@ function biblio(refs) {
 // Autor por defecto de los protocolos de la Unidad Técnica de Medicina Interna.
 // Se puede sobrescribir por protocolo: firmas({ nombre: '…', unidad: '…' }),
 // para que el pipeline siga sirviendo a otras unidades y otros autores.
+//
+// El `nombre` no se imprime. Observación 29: «Colocar el cargo no el nombre
+// ejemplo Oficinista de la Coordinación General de Control de Calidad». Se
+// conserva en la estructura porque la autoría es real y viaja al JATS y a la
+// matriz; lo que ella corrige es lo que se lee en el papel.
 const AUTOR_POR_DEFECTO = {
   nombre: 'Dr. Alcy Edmundo Torres Guerrero',
   cargo: 'Médico Internista (Tratante)',
   unidad: 'Unidad Técnica de Medicina Interna',
 };
+
+// «{Cargo} de la {Unidad}», el patrón de su ejemplo. Se recorta el matiz entre
+// paréntesis —«Médico Internista (Tratante)» → «Médico Tratante»— porque su
+// ejemplo nombra un cargo llano, sin acotaciones.
+function cargoFirmante(autor) {
+  if (autor.cargoFirma) return autor.cargoFirma;
+  const cargo = (autor.cargo || '').replace(/Médico Internista \(Tratante\)/, 'Médico Tratante');
+  if (!cargo) return autor.unidad || '';
+  return autor.unidad ? `${cargo} de la ${autor.unidad}` : cargo;
+}
 
 // Revisores por defecto: solo los que firman todo protocolo. Las jefaturas de
 // unidad las decide cada matriz según qué unidades intervienen, así que la
@@ -414,7 +429,7 @@ function firmas(autor = AUTOR_POR_DEFECTO, revisores = REVISORES_POR_DEFECTO) {
     new TableRow({ children: [cL(['Aprobado por:', 'Director Técnico']), cR(1)] }),
     new TableRow({ children: [cL(['Revisado por:', ...revisores]),
       cR(revisores.length)] }),
-    new TableRow({ children: [cL(['Elaborado por:', autor.nombre, autor.cargo, autor.unidad]
+    new TableRow({ children: [cL(['Elaborado por:', cargoFirmante(autor)]
       .filter(Boolean)), cR(1)] }),
   ]});
 }

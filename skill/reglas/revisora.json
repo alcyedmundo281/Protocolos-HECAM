@@ -1,0 +1,112 @@
+{
+  "fuente": "docs/revision-16-julio-2026.docx",
+  "revision": "16 de julio de 2026",
+  "protocoloRevisado": "HECAM-MI-PR-001",
+  "nota": "Las 13 observaciones de la revisora, transcritas literalmente desde word/comments.xml del documento devuelto. El campo `texto` no se toca nunca: es su palabra. `ancla` es el fragmento del protocolo sobre el que colocó el comentario. `regla` es nuestra lectura, y `verificador` el script que la comprueba; ambos son revisables, el texto no.",
+  "observaciones": [
+    {
+      "id": 7,
+      "texto": "Revisar esta numeración, en relación a que se encuentra ya que inicia en 5",
+      "ancla": "9. ELIMINAR el término «sepsis severa» del registro — es obsoleto según Sepsis-3.",
+      "regla": "Cada lista numerada arranca en 1. En Word esto exige una instancia de numeración propia por lista: si dos listas comparten numId, la segunda continúa la cuenta de la primera.",
+      "verificador": "verificar_numeracion.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 8,
+      "texto": "Colocar el número y título de la tabla así como la fuente correspondiente",
+      "ancla": "Prioridad | Examen | Objetivo / Nota HECAM",
+      "regla": "Toda tabla lleva «Tabla N. Título» encima y «Fuente:» debajo. Sin excepción, y la fuente puede ser «Elaboración propia».",
+      "verificador": "verificar_fuentes_docx.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 10,
+      "texto": "Esta información corresponde a tratamiento farmacológico",
+      "ancla": "30 mL/kg de SS 0.9 % o Ringer Lactato en 3 horas si PAM < 65 mmHg o lactato > 4 mmol/L.",
+      "regla": "Todo lo que se administra al paciente va en 4.3 Plan Terapéutico, incluida la hidratación. Los cristaloides son un fármaco a estos efectos.",
+      "verificador": "verificar_farmacos.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 11,
+      "texto": "Colocar el número y título de la tabla así como la fuente correspondiente",
+      "ancla": "Tabla de resistencia antimicrobiana (TMP/SMX, Oxacilina, Linezolid, Vancomicina)",
+      "regla": "Repetición de la observación 8.",
+      "verificador": "verificar_fuentes_docx.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 12,
+      "texto": "Colocar el número y título de la tabla así como la fuente correspondiente",
+      "ancla": "Vancomicina 25-30 mg/kg/día IV; Pip/Tazo 4.5 g IV c/6h.",
+      "regla": "Repetición de la observación 8.",
+      "verificador": "verificar_fuentes_docx.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 14,
+      "texto": "Colocar el número y título de la tabla así como la fuente correspondiente",
+      "ancla": "PAM ≥ 65 mmHg Y lactato > 2 mmol/L pese a resucitación adecuada.",
+      "regla": "Repetición de la observación 8.",
+      "verificador": "verificar_fuentes_docx.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 16,
+      "texto": "Mejorar la redacción",
+      "ancla": "Revisar hemocultivos y cultivo del foco. Si microorganismo sensible a espectro más estrecho: DESESCALAR de forma obligatoria",
+      "regla": "Juicio de estilo sobre un pasaje concreto. No se puede comprobar por script.",
+      "verificador": null,
+      "estado": "manual"
+    },
+    {
+      "id": 18,
+      "texto": "Colocar el número y título de la tabla así como la fuente correspondiente",
+      "ancla": "PaO₂/FiO₂ para 2.850 m.s.n.m.; notificación de aislamientos CRE y XDR al PROA-HECAM.",
+      "regla": "Repetición de la observación 8.",
+      "verificador": "verificar_fuentes_docx.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 20,
+      "texto": "La información que constaba en algoritmo no la trasladé debido a que este se realiza en la coordinación de calidad con el personal de calidad",
+      "ancla": "…utilizando la herramienta Bizagi, el cual será realizado con el soporte de la Coordinación General de Control de Calidad.",
+      "regla": "La sección 5 lleva el algoritmo en prosa más la nota de que el diagrama Bizagi lo elabora Control de Calidad. El diagrama no es nuestro entregable.",
+      "verificador": "verificar_documento.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 22,
+      "texto": "Colocar el nombre completo del servicio Revisar en toda la tabla Unidad Técnica de Medicina Interna, Unidad Técnica de Cuidados Intensivos etc.",
+      "ancla": "MI",
+      "regla": "Nunca abreviar un servicio. Se escribe «Unidad Técnica de …» completo, también dentro de las tablas de indicadores.",
+      "verificador": "verificar_revisora.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 25,
+      "texto": "Tomar en cuenta el formato de cronograma establecido: Id | Nombre de la tarea | Comienzo | Fin | 2025 (Nov Dic Ene Feb Mar Abr May Jun Jul Ag Sep Oct Nov Dic); 1 Elaboración del Protocolo 29/11/2024 29/12/2024 x x; 2 Aprobación 01/01/2025 15/01/2025 x; 3 Difusión 16/01/2025 31/01/2025 x; 4 Implementación 01/02/2025 31/12/2025 x x x x x x x x x x x",
+      "ancla": "Anexo 1: Cronograma",
+      "regla": "El cronograma es una rejilla Gantt: cuatro columnas fijas (Id, Nombre de la tarea, Comienzo, Fin) y una ventana de catorce meses marcada con «x», con el año en una fila de cabecera propia que abarca los meses.",
+      "verificador": "verificar_revisora.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 28,
+      "texto": "Se deben colocar a todas la Coordinaciones y Jefaturas que intervienen en el protocolo, deben colocarse en orden jerárquico; se han agregado algunas continuar según corresponda",
+      "ancla": "Firmas de los involucrados",
+      "regla": "La lista de revisores depende de qué unidades intervienen. La coordinación general no absorbe a la unidad: ella misma añadió las jefaturas de Áreas Clínicas y de Cuidados Intensivos aunque sus coordinaciones ya firmaban.",
+      "verificador": "verificar_firmas.py",
+      "estado": "automatizada"
+    },
+    {
+      "id": 29,
+      "texto": "Colocar el cargo no el nombre ejemplo Oficinista de la Coordinación General de Control de Calidad",
+      "ancla": "Autor",
+      "regla": "En el bloque de firmas se imprime el cargo con su unidad, «{Cargo} de la {Unidad}», no el nombre propio. El nombre del autor permanece en la matriz y en el JATS, que es donde vive la autoría; lo que ella corrige es el impreso.",
+      "verificador": "verificar_firmas.py",
+      "estado": "automatizada"
+    }
+  ]
+}

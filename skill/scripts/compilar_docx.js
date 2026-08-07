@@ -267,11 +267,15 @@ function seccion9() {
   const s = seccion('9');
   const rol = (doc.author || [])[0] || {};
   const persona = g(rol, 'author', {});
+  // `nombre` viaja para el JATS y para los metadatos; el bloque de firmas
+  // imprime solo `cargoFirma` (observación 29). La matriz puede fijarlo
+  // literalmente cuando el cargo no se deduzca bien del par cargo/unidad.
   const autor = {
     nombre: [g(persona, 'honorificPrefix', ''), g(persona, 'name', '')]
       .filter(Boolean).join(' '),
     cargo: g(persona, 'jobTitle', ''),
     unidad: g(g(persona, 'memberOf', {}), 'name', ''),
+    cargoFirma: g(persona, 'cargoFirma', ''),
   };
   // Los revisores salen de la matriz, no de la biblioteca: cada protocolo
   // firma con las jefaturas de las unidades que intervienen en él.

@@ -14,6 +14,12 @@ Cada regla lleva anotado el comentario que la originó, de modo que si alguna
 resulta discutible se pueda rastrear hasta su fuente y renegociarla con ella en
 vez de borrarla del código.
 
+Sus trece observaciones están transcritas literalmente en
+skill/reglas/revisora.json, para que no dependan de conservar el .docx que nos
+devolvió. Al arrancar se comprueba que ese registro y el código no se hayan
+separado: toda observación que declare un verificador debe apuntar a un script
+que exista.
+
 Código de salida 0 si no hay hallazgos, 1 si los hay.
 """
 
@@ -21,6 +27,27 @@ import json
 import os
 import re
 import sys
+
+AQUI = os.path.dirname(os.path.abspath(__file__))
+REGISTRO = os.path.join(AQUI, "..", "reglas", "revisora.json")
+
+
+def registro_coherente():
+    """El registro de observaciones apunta a verificadores que existen."""
+    with open(REGISTRO, encoding="utf-8") as f:
+        obs = json.load(f)["observaciones"]
+    huerfanas = [o["id"] for o in obs
+                 if o.get("verificador")
+                 and not os.path.exists(os.path.join(AQUI, o["verificador"]))]
+    if huerfanas:
+        print("  FALLA: observaciones %s citan un verificador inexistente"
+              % huerfanas)
+    sin_cubrir = [o["id"] for o in obs
+                  if not o.get("verificador") and o.get("estado") != "manual"]
+    if sin_cubrir:
+        print("  FALLA: observaciones %s sin verificador ni marca «manual»"
+              % sin_cubrir)
+    return not (huerfanas or sin_cubrir)
 
 # ── reglas, con el comentario que las originó ────────────────────────────────
 
@@ -210,6 +237,9 @@ def main():
     if not rutas:
         print(__doc__)
         return 2
+
+    if not registro_coherente():
+        return 1
 
     total = 0
     for ruta in rutas:

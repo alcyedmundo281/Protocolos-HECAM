@@ -83,7 +83,7 @@
         "type": "Persona",
         "honorificPrefix": "Dr.",
         "name": "Frank Romo",
-        "jobTitle": "Médico Internista, Tratante de la Unidad Técnica de Medicina Interna",
+        "jobTitle": "Médico Internista (Tratante)",
         "schema:memberOf": {
           "type": "Organizacion",
           "name": "Unidad Técnica de Medicina Interna"
@@ -91,7 +91,8 @@
         "worksFor": {
           "type": "Organizacion",
           "name": "Hospital de Especialidades Carlos Andrade Marín"
-        }
+        },
+        "cargoFirma": "Médico Tratante de la Unidad Técnica de Medicina Interna"
       }
     }
   ],
@@ -103,11 +104,9 @@
     "roleName": "Revisión de forma y estilo editorial",
     "alcanceRevision": "forma",
     "instancia": "Coordinación General de Investigación",
-    "startDate": "2026-07-29",
     "description": "Fija el formato editorial de la serie completa de protocolos. No revisa el contenido científico.",
     "contributor": {
       "type": "Persona",
-      "name": "Revisora de Protocolos Clínicos de la Coordinación General de Investigación",
       "jobTitle": "Revisora de Protocolos Clínicos",
       "worksFor": {
         "type": "Organizacion",
@@ -1605,5 +1604,6 @@
       "name": "Control de cambios",
       "pagina": 16
     }
-  ]
+  ],
+  "fechaElaboracionTexto": "Julio 2026"
 }

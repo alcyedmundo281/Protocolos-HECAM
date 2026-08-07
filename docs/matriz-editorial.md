@@ -243,6 +243,13 @@ diagnóstico y terapéutico. La lista canónica vive en `ORDEN`, dentro de
 Un firmante que no aparezca en ninguna sección es herencia de otro protocolo y
 se retira: los tres protocolos nacieron con la misma lista de siete.
 
+**En «Elaborado por» se imprime el cargo, no el nombre.** Observación 29:
+«Colocar el cargo no el nombre ejemplo Oficinista de la Coordinación General de
+Control de Calidad». El patrón es `{Cargo} de la {Unidad}`, y la matriz lo
+declara en `author[].author.cargoFirma`. El nombre propio permanece en la
+matriz y viaja al JATS —la autoría es real y no se pierde—; lo que ella corrige
+es lo que se lee en el papel.
+
 ### 10. Control de cambios
 Tres columnas: `No. Versión | Fecha | Descripción del Cambio`.
 Protocolo nuevo → una fila: `1 | {fecha} | Creación del Protocolo.` más filas vacías.
@@ -251,6 +258,14 @@ Se conservan la primera y las dos últimas versiones.
 ---
 
 ## 5. Tipografía y geometría
+
+Los valores viven en `skill/reglas/formato.json`, extraídos del propio
+`HECAM-CC-FR-012-v3.docx`, y `verificar_tipografia.py` los comprueba sobre el
+`.docx` compilado. Esta tabla es su resumen legible, no la fuente.
+
+El formato oficial es **Arial**: así lo fija el estilo `Normal` de la norma. El
+`Times New Roman` que aparece en sus `docDefaults` es el respaldo de escritura
+compleja (`w:cs`), no la letra del documento; conviene no confundirlo.
 
 | Parámetro | Valor | En `docx` |
 |-----------|-------|-----------|

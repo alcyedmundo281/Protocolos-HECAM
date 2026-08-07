@@ -165,8 +165,20 @@ def revisar(ruta):
     desorden = [(a, b) for a, b in zip(revisores, revisores[1:])
                 if rango(a) > rango(b)]
 
+    # Observación 29: «Colocar el cargo no el nombre ejemplo Oficinista de la
+    # Coordinación General de Control de Calidad». El nombre sigue en la matriz
+    # —la autoría es real y va al JATS—, pero el impreso necesita un cargo, y
+    # sin `cargoFirma` el compilador no tiene de dónde sacarlo.
+    sin_cargo = [(a.get("author") or {}).get("name", "?")
+                 for a in doc.get("author") or []
+                 if not (a.get("author") or {}).get("cargoFirma")]
+
     print("Revisando %s" % doc.get("identifier"))
     print("  firmantes: %d (%d revisores)" % (len(firmas), len(revisores)))
+
+    for nombre in sin_cargo:
+        print("  FALLA: el autor %r no declara 'cargoFirma'; el bloque de "
+              "firmas imprimiría su nombre (observación 29)" % nombre)
 
     for unidad, cargo, ss in faltan:
         print("  FALLA: %s consta en la sección %s y no firma; falta «%s»"
@@ -179,10 +191,11 @@ def revisar(ruta):
         print("  AVISO: %s interviene en la sección %s; valorar «%s»"
               % (unidad, ss, cargo))
 
-    if not (faltan or sobran or desorden):
+    mal = faltan or sobran or desorden or sin_cargo
+    if not mal:
         print("  OK — firma quien interviene, en orden jerárquico.")
     print()
-    return 1 if (faltan or sobran or desorden) else 0
+    return 1 if mal else 0
 
 
 def main():

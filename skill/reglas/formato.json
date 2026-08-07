@@ -1,0 +1,102 @@
+{
+  "fuente": "docs/HECAM-CC-FR-012-v3.docx",
+  "norma": "HECAM-CC-FR-012 V3.0",
+  "nota": "El formato oficial, extraído del propio .docx normativo y no de su lectura de memoria. `tipografia.cuerpo` sale del estilo Normal de word/styles.xml, que fija Arial; el «Times New Roman» que aparece en docDefaults es solo el respaldo de escritura compleja (w:cs) y no es la fuente del documento. Donde el formato revisado de la revisora se aparta de FR-012, manda el revisado y así queda anotado en `desviaciones`.",
+
+  "tipografia": {
+    "familia": "Arial",
+    "familiaProhibidas": ["Calibri", "Times New Roman", "Corbel", "Tahoma", "Cambria"],
+    "cuerpoPt": 10,
+    "interlineado": 1.15,
+    "tamanosPermitidosHalfPoints": {
+      "88": "Portada: la palabra PROTOCOLO (44 pt)",
+      "56": "Estilo Title de la portada (28 pt)",
+      "32": "Portada: unidad y fecha (16 pt)",
+      "26": "Título de sección h1 (13 pt)",
+      "24": "Subtítulo de sección h2 (12 pt)",
+      "22": "Título de tabla (11 pt)",
+      "20": "Cuerpo del documento (10 pt)",
+      "18": "Bloque de firmas y notas al pie de tabla (9 pt)",
+      "17": "Celda de tabla (8.5 pt)",
+      "16": "Celda de tabla estrecha (8 pt)",
+      "15": "Leyenda del semáforo de resistencia (7.5 pt)",
+      "14": "Membrete y rejilla de meses del cronograma (7 pt)"
+    }
+  },
+
+  "geometria": {
+    "paginaDxa": [11906, 16838],
+    "margenIzquierdoDxa": 1700,
+    "margenDerechoDxa": 1400,
+    "anchoUtilTablasDxa": 8806
+  },
+
+  "colores": {
+    "azulInstitucional": "003366",
+    "azulClaro": "E8EFF7",
+    "grisBloques": "F2F2F2",
+    "semaforoVerde": "D6EAD8",
+    "semaforoAmbar": "FFF2CC",
+    "semaforoRojo": "FDDCDC"
+  },
+
+  "secciones": [
+    ["1", "Justificación"],
+    ["2", "Objetivos"],
+    ["3", "Glosario de términos / Abreviaciones"],
+    ["4", "Procedimiento (Plan de Acción/Actuación)"],
+    ["4.1", "Evaluación inicial del paciente"],
+    ["4.2", "Diagnóstico / Identificación de problemas basados en las necesidades del paciente"],
+    ["4.3", "Plan Terapéutico / Intervenciones no farmacológicas"],
+    ["4.4", "Clasificación de severidad / Manejo de Complicaciones"],
+    ["4.5", "Plan de Egreso de la Unidad/Seguimiento / Evaluación integral"],
+    ["4.6", "Nivel de evidencia y grado de recomendaciones"],
+    ["5", "Algoritmo de actuación"],
+    ["6", "Indicadores"],
+    ["7", "Bibliografía"],
+    ["8", "Anexos"],
+    ["9", "Firmas de los involucrados"],
+    ["10", "Control de cambios"]
+  ],
+
+  "firmas": {
+    "imprimirCargoNoNombre": true,
+    "patronCargo": "{cargo} de la {unidad}",
+    "ejemploDeLaRevisora": "Oficinista de la Coordinación General de Control de Calidad",
+    "observacion": 29
+  },
+
+  "desviaciones": [
+    {
+      "elemento": "Citas",
+      "fr012": "(N) entre paréntesis",
+      "vigente": "superíndice, sin paréntesis"
+    },
+    {
+      "elemento": "Bibliografía",
+      "fr012": "numerada",
+      "vigente": "en orden de aparición"
+    },
+    {
+      "elemento": "Revisores",
+      "fr012": "4 genéricos",
+      "vigente": "una jefatura por unidad interviniente, en orden jerárquico",
+      "observacion": 28
+    },
+    {
+      "elemento": "Sección 1",
+      "fr012": "Justificación y Alcance",
+      "vigente": "Justificación"
+    },
+    {
+      "elemento": "Sección 6",
+      "fr012": "Indicadores de Calidad",
+      "vigente": "Indicadores"
+    },
+    {
+      "elemento": "Membrete",
+      "fr012": "incluye fila «Unidad»",
+      "vigente": "sin fila «Unidad»; lleva «Página # de #»"
+    }
+  ]
+}

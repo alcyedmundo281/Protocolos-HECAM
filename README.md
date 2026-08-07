@@ -194,11 +194,29 @@ produccion/             un directorio por protocolo, con su código instituciona
     salida/
 
 docs/                   matriz editorial, mapeo JATS, datos institucionales, valores de altitud
+skill/reglas/           la normativa como datos: revisora.json y formato.json
 ```
 
 `docs/matriz-editorial.md` recoge el formato vigente de la revisora y **manda
 sobre el formato genérico HECAM-CC-FR-012**. Cuando lleguen correcciones nuevas,
 se actualiza ese archivo primero y luego se recompila.
+
+### La normativa como datos
+
+`skill/reglas/` guarda lo que antes solo existía dentro de dos `.docx` y en
+comentarios sueltos del código:
+
+- **`revisora.json`** — sus trece observaciones del 16 de julio de 2026,
+  transcritas literalmente desde `word/comments.xml`, con el fragmento sobre el
+  que colocó cada una, la regla que deducimos y el script que la comprueba. El
+  campo `texto` es su palabra y no se edita; lo demás es discutible.
+- **`formato.json`** — el HECAM-CC-FR-012 V3.0 en datos: tipografía, geometría,
+  colores, nombres de sección y las desviaciones del formato revisado respecto
+  del genérico.
+
+No son documentación: `verificar_tipografia.py` lee `formato.json` para
+comprobar el `.docx`, y `verificar_revisora.py` falla si una observación cita un
+verificador que no existe. Si alguien borra un script, el registro lo delata.
 
 ---
 
