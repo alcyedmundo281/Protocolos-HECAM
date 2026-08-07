@@ -64,7 +64,7 @@ REVISORES = [
     "Coordinador General de Áreas Críticas",
     "Coordinador General de Diagnóstico y Tratamiento",
     "Jefe de Áreas Clínicas (Presidente PROA)",
-    "Jefe de la Unidad de Cuidados Intensivos Adultos",
+    "Jefe de la Unidad Técnica de Cuidados Intensivos",
 ]
 
 TIPOS_INDICADOR = ("diagnóstico", "seguimiento", "tratamiento", "resultado")

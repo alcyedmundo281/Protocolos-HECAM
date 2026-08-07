@@ -218,7 +218,7 @@
       "position": 7,
       "contributor": {
         "type": "Persona",
-        "jobTitle": "Jefe de la Unidad de Cuidados Intensivos Adultos"
+        "jobTitle": "Jefe de la Unidad Técnica de Cuidados Intensivos"
       }
     },
     {
@@ -697,7 +697,7 @@
             },
             {
               "type": "Parrafo",
-              "text": "**Criterios de traslado a Unidad de Cuidados Intensivos.** Convulsiones o estado epiléptico; puntuación de Glasgow igual o menor de 8; necesidad de vía aérea artificial; sodio inicial menor de 110 mmol/L con síntomas neurológicos; o corrección excesiva con deterioro neurológico progresivo."
+              "text": "**Criterios de traslado a la Unidad Técnica de Cuidados Intensivos.** Convulsiones o estado epiléptico; puntuación de Glasgow igual o menor de 8; necesidad de vía aérea artificial; sodio inicial menor de 110 mmol/L con síntomas neurológicos; o corrección excesiva con deterioro neurológico progresivo."
             },
             {
               "type": "Parrafo",

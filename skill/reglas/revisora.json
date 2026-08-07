@@ -80,9 +80,10 @@
       "id": 22,
       "texto": "Colocar el nombre completo del servicio Revisar en toda la tabla Unidad Técnica de Medicina Interna, Unidad Técnica de Cuidados Intensivos etc.",
       "ancla": "MI",
-      "regla": "Nunca abreviar un servicio. Se escribe «Unidad Técnica de …» completo, también dentro de las tablas de indicadores.",
+      "regla": "Nunca abreviar un servicio. Se escribe «Unidad Técnica de …» completo, también dentro de las tablas de indicadores y en el bloque de firmas.",
       "verificador": "verificar_revisora.py",
-      "estado": "automatizada"
+      "estado": "automatizada",
+      "nota": "En el bloque de firmas ella misma escribió «Jefe de la Unidad de Cuidados Intensivos Adultos», sin el «Técnica» que exige aquí. El autor lo corrigió a «Jefe de la Unidad Técnica de Cuidados Intensivos». La comprobación se aplica también a los cargos, de modo que el descuido no pueda volver por esa vía."
     },
     {
       "id": 25,

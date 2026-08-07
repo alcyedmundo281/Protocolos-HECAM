@@ -10,9 +10,13 @@ jerárquico; se han agregado algunas continuar según corresponda».
 
 La regla se lee en lo que ella misma añadió. Al bloque de coordinaciones
 generales le sumó dos jefaturas de unidad —Áreas Clínicas (PROA) y Cuidados
-Intensivos Adultos— que ya quedaban cubiertas por su coordinación. Es decir: la
+Intensivos— que ya quedaban cubiertas por su coordinación. Es decir: la
 coordinación general no absorbe a la unidad. Cada unidad que interviene firma
 por su cuenta, y «continuar según corresponda» significa seguir esa lista.
+
+Ella escribió esa jefatura como «Jefe de la Unidad de Cuidados Intensivos
+Adultos». El nombre correcto es «Unidad Técnica de Cuidados Intensivos», el que
+su propia observación 22 exige; corregido por el autor del protocolo.
 
 Por eso el script no da por buena la cobertura jerárquica. Cruza las unidades
 que el protocolo nombra *en su contenido* contra los cargos del bloque de
@@ -46,7 +50,7 @@ UNIDADES = [
      "Jefe de la Unidad Técnica de Emergencia"),
     ("Cuidados Intensivos",
      r"Cuidados Intensivos|\bUCI\b",
-     "Jefe de la Unidad de Cuidados Intensivos Adultos"),
+     "Jefe de la Unidad Técnica de Cuidados Intensivos"),
     ("Medicina Interna",
      r"Medicina Interna",
      "Jefe de la Unidad Técnica de Medicina Interna"),
@@ -105,7 +109,7 @@ ORDEN = [
     "Coordinador General de Áreas Críticas",
     "Coordinador General de Diagnóstico y Tratamiento",
     "Jefe de Áreas Clínicas (Presidente PROA)",
-    "Jefe de la Unidad de Cuidados Intensivos Adultos",
+    "Jefe de la Unidad Técnica de Cuidados Intensivos",
     "Jefe de la Unidad Técnica de Emergencia",
     "Jefe de la Unidad Técnica de Medicina Interna",
     "Jefe de la Unidad Técnica de Infectología",

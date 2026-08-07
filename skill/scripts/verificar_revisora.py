@@ -64,6 +64,16 @@ ABREV_SERVICIO = re.compile(
 # acompañado de su expansión o del guion institucional.
 ADMITIDAS = re.compile(r"PROA[- ]HECAM|Programa de Optimización")
 
+# La otra mitad del mismo comentario 22: el nombre completo no es solo «no
+# abreviar», es «Unidad **Técnica** de …». La propia revisora escribió «Jefe de
+# la Unidad de Cuidados Intensivos Adultos» en el bloque de firmas, olvidando el
+# «Técnica» que ella misma exige. Se comprueba para que no vuelva a entrar por
+# ninguna vía, incluida la suya.
+UNIDAD_SIN_TECNICA = re.compile(
+    r"Unidad de (?!Cuidados Intensivos Neonatales)"
+    r"(Cuidados Intensivos|Medicina Interna|Emergencia|Nefrología|Urología|"
+    r"Infectología|Laboratorio|Imagenología|Farmacia|Nutrición)")
+
 # «Tomar en cuenta el formato de cronograma establecido» (comentario 25).
 # Las columnas se leen de skill/reglas/formato.json, que es la misma fuente que
 # usa hecam-lib.js para componerlas. Antes había una copia en cada sitio, de
@@ -179,6 +189,20 @@ def revisar(ruta):
                   "responsable %r: escribir «Unidad Técnica de …» en vez de %r"
                   % (resp[:56], m.group(1)))
 
+    # El nombre completo lleva «Técnica», en el cuerpo y en el bloque de firmas.
+    for seccion, texto in textos_con_ruta(doc):
+        m = UNIDAD_SIN_TECNICA.search(texto)
+        if m:
+            anota("unidad-sin-tecnica", seccion,
+                  "«Unidad de %s» → «Unidad Técnica de %s»"
+                  % (m.group(1), m.group(1)))
+    for c in doc.get("contributor") or []:
+        cargo = (c.get("contributor") or {}).get("jobTitle") or ""
+        m = UNIDAD_SIN_TECNICA.search(cargo)
+        if m:
+            anota("unidad-sin-tecnica", "9 / firmas",
+                  "cargo %r: falta «Técnica»" % cargo[:56])
+
     # ── 4. Numeración escrita a mano ─────────────────────────────────────────
     vistos = {}
     for seccion, texto in textos_con_ruta(doc):
@@ -238,6 +262,7 @@ ETIQUETAS = {
     "tabla-sin-fuente": "Tabla sin fuente declarada",
     "cronograma": "Cronograma fuera del formato establecido",
     "servicio-abreviado": "Servicio abreviado en vez de nombre completo",
+    "unidad-sin-tecnica": "«Unidad de …» sin el «Técnica» del nombre oficial",
     "numeracion-escrita": "Numeración escrita en el texto",
     "cronograma-tareas": "Cronograma fuera del rango de 8–10 actividades",
     "indice-divergente": "El contenido no repite el nombre de la sección",

@@ -272,6 +272,13 @@ protocolo nombre en la **sección 1 (justificación), 5 (control de calidad) o 6
 `verificar_firmas.py` lo señala como aviso y la decisión es de Control de
 Calidad.
 
+Los cargos nombran la unidad completa: «Jefe de la **Unidad Técnica** de …»,
+igual que el cuerpo del documento (observación 22). Ella escribió «Jefe de la
+Unidad de Cuidados Intensivos Adultos», sin el «Técnica» que su propia
+observación exige; corregido a **«Jefe de la Unidad Técnica de Cuidados
+Intensivos»** por decisión del autor. `verificar_revisora.py` comprueba también
+los cargos, no solo el cuerpo.
+
 Orden jerárquico: Director Técnico → Coordinaciones Generales → Jefe de Áreas
 Clínicas → jefaturas de unidad → Líder de Enfermería. Entre las jefaturas de
 unidad, que no se ordenan entre sí, se sigue el recorrido del paciente:
