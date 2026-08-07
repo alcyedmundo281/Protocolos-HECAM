@@ -2226,7 +2226,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 2,
-      "primeraAparicion": "2",
+      "primeraAparicion": "1",
       "vancouver": "Rudd KE, Johnson SC, Agesa KM, Shackelford KA, Tsoi D, Kievlan DR, et al. Global, regional, and national sepsis incidence and mortality, 1990-2017: analysis for the Global Burden of Disease Study. Lancet. 2020;395(10219):200–11. doi:10.1016/S0140-6736(19)32989-7",
       "name": "Global, regional, and national sepsis incidence and mortality, 1990-2017: analysis for the Global Burden of Disease Study",
       "datePublished": "2020",
@@ -2242,25 +2242,25 @@
     {
       "type": "ArticuloAcademico",
       "position": 3,
-      "primeraAparicion": "3",
+      "primeraAparicion": "1",
       "vancouver": "World Health Organization. Improving the prevention, diagnosis and clinical management of sepsis. Resolution WHA70.7. Geneva: WHO; 2017."
     },
     {
       "type": "ArticuloAcademico",
       "position": 4,
-      "primeraAparicion": "4",
+      "primeraAparicion": "1",
       "vancouver": "Palacios Rodas R, Narváez M. Informe Técnico SVPCS-DNVE-2026-02: Situación de la Resistencia Antimicrobiana en Ecuador 2020–2024. Quito: Dirección Nacional de Vigilancia Epidemiológica, Ministerio de Salud Pública / INSPI–CRN-RAM; 15 de enero de 2026."
     },
     {
       "type": "ArticuloAcademico",
       "position": 5,
-      "primeraAparicion": "5",
+      "primeraAparicion": "1",
       "vancouver": "Andrade Estévez AC, Gordón A, Cevallos C. Análisis Acumulado de Resistencia Antibiótica 2025. Cartillas de Resistencia 2025. Quito: Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica, HECAM/IESS; abril de 2026."
     },
     {
       "type": "ArticuloAcademico",
       "position": 6,
-      "primeraAparicion": "6",
+      "primeraAparicion": "1",
       "vancouver": "Gonzalez-Garcia M, Maldonado D, Barrero M, Casas A, Perez-Padilla R, Torres-Duque CA. Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude. Eur J Appl Physiol. 2020;120(12):2729–36. doi:10.1007/s00421-020-04498-z",
       "name": "Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude",
       "datePublished": "2020",
@@ -2276,7 +2276,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 7,
-      "primeraAparicion": "7",
+      "primeraAparicion": "1",
       "vancouver": "Eltzschig HK, Carmeliet P. Hypoxia and inflammation. N Engl J Med. 2011;364(7):656–65. doi:10.1056/NEJMra0910283",
       "name": "Hypoxia and inflammation",
       "datePublished": "2011",
@@ -2292,7 +2292,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 8,
-      "primeraAparicion": "8",
+      "primeraAparicion": "1",
       "vancouver": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Crit Care Med. 2021;49(11):e1063–e1143. doi:10.1097/CCM.0000000000005337",
       "name": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
       "datePublished": "2021",
@@ -2308,7 +2308,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 9,
-      "primeraAparicion": "9",
+      "primeraAparicion": "2",
       "vancouver": "Barlam TF, Cosgrove SE, Abbo LM, MacDougall C, Schuetz AN, Septimus EJ, et al. Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America. Clin Infect Dis. 2016;62(10):e51–77. doi:10.1093/cid/ciw118",
       "name": "Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America",
       "datePublished": "2016",
@@ -2324,13 +2324,13 @@
     {
       "type": "ArticuloAcademico",
       "position": 10,
-      "primeraAparicion": "10",
+      "primeraAparicion": "2",
       "vancouver": "Ministerio de Salud Pública del Ecuador. Cuadro Nacional de Medicamentos Básicos, 10.ª revisión. Quito: MSP; 2022."
     },
     {
       "type": "ArticuloAcademico",
       "position": 11,
-      "primeraAparicion": "11",
+      "primeraAparicion": "3",
       "vancouver": "Shankar-Hari M, Phillips GS, Levy ML, Seymour CW, Liu VX, Deutschman CS, et al. Developing a new definition and assessing new clinical criteria for septic shock. JAMA. 2016;315(8):775–87. doi:10.1001/jama.2016.0289",
       "name": "Developing a New Definition and Assessing New Clinical Criteria for Septic Shock: For the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
       "datePublished": "2016",
@@ -2346,7 +2346,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 12,
-      "primeraAparicion": "12",
+      "primeraAparicion": "3",
       "vancouver": "Tamma PD, Aitken SL, Bonomo RA, Mathers AJ, van Duin D, Clancy CJ. Infectious Diseases Society of America 2022 guidance on the treatment of extended-spectrum β-lactamase producing Enterobacterales (ESBL-E), carbapenem-resistant Enterobacterales (CRE), and Pseudomonas aeruginosa with difficult-to-treat resistance (DTR-P. aeruginosa). Clin Infect Dis. 2022;75(2):187–212. doi:10.1093/cid/ciac268",
       "name": "Infectious Diseases Society of America 2022 Guidance on the Treatment of Extended-Spectrum β-lactamase Producing Enterobacterales (ESBL-E), Carbapenem-Resistant Enterobacterales (CRE), and Pseudomonas aeruginosa with Difficult-to-Treat Resistance (DTR-P. aeruginosa)",
       "datePublished": "2022",
@@ -2362,7 +2362,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 13,
-      "primeraAparicion": "13",
+      "primeraAparicion": "3",
       "vancouver": "Vincent JL, Moreno R, Takala J, Willatts S, De Mendonça A, Bruining H, et al. The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. Intensive Care Med. 1996;22(7):707–10. doi:10.1007/BF01709751",
       "name": "The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. On behalf of the Working Group on Sepsis-Related Problems of the European Society of Intensive Care Medicine",
       "datePublished": "1996",
@@ -2378,7 +2378,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 14,
-      "primeraAparicion": "14",
+      "primeraAparicion": "3",
       "vancouver": "Seymour CW, Liu VX, Iwashyna TJ, Brunkhorst FM, Rea TD, Scherag A, et al. Assessment of Clinical Criteria for Sepsis: for the Third International Consensus Definitions for Sepsis and Septic Shock. JAMA. 2016;315(8):762–74. doi:10.1001/jama.2016.0288",
       "name": "Assessment of Clinical Criteria for Sepsis: For the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
       "datePublished": "2016",
@@ -2394,7 +2394,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 15,
-      "primeraAparicion": "15",
+      "primeraAparicion": "4.3",
       "vancouver": "Levy MM, Dellinger RP, Townsend SR, Linde-Zwirble WT, Marshall JC, Bion J, et al. The Surviving Sepsis Campaign: results of an international guideline-based performance improvement program targeting severe sepsis. Crit Care Med. 2010;38(2):367–74. doi:10.1097/CCM.0b013e3181cb0cdc",
       "name": "The Surviving Sepsis Campaign: results of an international guideline-based performance improvement program targeting severe sepsis",
       "datePublished": "2010",
@@ -2410,7 +2410,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 16,
-      "primeraAparicion": "16",
+      "primeraAparicion": "4.3",
       "vancouver": "Marik PE, Farkas JD. The Changing Paradigm of Sepsis: Early Diagnosis, Early Antibiotics, Early Pressors, and Early Adjuvant Treatment. Crit Care Med. 2018;46(10):1690–2. doi:10.1097/CCM.0000000000003310",
       "name": "The Changing Paradigm of Sepsis: Early Diagnosis, Early Antibiotics, Early Pressors, and Early Adjuvant Treatment",
       "datePublished": "2018",
@@ -2426,19 +2426,19 @@
     {
       "type": "ArticuloAcademico",
       "position": 17,
-      "primeraAparicion": "17",
+      "primeraAparicion": "4.3",
       "vancouver": "Ministerio de Salud Pública del Ecuador. Oficio Nro. MSP-CGSSR-2026-0008-O. Traslado de información complementaria para la actualización del Cuadro Nacional de Medicamentos Básicos (Informe RAM 2020–2024). Quito: Coordinación General de Sostenibilidad del Sistema y Recursos, MSP; 11 de febrero de 2026."
     },
     {
       "type": "ArticuloAcademico",
       "position": 18,
-      "primeraAparicion": "18",
+      "primeraAparicion": "4.4",
       "vancouver": "Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial 5316. Normas para el manejo de sepsis e infecciones nosocomiales. Quito: MSP; 2020."
     },
     {
       "type": "ArticuloAcademico",
       "position": 19,
-      "primeraAparicion": "19",
+      "primeraAparicion": "4.4",
       "vancouver": "Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial Nro. 00001-2025. Norma Técnica del Sistema Integrado de Vigilancia Epidemiológica (SIVE). Registro Oficial Tercer Suplemento N.° 107; 21 de agosto de 2025."
     }
   ],

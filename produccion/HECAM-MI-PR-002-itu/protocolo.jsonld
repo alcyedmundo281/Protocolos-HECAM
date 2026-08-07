@@ -2405,13 +2405,13 @@
     {
       "type": "ArticuloAcademico",
       "position": 2,
-      "primeraAparicion": "2",
+      "primeraAparicion": "1",
       "vancouver": "European Association of Urology. EAU Guidelines on Urological Infections. Arnhem: European Association of Urology; 2023. ISBN 978-94-92671-19-6."
     },
     {
       "type": "ArticuloAcademico",
       "position": 3,
-      "primeraAparicion": "3",
+      "primeraAparicion": "1",
       "vancouver": "Singer M, Deutschman CS, Seymour CW, Shankar-Hari M, Annane D, Bauer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):801–10. doi:10.1001/jama.2016.0287",
       "name": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
       "datePublished": "2016",
@@ -2427,19 +2427,19 @@
     {
       "type": "ArticuloAcademico",
       "position": 4,
-      "primeraAparicion": "4",
+      "primeraAparicion": "1",
       "vancouver": "Palacios Rodas R, Narváez M. Informe Técnico SVPCS-DNVE-2026-02: Situación de la Resistencia Antimicrobiana en Ecuador 2020–2024. Quito: Dirección Nacional de Vigilancia Epidemiológica, Ministerio de Salud Pública / INSPI–CRN-RAM; 15 de enero de 2026."
     },
     {
       "type": "ArticuloAcademico",
       "position": 5,
-      "primeraAparicion": "5",
+      "primeraAparicion": "1",
       "vancouver": "Andrade Estévez AC, Gordón A, Cevallos C. Análisis Acumulado de Resistencia Antibiótica 2025. Cartillas de Resistencia 2025. Quito: Laboratorio de Bacteriología, Unidad Técnica de Patología Clínica, HECAM/IESS; abril de 2026."
     },
     {
       "type": "ArticuloAcademico",
       "position": 6,
-      "primeraAparicion": "6",
+      "primeraAparicion": "1",
       "vancouver": "Pitout JD, Laupland KB. Extended-spectrum beta-lactamase-producing Enterobacteriaceae: an emerging public-health concern. Lancet Infect Dis. 2008;8(3):159–66. doi:10.1016/S1473-3099(08)70041-0",
       "name": "Extended-spectrum beta-lactamase-producing Enterobacteriaceae: an emerging public-health concern",
       "datePublished": "2008",
@@ -2455,7 +2455,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 7,
-      "primeraAparicion": "7",
+      "primeraAparicion": "1",
       "vancouver": "Tamma PD, Aitken SL, Bonomo RA, Mathers AJ, van Duin D, Clancy CJ. Infectious Diseases Society of America 2022 guidance on the treatment of extended-spectrum β-lactamase producing Enterobacterales (ESBL-E), carbapenem-resistant Enterobacterales (CRE), and Pseudomonas aeruginosa with difficult-to-treat resistance (DTR-P. aeruginosa). Clin Infect Dis. 2022;75(2):187–212. doi:10.1093/cid/ciac268",
       "name": "Infectious Diseases Society of America 2022 Guidance on the Treatment of Extended-Spectrum β-lactamase Producing Enterobacterales (ESBL-E), Carbapenem-Resistant Enterobacterales (CRE), and Pseudomonas aeruginosa with Difficult-to-Treat Resistance (DTR-P. aeruginosa)",
       "datePublished": "2022",
@@ -2471,7 +2471,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 8,
-      "primeraAparicion": "8",
+      "primeraAparicion": "1",
       "vancouver": "Gonzalez-Garcia M, Maldonado D, Barrero M, Casas A, Perez-Padilla R, Torres-Duque CA. Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude. Eur J Appl Physiol. 2020;120(12):2729–36. doi:10.1007/s00421-020-04498-z",
       "name": "Arterial blood gases and ventilation at rest by age and sex in an adult Andean population resident at high altitude",
       "datePublished": "2020",
@@ -2487,13 +2487,13 @@
     {
       "type": "ArticuloAcademico",
       "position": 9,
-      "primeraAparicion": "9",
+      "primeraAparicion": "1",
       "vancouver": "Ministerio de Salud Pública del Ecuador. Oficio Nro. MSP-CGSSR-2026-0008-O. Traslado de información complementaria para la actualización del Cuadro Nacional de Medicamentos Básicos (Informe RAM 2020–2024). Quito: Coordinación General de Sostenibilidad del Sistema y Recursos, MSP; 11 de febrero de 2026."
     },
     {
       "type": "ArticuloAcademico",
       "position": 10,
-      "primeraAparicion": "10",
+      "primeraAparicion": "2",
       "vancouver": "Barlam TF, Cosgrove SE, Abbo LM, MacDougall C, Schuetz AN, Septimus EJ, et al. Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America. Clin Infect Dis. 2016;62(10):e51–77. doi:10.1093/cid/ciw118",
       "name": "Implementing an Antibiotic Stewardship Program: Guidelines by the Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America",
       "datePublished": "2016",
@@ -2509,13 +2509,13 @@
     {
       "type": "ArticuloAcademico",
       "position": 11,
-      "primeraAparicion": "11",
+      "primeraAparicion": "2",
       "vancouver": "Ministerio de Salud Pública del Ecuador. Cuadro Nacional de Medicamentos Básicos, 10.ª revisión. Quito: MSP; 2022."
     },
     {
       "type": "ArticuloAcademico",
       "position": 12,
-      "primeraAparicion": "12",
+      "primeraAparicion": "3",
       "vancouver": "Hooton TM, Bradley SF, Cardenas DD, Colgan R, Geerlings SE, Rice JC, et al. Diagnosis, prevention, and treatment of catheter-associated urinary tract infection in adults: 2009 International Clinical Practice Guidelines from the Infectious Diseases Society of America. Clin Infect Dis. 2010;50(5):625–63. doi:10.1086/650482",
       "name": "Diagnosis, prevention, and treatment of catheter-associated urinary tract infection in adults: 2009 International Clinical Practice Guidelines from the Infectious Diseases Society of America",
       "datePublished": "2010",
@@ -2531,7 +2531,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 13,
-      "primeraAparicion": "13",
+      "primeraAparicion": "3",
       "vancouver": "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int Suppl. 2013;3(1):1–150. doi:10.1038/kisup.2012.73",
       "doi": "10.1038/kisup.2012.73",
       "url": "https://doi.org/10.1038/kisup.2012.73",
@@ -2540,13 +2540,13 @@
     {
       "type": "ArticuloAcademico",
       "position": 14,
-      "primeraAparicion": "14",
+      "primeraAparicion": "3",
       "vancouver": "Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial Nro. 00001-2025. Norma Técnica del Sistema Integrado de Vigilancia Epidemiológica (SIVE). Registro Oficial Tercer Suplemento N.° 107; 21 de agosto de 2025."
     },
     {
       "type": "ArticuloAcademico",
       "position": 15,
-      "primeraAparicion": "15",
+      "primeraAparicion": "4.3",
       "vancouver": "Evans L, Rhodes A, Alhazzani W, Antonelli M, Coopersmith CM, French C, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Crit Care Med. 2021;49(11):e1063–e1143. doi:10.1097/CCM.0000000000005337",
       "name": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
       "datePublished": "2021",
@@ -2562,7 +2562,7 @@
     {
       "type": "ArticuloAcademico",
       "position": 16,
-      "primeraAparicion": "16",
+      "primeraAparicion": "4.3",
       "vancouver": "Carmeli Y, Armstrong J, Laud PJ, Newell P, Stone G, Wardman A, et al. Ceftazidime-avibactam or best available therapy in patients with ceftazidime-resistant Enterobacteriaceae and Pseudomonas aeruginosa complicated urinary tract infections or complicated intra-abdominal infections (REPRISE): a randomised, pathogen-directed, phase 3 study. Lancet Infect Dis. 2016;16(6):661–73. doi:10.1016/S1473-3099(16)30004-4",
       "name": "Ceftazidime-avibactam or best available therapy in patients with ceftazidime-resistant Enterobacteriaceae and Pseudomonas aeruginosa complicated urinary tract infections or complicated intra-abdominal infections (REPRISE): a randomised, pathogen-directed, phase 3 study",
       "datePublished": "2016",
@@ -2578,13 +2578,13 @@
     {
       "type": "ArticuloAcademico",
       "position": 17,
-      "primeraAparicion": "17",
+      "primeraAparicion": "4.5",
       "vancouver": "World Health Organization. Global Antimicrobial Resistance and Use Surveillance System (GLASS) Report 2023. Geneva: WHO; 2023."
     },
     {
       "type": "ArticuloAcademico",
       "position": 18,
-      "primeraAparicion": "18",
+      "primeraAparicion": "8",
       "vancouver": "Rodríguez-Baño J, Cisneros JM, Cobos-Trigueros N, Fresco G, Navarro-San Francisco C, Gudiol C, et al. Diagnosis and antimicrobial treatment of invasive infections due to multidrug-resistant Enterobacteriaceae. Enferm Infecc Microbiol Clin. 2015;33(5):337.e1–337.e21. doi:10.1016/j.eimc.2014.11.009",
       "name": "Diagnosis and antimicrobial treatment of invasive infections due to multidrug-resistant Enterobacteriaceae. Guidelines of the Spanish Society of Infectious Diseases and Clinical Microbiology",
       "datePublished": "2015",
