@@ -187,17 +187,29 @@ Corregido por la revisora el **20 de julio de 2026**: «Tomar en cuenta el forma
 de cronograma establecido». Sustituye a las columnas anteriores —ID, Tarea,
 Responsable, Inicio, Fin, Recursos—, que ya no se usan.
 
-| Id | Nombre de la tarea | Comienzo | Fin | *columnas de mes* |
-|----|--------------------|----------|-----|-------------------|
-| 1 | Elaboración del Protocolo | 29/11/2024 | 29/12/2024 | x x |
-| 2 | Aprobación | 01/01/2025 | 15/01/2025 | x |
+**Dos filas de cabecera.** El año va en la primera, abarcando toda la rejilla de
+meses; los nombres de mes en la segunda. Las cuatro columnas fijas se combinan
+verticalmente entre ambas filas:
 
-Las columnas de mes forman una rejilla tipo Gantt y se marcan con `x` en los
-meses que abarca cada tarea. La ventana de meses no tiene que cubrir el final de
-la última tarea: la columna **Fin** es la que declara la fecha real.
+```
+| Id | Nombre de la tarea | Comienzo   | Fin        |            2025           |
+|    |                    |            |            | Nov | Dic | Ene | … | Dic |
+|  1 | Elaboración        | 29/11/2024 | 29/12/2024 |  x  |  x  |     |   |     |
+|  2 | Aprobación         | 01/01/2025 | 15/01/2025 |     |     |  x  |   |     |
+|  4 | Implementación     | 01/02/2025 | 31/12/2025 |     |     |     | x |  x  |
+```
 
-Se pierden «Responsable» y «Recursos». Si alguna de las dos llevaba una cita,
-hay que reubicarla o la referencia queda huérfana en la bibliografía.
+**Catorce columnas de mes**, como en el modelo de la revisora. Se marcan con `x`
+los meses que abarca cada tarea. La ventana no tiene que cubrir el final de la
+última tarea: la columna **Fin** es la que declara la fecha real.
+
+Lo compone `cronograma()` en `lib/hecam-lib.js`, que no se puede sustituir por
+`mkT()`: esta solo admite una fila de cabecera y los meses necesitan márgenes y
+cuerpo menores para caber en el ancho de la página.
+
+Se pierden «Responsable» y «Recursos» respecto al formato anterior. Si alguna de
+las dos llevaba una cita, hay que reubicarla o la referencia queda huérfana en la
+bibliografía; pasó con la referencia 20 de hiponatremia.
 
 Imágenes numeradas y centradas: título `Imagen N: Nombre`, `Fuente:` al pie.
 

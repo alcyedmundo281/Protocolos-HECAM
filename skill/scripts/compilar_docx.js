@@ -93,8 +93,15 @@ function bloque(b) {
       const titulo = g(b, 'titulo');
       if (titulo) salida.push(L.caption(titulo));
       const filas = g(b, 'filas', []) || [];
-      salida.push(tipo === 'Tabla' ? L.mkT(columnas(b), filas)
-                                   : L.rTable(columnas(b), filas));
+      // El cronograma lleva dos filas de cabecera, con el año abarcando la
+      // rejilla de meses; mkT solo admite una, así que se compone aparte.
+      const anio = g(b, 'anioCabecera');
+      if (anio) {
+        salida.push(L.cronograma(anio, (g(b, 'columnas', []) || []).slice(4), filas));
+      } else {
+        salida.push(tipo === 'Tabla' ? L.mkT(columnas(b), filas)
+                                     : L.rTable(columnas(b), filas));
+      }
       const fuente = g(b, 'fuente');
       if (fuente) salida.push(L.note('Fuente: ' + fuente));
       return salida;
@@ -238,7 +245,14 @@ function seccion8() {
     const yaHayTabla = cuerpo.some((b) => String(g(b, 'type', '')).startsWith('Tabla'));
     const filas = g(a, 'filas');
     if (!yaHayTabla && filas && filas.length) {
-      out.push(L.mkT(columnas(a), filas));
+      // El cronograma se compone aparte: lleva dos filas de cabecera, con el año
+      // abarcando la rejilla de meses, y mkT solo admite una.
+      const anio = g(a, 'anioCabecera');
+      if (anio) {
+        out.push(L.cronograma(anio, (g(a, 'columnas', []) || []).slice(4), filas));
+      } else {
+        out.push(L.mkT(columnas(a), filas));
+      }
       // La fuente del anexo se maqueta también por esta vía; olvidarla dejaba
       // la tabla sin atribución y, si la fuente llevaba una cita, rompía el
       // orden correlativo de la bibliografía.

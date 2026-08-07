@@ -415,6 +415,64 @@ function firmas(autor = AUTOR_POR_DEFECTO) {
 }
 
 // ── Control de cambios (creación) ─────────────────────────────────────────────
+// Cronograma en el formato que fija la revisora: cuatro columnas fijas y una
+// rejilla de meses marcada con «x», con el año en una fila de cabecera propia
+// que abarca los meses. No se puede componer con mkT, que solo admite una fila
+// de cabecera, y los meses necesitan márgenes y cuerpo menores para caber.
+function cronograma(anio, meses, filas) {
+  const W_ID = 300, W_TAREA = 2000, W_FECHA = 700;
+  const wMes = Math.floor((CW - W_ID - W_TAREA - 2 * W_FECHA) / meses.length);
+  const fijas = [['Id', W_ID], ['Nombre de la tarea', W_TAREA],
+                 ['Comienzo', W_FECHA], ['Fin', W_FECHA]];
+
+  const cabFija = (t, w) => new TableCell({
+    width: { size: w, type: WidthType.DXA }, borders: allHdr, rowSpan: 2,
+    shading: { fill: BLUE, type: ShadingType.CLEAR },
+    margins: { top: 70, bottom: 70, left: 100, right: 100 },
+    verticalAlign: VerticalAlign.CENTER,
+    children: [new Paragraph({ alignment: AlignmentType.CENTER,
+      children: [new TextRun({ text: t, bold: true, color: WHITE, font: 'Arial', size: 17 })] })] });
+
+  const cabMes = (t, span) => new TableCell({
+    width: { size: wMes * (span || 1), type: WidthType.DXA }, borders: allHdr,
+    columnSpan: span || 1,
+    shading: { fill: BLUE, type: ShadingType.CLEAR },
+    margins: { top: 40, bottom: 40, left: 20, right: 20 },
+    verticalAlign: VerticalAlign.CENTER,
+    children: [new Paragraph({ alignment: AlignmentType.CENTER,
+      children: [new TextRun({ text: t, bold: true, color: WHITE, font: 'Arial', size: 14 })] })] });
+
+  const celdaMes = (t, shade) => new TableCell({
+    width: { size: wMes, type: WidthType.DXA }, borders: allCell,
+    shading: { fill: shade, type: ShadingType.CLEAR },
+    margins: { top: 40, bottom: 40, left: 20, right: 20 },
+    verticalAlign: VerticalAlign.CENTER,
+    children: [new Paragraph({ alignment: AlignmentType.CENTER,
+      children: [new TextRun({ text: t, font: 'Arial', size: 14 })] })] });
+
+  const filasTabla = [
+    new TableRow({ tableHeader: true, children: [
+      ...fijas.map(([t, w]) => cabFija(t, w)), cabMes(anio, meses.length)] }),
+    new TableRow({ tableHeader: true, children: meses.map((m) => cabMes(m)) }),
+  ];
+
+  filas.forEach((f, i) => {
+    const shade = i % 2 === 0 ? BLUE_LITE : WHITE;
+    filasTabla.push(new TableRow({ children: [
+      dC(String(f[0]), W_ID, shade, true),
+      dC(String(f[1]), W_TAREA, shade),
+      dC(String(f[2]), W_FECHA, shade, true),
+      dC(String(f[3]), W_FECHA, shade, true),
+      ...f.slice(4).map((m) => celdaMes(String(m || ''), shade)),
+    ] }));
+  });
+
+  return new Table({
+    width: { size: CW, type: WidthType.DXA },
+    columnWidths: [W_ID, W_TAREA, W_FECHA, W_FECHA, ...meses.map(() => wMes)],
+    rows: filasTabla });
+}
+
 function controlCambios() {
   return mkT(
     [{ label: 'No. Versión', w: 1300, centered: true }, { label: 'Fecha', w: 1900, centered: true }, { label: 'Descripción del Cambio', w: 5606 }],
@@ -475,5 +533,5 @@ module.exports = {
   BLUE, BLUE_LITE, GRAY_BG, WHITE, TEXT, GREEN_BG, AMBER_BG, RED_BG,
   CW, sp, parseRuns, h1, h2, h3, bp, blt, nmb, blk, dvd, caption, note, who,
   hC, dC, mkT, rC, rTable, semaforo, membrete, portada, tocItem, biblio,
-  firmas, controlCambios, buildDoc, allHdr, allCell, logo, AZUL_INST, escribir, LOGO_HEADER, LOGO_PORTADA,
+  firmas, cronograma, controlCambios, buildDoc, allHdr, allCell, logo, AZUL_INST, escribir, LOGO_HEADER, LOGO_PORTADA,
 };
