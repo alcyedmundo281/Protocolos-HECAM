@@ -561,7 +561,7 @@
                   "Urosepsis",
                   "ITU complicada con aumento agudo de SOFA ≥ 2 puntos sobre el basal.",
                   "20–40 %",
-                  "UCI o sala con monitoreo continuo. Activar el protocolo HECAM-MI-PR-001."
+                  "Unidad Técnica de Cuidados Intensivos o sala con monitoreo continuo. Activar el protocolo HECAM-Unidad Técnica de Medicina Interna-PR-001."
                 ]
               ],
               "titulo": "Tabla 4. Clasificación diagnóstica y destino del paciente",
@@ -644,11 +644,9 @@
               "type": "Lista",
               "estilo": "vinetas",
               "itemListElement": [
-                "Hidratación: administrar 1.000–2.000 mL de cristaloides IV en las primeras 4 horas si la vía oral está comprometida. Ante urosepsis, aplicar el esquema de 30 mL/kg en 3 horas del protocolo HECAM-MI-PR-001[[15]].",
                 "**Retirar o recambiar el catéter urinario** siempre que sea clínicamente posible en la ITU asociada a catéter. Constituye la intervención no farmacológica de mayor impacto en estos pacientes[[12]].",
                 "**Control del foco urológico:** interconsulta urgente a Urología ante hidronefrosis, pionefrosis o absceso perinéfrico. El drenaje percutáneo o la nefrostomía deben realizarse dentro de las primeras 6–12 horas y forman parte del tratamiento, no constituyen una medida opcional.",
-                "Control glucémico con meta de 140–180 mg/dL en el paciente hospitalizado, dado que la hiperglucemia sostenida altera la función leucocitaria y perpetúa la infección.",
-                "Analgesia con metamizol 1 g IV c/8 h o paracetamol 1 g IV c/6 h. Evitar los antiinflamatorios no esteroideos si la TFG es < 60 mL/min por el riesgo de lesión renal aguda[[13]]."
+                "Control glucémico con meta de 140–180 mg/dL en el paciente hospitalizado, dado que la hiperglucemia sostenida altera la función leucocitaria y perpetúa la infección."
               ]
             },
             {
@@ -853,7 +851,15 @@
             },
             {
               "type": "Subtitulo",
-              "text": "D. Antibioticoterapia empírica estratificada"
+              "text": "D. Tratamiento farmacológico: antibioticoterapia empírica, hidratación y analgesia"
+            },
+            {
+              "type": "Lista",
+              "estilo": "vinetas",
+              "itemListElement": [
+                "Analgesia con metamizol 1 g IV c/8 h o paracetamol 1 g IV c/6 h. Evitar los antiinflamatorios no esteroideos si la TFG es < 60 mL/min por el riesgo de lesión renal aguda[[13]].",
+                "Hidratación: administrar 1.000–2.000 mL de cristaloides IV en las primeras 4 horas si la vía oral está comprometida. Ante urosepsis, aplicar el esquema de 30 mL/kg en 3 horas del protocolo HECAM-MI-PR-001[[15]]."
+              ]
             },
             {
               "type": "Parrafo",
@@ -906,8 +912,8 @@
                 ],
                 [
                   "Pielonefritis con RIESGO ALTO de CRE",
-                  "Antecedente de ITU por KPC o CRE, uso previo de carbapenémicos, catéter en UCI o fracaso a ertapenem. __K. pneumoniae__ con 42 % R a imipenem y 24 % a meropenem en Emergencia[[7]].",
-                  "Meropenem IV. Si el paciente proviene de UCI o cursa con bacteriemia, considerar ceftazidima/avibactam desde el inicio.",
+                  "Antecedente de ITU por KPC o CRE, uso previo de carbapenémicos, catéter en Unidad Técnica de Cuidados Intensivos o fracaso a ertapenem. __K. pneumoniae__ con 42 % R a imipenem y 24 % a meropenem en Emergencia[[7]].",
+                  "Meropenem IV. Si el paciente proviene de Unidad Técnica de Cuidados Intensivos o cursa con bacteriemia, considerar ceftazidima/avibactam desde el inicio.",
                   "Meropenem 1–2 g IV c/8 h en infusión prolongada de 3 horas si se sospecha XDR.",
                   "Ajuste obligatorio por TFG según ficha técnica."
                 ],
@@ -1109,13 +1115,13 @@
                   "GRAVE",
                   "Urosepsis sin shock, con SOFA ≥ 2 puntos y sin hipotensión refractaria.",
                   "10–20 %",
-                  "UCI o sala con monitoreo continuo. Medición de lactato y evaluación del foco urológico. Considerar CRE."
+                  "Unidad Técnica de Cuidados Intensivos o sala con monitoreo continuo. Medición de lactato y evaluación del foco urológico. Considerar CRE."
                 ],
                 [
                   "CRÍTICA",
                   "Shock séptico de origen urinario: SOFA ≥ 2 puntos con vasopresores para PAM ≥ 65 mmHg y lactato > 2 mmol/L.",
                   "> 40 %",
-                  "UCI inmediata. Activar el protocolo HECAM-MI-PR-001. Drenaje urológico urgente si existe obstrucción."
+                  "Unidad Técnica de Cuidados Intensivos inmediata. Activar el protocolo HECAM-Unidad Técnica de Medicina Interna-PR-001. Drenaje urológico urgente si existe obstrucción."
                 ]
               ],
               "titulo": "Tabla 10. Clasificación de severidad de la infección urinaria complicada",

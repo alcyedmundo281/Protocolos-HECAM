@@ -22,6 +22,7 @@ fuentes:
 # Las observaciones que la revisora repite, comprobadas antes de enviarle nada.
 revisora:
 	python3 skill/scripts/verificar_revisora.py $(MATRICES)
+	python3 skill/scripts/verificar_farmacos.py $(MATRICES)
 
 jats:
 	@for f in $(MATRICES); do \

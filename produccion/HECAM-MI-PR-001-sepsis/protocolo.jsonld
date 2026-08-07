@@ -562,8 +562,7 @@
                 "Asegurar la vía aérea y el soporte ventilatorio. En Quito, ajustar la FiO₂ para lograr SatO₂ ≥ 92 %, evitando la hiperoxia (no perseguir SatO₂ > 96 %)[[6]].",
                 "Canalizar dos accesos venosos periféricos de calibre ≥ 18 G, o un acceso venoso central si el paciente no responde. Para ceftazidima/avibactam o meropenem en infusión prolongada se requiere una vía dedicada.",
                 "Tomar hemocultivos × 2 series (aerobio y anaerobio) y el cultivo del foco sospechado ANTES de administrar antibióticos. No retrasar el antimicrobiano más de 30–45 minutos esperando las muestras[[15]].",
-                "Medir el lactato sérico inicial. Si es > 2 mmol/L, repetir a las 2 horas (meta: descenso ≥ 10 %). Si es > 4 mmol/L, iniciar resucitación agresiva independientemente de la presión arterial[[16]].",
-                "Resucitación con cristaloides: administrar 30 mL/kg de solución salina al 0,9 % o lactato de Ringer en 3 horas si la PAM es < 65 mmHg o el lactato > 4 mmol/L. Reevaluar con cada 500 mL mediante POCUS o elevación pasiva de piernas[[8]]."
+                "Medir el lactato sérico inicial. Si es > 2 mmol/L, repetir a las 2 horas (meta: descenso ≥ 10 %). Si es > 4 mmol/L, iniciar resucitación agresiva independientemente de la presión arterial[[16]]."
               ]
             },
             {
@@ -846,22 +845,22 @@
                   "0,5 g c/24 h si TFG 10–30. Si TFG < 10, interconsulta a Infectología."
                 ],
                 [
-                  "Desconocido, riesgo alto de CRE (UCI o bacteriemia por K. pneumoniae)",
+                  "Desconocido, riesgo alto de CRE (Unidad Técnica de Cuidados Intensivos o bacteriemia por K. pneumoniae)",
                   "__K. pneumoniae__ CRE probable. Meropenem 49–56 % R en el HECAM 2025[[5]].",
-                  "Meropenem IV ± ceftazidima/avibactam (0–2 % R en __K. pneumoniae__ de UCI y bacteriemia: única opción activa)[[17]].",
+                  "Meropenem IV ± ceftazidima/avibactam (0–2 % R en __K. pneumoniae__ de Unidad Técnica de Cuidados Intensivos y bacteriemia: única opción activa)[[17]].",
                   "Meropenem 1–2 g IV c/8 h; ceftazidima/avibactam 2 g/0,5 g IV c/8 h en infusión de 2 h. Requiere autorización del PROA / Infectología.",
                   "Ambos requieren ajuste obligatorio por TFG."
                 ],
                 [
                   "Respiratorio comunitario",
-                  "__K. pneumoniae__ comunitaria. Ceftriaxona 54 % R en UCI-Neumología: precaución en monoterapia.",
+                  "__K. pneumoniae__ comunitaria. Ceftriaxona 54 % R en Unidad Técnica de Cuidados Intensivos-Neumología: precaución en monoterapia.",
                   "Ceftriaxona IV + azitromicina IV (cobertura de atípicos y gramnegativos comunitarios sensibles).",
                   "Ceftriaxona 2 g IV c/24 h + azitromicina 500 mg IV c/24 h. Alternativa: levofloxacino 750 mg IV c/24 h.",
                   "Ceftriaxona: sin ajuste. Levofloxacino: ajustar si TFG < 50."
                 ],
                 [
-                  "Respiratorio hospitalario / UCI",
-                  "__K. pneumoniae__ de UCI: meropenem 49 % R. Ceftazidima/avibactam 0 % R, única activa frente a CRE[[5]].",
+                  "Respiratorio hospitalario / Unidad Técnica de Cuidados Intensivos",
+                  "__K. pneumoniae__ de Unidad Técnica de Cuidados Intensivos: meropenem 49 % R. Ceftazidima/avibactam 0 % R, única activa frente a CRE[[5]].",
                   "Meropenem IV + ceftazidima/avibactam IV si se confirma o sospecha CRE. Alternativa si se excluye CRE: piperacilina/tazobactam + amikacina.",
                   "Meropenem 2 g IV c/8 h (infusión prolongada de 3 h si XDR); ceftazidima/avibactam 2 g/0,5 g IV c/8 h en infusión de 2 h.",
                   "Ambos requieren ajuste por TFG."
@@ -875,15 +874,15 @@
                 ],
                 [
                   "Urinario / urosepsis",
-                  "Véase el protocolo HECAM-MI-PR-002. __E. coli__ de Emergencia: piperacilina/tazobactam 7 % R; ertapenem 0 % R.",
+                  "Véase el protocolo HECAM-Unidad Técnica de Medicina Interna-PR-002. __E. coli__ de Emergencia: piperacilina/tazobactam 7 % R; ertapenem 0 % R.",
                   "__E. coli__: piperacilina/tazobactam o ertapenem. __K. pneumoniae__ o CRE: meropenem ± ceftazidima/avibactam.",
-                  "Véase el protocolo HECAM-MI-PR-002 para dosis detalladas.",
-                  "Véase el protocolo HECAM-MI-PR-002."
+                  "Véase el protocolo HECAM-Unidad Técnica de Medicina Interna-PR-002 para dosis detalladas.",
+                  "Véase el protocolo HECAM-Unidad Técnica de Medicina Interna-PR-002."
                 ],
                 [
                   "Piel y tejidos blandos",
-                  "__S. aureus__. En UCI: oxacilina 17 % R (SARM aproximadamente 17 %); linezolid y vancomicina 0 % R[[5]].",
-                  "Cloxacilina IV si se presume SASM. Si se sospecha SARM o el paciente proviene de UCI: vancomicina IV.",
+                  "__S. aureus__. En Unidad Técnica de Cuidados Intensivos: oxacilina 17 % R (SARM aproximadamente 17 %); linezolid y vancomicina 0 % R[[5]].",
+                  "Cloxacilina IV si se presume SASM. Si se sospecha SARM o el paciente proviene de Unidad Técnica de Cuidados Intensivos: vancomicina IV.",
                   "Cloxacilina 2 g IV c/6 h. Vancomicina 25–30 mg/kg/día IV (monitorización de niveles, meta 15–20 mg/L). Linezolid 600 mg IV c/12 h si hay intolerancia.",
                   "Vancomicina: monitorización terapéutica y ajuste por TFG. Cloxacilina: sin ajuste."
                 ],
@@ -910,12 +909,13 @@
             },
             {
               "type": "Subtitulo",
-              "text": "E. Tratamiento farmacológico complementario: vasopresores e inotrópicos"
+              "text": "E. Tratamiento farmacológico complementario: fluidoterapia, vasopresores e inotrópicos"
             },
             {
               "type": "Lista",
               "estilo": "vinetas",
               "itemListElement": [
+                "Resucitación con cristaloides: administrar 30 mL/kg de solución salina al 0,9 % o lactato de Ringer en 3 horas si la PAM es < 65 mmHg o el lactato > 4 mmol/L. Reevaluar con cada 500 mL mediante POCUS o elevación pasiva de piernas[[8]].",
                 "**Norepinefrina:** vasopresor de primera línea. Iniciar a 0,1–0,2 mcg/kg/min IV en infusión continua y titular hasta lograr PAM ≥ 65 mmHg[[8]].",
                 "**Vasopresina:** añadir si la norepinefrina supera 0,25 mcg/kg/min. Dosis fija de 0,03 UI/min IV.",
                 "**Dobutamina:** considerar ante disfunción miocárdica confirmada por ecocardiografía. Dosis de 2–20 mcg/kg/min IV.",
@@ -973,13 +973,13 @@
                   "SEPSIS",
                   "Aumento agudo de SOFA ≥ 2 puntos sobre el basal secundario a infección, sin requerimiento de vasopresores.",
                   "> 10 %",
-                  "Sala de hospitalización con monitoreo estrecho o UCI según evolución."
+                  "Sala de hospitalización con monitoreo estrecho o Unidad Técnica de Cuidados Intensivos según evolución."
                 ],
                 [
                   "SHOCK SÉPTICO",
                   "Sepsis más necesidad de vasopresores para mantener PAM ≥ 65 mmHg Y lactato > 2 mmol/L pese a resucitación adecuada.",
                   "> 40 %",
-                  "UCI de forma inmediata e impostergable."
+                  "Unidad Técnica de Cuidados Intensivos de forma inmediata e impostergable."
                 ]
               ],
               "titulo": "Tabla 6. Clasificación de severidad según Sepsis-3",
@@ -1098,7 +1098,7 @@
                 ],
                 [
                   "Cribado",
-                  "Utilizar el qSOFA (≥ 2 puntos) como herramienta rápida de identificación de riesgo fuera de la UCI[[14]].",
+                  "Utilizar el qSOFA (≥ 2 puntos) como herramienta rápida de identificación de riesgo fuera de la Unidad Técnica de Cuidados Intensivos[[14]].",
                   "2a",
                   "B"
                 ],
@@ -1401,7 +1401,7 @@
                 ],
                 [
                   "3",
-                  "Socialización a jefes de Emergencia, UCI y Medicina Interna de la nueva tabla antimicrobiana.",
+                  "Socialización a jefes de Emergencia, Unidad Técnica de Cuidados Intensivos y Medicina Interna de la nueva tabla antimicrobiana.",
                   "Sep 2026",
                   "Sep 2026",
                   "",
@@ -1473,7 +1473,7 @@
                 ],
                 [
                   "7",
-                  "Implementación piloto en Emergencia y UCI durante 3 meses.",
+                  "Implementación piloto en Emergencia y Unidad Técnica de Cuidados Intensivos durante 3 meses.",
                   "Nov 2026",
                   "Ene 2027",
                   "",
@@ -1607,7 +1607,7 @@
             ],
             [
               "3",
-              "Socialización a jefes de Emergencia, UCI y Medicina Interna de la nueva tabla antimicrobiana.",
+              "Socialización a jefes de Emergencia, Unidad Técnica de Cuidados Intensivos y Medicina Interna de la nueva tabla antimicrobiana.",
               "Sep 2026",
               "Sep 2026",
               "",
@@ -1679,7 +1679,7 @@
             ],
             [
               "7",
-              "Implementación piloto en Emergencia y UCI durante 3 meses.",
+              "Implementación piloto en Emergencia y Unidad Técnica de Cuidados Intensivos durante 3 meses.",
               "Nov 2026",
               "Ene 2027",
               "",
@@ -1990,7 +1990,7 @@
                   "2 %"
                 ],
                 [
-                  "E. coli — bacteriemia UCI (n=30)",
+                  "E. coli — bacteriemia Unidad Técnica de Cuidados Intensivos (n=30)",
                   "(-)",
                   "10 %",
                   "0 %",
@@ -1999,7 +1999,7 @@
                   "(-)"
                 ],
                 [
-                  "K. pneumoniae — UCI resp./sangre (n=67)",
+                  "K. pneumoniae — Unidad Técnica de Cuidados Intensivos resp./sangre (n=67)",
                   "54 %",
                   "50 %",
                   "49 %",
@@ -2008,7 +2008,7 @@
                   "0 %"
                 ],
                 [
-                  "K. pneumoniae — bacteriemia MI (n=48)",
+                  "K. pneumoniae — bacteriemia Unidad Técnica de Medicina Interna (n=48)",
                   "(-)",
                   "76 %",
                   "56 %",
@@ -2074,7 +2074,7 @@
               "2 %"
             ],
             [
-              "E. coli — bacteriemia UCI (n=30)",
+              "E. coli — bacteriemia Unidad Técnica de Cuidados Intensivos (n=30)",
               "(-)",
               "10 %",
               "0 %",
@@ -2083,7 +2083,7 @@
               "(-)"
             ],
             [
-              "K. pneumoniae — UCI resp./sangre (n=67)",
+              "K. pneumoniae — Unidad Técnica de Cuidados Intensivos resp./sangre (n=67)",
               "54 %",
               "50 %",
               "49 %",
@@ -2092,7 +2092,7 @@
               "0 %"
             ],
             [
-              "K. pneumoniae — bacteriemia MI (n=48)",
+              "K. pneumoniae — bacteriemia Unidad Técnica de Medicina Interna (n=48)",
               "(-)",
               "76 %",
               "56 %",
