@@ -152,7 +152,36 @@ def revisar(ruta):
                   "escribir el número en el texto" % primero)
             vistos[seccion] = 1  # no repetir el aviso por sección
 
-    # ── 5. «Elaborado por»: cargo, no nombre ─────────────────────────────────
+    # ── 5. Cronograma: entre 8 y 10 actividades ──────────────────────────────
+    # matriz-editorial.md, apartado 8: «8–10 actividades».
+    if anexos:
+        n_tareas = len(anexos[0].get("filas") or [])
+        if n_tareas and not (8 <= n_tareas <= 10):
+            anota("cronograma-tareas", "8 / Anexo 1",
+                  "%d actividades; el formato pide entre 8 y 10" % n_tareas)
+
+    # ── 6. Bibliografía: mínimo 15, habitualmente 18 ─────────────────────────
+    n_refs = len(doc.get("citation") or [])
+    if n_refs < 18:
+        anota("bibliografia-corta", "7",
+              "%d referencias; el mínimo es 15 y lo habitual 18" % n_refs)
+
+    # ── 7. El índice debe repetir el nombre exacto de cada sección ───────────
+    # La revisora coteja el contenido con los encabezados; una variante
+    # cosmética en uno de los dos lados se ve a simple vista.
+    por_numeral = {}
+    for s in doc.get("hasPart", []):
+        por_numeral[s.get("numeral")] = s.get("name")
+        for sub in s.get("hasPart", []) or []:
+            por_numeral[sub.get("numeral")] = sub.get("name")
+    for e in doc.get("indice") or []:
+        esperado = por_numeral.get(e.get("numeral"))
+        if esperado and e.get("name") != esperado:
+            anota("indice-divergente", e.get("numeral"),
+                  "el contenido dice %r y la sección %r"
+                  % (e.get("name", "")[:44], esperado[:44]))
+
+    # ── 8. «Elaborado por»: cargo, no nombre ─────────────────────────────────
     # (comentario 29: «Colocar el cargo no el nombre»)
     for rol in doc.get("author") or []:
         p = rol.get("author") or {}
@@ -169,6 +198,9 @@ ETIQUETAS = {
     "cronograma": "Cronograma fuera del formato establecido",
     "servicio-abreviado": "Servicio abreviado en vez de nombre completo",
     "numeracion-escrita": "Numeración escrita en el texto",
+    "cronograma-tareas": "Cronograma fuera del rango de 8–10 actividades",
+    "indice-divergente": "El contenido no repite el nombre de la sección",
+    "bibliografia-corta": "Bibliografía por debajo de lo habitual",
     "firma-sin-cargo": "«Elaborado por» sin cargo",
 }
 

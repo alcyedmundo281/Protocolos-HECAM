@@ -164,8 +164,10 @@ function seccionSimple(numeral, titulo) {
 function seccion6() {
   const s = seccion('6');
   const inds = g(s, 'indicadores', []) || [];
+  // Encabezados literales del HECAM-CC-FR-012 y de docs/matriz-editorial.md.
+  // No son intercambiables por sinónimos: la revisora los comprueba uno a uno.
   const cols = [
-    { label: 'Nombre del indicador', w: 1700 },
+    { label: 'Nombre Indicador', w: 1700 },
     { label: 'Definición', w: 1900 },
     { label: 'Cálculo', w: 2200 },
     { label: 'Meta', w: 900, centered: true },
@@ -250,9 +252,21 @@ function indice() {
     return (doc.hasPart || []).map((s) =>
       L.tocItem(g(s, 'numeral', ''), g(s, 'name', ''), ''));
   }
-  return entradas.map((e) => L.tocItem(
-    g(e, 'numeral', ''), g(e, 'name', ''), g(e, 'pagina', ''),
-    g(e, 'subseccion', false)));
+  // El nombre lo manda la sección, no el índice: del índice solo se toma la
+  // página, que es lo único que no se puede deducir. Así el contenido no puede
+  // divergir de los encabezados, que es una de las cosas que la revisora mira.
+  const porNumeral = {};
+  for (const s of doc.hasPart || []) {
+    porNumeral[g(s, 'numeral', '')] = g(s, 'name', '');
+    for (const sub of g(s, 'hasPart', []) || []) {
+      porNumeral[g(sub, 'numeral', '')] = g(sub, 'name', '');
+    }
+  }
+  return entradas.map((e) => {
+    const num = g(e, 'numeral', '');
+    return L.tocItem(num, porNumeral[num] || g(e, 'name', ''),
+                     g(e, 'pagina', ''), g(e, 'subseccion', false));
+  });
 }
 
 // ── ensamble ──────────────────────────────────────────────────────────────────

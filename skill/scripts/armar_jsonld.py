@@ -53,7 +53,7 @@ SUBSECCIONES = [
     ("4.2", "Diagnóstico / Identificación de problemas basados en las necesidades"),
     ("4.3", "Plan Terapéutico / Intervenciones no farmacológicas"),
     ("4.4", "Clasificación de severidad / Manejo de Complicaciones"),
-    ("4.5", "Plan de Egreso de la Unidad/Seguimiento/Evaluación integral"),
+    ("4.5", "Plan de Egreso de la Unidad/Seguimiento / Evaluación integral"),
     ("4.6", "Nivel de evidencia y grado de recomendaciones"),
 ]
 

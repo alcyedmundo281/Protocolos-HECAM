@@ -5,9 +5,15 @@ General de Investigación (revisión de julio 2026, sobre HECAM-MI-PR-001).
 **Estado:** vigente. Este archivo manda sobre la plantilla FR-012 genérica cuando hay
 conflicto.
 
-**Última actualización:** julio 2026.
+**Última actualización:** julio 2026, incorporando los trece comentarios de la revisión
+del 16 al 20 de julio de 2026 sobre el HECAM-MI-PR-001 y el cotejo con el
+HECAM-CC-FR-012 V3.0 original.
 Al recibir nuevas correcciones de la revisora, actualizar este archivo **primero** y luego
 recompilar los protocolos afectados.
+
+**Lo comprobable de este archivo está automatizado** en
+`skill/scripts/verificar_revisora.py`. Si se añade aquí una regla nueva, conviene
+añadirla también allí; si no, volverá a llegar como comentario.
 
 ---
 
@@ -171,9 +177,27 @@ N. Apellido AA, Apellido BB. Título del artículo. Revista Abrev. Año;Vol(Núm
 
 | Anexo | Contenido |
 |-------|-----------|
-| 1 | Cronograma de implementación (obligatorio) — ID, Tarea, Responsable, Inicio, Fin, Recursos. 8–10 actividades. |
+| 1 | Cronograma de implementación (obligatorio). 8–10 actividades. Formato en el apartado siguiente. |
 | 2 | Herramienta clínica de apoyo — escala, criterios de riesgo, ajuste por altitud. |
 | 3 | Comparación del perfil de resistencia nacional vs. HECAM. |
+
+#### Formato del cronograma
+
+Corregido por la revisora el **20 de julio de 2026**: «Tomar en cuenta el formato
+de cronograma establecido». Sustituye a las columnas anteriores —ID, Tarea,
+Responsable, Inicio, Fin, Recursos—, que ya no se usan.
+
+| Id | Nombre de la tarea | Comienzo | Fin | *columnas de mes* |
+|----|--------------------|----------|-----|-------------------|
+| 1 | Elaboración del Protocolo | 29/11/2024 | 29/12/2024 | x x |
+| 2 | Aprobación | 01/01/2025 | 15/01/2025 | x |
+
+Las columnas de mes forman una rejilla tipo Gantt y se marcan con `x` en los
+meses que abarca cada tarea. La ventana de meses no tiene que cubrir el final de
+la última tarea: la columna **Fin** es la que declara la fecha real.
+
+Se pierden «Responsable» y «Recursos». Si alguna de las dos llevaba una cita,
+hay que reubicarla o la referencia queda huérfana en la bibliografía.
 
 Imágenes numeradas y centradas: título `Imagen N: Nombre`, `Fuente:` al pie.
 

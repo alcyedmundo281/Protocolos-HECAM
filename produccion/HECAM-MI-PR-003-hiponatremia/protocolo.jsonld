@@ -644,7 +644,7 @@
         {
           "type": "Seccion",
           "numeral": "4.5",
-          "name": "Plan de Egreso de la Unidad/Seguimiento/Evaluación integral",
+          "name": "Plan de Egreso de la Unidad/Seguimiento / Evaluación integral",
           "quienLoHace": "Médico tratante de Medicina Interna elabora el plan de egreso; Enfermería imparte la educación al paciente y su familia; la consulta externa de Medicina Interna realiza el seguimiento.",
           "cuando": "Al momento de definir el alta hospitalaria y en los controles ambulatorios programados a los 15 días, 1 mes, 3 meses y 6 meses.",
           "contenido": [
@@ -1512,7 +1512,7 @@
     },
     {
       "numeral": "4.5",
-      "name": "Plan de Egreso de la Unidad/Seguimiento/Evaluación integral",
+      "name": "Plan de Egreso de la Unidad/Seguimiento / Evaluación integral",
       "pagina": 10,
       "subseccion": true
     },

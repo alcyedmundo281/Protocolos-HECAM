@@ -1146,7 +1146,7 @@
         {
           "type": "Seccion",
           "numeral": "4.5",
-          "name": "Plan de Egreso de la Unidad/Seguimiento/Evaluación integral",
+          "name": "Plan de Egreso de la Unidad/Seguimiento / Evaluación integral",
           "quienLoHace": "Médico tratante de Medicina Interna con el farmacéutico del PROA-HECAM.",
           "cuando": "Evaluación clínica diaria; revisión de cultivos a las 48–72 horas; aplicación de criterios de alta al alcanzar la estabilidad clínica.",
           "contenido": [
@@ -2540,13 +2540,13 @@
     },
     {
       "numeral": "4.4",
-      "name": "Clasificación de severidad / Manejo de complicaciones",
+      "name": "Clasificación de severidad / Manejo de Complicaciones",
       "pagina": 10,
       "subseccion": true
     },
     {
       "numeral": "4.5",
-      "name": "Plan de Egreso de la Unidad / Seguimiento / Evaluación integral",
+      "name": "Plan de Egreso de la Unidad/Seguimiento / Evaluación integral",
       "pagina": 11,
       "subseccion": true
     },
