@@ -47,7 +47,15 @@ Cuatro reglas, en orden de importancia:
 
 Consecuencia operativa: si al añadir un párrafo se introduce una cita nueva en medio del
 documento, hay que **renumerar toda la bibliografía posterior**. Por eso el orden se verifica
-programáticamente (`skill/scripts/check_citas.py`) y nunca a ojo.
+programáticamente (`skill/scripts/check_citas.py`) y nunca a ojo, y por eso la
+renumeración la hace `skill/scripts/renumerar_citas.py` (`make renumerar`), que
+reutiliza el mismo recorrido documental del verificador —si usara uno propio se
+estaría examinando a sí mismo— y conserva los grupos: `[[6,7]]` se traduce como
+grupo y no se descompone.
+
+**Toda fuente citada al pie de una tabla necesita su entrada bibliográfica.** El
+Oxford CEBM llegó a estar como `Fuente:` de la tabla 4.6 en los tres protocolos
+y en la bibliografía solo de uno; la regla 3 de arriba lo prohíbe.
 
 ### Toda tabla: número, título y fuente
 

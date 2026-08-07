@@ -40,7 +40,12 @@ todo: validar generar verificar fuentes revisora
 matriz:
 	python3 skill/scripts/armar_jsonld.py $(JS)
 
+# Renumera la bibliografía por orden de aparición tras insertar una cita nueva.
+renumerar:
+	python3 skill/scripts/renumerar_citas.py $(MATRICES)
+	python3 skill/scripts/verificar_citas_matriz.py --corregir $(MATRICES)
+
 referencia:
 	python3 skill/scripts/verificar_caratula.py --generar-referencia $(APROBADO)
 
-.PHONY: generar validar verificar fuentes revisora jats todo matriz referencia
+.PHONY: generar validar verificar fuentes revisora jats todo matriz referencia renumerar

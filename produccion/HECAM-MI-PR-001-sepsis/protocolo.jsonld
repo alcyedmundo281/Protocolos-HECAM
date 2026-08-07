@@ -1147,7 +1147,7 @@
           "contenido": [
             {
               "type": "Parrafo",
-              "text": "Las recomendaciones de este protocolo se catalogan según el sistema del __Oxford Centre for Evidence-Based Medicine__ (CEBM), versión de marzo de 2009."
+              "text": "Las recomendaciones de este protocolo se catalogan según el sistema del __Oxford Centre for Evidence-Based Medicine__ (CEBM), versión de marzo de 2009.[[20]]"
             },
             {
               "type": "Tabla",
@@ -2440,6 +2440,14 @@
       "position": 19,
       "primeraAparicion": "4.4",
       "vancouver": "Ministerio de Salud Pública del Ecuador. Acuerdo Ministerial Nro. 00001-2025. Norma Técnica del Sistema Integrado de Vigilancia Epidemiológica (SIVE). Registro Oficial Tercer Suplemento N.° 107; 21 de agosto de 2025."
+    },
+    {
+      "type": "DocumentoNormativo",
+      "position": 20,
+      "primeraAparicion": "4.6",
+      "vancouver": "OCEBM Levels of Evidence Working Group. The Oxford 2009 Levels of Evidence. Oxford: Oxford Centre for Evidence-Based Medicine; 2009.",
+      "name": "The Oxford 2009 Levels of Evidence",
+      "datePublished": "2009"
     }
   ],
   "indice": [

@@ -1314,7 +1314,7 @@
           "contenido": [
             {
               "type": "Parrafo",
-              "text": "Las recomendaciones de este protocolo se catalogan según el sistema del __Oxford Centre for Evidence-Based Medicine__ (CEBM), versión de marzo de 2009."
+              "text": "Las recomendaciones de este protocolo se catalogan según el sistema del __Oxford Centre for Evidence-Based Medicine__ (CEBM), versión de marzo de 2009.[[18]]"
             },
             {
               "type": "Tabla",
@@ -2275,7 +2275,7 @@
             },
             {
               "type": "Parrafo",
-              "text": "**CONCLUSIÓN CLAVE:** en el HECAM, __E. coli__ presenta una resistencia a ciprofloxacino del 66 % en Emergencia frente al 28 % nacional, lo que descarta su uso empírico. La resistencia de __K. pneumoniae__ a carbapenémicos alcanza el 42–76 % en el hospital frente al 28–31 % nacional. La ceftazidima/avibactam mantiene alta actividad en __E. coli__ (1 % R) y en la bacteriemia por __K. pneumoniae__ (2 % R), aunque en aislamientos urinarios de Medicina Interna alcanza el 49 % de resistencia, lo que obliga a confirmar la sensibilidad antes de su uso prolongado[[18]]."
+              "text": "**CONCLUSIÓN CLAVE:** en el HECAM, __E. coli__ presenta una resistencia a ciprofloxacino del 66 % en Emergencia frente al 28 % nacional, lo que descarta su uso empírico. La resistencia de __K. pneumoniae__ a carbapenémicos alcanza el 42–76 % en el hospital frente al 28–31 % nacional. La ceftazidima/avibactam mantiene alta actividad en __E. coli__ (1 % R) y en la bacteriemia por __K. pneumoniae__ (2 % R), aunque en aislamientos urinarios de Medicina Interna alcanza el 49 % de resistencia, lo que obliga a confirmar la sensibilidad antes de su uso prolongado[[19]]."
             }
           ],
           "columnas": [
@@ -2582,8 +2582,16 @@
       "vancouver": "World Health Organization. Global Antimicrobial Resistance and Use Surveillance System (GLASS) Report 2023. Geneva: WHO; 2023."
     },
     {
-      "type": "ArticuloAcademico",
+      "type": "DocumentoNormativo",
       "position": 18,
+      "primeraAparicion": "4.6",
+      "vancouver": "OCEBM Levels of Evidence Working Group. The Oxford 2009 Levels of Evidence. Oxford: Oxford Centre for Evidence-Based Medicine; 2009.",
+      "name": "The Oxford 2009 Levels of Evidence",
+      "datePublished": "2009"
+    },
+    {
+      "type": "ArticuloAcademico",
+      "position": 19,
       "primeraAparicion": "8",
       "vancouver": "Rodríguez-Baño J, Cisneros JM, Cobos-Trigueros N, Fresco G, Navarro-San Francisco C, Gudiol C, et al. Diagnosis and antimicrobial treatment of invasive infections due to multidrug-resistant Enterobacteriaceae. Enferm Infecc Microbiol Clin. 2015;33(5):337.e1–337.e21. doi:10.1016/j.eimc.2014.11.009",
       "name": "Diagnosis and antimicrobial treatment of invasive infections due to multidrug-resistant Enterobacteriaceae. Guidelines of the Spanish Society of Infectious Diseases and Clinical Microbiology",
