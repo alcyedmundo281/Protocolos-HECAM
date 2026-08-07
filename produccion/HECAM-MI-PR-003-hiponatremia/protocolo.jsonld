@@ -135,7 +135,8 @@
       "contributor": {
         "type": "Persona",
         "jobTitle": "Director Técnico"
-      }
+      },
+      "position": 1
     },
     {
       "type": [
@@ -145,7 +146,7 @@
       "roleName": "Revisado por",
       "bloqueFirma": "Revisado por:",
       "ordenFirma": 2,
-      "position": 1,
+      "position": 2,
       "contributor": {
         "type": "Persona",
         "jobTitle": "Coordinador General de Investigación"
@@ -159,7 +160,7 @@
       "roleName": "Revisado por",
       "bloqueFirma": "Revisado por:",
       "ordenFirma": 2,
-      "position": 2,
+      "position": 3,
       "contributor": {
         "type": "Persona",
         "jobTitle": "Coordinador General de Control de Calidad"
@@ -173,7 +174,7 @@
       "roleName": "Revisado por",
       "bloqueFirma": "Revisado por:",
       "ordenFirma": 2,
-      "position": 3,
+      "position": 4,
       "contributor": {
         "type": "Persona",
         "jobTitle": "Coordinador General de Hospitalización y Ambulatorio"
@@ -187,7 +188,7 @@
       "roleName": "Revisado por",
       "bloqueFirma": "Revisado por:",
       "ordenFirma": 2,
-      "position": 4,
+      "position": 5,
       "contributor": {
         "type": "Persona",
         "jobTitle": "Coordinador General de Áreas Críticas"
@@ -201,24 +202,10 @@
       "roleName": "Revisado por",
       "bloqueFirma": "Revisado por:",
       "ordenFirma": 2,
-      "position": 5,
-      "contributor": {
-        "type": "Persona",
-        "jobTitle": "Coordinador General de Diagnóstico y Tratamiento"
-      }
-    },
-    {
-      "type": [
-        "Rol",
-        "RolRevisionInstitucional"
-      ],
-      "roleName": "Revisado por",
-      "bloqueFirma": "Revisado por:",
-      "ordenFirma": 2,
       "position": 6,
       "contributor": {
         "type": "Persona",
-        "jobTitle": "Jefe de Áreas Clínicas (Presidente PROA)"
+        "jobTitle": "Coordinador General de Diagnóstico y Tratamiento"
       }
     },
     {
@@ -233,6 +220,84 @@
       "contributor": {
         "type": "Persona",
         "jobTitle": "Jefe de la Unidad de Cuidados Intensivos Adultos"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "ordenFirma": 2,
+      "position": 8,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Jefe de la Unidad Técnica de Emergencia"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "ordenFirma": 2,
+      "position": 9,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Jefe de la Unidad Técnica de Medicina Interna"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "ordenFirma": 2,
+      "position": 10,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Jefe de la Unidad Técnica de Laboratorio Clínico"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "ordenFirma": 2,
+      "position": 11,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Jefe de la Unidad Técnica de Farmacia"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "ordenFirma": 2,
+      "position": 12,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Jefe de la Unidad Técnica de Nutrición y Dietética"
+      }
+    },
+    {
+      "type": [
+        "Rol",
+        "RolRevisionInstitucional"
+      ],
+      "roleName": "Revisado por",
+      "ordenFirma": 2,
+      "position": 13,
+      "contributor": {
+        "type": "Persona",
+        "jobTitle": "Líder de Enfermería"
       }
     }
   ],

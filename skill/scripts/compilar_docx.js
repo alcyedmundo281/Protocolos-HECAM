@@ -273,8 +273,17 @@ function seccion9() {
     cargo: g(persona, 'jobTitle', ''),
     unidad: g(g(persona, 'memberOf', {}), 'name', ''),
   };
+  // Los revisores salen de la matriz, no de la biblioteca: cada protocolo
+  // firma con las jefaturas de las unidades que intervienen en él.
+  const revisores = (doc.contributor || [])
+    .filter((c) => g(c, 'ordenFirma') === 2)
+    .sort((a, b) => g(a, 'position', 0) - g(b, 'position', 0))
+    .map((c) => g(g(c, 'contributor', {}), 'jobTitle', ''))
+    .filter(Boolean);
+
   const out = [L.h1('9.  ' + g(s, 'name', 'Firmas de los involucrados'))];
-  out.push(autor.nombre ? L.firmas(autor) : L.firmas());
+  out.push(L.firmas(autor.nombre ? autor : undefined,
+    revisores.length ? revisores : undefined));
   out.push(...contenido(s));
   return out;
 }

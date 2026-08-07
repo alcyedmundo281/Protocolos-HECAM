@@ -34,14 +34,15 @@ SUBSECCIONES = [
     ("4.6", "Nivel de evidencia y grado de recomendaciones"),
 ]
 
+# Firman siempre, gobiernen o no el cuadro clínico. Las jefaturas de unidad no
+# se listan aquí porque dependen de qué unidades intervienen en cada protocolo:
+# de eso se ocupa verificar_firmas.py, que las cruza con el contenido.
 REVISORES = [
     "Coordinador General de Investigación",
     "Coordinador General de Control de Calidad",
     "Coordinador General de Hospitalización y Ambulatorio",
     "Coordinador General de Áreas Críticas",
     "Coordinador General de Diagnóstico y Tratamiento",
-    "Jefe de Áreas Clínicas (Presidente PROA)",
-    "Jefe de la Unidad de Cuidados Intensivos Adultos",
 ]
 
 COLS_INDICADOR = ["name", "definicionIndicador", "calculo", "meta", "periodo", "responsable"]
@@ -252,6 +253,8 @@ def main():
     for r in REVISORES:
         if r not in cargos:
             err(f"Falta el revisor institucional: {r}.")
+    if not any(c.startswith("Jefe de") for c in cargos):
+        err("Ninguna jefatura de unidad firma; ejecutar verificar_firmas.py.")
 
     # ── bibliografía y citas ─────────────────────────────────────────────────
     refs = doc.get("citation") or []

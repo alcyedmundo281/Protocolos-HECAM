@@ -385,7 +385,20 @@ const AUTOR_POR_DEFECTO = {
   unidad: 'Unidad Técnica de Medicina Interna',
 };
 
-function firmas(autor = AUTOR_POR_DEFECTO) {
+// Revisores por defecto: solo los que firman todo protocolo. Las jefaturas de
+// unidad las decide cada matriz según qué unidades intervienen, así que la
+// lista llega desde fuera; ver docs/matriz-editorial.md § 9 y
+// skill/scripts/verificar_firmas.py. Antes estaban escritas aquí dentro, y por
+// eso los tres protocolos salían con los mismos siete revisores.
+const REVISORES_POR_DEFECTO = [
+  'Coordinador General de Investigación',
+  'Coordinador General de Control de Calidad',
+  'Coordinador General de Hospitalización y Ambulatorio',
+  'Coordinador General de Áreas Críticas',
+  'Coordinador General de Diagnóstico y Tratamiento',
+];
+
+function firmas(autor = AUTOR_POR_DEFECTO, revisores = REVISORES_POR_DEFECTO) {
   const L = 4200, R = CW - L;
   const cL = (lines) => new TableCell({ width: { size: L, type: WidthType.DXA }, borders: allCell,
     shading: { fill: GRAY_BG, type: ShadingType.CLEAR },
@@ -399,16 +412,8 @@ function firmas(autor = AUTOR_POR_DEFECTO) {
       children: [new TextRun({ text: '_________________________', font: 'Arial', size: 18 })] })) });
   return new Table({ width: { size: CW, type: WidthType.DXA }, columnWidths: [L, R], rows: [
     new TableRow({ children: [cL(['Aprobado por:', 'Director Técnico']), cR(1)] }),
-    new TableRow({ children: [cL([
-      'Revisado por:',
-      'Coordinador General de Investigación',
-      'Coordinador General de Control de Calidad',
-      'Coordinador General de Hospitalización y Ambulatorio',
-      'Coordinador General de Áreas Críticas',
-      'Coordinador General de Diagnóstico y Tratamiento',
-      'Jefe de Áreas Clínicas (Presidente PROA)',
-      'Jefe de la Unidad de Cuidados Intensivos Adultos',
-    ]), cR(7)] }),
+    new TableRow({ children: [cL(['Revisado por:', ...revisores]),
+      cR(revisores.length)] }),
     new TableRow({ children: [cL(['Elaborado por:', autor.nombre, autor.cargo, autor.unidad]
       .filter(Boolean)), cR(1)] }),
   ]});

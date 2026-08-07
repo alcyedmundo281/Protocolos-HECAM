@@ -23,6 +23,7 @@ fuentes:
 revisora:
 	python3 skill/scripts/verificar_revisora.py $(MATRICES)
 	python3 skill/scripts/verificar_farmacos.py $(MATRICES)
+	python3 skill/scripts/verificar_firmas.py $(MATRICES)
 
 jats:
 	@for f in $(MATRICES); do \

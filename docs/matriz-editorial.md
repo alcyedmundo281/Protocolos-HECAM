@@ -214,8 +214,34 @@ bibliografía; pasó con la referencia 20 de hiponatremia.
 Imágenes numeradas y centradas: título `Imagen N: Nombre`, `Fuente:` al pie.
 
 ### 9. Firmas de los involucrados
-Tabla de 2 columnas (bloque+cargo | línea de firma). **Siete revisores nominados**, en este
-orden exacto — ver la tabla en `SKILL.md`. Nota al pie sobre firma electrónica.
+Tabla de 2 columnas (bloque+cargo | línea de firma). Nota al pie sobre firma electrónica.
+
+**La lista de revisores no es fija: depende de qué unidades intervienen.**
+Observación 28: «Se deben colocar a todas las Coordinaciones y Jefaturas que
+intervienen en el protocolo, deben colocarse en orden jerárquico; se han
+agregado algunas continuar según corresponda».
+
+La coordinación general **no absorbe** a la unidad. La propia revisora añadió
+las jefaturas de Áreas Clínicas (PROA) y de Cuidados Intensivos Adultos aunque
+sus coordinaciones ya firmaban; ese es el patrón a continuar. Cada unidad que
+interviene firma por su cuenta, además de su coordinación.
+
+Firman siempre, gobiernen o no el cuadro clínico: Director Técnico y las cinco
+Coordinaciones Generales. A ellas se suma una jefatura por cada unidad que el
+protocolo nombre en la **sección 1 (justificación), 5 (control de calidad) o 6
+(indicadores)**. Nombrar una unidad solo en la sección 4 es una interconsulta:
+`verificar_firmas.py` lo señala como aviso y la decisión es de Control de
+Calidad.
+
+Orden jerárquico: Director Técnico → Coordinaciones Generales → Jefe de Áreas
+Clínicas → jefaturas de unidad → Líder de Enfermería. Entre las jefaturas de
+unidad, que no se ordenan entre sí, se sigue el recorrido del paciente:
+Cuidados Intensivos, Emergencia, Medicina Interna, subespecialidades, apoyo
+diagnóstico y terapéutico. La lista canónica vive en `ORDEN`, dentro de
+`skill/scripts/verificar_firmas.py`.
+
+Un firmante que no aparezca en ninguna sección es herencia de otro protocolo y
+se retira: los tres protocolos nacieron con la misma lista de siete.
 
 ### 10. Control de cambios
 Tres columnas: `No. Versión | Fecha | Descripción del Cambio`.
@@ -254,7 +280,7 @@ Semáforo de resistencia antimicrobiana: verde `#D6EAD8` (<30 % R), ámbar `#FFF
 | Glosario | 3 columnas con columna CITA | **2 columnas**, cita al final de la definición |
 | Indicadores | Hasta 10 columnas | **6 columnas** exactas |
 | Algoritmo | Narrativa + tabla decisional | **Solo narrativa** para Bizagi |
-| Revisores | 4 genéricos | **7 nominados** |
+| Revisores | 4 genéricos | **variables: una jefatura por unidad interviniente** |
 | Anexos | 1 obligatorio + opcionales | **3** |
 | Sección 1 | "Justificación y Alcance" | **"Justificación"** |
 | Sección 6 | "Indicadores de Calidad" | **"Indicadores"** |
@@ -273,7 +299,8 @@ Semáforo de resistencia antimicrobiana: verde `#D6EAD8` (<30 % R), ámbar `#FFF
 - [ ] Indicadores: 6 columnas, ≥8 filas, ≥2 por tipo
 - [ ] Bibliografía Vancouver, idioma original, **orden de aparición verificado por script**
 - [ ] Anexo 1 = cronograma; anexos 2 y 3 presentes
-- [ ] Firmas con los 7 revisores nominados + nota de firma electrónica
+- [ ] Firmas: una jefatura por unidad interviniente, en orden jerárquico
+      (`verificar_firmas.py`) + nota de firma electrónica
 - [ ] Control de cambios de 3 columnas
 - [ ] Membrete en todas las páginas, sin fila "Unidad", con `Página # de #`
 - [ ] Arial 10, interlineado 1.15
