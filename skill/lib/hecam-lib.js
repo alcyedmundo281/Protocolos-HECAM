@@ -102,8 +102,13 @@ function blt(t, lvl = 0) {
     children: parseRuns(t), spacing: sp(40, 40),
     indent: lvl === 0 ? { left: 700, hanging: 350 } : { left: 1060, hanging: 350 } });
 }
-function nmb(t) {
-  return new Paragraph({ numbering: { reference: 'numbers', level: 0 },
+// `instancia` separa listas: sin ella todas comparten el mismo contador y cada
+// lista continúa la numeración de la anterior, de modo que la segunda del
+// documento empieza en 5 en vez de en 1. Quien compone debe pasar una instancia
+// distinta por cada lista lógica.
+function nmb(t, instancia = 0) {
+  return new Paragraph({
+    numbering: { reference: 'numbers', level: 0, instance: instancia },
     children: parseRuns(t), spacing: sp(40, 40), indent: { left: 700, hanging: 350 } });
 }
 function blk() { return new Paragraph({ children: [new TextRun({ text: '', font: 'Arial', size: 20 })], spacing: sp(40, 40) }); }

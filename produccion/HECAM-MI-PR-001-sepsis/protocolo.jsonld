@@ -448,23 +448,23 @@
               "text": "Criterios diagnósticos secuenciales (Sepsis-3)"
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "Confirmar la presencia o alta sospecha de infección (clínica, laboratorio, imagen)."
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "Calcular la puntuación SOFA basal. Si no se dispone del valor basal, asumir 0[[13]]."
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "Un aumento agudo de SOFA ≥ 2 puntos confirma el diagnóstico de SEPSIS (mortalidad estimada > 10 %). Ajustar el componente respiratorio por altitud: PaO₂ basal de referencia 65–70 mmHg y PaO₂/FiO₂ basal aproximado 300–320, extrapolados a Quito desde población andina sana estudiada a 2.640 m[[1,6]]."
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "Medir el lactato sérico. Si el lactato es > 2 mmol/L y persiste la necesidad de vasopresores para mantener PAM ≥ 65 mmHg pese a una resucitación adecuada, se confirma SHOCK SÉPTICO (mortalidad estimada > 40 %)[[11]]."
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "ELIMINAR el término \"sepsis severa\" del registro clínico: es obsoleto según Sepsis-3[[1]]."
             },
             {

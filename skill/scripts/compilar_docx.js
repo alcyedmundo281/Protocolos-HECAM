@@ -53,6 +53,14 @@ function columnas(bloque) {
   });
 }
 
+// ── numeración de listas ──────────────────────────────────────────────────────
+
+// Cada lista numerada necesita su propia instancia; si comparten una, Word
+// continúa la cuenta y la segunda lista del documento empieza donde acabó la
+// primera. Es el error que la revisora marcó con «inicia en 5».
+let instanciaLista = 0;
+const nuevaLista = () => ++instanciaLista;
+
 // ── bloques de contenido ──────────────────────────────────────────────────────
 
 function bloque(b) {
@@ -69,11 +77,15 @@ function bloque(b) {
     // Una viñeta suelta: la usan las matrices escritas a mano, donde es más
     // natural que agrupar los ítems en un bloque Lista.
     case 'Vineta':      return [L.blt(texto, g(b, 'nivel', 0))];
-    case 'Numerada':    return [L.nmb(texto)];
+    // Un «Numerada» suelto continúa la lista abierta; el corte lo decide
+    // contenido(), que es quien ve dónde termina la serie.
+    case 'Numerada':    return [L.nmb(texto, instanciaLista)];
     case 'Lista': {
       const items = g(b, 'itemListElement', []) || [];
       const numerada = g(b, 'estilo', 'vinetas') === 'numerada';
-      return items.map((t) => (numerada ? L.nmb(t) : L.blt(t)));
+      if (!numerada) return items.map((t) => L.blt(t));
+      const instancia = nuevaLista();
+      return items.map((t) => L.nmb(t, instancia));
     }
     case 'Tabla':
     case 'TablaResistencia': {
@@ -101,7 +113,18 @@ function bloque(b) {
 }
 
 function contenido(sec) {
-  return (g(sec, 'contenido', []) || []).flatMap(bloque);
+  const bloques = g(sec, 'contenido', []) || [];
+  const salida = [];
+  let previoNumerado = false;
+  for (const b of bloques) {
+    const esNumerado = g(b, 'type', '') === 'Numerada';
+    // una serie de «Numerada» seguidos es una lista; cualquier otro bloque la
+    // cierra, y el siguiente número vuelve a empezar en 1
+    if (esNumerado && !previoNumerado) nuevaLista();
+    previoNumerado = esNumerado;
+    salida.push(...bloque(b));
+  }
+  return salida;
 }
 
 // ── secciones ─────────────────────────────────────────────────────────────────
@@ -119,7 +142,7 @@ function seccion2() {
     L.h3('Objetivo General'),
     L.bp(g(s, 'objetivoGeneral', '')),
     L.h3('Objetivos Específicos'),
-    ...especificos.map((t) => L.nmb(t)),
+    ...(() => { const i = nuevaLista(); return especificos.map((t) => L.nmb(t, i)); })(),
   ];
 }
 

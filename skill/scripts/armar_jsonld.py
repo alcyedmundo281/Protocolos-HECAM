@@ -122,8 +122,13 @@ def bloques(tramo, saltar_hasta=0):
         fn, a = x["fn"], x["args"]
         if fn == "h3":
             salida.append({"type": "Subtitulo", "text": a[0]})
-        elif fn in ("bp", "nmb"):
+        elif fn == "bp":
             salida.append({"type": "Parrafo", "text": a[0]})
+        elif fn == "nmb":
+            # nmb() es un ítem de lista numerada. Traducirlo a Parrafo hacía
+            # desaparecer el número sin que el texto cambiara, y eso no se ve al
+            # revisar el documento: hay que mirar la numeración.
+            salida.append({"type": "Numerada", "text": a[0]})
         elif fn == "blt":
             if salida and salida[-1].get("type") == "Lista" \
                     and salida[-1].get("estilo") == "vinetas":

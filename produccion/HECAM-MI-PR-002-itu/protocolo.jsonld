@@ -490,23 +490,23 @@
               "text": "Secuencia diagnóstica"
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "Solicitar TIRA REACTIVA DE ORINA al ingreso, con resultado disponible en menos de 10 minutos. La positividad para nitritos o esterasa leucocitaria orienta a ITU; un resultado negativo no descarta la infección en el paciente inmunodeprimido[[1]]."
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "Solicitar SEDIMENTO URINARIO. Una piuria ≥ 10 leucocitos por campo confirma la inflamación urinaria; una hematuria ≥ 5 eritrocitos por campo orienta a litiasis o neoplasia."
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "Tomar UROCULTIVO con antibiograma ANTES de iniciar el antimicrobiano en todos los pacientes con ITU complicada, sin excepción. Recolección por chorro medio en el paciente continente o mediante catéter recién colocado en el paciente cateterizado[[12]]."
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "Solicitar HEMOCULTIVOS en dos series si el paciente presenta temperatura ≥ 38,5 °C, escalofríos, hipotensión o sospecha de urosepsis: entre el 25 y el 30 % de las pielonefritis complicadas cursan con bacteriemia[[14]]."
             },
             {
-              "type": "Parrafo",
+              "type": "Numerada",
               "text": "Calcular la puntuación SOFA ante sospecha de disfunción orgánica. Un aumento agudo ≥ 2 puntos sobre el basal define UROSEPSIS y obliga a activar en paralelo el protocolo HECAM-MI-PR-001 de manejo de sepsis y shock séptico[[3]]."
             },
             {
