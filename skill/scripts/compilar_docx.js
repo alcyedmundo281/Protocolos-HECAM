@@ -128,16 +128,21 @@ function seccion3() {
   const gl = g(s, 'glosario', []) || [];
   const ab = g(s, 'abreviaciones', []) || [];
   const out = [L.h1('3.  ' + g(s, 'name', 'Glosario de términos / Abreviaciones'))];
+  // Toda tabla declara su fuente, también las que compone el compilador y que
+  // por tanto no están descritas en la matriz. Sin esto se colaban tres por
+  // protocolo sin atribución.
   if (gl.length) {
     out.push(L.caption('Tabla 1. Términos clínicos'));
     out.push(L.mkT([{ label: 'TÉRMINO', w: 2200 }, { label: 'DEFINICIÓN', w: L.CW - 2200 }],
                    gl.map((x) => [g(x, 'termino', ''), g(x, 'definicion', '')])));
+    out.push(L.note('Fuente: ' + g(s, 'fuenteGlosario', 'Elaboración propia.')));
   }
   if (ab.length) {
     out.push(L.blk());
     out.push(L.caption('Tabla 2. Abreviaciones'));
     out.push(L.mkT([{ label: 'ABREVIACIÓN', w: 2200 }, { label: 'SIGNIFICADO', w: L.CW - 2200 }],
                    ab.map((x) => [g(x, 'sigla', ''), g(x, 'significado', '')])));
+    out.push(L.note('Fuente: ' + g(s, 'fuenteAbreviaciones', 'Elaboración propia.')));
   }
   return out;
 }
@@ -185,6 +190,7 @@ function seccion6() {
   if (filas.length) {
     out.push(L.caption(g(s, 'tituloTabla', 'Indicadores de calidad del protocolo')));
     out.push(L.mkT(cols, filas));
+    out.push(L.note('Fuente: ' + g(s, 'fuenteTabla', 'Elaboración propia.')));
   }
   return out;
 }

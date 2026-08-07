@@ -12,6 +12,7 @@ verificar:
 		python3 skill/scripts/verificar_caratula.py "$$f" || exit 1; \
 		python3 skill/scripts/verificar_documento.py "$$f" || exit 1; \
 		python3 skill/scripts/check_citas.py "$$f" || exit 1; \
+		python3 skill/scripts/verificar_fuentes_docx.py "$$f" || exit 1; \
 	done
 
 fuentes:
